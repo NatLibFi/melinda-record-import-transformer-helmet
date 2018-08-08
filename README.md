@@ -2,9 +2,6 @@
 
 Helmet record transformer for the Melinda record batch import system. Consumes records as represented by Helmet's [Sierra ILS](https://sandbox.iii.com/iii/sierra-api/swagger/index.html)
 
-## Usage
-Create `config.js` in `src`. The module must export an object which has a property `validators` (See how [validators are specified](https://github.com/NatLibFi/marc-record-validators-melinda#passing-options-to-validators)).
-
 ## License and copyright
 
 Copyright (c) 2018 **University Of Helsinki (The National Library Of Finland)**

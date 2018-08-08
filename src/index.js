@@ -29,7 +29,6 @@
 
 'use strict';
 
-import moment from moment;
 import MarcRecord from 'marc-record-js';
 import validateFactory from '@natlibfi/marc-record-validators-melinda';
 import {TransformerUtils as utils} from '@natlibfi/melinda-record-import-commons';
@@ -59,19 +58,19 @@ async function start() {
 	}
 
 	async function transform(response) {
-		const result = await response.json();
-		const records = await Promise.all(result.entries.map(convertRecord));
-		const validationResults = await Promise.all(records.map(r => validate(r, {
+		const records = await response.json();
+		const convertedRecords = await Promise.all(records.map(convertRecord));
+		const validationResults = await Promise.all(convertedRecords.map(r => validate(r, {
 			fix: true,
 			validateFixes: true
 		})));
 
-		return records.reduce((acc, record, index) => {
+		return convertedRecords.reduce((acc, record, index) => {
 			return acc.concat({
 				record,
 				failed: validationResults[index].failed,
-				messages: validationResults[index].validators,
-			})
+				messages: validationResults[index].validators
+			});
 		}, []);
 
 		function convertRecord(record) {
@@ -81,7 +80,7 @@ async function start() {
 					if (field.fieldTag === '_') {
 						marcRecord.setLeader(field.content);
 					} else {
-						marcRecord.insertControlField({tag: field.marcTag, value: field.content });
+						marcRecord.insertControlField({tag: field.marcTag, value: field.content});
 					}
 				} else {
 					marcRecord.insertField({
