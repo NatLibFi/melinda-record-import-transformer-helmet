@@ -1,4 +1,4 @@
-# Helmet record transformer for the Melinda record batch import system  [![Build Status](https://travis-ci.org/NatLibFi/melinda-record-import-transformer-marc.svg)](https://travis-ci.org/NatLibFi/melinda-record-import-transformer-marc) [![Test Coverage](https://codeclimate.com/github/NatLibFi/melinda-record-import-transformer-marc/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/melinda-record-import-transformer-marc/coverage)
+# Helmet record transformer for the Melinda record batch import system  [![Build Status](https://travis-ci.org/NatLibFi/melinda-record-import-transformer-helmet.svg)](https://travis-ci.org/NatLibFi/melinda-record-import-transformer-helmet) [![Test Coverage](https://codeclimate.com/github/NatLibFi/melinda-record-import-transformer-helmet/badges/coverage.svg)](https://codeclimate.com/github/NatLibFi/melinda-record-import-transformer-helmet/coverage)
 
 Helmet record transformer for the Melinda record batch import system. Consumes records as represented by Helmet's [Sierra ILS](https://sandbox.iii.com/iii/sierra-api/swagger/index.html)
 
