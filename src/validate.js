@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
 *
 * @licstart  The following is the entire license notice for the JavaScript code in this file.
@@ -27,35 +26,29 @@
 *
 */
 
-'use strict';
+/* eslint-disable new-cap */
+import validateFactory from '@natlibfi/marc-record-validate';
+import {EndingPunctuation, FieldStructure, FieldsPresent} from '@natlibfi/marc-record-validators-melinda';
 
-import transform from './transform';
-import createValidateFunction from './validate';
-import {TransformerUtils as Utils} from '@natlibfi/melinda-record-import-commons';
+export default async () => {
+	const validate = await validateFactory([
+		await FieldStructure([
+			{ tag: /^007$/, valuePattern: /.+/, dependencies: [{leader: /^.{6}[^at]/}]}
+		])/*
+		await FieldsPresent([/^007$/])
+		await EndingPunctuation()*/
+	]);
 
-start();
+	return async (records, fix = false) => {
+		const opts = fix ? {fix: true, validateFixes: true} : {fix: false};
+		const results = await Promise.all(
+			records.map(r => validate(r, opts))
+		);
 
-async function start() {
-	const logger = Utils.createLogger();
-
-	Utils.registerSignalHandlers();
-	Utils.checkEnv();
-
-	const stopHealthCheckService = Utils.startHealthCheckService(process.env.HEALTH_CHECK_PORT);
-
-	try {
-		await Utils.startTransformation(transformCallback);
-		stopHealthCheckService();
-		process.exit();
-	} catch (err) {
-		stopHealthCheckService();
-		logger.error(err);
-		process.exit(-1);
-	}
-
-	async function transformCallback(response) {
-		const records = await transform(response.body);
-		const validate = await createValidateFunction();
-		return Utils.runValidate(validate, records, true);
-	}
-}
+		return results.map(result => ({
+			record: result.record,
+			failed: !result.valid,
+			messages: result.report
+		}));
+	};
+};
