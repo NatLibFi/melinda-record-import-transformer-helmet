@@ -28,15 +28,14 @@
 
 /* eslint-disable new-cap */
 import validateFactory from '@natlibfi/marc-record-validate';
-import {EndingPunctuation, FieldStructure, FieldsPresent} from '@natlibfi/marc-record-validators-melinda';
+import {EndingPunctuation, FieldStructure} from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
 	const validate = await validateFactory([
 		await FieldStructure([
-			{ tag: /^007$/, valuePattern: /.+/, dependencies: [{leader: /^.{6}[^at]/}]}
-		])/*
-		await FieldsPresent([/^007$/])
-		await EndingPunctuation()*/
+			{ tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}
+		]),
+		await EndingPunctuation()
 	]);
 
 	return async (records, fix = false) => {
