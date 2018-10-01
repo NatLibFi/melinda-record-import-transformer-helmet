@@ -79,24 +79,24 @@ export default function (record) {
 		case 'f':
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'f', i4: 'b'});
 			break;
-    case 'd':
-    	f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
-    	break;
-    case 'x':
-      f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
-      break;
-    case '2':
-      f007.value = create007Value({len: 8, i0: 'a'});
-      break;
-    case 'e':
-    	f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
-    	break;
-    case 'j':
-      f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
-      break;
-    case 'r':
-  		f007.value = create007Value({len: 2, i0: 'z', i1: 'u'});
-  		break;
+		case 'd':
+			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
+			break;
+		case 'x':
+			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
+			break;
+		case '2':
+			f007.value = create007Value({len: 8, i0: 'a'});
+			break;
+		case 'e':
+			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
+			break;
+		case 'j':
+			f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
+			break;
+		case 'r':
+			f007.value = create007Value({len: 2, i0: 'z', i1: 'u'});
+			break;
 		default:
 			break;
 	}

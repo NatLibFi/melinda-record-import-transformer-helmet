@@ -28,12 +28,26 @@
 
 /* eslint-disable new-cap */
 import validateFactory from '@natlibfi/marc-record-validate';
-import {EndingPunctuation, FieldStructure} from '@natlibfi/marc-record-validators-melinda';
+import {
+	EndingPunctuation,
+	FieldExclusion,
+	SubfieldExclusion,
+	FieldStructure
+} from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
 	const validate = await validateFactory([
+		await FieldExclusion([
+			/^(001|091|092|093|094|095|574|575|576|577|578|599)$/,
+			{ tag: /^264$/, subfields: [{code: /^a$/, value: /^\[.*\]$/ }]},
+			{ tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i }]},
+			{ tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}] }
+		]),
+		await SubfieldExclusion([
+			{ tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/ }]}
+		]),
 		await FieldStructure([
-			{ tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}
+			{tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}
 		]),
 		await EndingPunctuation()
 	]);

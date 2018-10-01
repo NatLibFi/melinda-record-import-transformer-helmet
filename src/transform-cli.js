@@ -28,7 +28,6 @@
 */
 
 import fs from 'fs';
-import path from 'path';
 import ora from 'ora';
 import transform from './transform';
 import createValidateFunction from './validate';
@@ -58,7 +57,9 @@ async function run() {
 			spinner.start('Validating records');
 
 			const results = await validate(records, mode === 'fix');
-			spinner.succeed();
+			const invalidCount = results.filter(r => r.failed).length;
+			const validCount = results.length - invalidCount;
+			spinner.succeed(`Validating records (Valid: ${validCount}, invalid: ${invalidCount})`);
 
 			if (recordsOnly) {
 				console.error(`Excluding ${results.filter(r => r.failed).length} failed records`);
@@ -66,7 +67,6 @@ async function run() {
 			} else {
 				console.log(JSON.stringify(results, undefined, 2));
 			}
-
 		} else {
 			const records = await transform(fs.createReadStream(file));
 			spinner.succeed();
