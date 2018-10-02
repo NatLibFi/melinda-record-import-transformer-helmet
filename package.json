@@ -31,9 +31,9 @@
 		"watch": "cross-env DEBUG=1 NODE_ENV=debug nodemon --watch src --exec 'npm test && babel-node src/index.js'"
 	},
 	"dependencies": {
-		"@natlibfi/marc-record": "^3.0.0",
-		"@natlibfi/marc-record-validate": "^3.0.1",
-		"@natlibfi/marc-record-validators-melinda": "^4.2.0",
+		"@natlibfi/marc-record": "^4.0.0",
+		"@natlibfi/marc-record-validate": "^4.0.0",
+		"@natlibfi/marc-record-validators-melinda": "^5.0.0",
 		"@natlibfi/melinda-record-import-commons": "^1.5.0",
 		"csv": "^3.1.0",
 		"csv-parse": "^3.0.0",

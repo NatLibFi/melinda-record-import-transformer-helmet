@@ -27,12 +27,14 @@
 */
 
 /* eslint-disable new-cap */
+import {MarcRecord} from '@natlibfi/marc-record';
 import validateFactory from '@natlibfi/marc-record-validate';
 import {
 	EndingPunctuation,
 	FieldExclusion,
 	SubfieldExclusion,
-	FieldStructure
+	FieldStructure,
+	EmptyFields
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
@@ -43,6 +45,7 @@ export default async () => {
 			{ tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i }]},
 			{ tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}] }
 		]),
+		await EmptyFields(),
 		await SubfieldExclusion([
 			{ tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/ }]}
 		]),
