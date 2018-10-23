@@ -36,7 +36,7 @@ import createMaterialFields from './create-material-fields';
 
 export default async function (stream) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
-	
+
 	const records = await JSON.parse(await getStream(stream));
 	return Promise.all(records.map(convertRecord));
 
@@ -45,8 +45,10 @@ export default async function (stream) {
 
 		handle008();
 		handle007();
+		handle020();
 		handle300();
 		handle500();
+		handle546();
 		handle856();
 
 		marcRecord.insertField({tag: 'SID', subfields: [
@@ -60,31 +62,31 @@ export default async function (stream) {
 			const marcRecord = new MarcRecord();
 
 			record.varFields
-			.forEach(field => {
-				if (field.content) {
-					if (field.fieldTag === '_') {
-						marcRecord.leader = field.content;
-					} else {
-						marcRecord.insertField({tag: field.marcTag, value: field.content});
-					}
-				} else if (field.subfields) {
-					marcRecord.insertField({
-						tag: field.marcTag,
-						ind1: field.ind1,
-						ind2: field.ind2,
-						subfields: field.subfields.map(subfield => {
-							if ('content' in subfield && subfield.content.length === 0) {
-								return {code: subfield.tag};
-							}
+				.forEach(field => {
+					if (field.content) {
+						if (field.fieldTag === '_') {
+							marcRecord.leader = field.content;
+						} else {
+							marcRecord.insertField({tag: field.marcTag, value: field.content});
+						}
+					} else if (field.subfields) {
+						marcRecord.insertField({
+							tag: field.marcTag,
+							ind1: field.ind1,
+							ind2: field.ind2,
+							subfields: field.subfields.map(subfield => {
+								if ('content' in subfield && subfield.content.length === 0) {
+									return {code: subfield.tag};
+								}
 
-							return {
-								code: subfield.tag,
-								value: subfield.content
-							}
-						})
-					});
-				}
-			});
+								return {
+									code: subfield.tag,
+									value: subfield.content
+								};
+							})
+						});
+					}
+				});
 
 			return marcRecord;
 		}
@@ -93,7 +95,7 @@ export default async function (stream) {
 			const f008 = marcRecord.get(/^008$/).shift();
 			const creationDate = moment().format('YYMMDD');
 			// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
-			const chars = f008.value.split('').slice(0, 41).slice(6);
+			const chars = f008.value.split('').slice(0, 40).slice(6);
 
 			if (chars[17] === ' ') {
 				chars[17] = '^';
@@ -123,44 +125,83 @@ export default async function (stream) {
 			}
 		}
 
-		function handle300() {
-			marcRecord.get(/^300$/)
-			.forEach(field => {
-				const a = field.subfields.find(sf => sf.code === 'a');
-				const b = field.subfields.find(sf => sf.code === 'b');
+		function handle020() {
+			marcRecord.get(/^020$/)
+				.forEach(field => {
+					if (!field.subfields.find(sf => sf.code === 'q')) {
+						const a = field.subfields.find(sf => sf.code === 'a');
 
-				if (a && b && b.value === 'elektroninen') {
-					if (/(tekstitiedosto|äänitiedosto|videotiedosto)$/.test(a.value)) {
-						marcRecord.removeSubfield(b, field);
-						a.value = 'verkkoaineisto';
+						if (/\s/.test(a.value.trim())) {
+							const [isbn, postfix] = a.value.split(/\s/);
+							a.value = isbn;
 
-						if (a.value === 'äänitiedosto') {
-							record.insertField({tag: '347', subfields: [
-								{code: 'a', value: 'äänitiedosto'}
-							]});
-						} else if (a.value === 'videotiedosto') {
-							record.insertField({tag: '347', subfields: [
-								{code: 'a', value: 'videotiedosto'}
-							]});
+							field.subfields.push({
+								code: 'q',
+								value: postfix.replace(/[()]/, '')
+							});
 						}
 					}
-				}
-			});
+				});
+		}
+
+		function handle300() {
+			marcRecord.get(/^300$/)
+				.forEach(field => {
+					const a = field.subfields.find(sf => sf.code === 'a');
+					const b = field.subfields.find(sf => sf.code === 'b');
+
+					if (a && b && b.value === 'elektroninen') {
+						if (/(tekstitiedosto|äänitiedosto|videotiedosto|e-kirja|e-äänikirja)$/.test(a.value)) {
+							marcRecord.removeSubfield(b, field);
+							a.value = '1 verkkoaineisto';
+
+							if (a.value === 'äänitiedosto') {
+								record.insertField({tag: '347', subfields: [
+									{code: 'a', value: '1 äänitiedosto'}
+								]});
+							} else if (a.value === 'videotiedosto') {
+								record.insertField({tag: '347', subfields: [
+									{code: 'a', value: '1 videotiedosto'}
+								]});
+							}
+						}
+					}
+				});
 		}
 
 		function handle500() {
 			marcRecord.get(/^500$/)
-			.filter(field => {
-				const a = field.subfields.find(sf => sf.code === 'a');
-				return /^Ä\/ääniraita/.test(a.value);
-			})
-			.forEach(field => {
-				const f546 = clone(field);
-				f546.tag = '546';
+				.filter(field => {
+					const a = field.subfields.find(sf => sf.code === 'a');
+					return /^Ä\/ääniraita/.test(a.value);
+				})
+				.forEach(field => {
+					const f546 = clone(field);
+					f546.tag = '546';
 
-				marcRecord.insertField(f546);
-				marcRecord.removeField(field);
-			});
+					marcRecord.insertField(f546);
+					marcRecord.removeField(field);
+				});
+		}
+
+		function handle546() {
+			const f040 = marcRecord.get(/^040$/).shift();
+
+			if (f040) {
+				const b = f040.subfields.find(sf => sf.code === 'b');
+
+				if (b && b.value === 'fin') {
+					marcRecord.get(/^546$/)
+						.forEach(field => {
+							const a = field.subfields.find(sf => sf.code === 'a');
+
+							if (a && /svenska/i.test(a.value)) {
+								a.value = a.value.replace(/svenska/i, 'ruotsi');
+								a.value = a.value.replace(/^ruotsi/, 'Ruotsi');
+							}
+						});
+				}
+			}
 		}
 
 		function handle856() {
@@ -169,6 +210,15 @@ export default async function (stream) {
 
 				if (subfield) {
 					subfield.code = 'y';
+				}
+
+				const y = field.subfields.find(sf => sf.code === 'y');
+
+				/* Move subfield y to the last index */
+				if (y) {
+					const index = field.subfields.indexOf(y);
+					field.subfields.splice(index, 1);
+					field.subfields.push(y);
 				}
 			});
 		}

@@ -27,27 +27,30 @@
 */
 
 /* eslint-disable new-cap */
-import {MarcRecord} from '@natlibfi/marc-record';
 import validateFactory from '@natlibfi/marc-record-validate';
 import {
-	EndingPunctuation,
 	FieldExclusion,
-	SubfieldExclusion,
 	FieldStructure,
-	EmptyFields
+	FieldsPresent,
+	EmptyFields,
+	EndingPunctuation,
+	IsbnIssn,
+	SubfieldExclusion,
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
 	const validate = await validateFactory([
+		await FieldsPresent([/^(336|337|338)$/]),
 		await FieldExclusion([
-			/^(001|091|092|093|094|095|574|575|576|577|578|599)$/,
-			{ tag: /^264$/, subfields: [{code: /^a$/, value: /^\[.*\]$/ }]},
-			{ tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i }]},
-			{ tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}] }
+			/^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/,
+			{tag: /^264$/, subfields: [{code: /^a$/, value: /^\[.*\]$/}]},
+			{tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i}]},
+			{tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}]}
 		]),
 		await EmptyFields(),
+		await IsbnIssn(),
 		await SubfieldExclusion([
-			{ tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/ }]}
+			{tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/}]}
 		]),
 		await FieldStructure([
 			{tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}

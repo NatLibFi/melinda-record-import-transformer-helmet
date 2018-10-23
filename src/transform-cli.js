@@ -65,7 +65,9 @@ async function run() {
 				console.error(`Excluding ${results.filter(r => r.failed).length} failed records`);
 				console.log(JSON.stringify(results.filter(r => !r.failed).map(r => r.record.toObject()), undefined, 2));
 			} else {
-				console.log(JSON.stringify(results, undefined, 2));
+				console.log(JSON.stringify(results.map(r => {
+					return Object.assign(r, {record: r.record.toObject()});
+				}), undefined, 2));
 			}
 		} else {
 			const records = await transform(fs.createReadStream(file));
