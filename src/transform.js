@@ -93,19 +93,22 @@ export default async function (stream) {
 
 		function handle008() {
 			const f008 = marcRecord.get(/^008$/).shift();
-			const creationDate = moment().format('YYMMDD');
-			// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
-			const chars = f008.value.split('').slice(0, 40).slice(6);
 
-			if (chars[17] === ' ') {
-				chars[17] = '^';
+			if (f008) {
+				const creationDate = moment().format('YYMMDD');
+				// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
+				const chars = f008.value.split('').slice(0, 40).slice(6);
+	
+				if (chars[17] === ' ') {
+					chars[17] = '^';
+				}
+	
+				if (chars[18] === 'c') {
+					chars[18] = 'i';
+				}
+	
+				f008.value = `${creationDate}${chars.join('')}`;
 			}
-
-			if (chars[18] === 'c') {
-				chars[18] = 'i';
-			}
-
-			f008.value = `${creationDate}${chars.join('')}`;
 		}
 
 		function handle007() {
@@ -177,6 +180,7 @@ export default async function (stream) {
 				})
 				.forEach(field => {
 					const f546 = clone(field);
+					f546.ind1 = f546.ind2 = '#';					 
 					f546.tag = '546';
 
 					marcRecord.insertField(f546);
