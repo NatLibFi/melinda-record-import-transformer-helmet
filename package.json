@@ -28,7 +28,7 @@
 		"clean": "rimraf build dist",
 		"build:transpile": "babel src --source-maps --out-dir=dist --minified",
 		"build": "npm run build:transpile && npm run check-deps",
-		"watch": "cross-env DEBUG=1 NODE_ENV=debug nodemon --watch src --exec 'npm test && babel-node src/index.js'"
+		"watch": "cross-env DEBUG=1 NODE_ENV=debug nodemon --watch src --exec 'npm test'"
 	},
 	"dependencies": {
 		"@natlibfi/marc-record": "^4.0.0",

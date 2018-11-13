@@ -59,6 +59,6 @@ async function start() {
 		const records = await transform(response.body);
 		const validate = await createValidateFunction();
 		logger.log('debug', 'Validating records');
-		return Utils.runValidate(validate, records, true);
+		return validate(records, true);
 	}
 }

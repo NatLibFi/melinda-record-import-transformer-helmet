@@ -43,6 +43,7 @@ export default async function (stream) {
 	function convertRecord(record) {
 		const marcRecord = convertToMARC();
 
+		handleLeader();
 		handle008();
 		handle007();
 		handle020();
@@ -91,6 +92,20 @@ export default async function (stream) {
 			return marcRecord;
 		}
 
+		function handleLeader() {
+			if (marcRecord.leader[6] === 'o' && marcRecord.get(/^655$/).some(isBoardGame)) {
+				marcRecord.leader[6] = 'r';
+			}
+
+			if (marcRecord.leader[18] === 'c') {
+				marcRecord.leader = 'i';
+			}
+
+			function isBoardGame(field) {
+				return field.subfields.some(sf => sf.code === 'a' && sf.value === 'lautapelit');
+			}
+		}
+
 		function handle008() {
 			const f008 = marcRecord.get(/^008$/).shift();
 
@@ -98,15 +113,19 @@ export default async function (stream) {
 				const creationDate = moment().format('YYMMDD');
 				// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
 				const chars = f008.value.split('').slice(0, 40).slice(6);
-	
+
 				if (chars[17] === ' ') {
 					chars[17] = '^';
 				}
-	
+
 				if (chars[18] === 'c') {
 					chars[18] = 'i';
 				}
-	
+
+				if (['#', 'd', 'u', '|'].includes(chars[39])) {
+					chars[39] = 'c';
+				}
+
 				f008.value = `${creationDate}${chars.join('')}`;
 			}
 		}
@@ -134,7 +153,7 @@ export default async function (stream) {
 					if (!field.subfields.find(sf => sf.code === 'q')) {
 						const a = field.subfields.find(sf => sf.code === 'a');
 
-						if (/\s/.test(a.value.trim())) {
+						if (a && /\s/.test(a.value.trim())) {
 							const [isbn, postfix] = a.value.split(/\s/);
 							a.value = isbn;
 
@@ -145,6 +164,25 @@ export default async function (stream) {
 						}
 					}
 				});
+		}
+
+		function handle037() {
+			marcRecord.get(/^130$/).forEach(field => {
+				field.subfields.push({
+					code: '5', value: 'HELME<KEEP>'
+				});
+			});
+		}
+
+		function handle130() {
+			marcRecord.get(/^130$/).forEach(field => {
+				const a = field.subfields.find(sf => sf.code === 'a' && /:/.test(sf.value));
+
+				if (a) {
+					const re = /^(.*):/.exec(a.value);
+					a.value = `${re[1].trimEnd()}.`;
+				}
+			});
 		}
 
 		function handle300() {
@@ -173,19 +211,43 @@ export default async function (stream) {
 		}
 
 		function handle500() {
-			marcRecord.get(/^500$/)
-				.filter(field => {
-					const a = field.subfields.find(sf => sf.code === 'a');
-					return /^Ä\/ääniraita/.test(a.value);
-				})
-				.forEach(field => {
-					const f546 = clone(field);
-					f546.ind1 = f546.ind2 = '#';					 
-					f546.tag = '546';
+			marcRecord.get(/^500$/).forEach(field => {
+				const a = field.subfields.find(sf => sf.code === 'a');
 
-					marcRecord.insertField(f546);
+				if (a && /^(ääniraita|lainausoikeus\.)/i.test(a.value)) {
+					const newField = clone(field);
+					newField.ind1 = '#';
+					newField.ind2 = '#';
+					newField.tag = /^ääniraita/i.test(a.value) ? '546' : '540';
+
+					marcRecord.insertField(newField);
 					marcRecord.removeField(field);
-				});
+				}
+			});
+		}
+
+		function handle506() {
+			marcRecord.get(/^506$/).forEach(field => {
+				const a = field.subfields.find(sf => sf.code === 'a');
+
+				if (a) {
+					const re = /^Kielletty alle ([0-9]+)-v\.$/i.exec(a.value);
+
+					if (re) {
+						a.value = `Kielletty alle ${re[1]} vuotiailta.`;
+					}
+				}
+			});
+		}
+
+		function handle530() {
+			marcRecord.get(/^530$/).forEach(field => {
+				const a = field.subfields.find(sf => sf.code === 'a');
+
+				if (a && /^Julkaistu myös e-kirjana\.$/.test(a.value)) {
+					a.value = 'Julkaistu myös verkkoaineistona.';
+				}
+			});
 		}
 
 		function handle546() {
@@ -206,6 +268,26 @@ export default async function (stream) {
 						});
 				}
 			}
+		}
+
+		function handleTerms() {
+			marcRecord.get(/^(648|651|655)$/).forEach(field => {
+				const sf = field.subfields.find(sf => sf.code === '2');
+
+				if (sf) {
+					if (['648', '650'].includes(field.tag) && sf.value === 'kaunokki') {
+						sf.value = 'ysa';
+					}
+
+					if (field.tag === '655' && sf.value === 'kaunokki') {
+						sf.value = 'slm/fin';
+					}
+
+					if (field.tag === '655' && sf.value === 'bella') {
+						sf.value = 'slm/swe';
+					}
+				}
+			});
 		}
 
 		function handle856() {

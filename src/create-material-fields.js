@@ -134,7 +134,7 @@ export default function (record) {
 		return [
 			{tag: '006', value: values006.join('')},
 			{tag: '007', value: valuesFirst007.join('')},
-			{tag: '007', value: valuesFirst007.join('')}
+			{tag: '007', value: valuesSecond007.join('')}
 		];
 	}
 
@@ -155,7 +155,7 @@ export default function (record) {
 		return [
 			{tag: '006', value: values006.join('')},
 			{tag: '007', value: valuesFirst007.join('')},
-			{tag: '007', value: valuesFirst007.join('')}
+			{tag: '007', value: valuesSecond007.join('')}
 		];
 	}
 }

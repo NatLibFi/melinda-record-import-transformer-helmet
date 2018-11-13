@@ -35,7 +35,7 @@ import {
 	EmptyFields,
 	EndingPunctuation,
 	IsbnIssn,
-	SubfieldExclusion,
+	SubfieldExclusion
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
