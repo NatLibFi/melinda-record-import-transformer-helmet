@@ -37,19 +37,27 @@ import createMaterialFields from './create-material-fields';
 export default async function (stream) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
+	const logger = Utils.createLogger();
 	const records = await JSON.parse(await getStream(stream));
+
 	return Promise.all(records.map(convertRecord));
 
 	function convertRecord(record) {
 		const marcRecord = convertToMARC();
 
+		/* Order is significant! */
 		handleLeader();
 		handle008();
 		handle007();
 		handle020();
+		handle037();
+		handle130();
 		handle300();
 		handle500();
+		handle506();
+		handle530();
 		handle546();
+		handleTerms();
 		handle856();
 
 		marcRecord.insertField({tag: 'SID', subfields: [
@@ -63,43 +71,47 @@ export default async function (stream) {
 			const marcRecord = new MarcRecord();
 
 			record.varFields
-				.forEach(field => {
-					if (field.content) {
-						if (field.fieldTag === '_') {
-							marcRecord.leader = field.content;
-						} else {
-							marcRecord.insertField({tag: field.marcTag, value: field.content});
-						}
-					} else if (field.subfields) {
-						marcRecord.insertField({
-							tag: field.marcTag,
-							ind1: field.ind1,
-							ind2: field.ind2,
-							subfields: field.subfields.map(subfield => {
-								if ('content' in subfield && subfield.content.length === 0) {
-									return {code: subfield.tag};
-								}
-
-								return {
-									code: subfield.tag,
-									value: subfield.content
-								};
-							})
-						});
+			.forEach(field => {
+				if (field.content) {
+					if (field.fieldTag === '_') {
+						marcRecord.leader = field.content;
+					} else {
+						marcRecord.insertField({tag: field.marcTag, value: field.content});
 					}
-				});
+				} else if (field.subfields) {
+					marcRecord.insertField({
+						tag: field.marcTag,
+						ind1: field.ind1,
+						ind2: field.ind2,
+						subfields: field.subfields.map(subfield => {
+							if ('content' in subfield && subfield.content.length === 0) {
+								return {code: subfield.tag};
+							}
+
+							return {
+								code: subfield.tag,
+								value: subfield.content
+							};
+						})
+					});
+				}
+			});
 
 			return marcRecord;
 		}
 
 		function handleLeader() {
-			if (marcRecord.leader[6] === 'o' && marcRecord.get(/^655$/).some(isBoardGame)) {
-				marcRecord.leader[6] = 'r';
+			const chars = marcRecord.leader.split('');
+
+			if (chars[6] === 'o' && marcRecord.get(/^655$/).some(isBoardGame)) {
+				chars[6] = 'r';
 			}
 
-			if (marcRecord.leader[18] === 'c') {
-				marcRecord.leader = 'i';
+			if (chars[18] === 'c') {
+				chars[18] = 'i';
 			}
+
+			marcRecord.leader = chars.join('');
 
 			function isBoardGame(field) {
 				return field.subfields.some(sf => sf.code === 'a' && sf.value === 'lautapelit');
@@ -122,7 +134,7 @@ export default async function (stream) {
 					chars[18] = 'i';
 				}
 
-				if (['#', 'd', 'u', '|'].includes(chars[39])) {
+				if (['#', '^', 'd', 'u', '|'].includes(chars[39])) {
 					chars[39] = 'c';
 				}
 
@@ -149,25 +161,25 @@ export default async function (stream) {
 
 		function handle020() {
 			marcRecord.get(/^020$/)
-				.forEach(field => {
-					if (!field.subfields.find(sf => sf.code === 'q')) {
-						const a = field.subfields.find(sf => sf.code === 'a');
+			.forEach(field => {
+				if (!field.subfields.find(sf => sf.code === 'q')) {
+					const a = field.subfields.find(sf => sf.code === 'a');
 
-						if (a && /\s/.test(a.value.trim())) {
-							const [isbn, postfix] = a.value.split(/\s/);
-							a.value = isbn;
+					if (a && /\s/.test(a.value.trim())) {
+						const [isbn, postfix] = a.value.split(/\s/);
+						a.value = isbn;
 
-							field.subfields.push({
-								code: 'q',
-								value: postfix.replace(/[()]/, '')
-							});
-						}
+						field.subfields.push({
+							code: 'q',
+							value: postfix.replace(/[()]/, '')
+						});
 					}
-				});
+				}
+			});
 		}
 
 		function handle037() {
-			marcRecord.get(/^130$/).forEach(field => {
+			marcRecord.get(/^037$/).forEach(field => {
 				field.subfields.push({
 					code: '5', value: 'HELME<KEEP>'
 				});
@@ -187,27 +199,58 @@ export default async function (stream) {
 
 		function handle300() {
 			marcRecord.get(/^300$/)
-				.forEach(field => {
-					const a = field.subfields.find(sf => sf.code === 'a');
-					const b = field.subfields.find(sf => sf.code === 'b');
+			.forEach(field => {
+				const a = field.subfields.find(sf => sf.code === 'a');
+				const b = field.subfields.find(sf => sf.code === 'b');
 
-					if (a && b && b.value === 'elektroninen') {
-						if (/(tekstitiedosto|äänitiedosto|videotiedosto|e-kirja|e-äänikirja)$/.test(a.value)) {
-							marcRecord.removeSubfield(b, field);
-							a.value = '1 verkkoaineisto';
+				if (a) {
+					if (b && b.value === 'elektroninen') {
+						marcRecord.removeSubfield(b, field);
+						a.value = '1 verkkoaineisto';
 
-							if (a.value === 'äänitiedosto') {
-								record.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 äänitiedosto'}
-								]});
-							} else if (a.value === 'videotiedosto') {
-								record.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 videotiedosto'}
-								]});
-							}
+						if (a.value === '1 äänitiedosto') {
+							record.insertField({tag: '347', subfields: [
+								{code: 'a', value: '1 äänitiedosto'}
+							]});
 						}
+
+						if (a.value === '1 videotiedosto') {
+							record.insertField({tag: '347', subfields: [
+								{code: 'a', value: '1 videotiedosto'}
+							]});
+						}
+					} else if (/^(e-äänikirja|e-ljudbok|eljudbok)$/i.test(a.value)) {
+						a.value = '1 verkkoaineisto';
+					} else if (/^(äänikirja|ljudbok)$/i.test(a.value)) {
+						a.value = '1 CD-äänilevy';
+					} else {
+						handleConsoleGames();
 					}
-				});
+				}
+
+				function handleConsoleGames() {
+					if (/^(konsolipeli|konsolspel)$/i.test(a.value)) {
+						const f007 = marcRecord.get(/^007$/).shift();
+
+						switch (f007.value[1]) {
+							case 'o':
+							a.value = '1 tietolevy';
+							break;
+							case 'b':
+							a.value = '1 piirikotelo';
+							break;
+							case 'z':
+							a.value = '1 muistikortti';
+							break;
+							default:
+							logger.warn(`Unsupported console game description: ${a.value}`);
+							break;
+						}
+					} else if (/^(Konsolipeli \(1 tietolevy\)|Konsolipeli \(1 Blu-ray-levy\)|Konsolipeli \(1 muistikortti\))$/i.test(a.value)) {
+						a.value = /^Konsolipeli (.*)$/i.exec(a.value)[1];
+					}
+				}
+			});
 		}
 
 		function handle500() {
@@ -258,14 +301,14 @@ export default async function (stream) {
 
 				if (b && b.value === 'fin') {
 					marcRecord.get(/^546$/)
-						.forEach(field => {
-							const a = field.subfields.find(sf => sf.code === 'a');
+					.forEach(field => {
+						const a = field.subfields.find(sf => sf.code === 'a');
 
-							if (a && /svenska/i.test(a.value)) {
-								a.value = a.value.replace(/svenska/i, 'ruotsi');
-								a.value = a.value.replace(/^ruotsi/, 'Ruotsi');
-							}
-						});
+						if (a && /svenska/i.test(a.value)) {
+							a.value = a.value.replace(/svenska/i, 'ruotsi');
+							a.value = a.value.replace(/^ruotsi/, 'Ruotsi');
+						}
+					});
 				}
 			}
 		}
