@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
 *
 * @licstart  The following is the entire license notice for the JavaScript code in this file.
@@ -27,38 +26,51 @@
 *
 */
 
-'use strict';
-
 import transform from './transform';
 import createValidateFunction from './validate';
-import {TransformerUtils as Utils} from '@natlibfi/melinda-record-import-commons';
+import {TransformerUtils, registerSignalHandlers, createLogger, startHealthCheckService} from '@natlibfi/melinda-record-import-commons';
+
+import {RECORD_IMPORT_URL, RECORD_IMPORT_BLOB_ID, RECORD_IMPORT_PROFILE,
+	RECORD_IMPORT_USERNAME, RECORD_IMPORT_PASSWORD, AMQP_URL} from './config';
 
 start();
 
 async function start() {
-	const logger = Utils.createLogger();
+	const {checkEnv, startTransformation} = TransformerUtils;
+	const Logger = createLogger();
 
-	Utils.registerSignalHandlers();
-	Utils.checkEnv();
+	registerSignalHandlers();
+	checkEnv();
 
-	const stopHealthCheckService = Utils.startHealthCheckService(process.env.HEALTH_CHECK_PORT);
+	const stopHealthCheckService = startHealthCheckService(process.env.HEALTH_CHECK_PORT);
 
 	try {
-		logger.log('info', 'Starting melinda-record-import-transformer-helmet');
-		await Utils.startTransformation(transformCallback);
+		Logger.log('info', 'Starting melinda-record-import-transformer-helmet');
+		await startTransformation({
+			callback: transformCallback,
+			blobId: RECORD_IMPORT_BLOB_ID,
+			profile: RECORD_IMPORT_PROFILE,
+			apiURL: RECORD_IMPORT_URL,
+			apiUsername: RECORD_IMPORT_USERNAME,
+			apiPassword: RECORD_IMPORT_PASSWORD,
+			amqpURL: AMQP_URL
+		});
+
 		stopHealthCheckService();
 		process.exit();
 	} catch (err) {
 		stopHealthCheckService();
-		logger.error(err);
+		Logger.error(err);
 		process.exit(-1);
 	}
 
 	async function transformCallback(response) {
-		logger.log('debug', 'Transforming records');
+		Logger.log('debug', 'Transforming records');
+
 		const records = await transform(response.body);
 		const validate = await createValidateFunction();
-		logger.log('debug', 'Validating records');
+
+		Logger.log('debug', 'Validating records');
 		return validate(records, true);
 	}
 }

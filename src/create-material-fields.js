@@ -44,7 +44,7 @@ export default function (record) {
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'd', i4: 's', i10: 'm'});
 			break;
 		case '3':
-			f007.value = create007Value({len: 14, i0: 's', i1: 'd'});
+			f007.value = create007Value({len: 14, i0: 's', i1: 'd', i3: 'f', i6: 'g', i10: 'm'});
 			break;
 		case 'b':
 			f007.value = create007Value({len: 9, i0: 'g', i1: 's'});
@@ -53,16 +53,19 @@ export default function (record) {
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'd', i4: 'v'});
 			break;
 		case 'z':
+			update008([{index: 23, value: 'o'}]);
 			f007.value = create007Value({len: 2, i0: 'c', i1: 'r'});
 			break;
 		case 'y':
+			update008([{index: 23, value: 'o'}]);
 			f007.value = create007Value({len: 2, i0: 'c', i1: 'r'});
 			break;
 		case '4':
 			f007.value = create007Value({len: 14, i0: 's', i1: 's', i3: 'l', i6: 'j', i10: 'p'});
 			break;
 		case 's':
-			f007.value = create007Value({len: 14, i0: 'c', i4: 'g', i5: 'a'});
+			update008([{index: 23, value: '|'}, {index: 26, value: '|'}]);
+			f007.value = create007Value({len: 14, i0: 'c', i1: '|', i4: 'g', i5: 'a'});
 			break;
 		case 'a':
 			f007.value = create007Value({len: 6, i0: 'k'});
@@ -80,21 +83,25 @@ export default function (record) {
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'f', i4: 'b'});
 			break;
 		case 'd':
+			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
 			break;
 		case 'x':
+			update008([{index: 26, value: 'j'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
 			break;
 		case '2':
 			f007.value = create007Value({len: 8, i0: 'a'});
 			break;
 		case 'e':
+			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
 			break;
 		case 'j':
 			f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
 			break;
 		case 'r':
+			update008([{index: 33, value: 'g'}]);
 			f007.value = create007Value({len: 2, i0: 'z', i1: 'u'});
 			break;
 		default:
@@ -157,5 +164,16 @@ export default function (record) {
 			{tag: '007', value: valuesFirst007.join('')},
 			{tag: '007', value: valuesSecond007.join('')}
 		];
+	}
+
+	function update008(values) {
+		const f008 = record.get(/^008$/).shift();
+		const chars = f008.value.split('');
+
+		values.forEach(({index, value}) => {
+			chars[index] = value;
+		});
+
+		f008.value = chars.join('');
 	}
 }

@@ -1,0 +1,592 @@
+[
+  {
+    "id": "2364053",
+    "materialType": {
+      "code": "t  "
+    },
+    "catalogDate": "2018-09-14",
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helin, Sari,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Nenonen, Meri,"
+          },
+          {
+            "tag": "e",
+            "content": "lukija."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Ellibs"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "äänikirjat"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "e-kirjat"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "huumori"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "arki"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "lapsiperheet"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ajankäyttö"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "vanhemmuus"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "äidit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "aviovaimot"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "978-951-31-9682-0"
+          },
+          {
+            "tag": "q",
+            "content": "mp3"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4 "
+          },
+          {
+            "tag": "b",
+            "content": "128.32"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "05"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "540",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Käyttöoikeus Helmet-kirjastokortilla"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "MP3-julkaisu"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "530",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Myös CD-äänikirjana"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "538",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Internet-yhteys, www-selain ; lukuohjelma"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "574",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "LK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "E-ÄÄNITE / E-AUDIO"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Koottu kirjoittajan Anna-lehteen, Kotivinkkiin, Kaksplussaan ja blogiin kirjoittamistaan teksteistä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Kannessa myös: Huono Äiti."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "511",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Lukija: Meri Nenonen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9789513196820"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "[Helsinki] :"
+          },
+          {
+            "tag": "b",
+            "content": "Tammi,"
+          },
+          {
+            "tag": "c",
+            "content": "[2017]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "14.8"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "E-äänikirja (MP3  kb; kesto 3 h 10 min)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "puhe"
+          },
+          {
+            "tag": "b",
+            "content": "spw"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tietokonekäyttöinen"
+          },
+          {
+            "tag": "b",
+            "content": "c"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "verkkoaineisto"
+          },
+          {
+            "tag": "b",
+            "content": "cr"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Elämää tehosekoittimessa ja muita kirjoituksia /"
+          },
+          {
+            "tag": "c",
+            "content": "Sari Helin."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "14.8"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "007",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "cr |||||||||||"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "      s2017    fi ||||||||| |||| | fin||nim4c "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Fi-He"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "fin"
+          },
+          {
+            "tag": "d",
+            "content": "fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "776",
+        "ind1": "0",
+        "ind2": "8",
+        "subfields": [
+          {
+            "tag": "i",
+            "content": "CD-äänikirja:"
+          },
+          {
+            "tag": "z",
+            "content": "9789513197872"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "u",
+            "content": "https://www.ellibslibrary.com/helmet/9789513196820"
+          },
+          {
+            "tag": "y",
+            "content": "Linkki e-äänikirjaan"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nim  22000004c 4500"
+      }
+    ]
+  }
+]

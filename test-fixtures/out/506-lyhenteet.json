@@ -1,0 +1,604 @@
+[
+  {
+    "leader": "00000ngm a22005774i 4500",
+    "fields": [
+      {
+        "tag": "007",
+        "value": "vd||v||||"
+      },
+      {
+        "tag": "008",
+        "value": "000000s2018    fi ||| g^    |    v|mul|c"
+      },
+      {
+        "tag": "024",
+        "ind1": "3",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "7340112745189"
+          }
+        ]
+      },
+      {
+        "tag": "028",
+        "ind1": "0",
+        "ind2": "1",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "N085020DSP01"
+          }
+        ]
+      },
+      {
+        "tag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "eng"
+          },
+          {
+            "code": "a",
+            "value": "swe"
+          },
+          {
+            "code": "a",
+            "value": "dan"
+          },
+          {
+            "code": "a",
+            "value": "nor"
+          },
+          {
+            "code": "a",
+            "value": "fin"
+          },
+          {
+            "code": "j",
+            "value": "fin"
+          },
+          {
+            "code": "j",
+            "value": "swe"
+          },
+          {
+            "code": "j",
+            "value": "dan"
+          },
+          {
+            "code": "j",
+            "value": "nor"
+          },
+          {
+            "code": "j",
+            "value": "eng"
+          },
+          {
+            "code": "h",
+            "value": "eng"
+          }
+        ]
+      },
+      {
+        "tag": "049",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "c",
+            "value": "K7"
+          }
+        ]
+      },
+      {
+        "tag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "89"
+          }
+        ]
+      },
+      {
+        "tag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1.4"
+          }
+        ]
+      },
+      {
+        "tag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1.4"
+          }
+        ]
+      },
+      {
+        "tag": "130",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Silicon valley."
+          }
+        ]
+      },
+      {
+        "tag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Silicon valley."
+          },
+          {
+            "code": "n",
+            "value": "the complete fifth season /"
+          },
+          {
+            "code": "c",
+            "value": "created by Mike Judge & John Altschuler & Dave Krinsky 5. kausi (DVD)"
+          }
+        ]
+      },
+      {
+        "tag": "264",
+        "ind1": " ",
+        "ind2": "2",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "[Helsinki] :"
+          },
+          {
+            "code": "b",
+            "value": "Warner Bros, Entertainment Finland,"
+          },
+          {
+            "code": "c",
+            "value": "[2018]"
+          }
+        ]
+      },
+      {
+        "tag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1 DVD-levy (3 h 44 min) :"
+          },
+          {
+            "code": "b",
+            "value": "vär., ääni"
+          }
+        ]
+      },
+      {
+        "tag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "kaksiulotteinen liikkuva kuva"
+          },
+          {
+            "code": "b",
+            "value": "tdi"
+          },
+          {
+            "code": "2",
+            "value": "rdacontent"
+          }
+        ]
+      },
+      {
+        "tag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "video"
+          },
+          {
+            "code": "b",
+            "value": "v"
+          },
+          {
+            "code": "2",
+            "value": "rdamedia"
+          }
+        ]
+      },
+      {
+        "tag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "videolevy"
+          },
+          {
+            "code": "b",
+            "value": "vd"
+          },
+          {
+            "code": "2",
+            "value": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "tag": "506",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Kielletty alle 7-vuotiailta. FOOBAR"
+          }
+        ]
+      },
+      {
+        "tag": "511",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Thomas Middleditch, Josh Brener, Amanda Crew, Kumail Nanjiani, Martin Starr"
+          }
+        ]
+      },
+      {
+        "tag": "534",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "p",
+            "value": "Alun perin julkaistu:"
+          },
+          {
+            "code": "c",
+            "value": "HBO Entertainment, 2018"
+          }
+        ]
+      },
+      {
+        "tag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Tekstitys: suomi, svenska, norja, tanska, ääniraita: englanti"
+          }
+        ]
+      },
+      {
+        "tag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Ääniraita englanti"
+          }
+        ]
+      },
+      {
+        "tag": "577",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "K.Pesonen"
+          }
+        ]
+      },
+      {
+        "tag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "DVDLEVY / DVDSKIVA"
+          }
+        ]
+      },
+      {
+        "tag": "648",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "2010-luku"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "yritykset"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "tietotekniikka"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Yhdysvallat"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Kalifornia"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Piilaakso"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Silicon Valley"
+          },
+          {
+            "code": "2",
+            "value": "kaunokki"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "komediasarjat"
+          },
+          {
+            "code": "2",
+            "value": "slm/fin"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "televisiosarjat"
+          },
+          {
+            "code": "2",
+            "value": "slm/fin"
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Judge, Mike,"
+          },
+          {
+            "code": "e",
+            "value": "alkuperäisidean luoja."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Krinsky, Dave,"
+          },
+          {
+            "code": "e",
+            "value": "alkuperäisidean luoja."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Altschuler, John,"
+          },
+          {
+            "code": "e",
+            "value": "alkuperäisidean luoja."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Middleditch, Thomas,"
+          },
+          {
+            "code": "e",
+            "value": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Brener, Josh,"
+          },
+          {
+            "code": "e",
+            "value": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Crew, Amanda,"
+          },
+          {
+            "code": "e",
+            "value": "näyttelijä"
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Nanjiani, Kumail,"
+          },
+          {
+            "code": "e",
+            "value": "näyttelijä"
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Starr, Martin,"
+          },
+          {
+            "code": "e",
+            "value": "näyttelijä"
+          }
+        ]
+      },
+      {
+        "tag": "SID",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "2351903"
+          },
+          {
+            "code": "b",
+            "value": "helme"
+          }
+        ],
+        "ind1": " ",
+        "ind2": " "
+      }
+    ]
+  }
+]

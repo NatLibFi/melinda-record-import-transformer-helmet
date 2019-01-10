@@ -48,7 +48,7 @@ export default async () => {
 			{tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}]}
 		]),
 		await EmptyFields(),
-		await IsbnIssn(),
+		await IsbnIssn({hyphenateISBN: true}),
 		await SubfieldExclusion([
 			{tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/}]}
 		]),
