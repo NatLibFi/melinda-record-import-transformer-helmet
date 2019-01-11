@@ -28,32 +28,19 @@
 
 import fs from 'fs';
 import path from 'path';
-import chai, {expect} from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import * as testContext from './transform';
+import {expect} from 'chai';
+import {MarcRecord} from '@natlibfi/marc-record';
+import * as testContext from './create-material-fields';
 
-chai.use(sinonChai);
+const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/create-material-fields');
 
-const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/transform');
-
-describe('transform', () => {
-	beforeEach(() => {
-		// 008 has current date in it
-		testContext.default.__Rewire__('moment', sinon.fake.returns({
-			format: sinon.fake.returns('000000')
-		}));
-	});
-
-	afterEach(() => {
-		testContext.default.__ResetDependency__('moment');
-	});
-
+describe('create-material-fields', () => {
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const records = await testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
-			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
-			expect(records.map(r => r.toObject())).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));			
+			const fields = testContext.default(record);
+
+			expect(JSON.stringify(fields, undefined, 2)).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});
 	});
 });

@@ -37,7 +37,11 @@ export default function (record) {
 		return createElectronicRecording();
 	}
 
-	const f007 = {tag: '007'};
+	const f007 = {tag: '007'};	
+	const f008 = {
+		tag: '008',
+		value: record.varFields.find(f => f.marcTag === '008').content
+	};
 
 	switch (materialType) {
 		case 'h':
@@ -60,9 +64,9 @@ export default function (record) {
 			update008([{index: 23, value: 'o'}]);
 			f007.value = create007Value({len: 2, i0: 'c', i1: 'r'});
 			break;
-		case '4':
+		/*case '4':
 			f007.value = create007Value({len: 14, i0: 's', i1: 's', i3: 'l', i6: 'j', i10: 'p'});
-			break;
+			break;*/
 		case 's':
 			update008([{index: 23, value: '|'}, {index: 26, value: '|'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: '|', i4: 'g', i5: 'a'});
@@ -70,12 +74,12 @@ export default function (record) {
 		case 'a':
 			f007.value = create007Value({len: 6, i0: 'k'});
 			break;
-		case '6':
+		/*case '6':
 			f007.value = create007Value({len: 14, i0: 's', i1: 'd', i3: 'b', i6: 'e', i10: 'p'});
-			break;
-		case 'n':
+			break;*/
+		/*case 'n':
 			f007.value = create007Value({len: 2, i0: 'f', i1: 'b'});
-			break;
+			break;*/
 		case 'c':
 			f007.value = create007Value({len: 6, i0: 'k', i1: 'l'});
 			break;
@@ -93,13 +97,13 @@ export default function (record) {
 		case '2':
 			f007.value = create007Value({len: 8, i0: 'a'});
 			break;
-		case 'e':
+		/*case 'e':
 			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
-			break;
-		case 'j':
+			break;*/
+		/*case 'j':
 			f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
-			break;
+			break;*/
 		case 'r':
 			update008([{index: 33, value: 'g'}]);
 			f007.value = create007Value({len: 2, i0: 'z', i1: 'u'});
@@ -109,7 +113,7 @@ export default function (record) {
 	}
 
 	if (f007.value) {
-		return [f007];
+		return [f007], f008;
 	}
 
 	function create007Value(opts) {
@@ -167,7 +171,6 @@ export default function (record) {
 	}
 
 	function update008(values) {
-		const f008 = record.get(/^008$/).shift();
 		const chars = f008.value.split('');
 
 		values.forEach(({index, value}) => {

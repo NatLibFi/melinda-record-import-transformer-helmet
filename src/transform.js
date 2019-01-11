@@ -44,9 +44,9 @@ export default async function (stream) {
 		const marcRecord = convertToMARC();
 
 		/* Order is significant! */
-		handleLeader();
-		handle008();
+		handleLeader();		
 		handle007();
+		handle008();
 		handle020();
 		handle037();
 		handle130();
@@ -145,15 +145,24 @@ export default async function (stream) {
 				const fields = createMaterialFields(record) || [];
 
 				fields.forEach(f => {
-					if (f.tag === '006') {
-						const f006 = marcRecord.get(/^006$/).shift();
+					switch (f.tag) {
+						case '008':
+							const f008 = marcRecord.get(/^008$/).shift();
+							f008.value = f.value;
+							break;
+						case '006':
+							const f006 = marcRecord.get(/^006$/).shift();
+							
+							if (f006) {
+								marcRecord.removeField(f006);
+							}
 
-						if (f006) {
-							marcRecord.removeField(f006);
-						}
+							marcRecord.insertField(f);
+							break;
+						case '007':
+							marcRecord.insertField(f);
+							break;
 					}
-
-					marcRecord.insertField(f);
 				});
 			}
 		}
