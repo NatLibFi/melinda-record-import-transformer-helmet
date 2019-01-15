@@ -47,8 +47,6 @@ describe('validate', () => {
 			const result = await validate([record], true);
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			fs.writeFileSync('tmp.json', JSON.stringify(result, undefined, 2));
-
 			expect(JSON.stringify(result, undefined, 2)).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});
 	});

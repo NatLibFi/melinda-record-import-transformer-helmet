@@ -2,19 +2,11 @@
   {
     "record": {
       "_validationOptions": {},
-      "leader": "00000nam  22002534i 4500",
+      "leader": "00000nam  22000004i 4500",
       "fields": [
         {
-          "tag": "003",
-          "value": "FI-BTJ"
-        },
-        {
-          "tag": "005",
-          "value": "20160223013110"
-        },
-        {
           "tag": "008",
-          "value": "181205s2015    sw ||||j^    |00| f|per|c"
+          "value": "190115s2016    xxk|||| ^    |00| f|eng|c"
         },
         {
           "tag": "020",
@@ -23,7 +15,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "978-91-87359-19-4"
+              "value": "978-15098-1589-0"
             },
             {
               "code": "q",
@@ -38,7 +30,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "FI-He"
+              "value": "FI-Vantaa"
             },
             {
               "code": "b",
@@ -57,22 +49,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "per"
-            }
-          ]
-        },
-        {
-          "tag": "084",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "85.2833"
-            },
-            {
-              "code": "2",
-              "value": "ykl"
+              "value": "eng"
             }
           ]
         },
@@ -83,7 +60,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "Muhammadi, Muhammad Husayn,"
+              "value": "Cleeves, Ann,"
             },
             {
               "code": "e",
@@ -94,30 +71,15 @@
         {
           "tag": "245",
           "ind1": "1",
-          "ind2": "0",
+          "ind2": "4",
           "subfields": [
             {
               "code": "a",
-              "value": "Mah va mahi ="
-            },
-            {
-              "code": "b",
-              "value": "The moon and the fish /"
+              "value": "The crow trap /"
             },
             {
               "code": "c",
-              "value": "nivisandah: Muhammad Husayn Muhammadi ; tasvirgar: 'Ali Mumini."
-            }
-          ]
-        },
-        {
-          "tag": "246",
-          "ind1": "3",
-          "ind2": "1",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Moon and the fish"
+              "value": "Ann Cleeves."
             }
           ]
         },
@@ -128,15 +90,15 @@
           "subfields": [
             {
               "code": "a",
-              "value": "Stockholm :"
+              "value": "London :"
             },
             {
               "code": "b",
-              "value": "Ferdosi,"
+              "value": "Pan Books,"
             },
             {
               "code": "c",
-              "value": "2015."
+              "value": "2016."
             }
           ]
         },
@@ -147,34 +109,11 @@
           "subfields": [
             {
               "code": "a",
-              "value": "16 sivua :"
-            },
-            {
-              "code": "b",
-              "value": "kuvitettu ;"
+              "value": "551 sivua ;"
             },
             {
               "code": "c",
-              "value": "20 x 20 cm"
-            }
-          ]
-        },
-        {
-          "tag": "336",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "stillkuva"
-            },
-            {
-              "code": "b",
-              "value": "sti"
-            },
-            {
-              "code": "2",
-              "value": "rdacontent"
+              "value": "20 cm"
             }
           ]
         },
@@ -217,13 +156,43 @@
           ]
         },
         {
-          "tag": "500",
+          "tag": "338",
           "ind1": " ",
           "ind2": " ",
           "subfields": [
             {
               "code": "a",
-              "value": "Kirjan kieli on dari ."
+              "value": "nide"
+            },
+            {
+              "code": "b",
+              "value": "nc"
+            },
+            {
+              "code": "2",
+              "value": "rdacarrier"
+            }
+          ]
+        },
+        {
+          "tag": "490",
+          "ind1": "0",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Vera Stanhope series"
+            }
+          ]
+        },
+        {
+          "tag": "520",
+          "ind1": "8",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Three very different women come together at isolated Baikie’s Cottage on the North Pennines, to complete an environmental survey. Three women who each know the meaning of betrayal . . . Rachael, the team leader, is still reeling after a double betrayal by her lover and boss, Peter Kemp. Anne, a botanist, sees the survey as a chance to indulge in a little deception of her own. And then there is Grace, a strange, uncommunicative young woman, hiding plenty of her own secrets. Rachael is the first to arrive at the cottage, where she discovers the body of her friend, Bella Furness. Bella, it appears, has committed suicide – a verdict Rachael refuses to accept. When another death occurs, a fourth woman enters the picture – the unconventional Detective Inspector Vera Stanhope . . ."
             }
           ]
         },
@@ -234,37 +203,22 @@
           "subfields": [
             {
               "code": "a",
-              "value": "persia."
+              "value": "englanti."
             }
           ]
         },
         {
-          "tag": "650",
-          "ind1": " ",
-          "ind2": "7",
+          "tag": "600",
+          "ind1": "1",
+          "ind2": "4",
           "subfields": [
             {
               "code": "a",
-              "value": "kalat"
+              "value": "Stanhope, Vera,"
             },
             {
-              "code": "2",
-              "value": "kaunokki"
-            }
-          ]
-        },
-        {
-          "tag": "650",
-          "ind1": " ",
-          "ind2": "7",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Kuu"
-            },
-            {
-              "code": "2",
-              "value": "kaunokki"
+              "code": "c",
+              "value": "(fiktiivinen hahmo)"
             }
           ]
         },
@@ -275,7 +229,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "lastenkirjallisuus"
+              "value": "poliisikirjallisuus"
             },
             {
               "code": "2",
@@ -290,7 +244,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "kuvakirjat"
+              "value": "rikoskirjallisuus"
             },
             {
               "code": "2",
@@ -305,7 +259,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "kertomukset"
+              "value": "romaanit"
             },
             {
               "code": "2",
@@ -335,11 +289,41 @@
           "subfields": [
             {
               "code": "a",
-              "value": "darinkielinen kirjallisuus"
+              "value": "englanninkielinen kirjallisuus"
             },
             {
               "code": "2",
               "value": "slm/fin"
+            }
+          ]
+        },
+        {
+          "tag": "830",
+          "ind1": " ",
+          "ind2": "0",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Vera Stanhope ;"
+            },
+            {
+              "code": "v",
+              "value": "1."
+            }
+          ]
+        },
+        {
+          "tag": "SID",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "1985460"
+            },
+            {
+              "code": "b",
+              "value": "helme"
             }
           ]
         }
@@ -362,7 +346,7 @@
       },
       {
         "description": "Validates ISBN and ISSN values",
-        "state": "fixed"
+        "state": "valid"
       },
       {
         "description": "Checks that the record does not contain the configured subfields",

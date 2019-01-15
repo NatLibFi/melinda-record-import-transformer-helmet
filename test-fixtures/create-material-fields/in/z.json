@@ -1,0 +1,723 @@
+  {
+    "id": "2354217",
+    "materialType": {
+      "code": "z  "
+    },
+    "catalogDate": "2018-10-11",
+    "varFields": [
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Gay, Roxane,"
+          },
+          {
+            "tag": "e",
+            "content": "toimittaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Hirsch, Aubrey,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "OverDrive, Inc.,"
+          },
+          {
+            "tag": "e",
+            "content": "jakaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Overdrive"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "e-kirjat"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "raiskaus"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "uhrit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "seksuaalinen hyväksikäyttö"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "sukupuolinen häirintä"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "naisviha"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "feminismi"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "naisen asema"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "esseet"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "978-0-06-241350-5"
+          },
+          {
+            "tag": "q",
+            "content": "epub"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "359 "
+          },
+          {
+            "tag": "b",
+            "content": "375"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "14"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Electronic book."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "EPUB-julkaisu"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "506",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Käyttöoikeus HelMet-kirjastokortilla"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "530",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Julkaistu myös painettuna."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "533",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Electronic reproduction."
+          },
+          {
+            "tag": "b",
+            "content": "New York"
+          },
+          {
+            "tag": "c",
+            "content": "HarperCollins"
+          },
+          {
+            "tag": "d",
+            "content": "2018"
+          },
+          {
+            "tag": "n",
+            "content": "Available via World Wide Web."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "538",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Internet-yhteys, www-selain ; lukuohjelma"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanti"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "574",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tero.isosaari()hel.fi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "E-KIRJA / E-BOK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9780062413505"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "New York :"
+          },
+          {
+            "tag": "b",
+            "content": "HarperCollins,"
+          },
+          {
+            "tag": "c",
+            "content": "2018."
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Sähkökirja (EPUB 6407 kt; vastaa painettuna 368 sivua)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "teksti"
+          },
+          {
+            "tag": "b",
+            "content": "txt"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tietokonekäyttöinen"
+          },
+          {
+            "tag": "b",
+            "content": "c"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "verkkoaineisto"
+          },
+          {
+            "tag": "b",
+            "content": "cr"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "347",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "text file"
+          },
+          {
+            "tag": "2",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "380",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "eBook"
+          },
+          {
+            "tag": "2",
+            "content": "tlcgt"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "385",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "General"
+          },
+          {
+            "tag": "2",
+            "content": "tlctarget"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "0",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Not that bad :"
+          },
+          {
+            "tag": "b",
+            "content": "dispatches from rape culture /"
+          },
+          {
+            "tag": "c",
+            "content": "edited by Roxane Gay ; [kirjoittajat:] Aubrey Hirsch [ja 28 muuta]."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "246",
+        "ind1": "3",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Dispatches from rape culture"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "TLC"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20180328220245.0"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "006",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "m        d        "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "007",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "cr unu||||||||"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "180328s2018    xxu|||| o    |||| ||eng dnam4c "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(OCoLC)1031373073"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "037",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "3F27DB79-1295-4DA8-B2F6-A57916414E00"
+          },
+          {
+            "tag": "b",
+            "content": "OverDrive, Inc."
+          },
+          {
+            "tag": "n",
+            "content": "http://www.overdrive.com"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "TLC"
+          },
+          {
+            "tag": "c",
+            "content": "TLC"
+          },
+          {
+            "tag": "d",
+            "content": "TLC"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          },
+          {
+            "tag": "d",
+            "content": "FI-He"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "776",
+        "ind1": "0",
+        "ind2": "8",
+        "subfields": [
+          {
+            "tag": "i",
+            "content": "Painettu;"
+          },
+          {
+            "tag": "z",
+            "content": "9780062413512"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "z",
+            "content": "Linkki e-kirjaan"
+          },
+          {
+            "tag": "u",
+            "content": "http://link.overdrive.com/?websiteID=100197&titleID=3287727"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "z",
+            "content": "Linkki tekstinäytteeseen"
+          },
+          {
+            "tag": "u",
+            "content": "https://samples.overdrive.com/?crid=3f27db79-1295-4da8-b2f6-a57916414e00&.epub-sample.overdrive.com"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nam  22004454c 4500"
+      }
+    ]
+  }

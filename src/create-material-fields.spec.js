@@ -29,7 +29,6 @@
 import fs from 'fs';
 import path from 'path';
 import {expect} from 'chai';
-import {MarcRecord} from '@natlibfi/marc-record';
 import * as testContext from './create-material-fields';
 
 const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/create-material-fields');
@@ -37,8 +36,9 @@ const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/create-material-fie
 describe('create-material-fields', () => {
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));			
+			const record = JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
 			const fields = testContext.default(record);
+			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
 			expect(JSON.stringify(fields, undefined, 2)).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});

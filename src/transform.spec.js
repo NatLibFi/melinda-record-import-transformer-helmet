@@ -53,6 +53,7 @@ describe('transform', () => {
 		it(file, async () => {
 			const records = await testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
+
 			expect(records.map(r => r.toObject())).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
 		});
 	});

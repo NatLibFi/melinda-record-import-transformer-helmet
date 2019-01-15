@@ -37,7 +37,7 @@ export default function (record) {
 		return createElectronicRecording();
 	}
 
-	const f007 = {tag: '007'};	
+	const f007 = {tag: '007'};
 	const f008 = {
 		tag: '008',
 		value: record.varFields.find(f => f.marcTag === '008').content
@@ -45,7 +45,7 @@ export default function (record) {
 
 	switch (materialType) {
 		case 'h':
-			f007.value = create007Value({len: 9, i0: 'v', i1: 'd', i4: 's', i10: 'm'});
+			f007.value = create007Value({len: 9, i0: 'v', i1: 'd', i4: 's'});
 			break;
 		case '3':
 			f007.value = create007Value({len: 14, i0: 's', i1: 'd', i3: 'f', i6: 'g', i10: 'm'});
@@ -58,15 +58,15 @@ export default function (record) {
 			break;
 		case 'z':
 			update008([{index: 23, value: 'o'}]);
-			f007.value = create007Value({len: 2, i0: 'c', i1: 'r'});
+			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
 			break;
 		case 'y':
 			update008([{index: 23, value: 'o'}]);
-			f007.value = create007Value({len: 2, i0: 'c', i1: 'r'});
+			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
 			break;
-		/*case '4':
+		/* Case '4':
 			f007.value = create007Value({len: 14, i0: 's', i1: 's', i3: 'l', i6: 'j', i10: 'p'});
-			break;*/
+			break; */
 		case 's':
 			update008([{index: 23, value: '|'}, {index: 26, value: '|'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: '|', i4: 'g', i5: 'a'});
@@ -74,22 +74,22 @@ export default function (record) {
 		case 'a':
 			f007.value = create007Value({len: 6, i0: 'k'});
 			break;
-		/*case '6':
+			/* Case '6':
 			f007.value = create007Value({len: 14, i0: 's', i1: 'd', i3: 'b', i6: 'e', i10: 'p'});
-			break;*/
-		/*case 'n':
+			break; */
+		/* case 'n':
 			f007.value = create007Value({len: 2, i0: 'f', i1: 'b'});
-			break;*/
+			break; */
 		case 'c':
 			f007.value = create007Value({len: 6, i0: 'k', i1: 'l'});
 			break;
-		case 'f':
+			/* Case 'f':
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'f', i4: 'b'});
-			break;
-		case 'd':
+			break; */
+		/* case 'd':
 			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
-			break;
+			break; */
 		case 'x':
 			update008([{index: 26, value: 'j'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
@@ -97,13 +97,13 @@ export default function (record) {
 		case '2':
 			f007.value = create007Value({len: 8, i0: 'a'});
 			break;
-		/*case 'e':
+			/* Case 'e':
 			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
-			break;*/
-		/*case 'j':
+			break; */
+		/* case 'j':
 			f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
-			break;*/
+			break; */
 		case 'r':
 			update008([{index: 33, value: 'g'}]);
 			f007.value = create007Value({len: 2, i0: 'z', i1: 'u'});
@@ -113,14 +113,14 @@ export default function (record) {
 	}
 
 	if (f007.value) {
-		return [f007], f008;
+		return [f007, f008];
 	}
 
 	function create007Value(opts) {
 		const value = Array(opts.len).fill('|');
 
 		Object.keys(opts).filter(k => k.startsWith('i')).forEach(k => {
-			const index = k[1];
+			const index = Number(k.replace(/^i/, ''));
 			value[index] = opts[k];
 		});
 
@@ -129,7 +129,7 @@ export default function (record) {
 
 	function createElectronicVideo() {
 		const valuesFirst007 = Array(9).fill('|');
-		const valuesSecond007 = Array(9).fill('|');
+		const valuesSecond007 = Array(14).fill('|');
 		const values006 = Array(18).fill('|');
 
 		values006[0] = 'm';

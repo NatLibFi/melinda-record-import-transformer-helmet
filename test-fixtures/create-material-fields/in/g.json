@@ -1,0 +1,756 @@
+{
+    "id": "2327907",
+    "materialType": {
+      "code": "g  "
+    },
+    "catalogDate": "2018-12-03",
+    "varFields": [
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Kauffman, Martha,"
+          },
+          {
+            "tag": "e",
+            "content": "alkuperäisidean luoja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Morris, Howard J.,"
+          },
+          {
+            "tag": "e",
+            "content": "alkuperäisidean luoja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Fonda, Jane,"
+          },
+          {
+            "tag": "e",
+            "content": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Tomlin, Lily,"
+          },
+          {
+            "tag": "e",
+            "content": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Sheen, Martin,"
+          },
+          {
+            "tag": "e",
+            "content": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Waterston, Sam,"
+          },
+          {
+            "tag": "e",
+            "content": "näyttelijä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Skydance Productions,"
+          },
+          {
+            "tag": "e",
+            "content": "tuotantoyhtiö."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "648",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "2010-luku"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ihmissuhteet"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "aviopuolisot"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ystävyys"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "naiset"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Yhdysvallat"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "televisiosarjat"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "draamasarjat"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "komediasarjat"
+          },
+          {
+            "tag": "2",
+            "content": "kaunokki"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "024",
+        "ind1": "3",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "7330031004160"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "028",
+        "ind1": "4",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "b",
+            "content": "Sony Pictures Home Entertainment"
+          },
+          {
+            "tag": "a",
+            "content": "52GSD3100416"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "89"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "506",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Kielletty alle 12-vuotiailta."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Sarjan luoneet Marta Kauffman, Howard J. Morris."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Lainausoikeus."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Ääniraita englanti, ääniraita ranska, ääniraita saksa, ääniraita italia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "505",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Lisämateriaali: Gag reel."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "511",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Pääosissa: Jane Fonda, Lily Tomlin, Sam Waterston, Martin Sheen."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "534",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "p",
+            "content": "Alun perin julkaistu:"
+          },
+          {
+            "tag": "c",
+            "content": "Skydance Productions, 2015-2016."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Tekstitys: suomi, svenska, norja, tanska, hollanti, ranska, saksa, italia, puola sekä englanti kuulovammaisille, ääniraita: monikielinen. - Kielimerkinnät kannesta."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "577",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "K.Pesonen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "588",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Nimeke kannesta"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "DVDLEVY / DVDSKIVA"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "4517754"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "[Helsinki] :"
+          },
+          {
+            "tag": "b",
+            "content": "Universal Sony Pictures Home Entertainment Nordic AB,"
+          },
+          {
+            "tag": "c",
+            "content": "[2017]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "3 DVD-videolevyä (6 h 14 min) :"
+          },
+          {
+            "tag": "b",
+            "content": "värillinen, ääni ;"
+          },
+          {
+            "tag": "c",
+            "content": "12 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaksiulotteinen liikkuva kuva"
+          },
+          {
+            "tag": "b",
+            "content": "tdi"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "video"
+          },
+          {
+            "tag": "b",
+            "content": "v"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "videolevy"
+          },
+          {
+            "tag": "b",
+            "content": "vd"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Grace and Frankie."
+          },
+          {
+            "tag": "n",
+            "content": "Season two /"
+          },
+          {
+            "tag": "c",
+            "content": "Skydance Productions."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "130",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Grace and Frankie."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-BTJ"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20180329011308.8"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "007",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "vd cva|z|"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "180329s2017||||fi ||| g     |    v|mul|cngm4i "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-BTJ"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "eng"
+          },
+          {
+            "tag": "a",
+            "content": "fre"
+          },
+          {
+            "tag": "a",
+            "content": "ger"
+          },
+          {
+            "tag": "a",
+            "content": "ita"
+          },
+          {
+            "tag": "j",
+            "content": "fin"
+          },
+          {
+            "tag": "j",
+            "content": "swe"
+          },
+          {
+            "tag": "j",
+            "content": "dan"
+          },
+          {
+            "tag": "j",
+            "content": "nor"
+          },
+          {
+            "tag": "j",
+            "content": "eng"
+          },
+          {
+            "tag": "j",
+            "content": "dut"
+          },
+          {
+            "tag": "j",
+            "content": "ger"
+          },
+          {
+            "tag": "j",
+            "content": "ita"
+          },
+          {
+            "tag": "j",
+            "content": "pol"
+          },
+          {
+            "tag": "h",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "046",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "m"
+          },
+          {
+            "tag": "k",
+            "content": "2015"
+          },
+          {
+            "tag": "l",
+            "content": "2016"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "049",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "K12"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "84.2"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000ngm a22005534ia4500"
+      }
+    ]
+  }
