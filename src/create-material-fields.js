@@ -156,6 +156,7 @@ export default function (record) {
 
 		values006[0] = 'm';
 		values006[6] = 'o';
+		values006[9] = 'h';
 
 		valuesFirst007[0] = 's';
 		valuesFirst007[1] = 'r';
