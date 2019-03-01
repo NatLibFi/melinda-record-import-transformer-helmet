@@ -35,7 +35,7 @@
 		"@natlibfi/marc-record": "^4.0.0",
 		"@natlibfi/marc-record-validate": "^4.0.0",
 		"@natlibfi/marc-record-validators-melinda": "^6.0.0",
-		"@natlibfi/melinda-record-import-commons": "^2.0.0",
+		"@natlibfi/melinda-record-import-commons": "^2.2.0",
 		"csv": "^3.1.0",
 		"csv-parse": "^3.0.0",
 		"get-stream": "^4.0.0",

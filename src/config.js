@@ -28,10 +28,10 @@
 
 import {readEnvironmentVariable} from '@natlibfi/melinda-record-import-commons';
 
+export const BLOB_ID = readEnvironmentVariable('BLOB_ID');
+export const API_URL = readEnvironmentVariable('API_URL');
+export const PROFILE_ID = readEnvironmentVariable('PROFILE_ID');
+export const API_USERNAME = readEnvironmentVariable('API_USERNAME');
+export const API_PASSWORD = readEnvironmentVariable('API_PASSWORD');
 export const AMQP_URL = readEnvironmentVariable('AMQP_URL');
-
-export const RECORD_IMPORT_BLOB_ID = readEnvironmentVariable('RECORD_IMPORT_BLOB_ID');
-export const RECORD_IMPORT_URL = readEnvironmentVariable('RECORD_IMPORT_URL');
-export const RECORD_IMPORT_PROFILE = readEnvironmentVariable('RECORD_IMPORT_PROFILE');
-export const RECORD_IMPORT_USERNAME = readEnvironmentVariable('RECORD_IMPORT_USERNAME');
-export const RECORD_IMPORT_PASSWORD = readEnvironmentVariable('RECORD_IMPORT_PASSWORD');
+export const ABORT_ON_INVALID_RECORDS = readEnvironmentVariable('ABORT_ON_INVALID_RECORDS');

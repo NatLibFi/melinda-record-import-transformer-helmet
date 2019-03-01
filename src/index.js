@@ -30,8 +30,7 @@ import transform from './transform';
 import createValidateFunction from './validate';
 import {TransformerUtils, registerSignalHandlers, createLogger, startHealthCheckService} from '@natlibfi/melinda-record-import-commons';
 
-import {RECORD_IMPORT_URL, RECORD_IMPORT_BLOB_ID, RECORD_IMPORT_PROFILE,
-	RECORD_IMPORT_USERNAME, RECORD_IMPORT_PASSWORD, AMQP_URL} from './config';
+import {API_URL, BLOB_ID, PROFILE_ID, API_USERNAME, API_PASSWORD, AMQP_URL, ABORT_ON_INVALID_RECORDS} from './config';
 
 start();
 
@@ -44,30 +43,35 @@ async function start() {
 
 	const stopHealthCheckService = startHealthCheckService(process.env.HEALTH_CHECK_PORT);
 
+	process.on('SIGINT', () => {
+		stopHealthCheckService();
+	});
+
 	try {
 		Logger.log('info', 'Starting melinda-record-import-transformer-helmet');
 		await startTransformation({
 			callback: transformCallback,
-			blobId: RECORD_IMPORT_BLOB_ID,
-			profile: RECORD_IMPORT_PROFILE,
-			apiURL: RECORD_IMPORT_URL,
-			apiUsername: RECORD_IMPORT_USERNAME,
-			apiPassword: RECORD_IMPORT_PASSWORD,
-			amqpURL: AMQP_URL
+			blobId: BLOB_ID,
+			profile: PROFILE_ID,
+			apiURL: API_URL,
+			apiUsername: API_USERNAME,
+			apiPassword: API_PASSWORD,
+			amqpURL: AMQP_URL,
+			abortOnInvalid: ABORT_ON_INVALID_RECORDS
 		});
 
 		stopHealthCheckService();
 		process.exit();
 	} catch (err) {
 		stopHealthCheckService();
-		Logger.error(err);
+		Logger.error(err.stack);
 		process.exit(-1);
 	}
 
 	async function transformCallback(response) {
 		Logger.log('debug', 'Transforming records');
 
-		const records = await transform(response.body);
+		const records = await transform(response);
 		const validate = await createValidateFunction();
 
 		Logger.log('debug', 'Validating records');
