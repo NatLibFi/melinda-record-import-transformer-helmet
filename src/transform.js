@@ -29,13 +29,15 @@
 import moment from 'moment';
 import getStream from 'get-stream';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {createLogger} from '@natlibfi/melinda-record-import-commons';
+import {Utils} from '@natlibfi/melinda-commons';
 import createMaterialFields from './create-material-fields';
+
+const {createLogger} = Utils;
 
 export default async function (stream) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
-	const Logger = createLogger();	
+	const Logger = createLogger();
 	const records = await JSON.parse(await getStream(stream));
 
 	Logger.log('debug', `Starting conversion of ${records.length} records...`);
