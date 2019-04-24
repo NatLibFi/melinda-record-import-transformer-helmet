@@ -21,7 +21,7 @@
 	},
 	"scripts": {
 		"start": "node dist/index.js",
-		"cli": "node dist/cli.js",		
+		"cli": "node dist/cli.js",
 		"check-deps": "npm-check;exit 0",
 		"lint": "eslint --fix src",
 		"test:base": "cross-env NODE_ENV=test mocha --require @babel/register",
