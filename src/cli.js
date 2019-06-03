@@ -4,7 +4,7 @@
 *
 * Helmet record transformer for the Melinda record batch import system
 *
-* Copyright (C) 2018 University Of Helsinki (The National Library Of Finland)
+* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
 *
 * This file is part of melinda-record-import-transformer-helmet
 *
@@ -26,13 +26,15 @@
 *
 */
 
-import transform from './transform';
-import createValidateFunction from './validate';
-import {TransformerUtils} from '@natlibfi/melinda-record-import-commons';
+import transformCallback from './transform';
+import createValidator from './validate';
+import {Transformer} from '@natlibfi/melinda-record-import-commons';
+
+const {runCLI} = Transformer;
 
 run();
 
 async function run() {
-	const validate = await createValidateFunction();
-	TransformerUtils.cli('melinda-record-import-transformer-helmet', transform, validate);
+	const validateCallback = await createValidator();
+	runCLI({name: 'melinda-record-import-transformer-helmet', transformCallback, validateCallback});
 }

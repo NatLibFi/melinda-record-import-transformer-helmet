@@ -1,10 +1,10 @@
 [
   {
-    "leader": "00000nam  22000004i 4500",
+    "leader": "00000nim  22000004i 4500",
     "fields": [
       {
         "tag": "001",
-        "value": "9789511331353"
+        "value": "9789513196820"
       },
       {
         "tag": "007",
@@ -12,7 +12,7 @@
       },
       {
         "tag": "008",
-        "value": "000000s2018    fi ||||||||| |||||||fin||"
+        "value": "000000s2017    fi ||||||||| |||| | fin||"
       },
       {
         "tag": "020",
@@ -21,11 +21,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "978-951-1-33135-3"
+            "value": "978-951-31-9682-0"
           },
           {
             "code": "q",
-            "value": "ePub"
+            "value": "mp3"
           }
         ]
       },
@@ -50,7 +50,7 @@
       },
       {
         "tag": "041",
-        "ind1": "1",
+        "ind1": "0",
         "ind2": " ",
         "subfields": [
           {
@@ -58,8 +58,8 @@
             "value": "fin"
           },
           {
-            "code": "h",
-            "value": "eng"
+            "code": "d",
+            "value": "fin"
           }
         ]
       },
@@ -70,7 +70,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "99"
+            "value": "05"
           }
         ]
       },
@@ -81,18 +81,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "99.1"
-          }
-        ]
-      },
-      {
-        "tag": "093",
-        "ind1": " ",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "99.1"
+            "value": "14.8"
           }
         ]
       },
@@ -103,7 +92,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "99.1"
+            "value": "14.8"
           }
         ]
       },
@@ -114,7 +103,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "993"
+            "value": "1.4 "
+          },
+          {
+            "code": "b",
+            "value": "128.32"
           }
         ]
       },
@@ -125,26 +118,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "Obama, Michelle,"
+            "value": "Helin, Sari,"
           },
           {
             "code": "e",
             "value": "kirjoittaja."
-          }
-        ]
-      },
-      {
-        "tag": "240",
-        "ind1": "1",
-        "ind2": "0",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Becoming,"
-          },
-          {
-            "code": "l",
-            "value": "suomi"
           }
         ]
       },
@@ -155,11 +133,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "Minun tarinani /"
+            "value": "Elämää tehosekoittimessa ja muita kirjoituksia /"
           },
           {
             "code": "c",
-            "value": "Michelle Obama ; suomentanut Ilkka Rekiaro."
+            "value": "Sari Helin."
           }
         ]
       },
@@ -174,11 +152,11 @@
           },
           {
             "code": "b",
-            "value": "Kustannusosakeyhtiö Otava,"
+            "value": "Tammi,"
           },
           {
             "code": "c",
-            "value": "2018"
+            "value": "[2017]"
           }
         ]
       },
@@ -189,7 +167,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "1 verkkoaineisto"
+            "value": "1 verkkoaineisto (MP3  kb; kesto 3 h 10 min)"
           }
         ]
       },
@@ -200,11 +178,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "teksti"
+            "value": "puhe"
           },
           {
             "code": "b",
-            "value": "txt"
+            "value": "spw"
           },
           {
             "code": "2",
@@ -257,7 +235,40 @@
         "subfields": [
           {
             "code": "a",
-            "value": "EPUB-julkaisu"
+            "value": "MP3-julkaisu"
+          }
+        ]
+      },
+      {
+        "tag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Koottu kirjoittajan Anna-lehteen, Kotivinkkiin, Kaksplussaan ja blogiin kirjoittamistaan teksteistä."
+          }
+        ]
+      },
+      {
+        "tag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Kannessa myös: Huono Äiti."
+          }
+        ]
+      },
+      {
+        "tag": "511",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Lukija: Meri Nenonen"
           }
         ]
       },
@@ -268,7 +279,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "Julkaistu myös painettuna"
+            "value": "Myös CD-äänikirjana"
           }
         ]
       },
@@ -323,18 +334,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "E-KIRJA / E-BOK"
-          }
-        ]
-      },
-      {
-        "tag": "600",
-        "ind1": "1",
-        "ind2": "4",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Obama, Michelle."
+            "value": "E-ÄÄNITE / E-AUDIO"
           }
         ]
       },
@@ -360,7 +360,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "aviopuolisot"
+            "value": "arki"
           },
           {
             "code": "2",
@@ -375,7 +375,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "presidentit"
+            "value": "lapsiperheet"
           },
           {
             "code": "2",
@@ -390,7 +390,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "juristit"
+            "value": "ajankäyttö"
           },
           {
             "code": "2",
@@ -405,7 +405,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "asianajajat"
+            "value": "vanhemmuus"
           },
           {
             "code": "2",
@@ -420,7 +420,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "henkilöhistoria"
+            "value": "äidit"
           },
           {
             "code": "2",
@@ -435,7 +435,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "perhe-elämä"
+            "value": "aviovaimot"
           },
           {
             "code": "2",
@@ -444,62 +444,17 @@
         ]
       },
       {
-        "tag": "650",
+        "tag": "655",
         "ind1": " ",
         "ind2": "7",
         "subfields": [
           {
             "code": "a",
-            "value": "julkisuus"
+            "value": "äänikirjat"
           },
           {
             "code": "2",
-            "value": "ysa"
-          }
-        ]
-      },
-      {
-        "tag": "650",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "valtiovierailut"
-          },
-          {
-            "code": "2",
-            "value": "ysa"
-          }
-        ]
-      },
-      {
-        "tag": "650",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "poliittinen kulttuuri"
-          },
-          {
-            "code": "2",
-            "value": "ysa"
-          }
-        ]
-      },
-      {
-        "tag": "651",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Yhdysvallat"
-          },
-          {
-            "code": "2",
-            "value": "ysa"
+            "value": "slm/fin"
           }
         ]
       },
@@ -525,7 +480,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "muistelmat"
+            "value": "huumori"
           },
           {
             "code": "2",
@@ -540,11 +495,11 @@
         "subfields": [
           {
             "code": "a",
-            "value": "Rekiaro, Ilkka,"
+            "value": "Nenonen, Meri,"
           },
           {
             "code": "e",
-            "value": "kääntäjä."
+            "value": "lukija."
           }
         ]
       },
@@ -555,11 +510,11 @@
         "subfields": [
           {
             "code": "i",
-            "value": "Painettu:"
+            "value": "CD-äänikirja:"
           },
           {
             "code": "z",
-            "value": "9789511321224"
+            "value": "9789513197872"
           }
         ]
       },
@@ -570,11 +525,11 @@
         "subfields": [
           {
             "code": "u",
-            "value": "https://www.ellibslibrary.com/helmet/9789511331353"
+            "value": "https://www.ellibslibrary.com/helmet/9789513196820"
           },
           {
             "code": "y",
-            "value": "Linkki e-kirjaan"
+            "value": "Linkki e-äänikirjaan"
           }
         ]
       },
@@ -583,7 +538,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "2373169"
+            "value": "2364053"
           },
           {
             "code": "b",

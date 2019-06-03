@@ -1,0 +1,456 @@
+  {
+    "id": "2292686",
+    "materialType": {
+      "code": "s  "
+    },
+    "catalogDate": "2018-09-03",
+    "varFields": [
+      {
+        "fieldTag": "b",
+        "marcTag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Klei Entertainment."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "videopelit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "konsolipelit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "seikkailupelit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "selviytymispelit"
+          },
+          {
+            "tag": "2",
+            "content": "ysa"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "024",
+        "ind1": "3",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "8023171042015"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "024",
+        "ind1": "8",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "CUSA04282"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "82"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1-2 pelaajaa, online: 2-6 pelaajaa. - Online-pelaaminen edellyttää maksullista Playstation Plus -palvelua."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "506",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Kielletty alle 12-vuotiailta."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "538",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "PlayStation 4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanti"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "588",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Nimeke levystä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "KONSOLIPELI / KONSOLSPEL"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "6855427"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "[Milano] :"
+          },
+          {
+            "tag": "b",
+            "content": "505 Games,"
+          },
+          {
+            "tag": "c",
+            "content": "[2018]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1 tietolevy :"
+          },
+          {
+            "tag": "b",
+            "content": "värillinen, ääni ;"
+          },
+          {
+            "tag": "c",
+            "content": "12 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaksiulotteinen liikkuva kuva"
+          },
+          {
+            "tag": "b",
+            "content": "tdi"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tietokoneohjelma"
+          },
+          {
+            "tag": "b",
+            "content": "cop"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tietokonekäyttöinen"
+          },
+          {
+            "tag": "b",
+            "content": "c"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tietolevy"
+          },
+          {
+            "tag": "b",
+            "content": "cd"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "0",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Don't starve :"
+          },
+          {
+            "tag": "b",
+            "content": "Mega pack : PlayStation 4 /"
+          },
+          {
+            "tag": "c",
+            "content": "developed by Klei Entertainment."
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "79.81"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-BTJ"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20180824092011.1"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "007",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "co cga||||||||"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "180604s2018    it     gq  g |      eng|cnmm4i "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-BTJ"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "049",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "K12"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "79.81"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "753",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "Sony PlayStation 4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nmm a22003854i 4500"
+      }
+    ]
+  }

@@ -4,7 +4,7 @@
 *
 * Helmet record transformer for the Melinda record batch import system
 *
-* Copyright (C) 2018 University Of Helsinki (The National Library Of Finland)
+* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
 *
 * This file is part of melinda-record-import-transformer-helmet
 *
@@ -29,8 +29,10 @@
 import moment from 'moment';
 import getStream from 'get-stream';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {createLogger} from '@natlibfi/melinda-record-import-commons';
+import {Utils} from '@natlibfi/melinda-commons';
 import createMaterialFields from './create-material-fields';
+
+const {createLogger} = Utils;
 
 export default async function (stream) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
@@ -38,6 +40,7 @@ export default async function (stream) {
 	const Logger = createLogger();
 	const records = await JSON.parse(await getStream(stream));
 
+	Logger.log('debug', `Starting conversion of ${records.length} records...`);
 	return Promise.all(records.map(convertRecord));
 
 	function convertRecord(record) {
@@ -45,8 +48,8 @@ export default async function (stream) {
 
 		/* Order is significant! */
 		handleLeader();
-		handle008();
 		handle007();
+		handle008();
 		handle020();
 		handle037();
 		handle130();
@@ -145,15 +148,20 @@ export default async function (stream) {
 				const fields = createMaterialFields(record) || [];
 
 				fields.forEach(f => {
-					if (f.tag === '006') {
+					if (f.tag === '008') {
+						const f008 = marcRecord.get(/^008$/).shift();
+						f008.value = f.value;
+					} else if (f.tag === '007') {
+						marcRecord.insertField(f);
+					} else if (f.tag === '006') {
 						const f006 = marcRecord.get(/^006$/).shift();
 
 						if (f006) {
 							marcRecord.removeField(f006);
 						}
-					}
 
-					marcRecord.insertField(f);
+						marcRecord.insertField(f);
+					}
 				});
 			}
 		}
@@ -190,8 +198,14 @@ export default async function (stream) {
 				const a = field.subfields.find(sf => sf.code === 'a' && /:/.test(sf.value));
 
 				if (a) {
-					const re = /^(.*):/.exec(a.value);
-					a.value = `${re[1].replace(/\s+$/, '')}.`;
+					const reComplex = /^(.[^:]*).*(\(.*\))/.exec(a.value);
+
+					if (reComplex) {
+						a.value = `${reComplex[1].replace(/\s+$/, '')} ${reComplex[2]}`;
+					} else {
+						const reSimple = /^(.[^:]*)/.exec(a.value);
+						a.value = `${reSimple[1].replace(/\s+$/, '')}.`;
+					}
 				}
 			});
 		}
@@ -204,52 +218,66 @@ export default async function (stream) {
 
 					if (a) {
 						if (b && b.value === 'elektroninen') {
-							marcRecord.removeSubfield(b, field);
-							a.value = '1 verkkoaineisto';
+							if (/^1 tekstitiedosto/i.test(a.value)) {
+								a.value = generateExtendDescr(a.value);
+								marcRecord.removeSubfield(b, field);
+							} else if (/^1 äänitiedosto/i.test(a.value)) {
+								a.value = generateExtendDescr(a.value);
+								marcRecord.removeSubfield(b, field);
 
-							if (a.value === '1 äänitiedosto') {
-								record.insertField({tag: '347', subfields: [
+								marcRecord.insertField({tag: '347', subfields: [
 									{code: 'a', value: '1 äänitiedosto'}
 								]});
-							}
+							} else if (/^1 videotiedosto/i.test(a.value)) {
+								a.value = generateExtendDescr(a.value);
+								marcRecord.removeSubfield(b, field);
 
-							if (a.value === '1 videotiedosto') {
-								record.insertField({tag: '347', subfields: [
+								marcRecord.insertField({tag: '347', subfields: [
 									{code: 'a', value: '1 videotiedosto'}
 								]});
 							}
-						} else if (/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)$/i.test(a.value)) {
-							a.value = '1 verkkoaineisto';
-						} else if (/^(äänikirja|ljudbok)$/i.test(a.value)) {
-							a.value = '1 CD-äänilevy';
+						} else if (/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/i.test(a.value)) {
+							a.value = generateExtendDescr(a.value);
+						} else if (/^(äänikirja|ljudbok)/i.test(a.value)) {
+							a.value = generateExtendDescr(a.value, '1 CD-äänilevy');
 						} else if (/^cd-skiva/i.test(a.value)) {
-							a.value = '1 CD-ljudskiva';
+							a.value = generateExtendDescr(a.value, '1 CD-ljudskiva');
 						} else {
 							handleConsoleGames();
 						}
 					}
 
 					function handleConsoleGames() {
-						if (/^(konsolipeli|konsolspel)$/i.test(a.value)) {
+						if (/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/i.test(a.value)) {
+							const re = /^konsolipeli \((.*)\)(.*)$/i.exec(a.value);
+							a.value = `${re[1]}${re[2]}`;
+						} else if (/^(konsolipeli|konsolspel)/i.test(a.value)) {
 							const f007 = marcRecord.get(/^007$/).shift();
 
 							switch (f007.value[1]) {
 								case 'o':
-									a.value = '1 tietolevy';
+									a.value = generateExtendDescr(a.value, '1 tietolevy');
 									break;
 								case 'b':
-									a.value = '1 piirikotelo';
+									a.value = generateExtendDescr(a.value, '1 piirikotelo');
 									break;
 								case 'z':
-									a.value = '1 muistikortti';
+									a.value = generateExtendDescr(a.value, '1 muistikortti');
 									break;
 								default:
-									Logger.warn(`Unsupported console game description: ${a.value}`);
 									break;
 							}
-						} else if (/^(Konsolipeli \(1 tietolevy\)|Konsolipeli \(1 Blu-ray-levy\)|Konsolipeli \(1 muistikortti\))$/i.test(a.value)) {
-							a.value = /^Konsolipeli (.*)$/i.exec(a.value)[1];
 						}
+					}
+
+					function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
+						const re = / \((.*)\)/i.exec(descr);
+
+						if (re) {
+							return `${prefix} (${re[1]})`;
+						}
+
+						return prefix;
 					}
 				});
 		}

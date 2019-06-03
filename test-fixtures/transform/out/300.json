@@ -1,0 +1,1026 @@
+[
+  {
+    "leader": "00000nam  22000004i 4500",
+    "fields": [
+      {
+        "tag": "001",
+        "value": "9789511331353"
+      },
+      {
+        "tag": "007",
+        "value": "cr |||||||||||"
+      },
+      {
+        "tag": "008",
+        "value": "000000s2018    fi ||||||||| |||||||fin||"
+      },
+      {
+        "tag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "978-951-1-33135-3"
+          },
+          {
+            "code": "q",
+            "value": "ePub"
+          }
+        ]
+      },
+      {
+        "tag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Fi-He"
+          },
+          {
+            "code": "b",
+            "value": "fin"
+          },
+          {
+            "code": "e",
+            "value": "rda"
+          }
+        ]
+      },
+      {
+        "tag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "fin"
+          },
+          {
+            "code": "h",
+            "value": "eng"
+          }
+        ]
+      },
+      {
+        "tag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "99"
+          }
+        ]
+      },
+      {
+        "tag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "99.1"
+          }
+        ]
+      },
+      {
+        "tag": "093",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "99.1"
+          }
+        ]
+      },
+      {
+        "tag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "99.1"
+          }
+        ]
+      },
+      {
+        "tag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "993"
+          }
+        ]
+      },
+      {
+        "tag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Obama, Michelle,"
+          },
+          {
+            "code": "e",
+            "value": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "tag": "240",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Becoming,"
+          },
+          {
+            "code": "l",
+            "value": "suomi"
+          }
+        ]
+      },
+      {
+        "tag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Minun tarinani /"
+          },
+          {
+            "code": "c",
+            "value": "Michelle Obama ; suomentanut Ilkka Rekiaro."
+          }
+        ]
+      },
+      {
+        "tag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "[Helsinki] :"
+          },
+          {
+            "code": "b",
+            "value": "Kustannusosakeyhtiö Otava,"
+          },
+          {
+            "code": "c",
+            "value": "2018"
+          }
+        ]
+      },
+      {
+        "tag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1 verkkoaineisto (EPUB  kb; vastaa painettuna 526 sivua)"
+          }
+        ]
+      },
+      {
+        "tag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "teksti"
+          },
+          {
+            "code": "b",
+            "value": "txt"
+          },
+          {
+            "code": "2",
+            "value": "rdacontent"
+          }
+        ]
+      },
+      {
+        "tag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "tietokonekäyttöinen"
+          },
+          {
+            "code": "b",
+            "value": "c"
+          },
+          {
+            "code": "2",
+            "value": "rdamedia"
+          }
+        ]
+      },
+      {
+        "tag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "verkkoaineisto"
+          },
+          {
+            "code": "b",
+            "value": "cr"
+          },
+          {
+            "code": "2",
+            "value": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "tag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "EPUB-julkaisu"
+          }
+        ]
+      },
+      {
+        "tag": "530",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Julkaistu myös painettuna"
+          }
+        ]
+      },
+      {
+        "tag": "538",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Internet-yhteys, www-selain ; lukuohjelma"
+          }
+        ]
+      },
+      {
+        "tag": "540",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Käyttöoikeus Helmet-kirjastokortilla"
+          }
+        ]
+      },
+      {
+        "tag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "suomi"
+          }
+        ]
+      },
+      {
+        "tag": "574",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "LK"
+          }
+        ]
+      },
+      {
+        "tag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "E-KIRJA / E-BOK"
+          }
+        ]
+      },
+      {
+        "tag": "600",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Obama, Michelle."
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Ellibs"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "aviopuolisot"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "presidentit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "juristit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "asianajajat"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "henkilöhistoria"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "perhe-elämä"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "julkisuus"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "valtiovierailut"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "poliittinen kulttuuri"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Yhdysvallat"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "e-kirjat"
+          },
+          {
+            "code": "2",
+            "value": "slm/fin"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "muistelmat"
+          },
+          {
+            "code": "2",
+            "value": "slm/fin"
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Rekiaro, Ilkka,"
+          },
+          {
+            "code": "e",
+            "value": "kääntäjä."
+          }
+        ]
+      },
+      {
+        "tag": "776",
+        "ind1": "0",
+        "ind2": "8",
+        "subfields": [
+          {
+            "code": "i",
+            "value": "Painettu:"
+          },
+          {
+            "code": "z",
+            "value": "9789511321224"
+          }
+        ]
+      },
+      {
+        "tag": "856",
+        "ind1": "4",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "u",
+            "value": "https://www.ellibslibrary.com/helmet/9789511331353"
+          },
+          {
+            "code": "y",
+            "value": "Linkki e-kirjaan"
+          }
+        ]
+      },
+      {
+        "tag": "SID",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "2373169"
+          },
+          {
+            "code": "b",
+            "value": "helme"
+          }
+        ],
+        "ind1": " ",
+        "ind2": " "
+      }
+    ]
+  },
+  {
+    "leader": "00000nmm a22003854i 4500",
+    "fields": [
+      {
+        "tag": "001",
+        "value": "6855427"
+      },
+      {
+        "tag": "003",
+        "value": "FI-BTJ"
+      },
+      {
+        "tag": "007",
+        "value": "co cga||||||||"
+      },
+      {
+        "tag": "008",
+        "value": "000000s2018    it     gq  g |      eng|c"
+      },
+      {
+        "tag": "024",
+        "ind1": "3",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "8023171042015"
+          }
+        ]
+      },
+      {
+        "tag": "024",
+        "ind1": "8",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "CUSA04282"
+          }
+        ]
+      },
+      {
+        "tag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "FI-BTJ"
+          },
+          {
+            "code": "b",
+            "value": "fin"
+          },
+          {
+            "code": "e",
+            "value": "rda"
+          }
+        ]
+      },
+      {
+        "tag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "eng"
+          }
+        ]
+      },
+      {
+        "tag": "049",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "c",
+            "value": "K12"
+          }
+        ]
+      },
+      {
+        "tag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "79.81"
+          },
+          {
+            "code": "2",
+            "value": "ykl"
+          }
+        ]
+      },
+      {
+        "tag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "82"
+          }
+        ]
+      },
+      {
+        "tag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "79.81"
+          }
+        ]
+      },
+      {
+        "tag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "798.2"
+          }
+        ]
+      },
+      {
+        "tag": "245",
+        "ind1": "0",
+        "ind2": "0",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Don't starve :"
+          },
+          {
+            "code": "b",
+            "value": "Mega pack : PlayStation 4 /"
+          },
+          {
+            "code": "c",
+            "value": "developed by Klei Entertainment."
+          }
+        ]
+      },
+      {
+        "tag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "[Milano] :"
+          },
+          {
+            "code": "b",
+            "value": "505 Games,"
+          },
+          {
+            "code": "c",
+            "value": "[2018]"
+          }
+        ]
+      },
+      {
+        "tag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1 tietolevy :"
+          },
+          {
+            "code": "b",
+            "value": "värillinen, ääni ;"
+          },
+          {
+            "code": "c",
+            "value": "12 cm"
+          }
+        ]
+      },
+      {
+        "tag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "kaksiulotteinen liikkuva kuva"
+          },
+          {
+            "code": "b",
+            "value": "tdi"
+          },
+          {
+            "code": "2",
+            "value": "rdacontent"
+          }
+        ]
+      },
+      {
+        "tag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "tietokoneohjelma"
+          },
+          {
+            "code": "b",
+            "value": "cop"
+          },
+          {
+            "code": "2",
+            "value": "rdacontent"
+          }
+        ]
+      },
+      {
+        "tag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "tietokonekäyttöinen"
+          },
+          {
+            "code": "b",
+            "value": "c"
+          },
+          {
+            "code": "2",
+            "value": "rdamedia"
+          }
+        ]
+      },
+      {
+        "tag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "tietolevy"
+          },
+          {
+            "code": "b",
+            "value": "cd"
+          },
+          {
+            "code": "2",
+            "value": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "tag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "1-2 pelaajaa, online: 2-6 pelaajaa. - Online-pelaaminen edellyttää maksullista Playstation Plus -palvelua."
+          }
+        ]
+      },
+      {
+        "tag": "506",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Kielletty alle 12-vuotiailta."
+          }
+        ]
+      },
+      {
+        "tag": "538",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "PlayStation 4"
+          }
+        ]
+      },
+      {
+        "tag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "englanti"
+          }
+        ]
+      },
+      {
+        "tag": "588",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Nimeke levystä."
+          }
+        ]
+      },
+      {
+        "tag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "KONSOLIPELI / KONSOLSPEL"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "videopelit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "konsolipelit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "seikkailupelit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "selviytymispelit"
+          },
+          {
+            "code": "2",
+            "value": "ysa"
+          }
+        ]
+      },
+      {
+        "tag": "710",
+        "ind1": "2",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Klei Entertainment."
+          }
+        ]
+      },
+      {
+        "tag": "753",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "c",
+            "value": "Sony PlayStation 4"
+          }
+        ]
+      },
+      {
+        "tag": "SID",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "2292686"
+          },
+          {
+            "code": "b",
+            "value": "helme"
+          }
+        ],
+        "ind1": " ",
+        "ind2": " "
+      }
+    ]
+  }
+]

@@ -4,7 +4,7 @@
 *
 * Helmet record transformer for the Melinda record batch import system
 *
-* Copyright (C) 2018 University Of Helsinki (The National Library Of Finland)
+* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
 *
 * This file is part of melinda-record-import-transformer-helmet
 *
@@ -26,12 +26,21 @@
 *
 */
 
-import {readEnvironmentVariable} from '@natlibfi/melinda-record-import-commons';
+import fs from 'fs';
+import path from 'path';
+import {expect} from 'chai';
+import * as testContext from './create-material-fields';
 
-export const AMQP_URL = readEnvironmentVariable('AMQP_URL');
+const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/create-material-fields');
 
-export const RECORD_IMPORT_BLOB_ID = readEnvironmentVariable('RECORD_IMPORT_BLOB_ID');
-export const RECORD_IMPORT_URL = readEnvironmentVariable('RECORD_IMPORT_URL');
-export const RECORD_IMPORT_PROFILE = readEnvironmentVariable('RECORD_IMPORT_PROFILE');
-export const RECORD_IMPORT_USERNAME = readEnvironmentVariable('RECORD_IMPORT_USERNAME');
-export const RECORD_IMPORT_PASSWORD = readEnvironmentVariable('RECORD_IMPORT_PASSWORD');
+describe('create-material-fields', () => {
+	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
+		it(file, async () => {
+			const record = JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
+			const fields = testContext.default(record);
+			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
+
+			expect(JSON.stringify(fields, undefined, 2)).to.eql(fs.readFileSync(expectedPath, 'utf8'));
+		});
+	});
+});

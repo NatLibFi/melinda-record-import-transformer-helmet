@@ -28,33 +28,27 @@
 
 import fs from 'fs';
 import path from 'path';
-import chai, {expect} from 'chai';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
-import * as testContext from './transform';
+import {expect} from 'chai';
+import {MarcRecord} from '@natlibfi/marc-record';
+import createValidator from './validate';
 
-chai.use(sinonChai);
+const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/validate');
 
-const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/transform');
+describe('validate', () => {
+	let validate;
 
-describe('transform', () => {
-	beforeEach(() => {
-		// 008 has current date in it
-		testContext.default.__Rewire__('moment', sinon.fake.returns({
-			format: sinon.fake.returns('000000')
-		}));
-	});
-
-	afterEach(() => {
-		testContext.default.__ResetDependency__('moment');
+	before(async () => {
+		validate = await createValidator();
 	});
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const records = await testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
+			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));
+			const result = await validate(record, {fix: true, validateFixes: true});
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
+			const stringResult = JSON.stringify({...result, record: result.record.toObject()}, undefined, 2);
 
-			expect(records.map(r => r.toObject())).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+			expect(stringResult).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});
 	});
 });

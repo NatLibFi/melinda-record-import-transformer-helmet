@@ -1,0 +1,460 @@
+  {
+    "id": "2346729",
+    "materialType": {
+      "code": "r  "
+    },
+    "catalogDate": "2018-11-21",
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Hamm, Christopher,"
+          },
+          {
+            "tag": "e",
+            "content": "designer"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Baraf, Eduardo,"
+          },
+          {
+            "tag": "e",
+            "content": "designer"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Catanzaro, Lou,"
+          },
+          {
+            "tag": "e",
+            "content": "kuvittaja"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Koziner, Sebastian,"
+          },
+          {
+            "tag": "e",
+            "content": "graafinen suunnittelija"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "lautapelit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "pelit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "fantasiapelit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "024",
+        "ind1": "3",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "019962279300"
+          },
+          {
+            "tag": "q",
+            "content": "pelipakkaus"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "798.2"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "82"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "2-4 pelaajalle"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "521",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Ikäsuositus 14+"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Pelin kesto 30 min / pelaaja"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Mechanics : card drafting, hand management, simultaneous action selection"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Mekaniikat : draftaus, kädenhallinta"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "500",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "World view board, 4 player boards, expedition board, 4 realm boards, vast expanse board, 8 landmarks, 4 gifts, 16 familiars, 4 player tokens, 48 creature cards, 36 wild creature cards, 4 reference cards, 48 orb tokens, 12 magic tokens, 88 renown tokens, 1 day mark tokens, 12 spells, 4 amulets, 12 expedition tokens, 4 shield tokens, rulebook"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanti"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "574",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "renni.honkanen@hel.fi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "LAUTAPELI / BRÄDSPEL"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "[Kustannuspaikka tuntematon] :"
+          },
+          {
+            "tag": "b",
+            "content": "Pencil First Games,"
+          },
+          {
+            "tag": "c",
+            "content": "[2018]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "©2018"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1 lautapeli +"
+          },
+          {
+            "tag": "e",
+            "content": "1 sääntövihko "
+          },
+          {
+            "tag": "f",
+            "content": "kotelo "
+          },
+          {
+            "tag": "g",
+            "content": "28 x 28 x 7 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kolmiulotteinen muoto"
+          },
+          {
+            "tag": "b",
+            "content": "tdf"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käytettävissä ilman laitetta"
+          },
+          {
+            "tag": "b",
+            "content": "n"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "objekti"
+          },
+          {
+            "tag": "b",
+            "content": "nr"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Legendary creatures /"
+          },
+          {
+            "tag": "c",
+            "content": "game design Christopher Hamm ; production & development Eduardo Baraf ; illustration Lou Catanzaro ; graphic design Sebastian Koziner"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "181121t20182018xxu           |00 | eng dnrm4c "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-He"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "856",
+        "ind1": "4",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "u",
+            "content": "https://boardgamegeek.com/boardgame/214125/legendary-creatures"
+          },
+          {
+            "tag": "z",
+            "content": "Peli BoardGameGeekissä"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nrm  22000004c 4500"
+      }
+    ]
+  }

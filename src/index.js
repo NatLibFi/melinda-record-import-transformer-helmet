@@ -4,7 +4,7 @@
 *
 * Helmet record transformer for the Melinda record batch import system
 *
-* Copyright (C) 2018 University Of Helsinki (The National Library Of Finland)
+* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
 *
 * This file is part of melinda-record-import-transformer-helmet
 *
@@ -27,50 +27,14 @@
 */
 
 import transform from './transform';
-import createValidateFunction from './validate';
-import {TransformerUtils, registerSignalHandlers, createLogger, startHealthCheckService} from '@natlibfi/melinda-record-import-commons';
+import createValidator from './validate';
+import {Transformer} from '@natlibfi/melinda-record-import-commons';
 
-import {RECORD_IMPORT_URL, RECORD_IMPORT_BLOB_ID, RECORD_IMPORT_PROFILE,
-	RECORD_IMPORT_USERNAME, RECORD_IMPORT_PASSWORD, AMQP_URL} from './config';
+const {startTransformer} = Transformer;
 
-start();
+run();
 
-async function start() {
-	const {checkEnv, startTransformation} = TransformerUtils;
-	const Logger = createLogger();
-
-	registerSignalHandlers();
-	checkEnv();
-
-	const stopHealthCheckService = startHealthCheckService(process.env.HEALTH_CHECK_PORT);
-
-	try {
-		Logger.log('info', 'Starting melinda-record-import-transformer-helmet');
-		await startTransformation({
-			callback: transformCallback,
-			blobId: RECORD_IMPORT_BLOB_ID,
-			profile: RECORD_IMPORT_PROFILE,
-			apiURL: RECORD_IMPORT_URL,
-			apiUsername: RECORD_IMPORT_USERNAME,
-			apiPassword: RECORD_IMPORT_PASSWORD,
-			amqpURL: AMQP_URL
-		});
-
-		stopHealthCheckService();
-		process.exit();
-	} catch (err) {
-		stopHealthCheckService();
-		Logger.error(err);
-		process.exit(-1);
-	}
-
-	async function transformCallback(response) {
-		Logger.log('debug', 'Transforming records');
-
-		const records = await transform(response.body);
-		const validate = await createValidateFunction();
-
-		Logger.log('debug', 'Validating records');
-		return validate(records, true);
-	}
+async function run() {
+	const validate = await createValidator();
+	startTransformer(transform, validate);
 }
