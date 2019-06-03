@@ -34,8 +34,8 @@
 		"@natlibfi/marc-record": "^4.0.0",
 		"@natlibfi/marc-record-validate": "^4.0.0",
 		"@natlibfi/marc-record-validators-melinda": "^6.0.0",
-		"@natlibfi/melinda-commons": "^5.0.0",
-		"@natlibfi/melinda-record-import-commons": "https://github.com/natlibfi/melinda-record-import-commons#feature-state-mgmt",
+		"@natlibfi/melinda-commons": "^7.0.0",
+		"@natlibfi/melinda-record-import-commons": "^4.2.0",
 		"get-stream": "^4.0.0",
 		"moment": "^2.22.2"
 	},
