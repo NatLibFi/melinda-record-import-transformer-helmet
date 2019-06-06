@@ -23,12 +23,14 @@
 		"start": "node dist/index.js",
 		"cli": "node dist/cli.js",
 		"check-deps": "npm-check;exit 0",
-		"lint": "eslint --fix src",
+		"lint": "eslint src",
+		"lint:dev": "eslint --fix src",
 		"test:base": "cross-env NODE_ENV=test mocha --require @babel/register",
 		"test": "npm run lint && npm run test:base -- src/**/*.spec.js",
-		"build": "babel src --source-maps --delete-dir-on-start --out-dir=dist --minified",
+		"test:dev": "npm run lint:dev && npm run test:base -- src/**/*.spec.js",
+		"build": "babel src --source-maps --delete-dir-on-start --out-dir=dist",
 		"build:dev": "npm run build:transpile && npm run check-deps",
-		"watch": "cross-env DEBUG=1 NODE_ENV=debug nodemon --watch src --exec 'npm test'"
+		"watch": "cross-env DEBUG=1 NODE_ENV=debug nodemon --watch src --exec 'npm run test:dev'"
 	},
 	"dependencies": {
 		"@natlibfi/marc-record": "^4.0.0",
