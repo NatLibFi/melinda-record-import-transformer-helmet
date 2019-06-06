@@ -76,10 +76,10 @@ export default async function (stream) {
 					if (field.content) {
 						if (field.fieldTag === '_') {
 							marcRecord.leader = field.content;
-						} else {
+						} else if (typeof field.marcTag === 'string') {
 							marcRecord.insertField({tag: field.marcTag, value: field.content});
 						}
-					} else if (field.subfields) {
+					} else if (field.subfields && typeof field.marcTag === 'string') {
 						marcRecord.insertField({
 							tag: field.marcTag,
 							ind1: field.ind1,
