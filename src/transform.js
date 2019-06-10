@@ -104,6 +104,9 @@ export default async function (stream) {
 		function handleLeader() {
 			const chars = marcRecord.leader.split('');
 
+			// Set record as unicode
+			chars[9] = 'a';
+
 			if (chars[6] === 'o' && marcRecord.get(/^655$/).some(isBoardGame)) {
 				chars[6] = 'r';
 			}
