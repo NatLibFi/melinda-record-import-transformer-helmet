@@ -40,6 +40,7 @@ import {
 
 export default async () => {
 	return validateFactory([
+		await FieldsPresent([/^(020|022|024)$/]),
 		await FieldsPresent([/^(336|337|338)$/]),
 		await FieldExclusion([
 			/^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/,
