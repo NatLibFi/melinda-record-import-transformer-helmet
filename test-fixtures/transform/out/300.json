@@ -582,7 +582,7 @@
         "tag": "SID",
         "subfields": [
           {
-            "code": "a",
+            "code": "c",
             "value": "2373169"
           },
           {
@@ -1010,7 +1010,7 @@
         "tag": "SID",
         "subfields": [
           {
-            "code": "a",
+            "code": "c",
             "value": "2292686"
           },
           {
