@@ -334,6 +334,11 @@
       "messages": []
     },
     {
+      "description": "Checks whether the configured fields are present in the record",
+      "state": "valid",
+      "messages": []
+    },
+    {
       "description": "Checks that the record does not contain the configured fields",
       "state": "valid"
     },
