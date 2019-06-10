@@ -62,7 +62,7 @@ export default async function (stream) {
 		handle856();
 
 		marcRecord.insertField({tag: 'SID', subfields: [
-			{code: 'a', value: record.id},
+			{code: 'c', value: record.id},
 			{code: 'b', value: 'helme'}
 		]});
 
