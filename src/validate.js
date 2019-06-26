@@ -46,6 +46,7 @@ export default async () => {
 			/^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/,
 			{tag: /^264$/, subfields: [{code: /^a$/, value: /^\[.*\]$/}]},
 			{tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i}]},
+			{tag: /^650$/, subfields: [{code: /^2$/, value: /^(ysa|musa|allars|cilla)$/}]},
 			{tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}]}
 		]),
 		await EmptyFields(),
