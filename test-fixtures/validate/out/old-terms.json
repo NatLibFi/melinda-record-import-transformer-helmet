@@ -308,36 +308,6 @@
         ]
       },
       {
-        "tag": "651",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Suomi"
-          },
-          {
-            "code": "2",
-            "value": "ysa"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "elämäkerrat"
-          },
-          {
-            "code": "2",
-            "value": "ysa"
-          }
-        ]
-      },
-      {
         "tag": "776",
         "ind1": "0",
         "ind2": "8",
