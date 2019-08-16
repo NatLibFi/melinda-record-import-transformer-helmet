@@ -215,6 +215,25 @@
         ]
       },
       {
+        "tag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "nide"
+          },
+          {
+            "code": "b",
+            "value": "nc"
+          },
+          {
+            "code": "2",
+            "value": "rdacarrier"
+          }
+        ]
+      },
+      {
         "tag": "500",
         "ind1": " ",
         "ind2": " ",
