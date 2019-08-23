@@ -2,9 +2,9 @@
 *
 * @licstart  The following is the entire license notice for the JavaScript code in this file.
 *
-* Helmet record transformer for the Melinda record batch import system
+* Shared modules for microservices of Melinda record batch import system
 *
-* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
+* Copyright (C) 2018-2019 University Of Helsinki (The National Library Of Finland)
 *
 * This file is part of melinda-record-import-transformer-helmet
 *
@@ -26,22 +26,17 @@
 *
 */
 
-import transform from './transform';
-import createValidator from './validate';
-import createRecordValidator from './validate-record';
-import {Transformer} from '@natlibfi/melinda-record-import-commons';
+export default function (callback) {
+	return async (records, fix = false) => {
+		const opts = fix ? {fix: true, validateFixes: true} : {fix: false};
+		const results = await Promise.all(
+			records.map(r => callback(r, opts))
+		);
 
-const {startTransformer} = Transformer;
-
-run();
-
-async function run() {
-	startTransformer(validate);
-
-	async function validate(stream) {
-		const validate = await createValidator();
-		const validateRecord = await createRecordValidator(validate);
-		const records = await transform(stream);
-		return validateRecord(records, true);
-	}
+		return results.map(result => ({
+			record: result.record,
+			failed: !result.valid,
+			messages: result.report
+		}));
+	};
 }
