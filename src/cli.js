@@ -26,8 +26,9 @@
 *
 */
 
-import transformCallback from './transform';
+import transform from './transform';
 import createValidator from './validate';
+import createRecordValidator from './validate-record';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
 
 const {runCLI} = Transformer;
@@ -35,6 +36,16 @@ const {runCLI} = Transformer;
 run();
 
 async function run() {
-	const validateCallback = await createValidator();
-	runCLI({name: 'melinda-record-import-transformer-helmet', transformCallback, validateCallback});
+	runCLI({name: 'melinda-record-import-transformer-helmet', validate});
+
+	async function validate(stream, validateBoolean, fixBoolean = false) {
+		const records = await transform(stream);
+		if (validateBoolean || fixBoolean) {
+			const validate = await createValidator();
+			const validateRecord = await createRecordValidator(validate);
+			return validateRecord(records, fixBoolean);
+		}
+
+		return records;
+	}
 }
