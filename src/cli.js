@@ -36,14 +36,14 @@ const {runCLI} = Transformer;
 run();
 
 async function run() {
-	runCLI({name: 'melinda-record-import-transformer-helmet', validate});
+	runCLI({name: 'melinda-record-import-transformer-helmet', transformStream});
 
-	async function validate(stream, validateBoolean, fixBoolean = false) {
+	async function transformStream(stream, argsValidate, argsFix) {
 		const records = await transform(stream);
-		if (validateBoolean || fixBoolean) {
+		if (argsValidate || argsFix) {
 			const validate = await createValidator();
 			const validateRecord = await createRecordValidator(validate);
-			return validateRecord(records, fixBoolean);
+			return validateRecord(records, argsFix);
 		}
 
 		return records;
