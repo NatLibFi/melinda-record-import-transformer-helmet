@@ -354,16 +354,15 @@
       }
     ]
   },
-  "report": [
+  "failed": false,
+  "messages": [
     {
       "description": "Checks whether the configured fields are present in the record",
-      "state": "valid",
-      "messages": []
+      "state": "valid"
     },
     {
       "description": "Checks whether the configured fields are present in the record",
-      "state": "valid",
-      "messages": []
+      "state": "valid"
     },
     {
       "description": "Checks that the record does not contain the configured fields",
@@ -389,6 +388,5 @@
       "description": "Handles invalid ending punctuation",
       "state": "fixed"
     }
-  ],
-  "valid": true
+  ]
 }

@@ -44,9 +44,9 @@ describe('validate', () => {
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
 			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));
-			const result = await validate(record, {fix: true, validateFixes: true});
+			const results = await validate([record], true, true);
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
-			const stringResult = JSON.stringify({...result, record: result.record.toObject()}, undefined, 2);
+			const stringResult = JSON.stringify({...results[0], record: results[0].record.toObject()}, undefined, 2);
 
 			expect(stringResult).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});

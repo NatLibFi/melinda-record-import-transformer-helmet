@@ -27,8 +27,7 @@
 */
 
 import transform from './transform';
-import createValidator from './validate';
-import createRecordValidator from './validate-record';
+import validate from './validate';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
 import moment from 'moment';
 import path from 'path';
@@ -38,14 +37,17 @@ const {runCLI} = Transformer;
 run();
 
 async function run() {
-	const yargs = [
-		{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
-		{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
-	];
-	const name = 'melinda-record-import-transformer-helmet';
-	runCLI(name, yargs, readArgs);
+	const transformerSettings = {
+		name: 'melinda-record-import-transformer-helmet',
+		yargs: [
+			{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
+			{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
+		],
+		callback: startTransform
+	};
+	runCLI(transformerSettings);
 
-	async function readArgs(stream, args, spinner, fs) {
+	async function startTransform(stream, args, spinner, fs) {
 		const records = await transformStream(stream, args.validate, args.fix);
 
 		if (args.validate || args.fix) {
@@ -89,9 +91,7 @@ async function run() {
 	async function transformStream(stream, argsValidate, argsFix) {
 		const records = await transform(stream);
 		if (argsValidate || argsFix) {
-			const validate = await createValidator();
-			const validateRecord = await createRecordValidator(validate);
-			return validateRecord(records, argsFix);
+			return validate(records, argsFix, argsValidate);
 		}
 
 		return records;
