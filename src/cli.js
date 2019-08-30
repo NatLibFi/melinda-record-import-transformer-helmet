@@ -30,7 +30,6 @@ import transform from './transform';
 import validate from './validate';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
 import moment from 'moment';
-import path from 'path';
 
 const {runCLI} = Transformer;
 
@@ -47,7 +46,7 @@ async function run() {
 	};
 	runCLI(transformerSettings);
 
-	async function startTransform(stream, args, spinner, fs) {
+	async function startTransform(stream, args, spinner, handleRecordsOutput) {
 		const records = await transformStream(stream, args.validate, args.fix);
 
 		if (args.validate || args.fix) {
@@ -69,22 +68,6 @@ async function run() {
 		} else {
 			spinner.succeed();
 			handleRecordsOutput(records);
-		}
-
-		function handleRecordsOutput(records) {
-			if (args.outputDirectory) {
-				if (!fs.existsSync(args.outputDirectory)) {
-					fs.mkdirSync(args.outputDirectory);
-				}
-
-				records
-					.forEach((record, index) => {
-						const file = path.join(args.outputDirectory, `${index}.json`);
-						fs.writeFileSync(file, JSON.stringify(record.toObject(), undefined, 2));
-					});
-			} else {
-				console.log(JSON.stringify(records.map(r => r.toObject()), undefined, 2));
-			}
 		}
 	}
 
