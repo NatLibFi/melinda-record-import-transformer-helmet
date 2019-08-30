@@ -60,8 +60,8 @@ export default async () => {
 		await EndingPunctuation()
 	]);
 
-	return async (records, fix, validateFix) => {
-		const opts = fix ? {fix, validateFix} : {fix: false};
+	return async (records, fix, validatefix) => {
+		const opts = fix ? {fix: fix, validateFixes: validatefix} : {fix: false};
 		const results = await Promise.all(records.map(r => validate(r, opts)));
 		return results.map(({record, valid, report}) => ({
 			record,

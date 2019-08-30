@@ -366,11 +366,13 @@
   "messages": [
     {
       "description": "Checks whether the configured fields are present in the record",
-      "state": "valid"
+      "state": "valid",
+      "messages": []
     },
     {
       "description": "Checks whether the configured fields are present in the record",
-      "state": "valid"
+      "state": "valid",
+      "messages": []
     },
     {
       "description": "Checks that the record does not contain the configured fields",
@@ -382,10 +384,7 @@
     },
     {
       "description": "Validates ISBN and ISSN values",
-      "state": "fixed",
-      "messages": [
-        "ISBN 9789187359194 is not valid"
-      ]
+      "state": "fixed"
     },
     {
       "description": "Checks that the record does not contain the configured subfields",
