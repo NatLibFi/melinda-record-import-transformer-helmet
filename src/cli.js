@@ -46,7 +46,7 @@ async function run() {
 	};
 	runCLI(transformerSettings);
 
-	async function startTransform(stream, args, spinner, handleRecordsOutput) {
+	async function startTransform({stream, args, spinner, handleRecordsOutput}) {
 		const records = await transformStream(stream, args.validate, args.fix);
 
 		if (args.validate || args.fix) {
