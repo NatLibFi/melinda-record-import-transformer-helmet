@@ -46,10 +46,10 @@ async function run() {
 	};
 	runCLI(transformerSettings);
 
-	async function startTransform({stream, args, spinner, handleRecordsOutput}) {
-		const records = await transformStream(stream, args.validate, args.fix);
+	async function startTransform({stream, args: {validate, fix, recordsOnly}, spinner, handleRecordsOutput}) {
+		const records = await transformStream(stream, validate, fix);
 
-		if (args.validate || args.fix) {
+		if (validate || fix) {
 			spinner.succeed();
 			spinner.start('Validating records');
 
@@ -57,7 +57,7 @@ async function run() {
 			const validCount = records.length - invalidCount;
 			spinner.succeed(`Validating records (Valid: ${validCount}, invalid: ${invalidCount})`);
 
-			if (args.recordsOnly) {
+			if (recordsOnly) {
 				console.error(`Excluding ${records.filter(r => r.failed).length} failed records`);
 				handleRecordsOutput(records.filter(r => !r.failed).map(r => r.record));
 			} else {
