@@ -35,10 +35,8 @@ const {startTransformer} = Transformer;
 run();
 
 async function run() {
-	startTransformer(validate);
-
-	async function validate(stream) {
+	startTransformer(async stream => {
 		const records = await transform(stream);
 		return validator(records, true, true);
-	}
+	});
 }
