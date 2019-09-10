@@ -39,7 +39,7 @@ import {
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
-	return validateFactory([
+	const validate = validateFactory([
 		await FieldsPresent([/^(020|022|024)$/]),
 		await FieldsPresent([/^336$/, /^337$/, /^338$/]),
 		await FieldExclusion([
@@ -59,4 +59,14 @@ export default async () => {
 		]),
 		await EndingPunctuation()
 	]);
+
+	return async (records, fix, validateFixes) => {
+		const opts = fix ? {fix, validateFixes} : {fix};
+		const results = await Promise.all(records.map(r => validate(r, opts)));
+		return results.map(({record, valid, report}) => ({
+			record,
+			failed: valid === false,
+			messages: report
+		}));
+	};
 };
