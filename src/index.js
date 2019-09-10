@@ -36,5 +36,5 @@ run();
 
 async function run() {
 	const validate = await createValidator();
-	startTransformer(transform, validate);
+	return startTransformer(transform, validate);
 }
