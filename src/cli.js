@@ -28,10 +28,14 @@
 
 import transform from './transform';
 import createValidator from './validate';
-import {Transformer} from '@natlibfi/melinda-record-import-commons';
+import { Transformer } from '@natlibfi/melinda-record-import-commons';
 import moment from 'moment';
+import { EventEmitter } from 'events';
 
-const {runCLI} = Transformer;
+const { runCLI } = Transformer;
+
+class TransformCLIEmitter extends EventEmitter { }
+const Emitter = new TransformCLIEmitter();
 
 run();
 
@@ -39,45 +43,37 @@ async function run() {
 	const transformerSettings = {
 		name: 'melinda-record-import-transformer-helmet',
 		yargsOptions: [
-			{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
-			{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
+			{ option: 'v', conf: { alias: 'validate', default: false, type: 'boolean', describe: 'Validate records' } },
+			{ option: 'f', conf: { alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records' } }
 		],
-		callback: startTransform
+		Emitter
 	};
 	runCLI(transformerSettings);
+}
 
-	async function startTransform({stream, args: {validate, fix, recordsOnly}, spinner, handleRecordsOutput}) {
-		const records = await transformStream(stream, validate, fix);
+async function transformStream({ stream, args: { argsValidate, argsFix, recordsOnly } }) {
+	let records = await transform(stream);
+	Emitter.emit('spinner', { state: 'succeed' });
 
-		if (validate || fix) {
-			spinner.succeed();
-			spinner.start('Validating records');
+	if (argsValidate || argsFix) {
+		Emitter.emit('spinner', { state: 'start', message: 'Validating records' });
+		const validate = await createValidator();
+		records = validate(records, argsFix, argsValidate);
 
-			const invalidCount = records.filter(r => r.failed).length;
-			const validCount = records.length - invalidCount;
-			spinner.succeed(`Validating records (Valid: ${validCount}, invalid: ${invalidCount})`);
+		const invalidCount = records.filter(r => r.failed).length;
+		const validCount = records.length - invalidCount;
+		Emitter.emit('spinner', { state: 'succeed', message: `Validating records (Valid: ${validCount}, invalid: ${invalidCount})` });
 
-			if (recordsOnly) {
-				console.error(`Excluding ${records.filter(r => r.failed).length} failed records`);
-				handleRecordsOutput(records.filter(r => !r.failed).map(r => r.record));
-			} else {
-				console.log(JSON.stringify(records.map(r => {
-					return {record: r.record.toObject(), timestamp: moment(), ...r};
-				}), undefined, 2));
-			}
+		if (recordsOnly) {
+			Emitter.emit('fail', `Excluding ${records.filter(r => r.failed).length} failed records`);
+			Emitter.emit('handle', records.filter(r => !r.failed).map(r => r.record));
 		} else {
-			spinner.succeed();
-			handleRecordsOutput(records);
+			Emitter.emit('log', JSON.stringify(records.map(r => {
+				return { record: r.record.toObject(), timestamp: moment(), ...r };
+			}), undefined, 2));
 		}
-	}
-
-	async function transformStream(stream, argsValidate, argsFix) {
-		const records = await transform(stream);
-		if (argsValidate || argsFix) {
-			const validate = await createValidator();
-			return validate(records, argsFix, argsValidate);
-		}
-
-		return records;
+	} else {
+		Emitter.emit('spinner', { state: 'succeed' });
+		Emitter.emit('handle', records);
 	}
 }

@@ -37,7 +37,7 @@
 		"@natlibfi/marc-record-validate": "^4.0.0",
 		"@natlibfi/marc-record-validators-melinda": "^7.0.0",
 		"@natlibfi/melinda-commons": "^7.0.0",
-		"@natlibfi/melinda-record-import-commons": "^6.0.0",
+		"@natlibfi/melinda-record-import-commons": "git+https://github.com/NatLibFi/melinda-record-import-commons.git#melkehitys-1020",
 		"get-stream": "^4.0.0",
 		"moment": "^2.22.2"
 	},
