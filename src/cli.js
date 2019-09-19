@@ -30,12 +30,9 @@ import transform from './transform';
 import createValidator from './validate';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
 import moment from 'moment';
-import {EventEmitter} from 'events';
+
 
 const {runCLI} = Transformer;
-
-class TransformCLIEmitter extends EventEmitter { }
-const Emitter = new TransformCLIEmitter();
 
 run();
 
@@ -46,12 +43,12 @@ async function run() {
 			{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
 			{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
 		],
-		Emitter
+		callback: transformStream
 	};
 	runCLI(transformerSettings);
 }
 
-async function transformStream({stream, args: {argsValidate, argsFix, recordsOnly}}) {
+async function transformStream({stream, args: {argsValidate, argsFix, recordsOnly}, Emitter}) {
 	let records = await transform(stream);
 	Emitter.emit('spinner', {state: 'succeed'});
 
