@@ -43,34 +43,35 @@ async function run() {
 			{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
 			{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
 		],
-		callback: transformStream
+		callback: startTransform
 	};
 	runCLI(transformerSettings);
-}
-
-async function transformStream({stream, args: {argsValidate, argsFix, recordsOnly}, Emitter}) {
-	let records = await transform(stream);
-	Emitter.emit('spinner', {state: 'succeed'});
-
-	if (argsValidate || argsFix) {
-		Emitter.emit('spinner', { state: 'start', message: 'Validating records' });
-		const validate = await createValidator();
-		records = validate(records, argsFix, argsValidate);
-
-		const invalidCount = records.filter(r => r.failed).length;
-		const validCount = records.length - invalidCount;
-		Emitter.emit('spinner', {state: 'succeed', message: `Validating records (Valid: ${validCount}, invalid: ${invalidCount})`});
-
-		if (recordsOnly) {
-			Emitter.emit('fail', `Excluding ${records.filter(r => r.failed).length} failed records`);
-			Emitter.emit('handle', records.filter(r => !r.failed).map(r => r.record));
+	
+	async function startTransform({stream, args: {argsValidate, argsFix, recordsOnly}, Emitter}) {
+		let records = await transform(stream);
+		
+		if (argsValidate || argsFix) {
+			Emitter.emit('spinner', {state: 'succeed'});
+			Emitter.emit('spinner', { state: 'start', message: 'Validating records' });
+			
+			const validate = await createValidator();
+			records = validate(records, argsFix, argsValidate);
+	
+			const invalidCount = records.filter(r => r.failed).length;
+			const validCount = records.length - invalidCount;
+			Emitter.emit('spinner', {state: 'succeed', message: `Validating records (Valid: ${validCount}, invalid: ${invalidCount})`});
+	
+			if (recordsOnly) {
+				Emitter.emit('fail', `Excluding ${records.filter(r => r.failed).length} failed records`);
+				Emitter.emit('handle', records.filter(r => !r.failed).map(r => r.record));
+			} else {
+				Emitter.emit('log', JSON.stringify(records.map(r => {
+					return { record: r.record.toObject(), timestamp: moment(), ...r };
+				}), undefined, 2));
+			}
 		} else {
-			Emitter.emit('log', JSON.stringify(records.map(r => {
-				return { record: r.record.toObject(), timestamp: moment(), ...r };
-			}), undefined, 2));
+			Emitter.emit('spinner', {state: 'succeed'});
+			Emitter.emit('handle', records);
 		}
-	} else {
-		Emitter.emit('spinner', {state: 'succeed'});
-		Emitter.emit('handle', records);
 	}
 }
