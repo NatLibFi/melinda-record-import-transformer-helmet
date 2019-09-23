@@ -31,20 +31,23 @@ import getStream from 'get-stream';
 import {MarcRecord} from '@natlibfi/marc-record';
 import {Utils} from '@natlibfi/melinda-commons';
 import createMaterialFields from './create-material-fields';
+import createValidator from './validate';
 
 const {createLogger} = Utils;
 
-export default async function (stream) {
+export default async function (stream, Emitter, validate = true, fix = true) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
 	const Logger = createLogger();
+	const validator = await createValidator();
 	const records = await JSON.parse(await getStream(stream));
 
 	Logger.log('debug', `Starting conversion of ${records.length} records...`);
-	return Promise.all(records.map(convertRecord));
+	Emitter.emit('transform', {status: 'start'});
+	return Promise.all(records.map(r => convertRecord(r, validate, fix, validator)));
 
-	function convertRecord(record) {
-		const marcRecord = convertToMARC();
+	async function convertRecord(record, validate, fix, validator) {
+		let marcRecord = convertToMARC();
 
 		/* Order is significant! */
 		handleLeader();
@@ -61,12 +64,22 @@ export default async function (stream) {
 		handleTerms();
 		handle856();
 
-		marcRecord.insertField({tag: 'SID', subfields: [
-			{code: 'c', value: record.id},
-			{code: 'b', value: 'helme'}
-		]});
+		marcRecord.insertField({
+			tag: 'SID', subfields: [
+				{code: 'c', value: record.id},
+				{code: 'b', value: 'helme'}
+			]
+		});
 
-		return marcRecord;
+		if (validate || fix) {
+			marcRecord = await validator(marcRecord, validate, fix);
+		} else {
+			// No validation or fix = all succes!
+			marcRecord.failed = false;
+		}
+		Emitter.emit('record', marcRecord);
+		return true;
+
 
 		function convertToMARC() {
 			const marcRecord = new MarcRecord();
@@ -228,16 +241,20 @@ export default async function (stream) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
-								marcRecord.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 äänitiedosto'}
-								]});
+								marcRecord.insertField({
+									tag: '347', subfields: [
+										{code: 'a', value: '1 äänitiedosto'}
+									]
+								});
 							} else if (/^1 videotiedosto/i.test(a.value)) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
-								marcRecord.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 videotiedosto'}
-								]});
+								marcRecord.insertField({
+									tag: '347', subfields: [
+										{code: 'a', value: '1 videotiedosto'}
+									]
+								});
 							}
 						} else if (/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/i.test(a.value)) {
 							a.value = generateExtendDescr(a.value);

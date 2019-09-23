@@ -27,22 +27,29 @@
 */
 
 import transform from './transform';
-import createValidator from './validate';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
+import {EventEmitter} from 'events';
 
-const {startTransformer} = Transformer;
+class TransformEmitter extends EventEmitter {}
 
-class TransformEmitter extends EventEmitter { }
-const Emitter = new TransformEmitter();
+const {runIndex} = Transformer;
 
 run();
 
 async function run() {
-	startTransformer(async stream => {
-		const validator = await createValidator();
+}
+runIndex(transformCallback);
+
+function transformCallback(stream) {
+	const Emitter = new TransformEmitter();
+	startTransform(stream)
+	return Emitter;
+
+	async function startTransform(stream) {
 		Emitter.emit('transform', {status: 'start'});
-		const records = await transform(stream);
-		Emitter.emit('transform', {status: 'end'});
-		return validator(records, true, true);
-	}, Emitter);
+		const records = await transform(stream, Emitter);
+		if (records) {
+			Emitter.emit('transform', {status: 'end'});
+		}
+	}
 }

@@ -27,10 +27,10 @@
 */
 
 import transform from './transform';
-import createValidator from './validate';
 import {Transformer} from '@natlibfi/melinda-record-import-commons';
-import moment from 'moment';
+import {EventEmitter} from 'events';
 
+class TransformCLIEmitter extends EventEmitter {}
 
 const {runCLI} = Transformer;
 
@@ -43,35 +43,21 @@ async function run() {
 			{option: 'v', conf: {alias: 'validate', default: false, type: 'boolean', describe: 'Validate records'}},
 			{option: 'f', conf: {alias: 'fix', default: false, type: 'boolean', describe: 'Validate & fix records'}}
 		],
-		callback: startTransform
+		callback: transformCallback
 	};
 	runCLI(transformerSettings);
-	
-	async function startTransform({stream, args: {argsValidate, argsFix, recordsOnly}, Emitter}) {
-		let records = await transform(stream);
-		
-		if (argsValidate || argsFix) {
-			Emitter.emit('spinner', {state: 'succeed'});
-			Emitter.emit('spinner', { state: 'start', message: 'Validating records' });
-			
-			const validate = await createValidator();
-			records = validate(records, argsFix, argsValidate);
-	
-			const invalidCount = records.filter(r => r.failed).length;
-			const validCount = records.length - invalidCount;
-			Emitter.emit('spinner', {state: 'succeed', message: `Validating records (Valid: ${validCount}, invalid: ${invalidCount})`});
-	
-			if (recordsOnly) {
-				Emitter.emit('fail', `Excluding ${records.filter(r => r.failed).length} failed records`);
-				Emitter.emit('handle', records.filter(r => !r.failed).map(r => r.record));
-			} else {
-				Emitter.emit('log', JSON.stringify(records.map(r => {
-					return { record: r.record.toObject(), timestamp: moment(), ...r };
-				}), undefined, 2));
+
+	function transformCallback({stream, args: {validate, fix}}) {
+		const Emitter = new TransformCLIEmitter();
+		startTransform(validate, fix);
+		return Emitter;
+
+		async function startTransform() {
+			Emitter.emit('transform', {state: 'start'});
+			const records = await transform(stream, Emitter, validate, fix);
+			if (records) {
+				Emitter.emit('transform', {state: 'end'});
 			}
-		} else {
-			Emitter.emit('spinner', {state: 'succeed'});
-			Emitter.emit('handle', records);
 		}
 	}
 }
