@@ -32,24 +32,24 @@ import {EventEmitter} from 'events';
 
 class TransformEmitter extends EventEmitter {}
 
-const {runIndex} = Transformer;
+const {startTransformer} = Transformer;
 
 run();
 
 async function run() {
-}
-runIndex(transformCallback);
+	startTransformer(transformCallback);
 
-function transformCallback(stream) {
-	const Emitter = new TransformEmitter();
-	startTransform(stream)
-	return Emitter;
+	function transformCallback(stream) {
+		const Emitter = new TransformEmitter();
+		startTransform(stream)
+		return Emitter;
 
-	async function startTransform(stream) {
-		Emitter.emit('transform', {status: 'start'});
-		const records = await transform(stream, Emitter);
-		if (records) {
-			Emitter.emit('transform', {status: 'end'});
+		async function startTransform(stream) {
+			Emitter.emit('log', 'Transformation => validation => fixing')
+			const promises = await transform(stream, Emitter);
+			if (promises) {
+				Emitter.emit('end');
+			}
 		}
 	}
 }

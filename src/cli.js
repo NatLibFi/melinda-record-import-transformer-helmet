@@ -53,10 +53,9 @@ async function run() {
 		return Emitter;
 
 		async function startTransform() {
-			Emitter.emit('transform', {state: 'start'});
 			const records = await transform(stream, Emitter, validate, fix);
 			if (records) {
-				Emitter.emit('transform', {state: 'end'});
+				Emitter.emit('end');
 			}
 		}
 	}

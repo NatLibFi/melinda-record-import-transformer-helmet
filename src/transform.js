@@ -75,9 +75,9 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 			marcRecord = await validator(marcRecord, validate, fix);
 		} else {
 			// No validation or fix = all succes!
-			marcRecord.failed = false;
+			marcRecord = {failed: false, record: {...marcRecord}};
 		}
-		Emitter.emit('record', marcRecord);
+		await Emitter.emit('record', marcRecord);
 		return true;
 
 
