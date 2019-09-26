@@ -43,7 +43,8 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 	const records = await JSON.parse(await getStream(stream));
 
 	Logger.log('debug', `Starting conversion of ${records.length} records...`);
-	Emitter.emit('transform', {status: 'start'});
+	Emitter.emit('log', 'Starting to send recordEvents');
+	Emitter.emit('counter', records.length);
 	return Promise.all(records.map(r => convertRecord(r, validate, fix, validator)));
 
 	async function convertRecord(record, validate, fix, validator) {

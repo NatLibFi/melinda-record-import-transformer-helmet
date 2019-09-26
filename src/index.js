@@ -45,11 +45,7 @@ async function run() {
 		return Emitter;
 
 		async function startTransform(stream) {
-			Emitter.emit('log', 'Transformation => validation => fixing')
-			const promises = await transform(stream, Emitter);
-			if (promises) {
-				Emitter.emit('end');
-			}
+			await transform(stream, Emitter);
 		}
 	}
 }
