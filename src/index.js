@@ -41,11 +41,7 @@ async function run() {
 
 	function transformCallback(stream) {
 		const Emitter = new TransformEmitter();
-		startTransform(stream)
+		transform(stream, Emitter);
 		return Emitter;
-
-		async function startTransform(stream) {
-			await transform(stream, Emitter);
-		}
 	}
 }

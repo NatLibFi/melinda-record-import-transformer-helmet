@@ -27,25 +27,30 @@
 */
 
 import moment from 'moment';
-import getStream from 'get-stream';
+import {chain} from 'stream-chain';
+import {parser} from 'stream-json';
+import {streamArray} from 'stream-json/streamers/StreamArray';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {Utils} from '@natlibfi/melinda-commons';
 import createMaterialFields from './create-material-fields';
 import createValidator from './validate';
-
-const {createLogger} = Utils;
 
 export default async function (stream, Emitter, validate = true, fix = true) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
-	const Logger = createLogger();
 	const validator = await createValidator();
-	const records = await JSON.parse(await getStream(stream));
-
-	Logger.log('debug', `Starting conversion of ${records.length} records...`);
 	Emitter.emit('log', 'Starting to send recordEvents');
-	Emitter.emit('counter', records.length);
-	return Promise.all(records.map(r => convertRecord(r, validate, fix, validator)));
+	const pipeline = chain([
+		stream,
+		parser(),
+		streamArray()
+	]);
+
+	let counter = 0;
+	pipeline.on('data', record => {
+		convertRecord(record.value, validate, fix, validator);
+		counter++;
+	});
+	pipeline.on('end', () => Emitter.emit('counter', counter));
 
 	async function convertRecord(record, validate, fix, validator) {
 		let marcRecord = convertToMARC();
@@ -79,8 +84,6 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 			marcRecord = {failed: false, record: {...marcRecord}};
 		}
 		await Emitter.emit('record', marcRecord);
-		return true;
-
 
 		function convertToMARC() {
 			const marcRecord = new MarcRecord();

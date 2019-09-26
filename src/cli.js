@@ -49,14 +49,7 @@ async function run() {
 
 	function transformCallback({stream, args: {validate, fix}}) {
 		const Emitter = new TransformCLIEmitter();
-		startTransform(validate, fix);
+		transform(stream, Emitter, validate, fix);
 		return Emitter;
-
-		async function startTransform() {
-			const records = await transform(stream, Emitter, validate, fix);
-			if (records) {
-				Emitter.emit('end');
-			}
-		}
 	}
 }

@@ -4,6 +4,4 @@ coverage
 dist
 .nyc_output
 .env
-test
-succesRecordstest.json
 
