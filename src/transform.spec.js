@@ -32,6 +32,9 @@ import chai, {expect} from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as testContext from './transform';
+import {EventEmitter} from 'events';
+
+class TransformEmitter extends EventEmitter {}
 
 chai.use(sinonChai);
 
@@ -51,10 +54,47 @@ describe('transform', () => {
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const records = await testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
+			const Emitter = new TransformEmitter();
+
+			let succesRecordArray = [];
+			let failedRecordsArray = [];
+			let counter = -1;
+			let numberOfRecords = 0;
+
+			testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), Emitter, false, false);
+
+			await new Promise(resolve => {
+				Emitter
+					.on('end', () => resolve(true))
+					.on('counter', setCounter)
+					.on('record', recordEvent);
+			});
+
+			function setCounter(amount) {
+				console.log('debug', `Expecting ${amount} records`);
+				counter = amount;
+				if (numberOfRecords === counter) {
+					Emitter.emit('end');
+				}
+			}
+
+			function recordEvent(payload) {
+				// Console.log('debug', 'Record failed: ' + payload.failed);
+				if (payload.failed) {
+					failedRecordsArray.push(payload);
+				} else {
+					succesRecordArray.push(payload);
+				}
+
+				numberOfRecords++;
+				if (numberOfRecords === counter) {
+					Emitter.emit('end');
+				}
+			}
+
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			expect(records.map(r => r.toObject())).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+			expect(succesRecordArray.map(r => r.record)).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
 		});
 	});
 });

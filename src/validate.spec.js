@@ -30,23 +30,35 @@ import fs from 'fs';
 import path from 'path';
 import {expect} from 'chai';
 import {MarcRecord} from '@natlibfi/marc-record';
-import createValidator from './validate';
+import validator from './validate';
+import {EventEmitter} from 'events';
 
 const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/validate');
 
-describe('validate', () => {
-	let validate;
+class ValidatorEmitter extends EventEmitter {}
 
-	before(async () => {
-		validate = await createValidator();
-	});
+describe('validate', () => {
+	const Emitter = new ValidatorEmitter();
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
 			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));
-			const results = await validate([record], true, true);
+
+			let result;
+			validator(record, true, true, Emitter);
+			await new Promise(resolve => {
+				Emitter
+					.on('end', () => resolve(true))
+					.on('record', recordEvent);
+			});
+
+			function recordEvent(payload) {
+				result = payload;
+				Emitter.emit('end');
+			}
+
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
-			const stringResult = JSON.stringify({...results[0], record: results[0].record.toObject()}, undefined, 2);
+			const stringResult = JSON.stringify({...result, record: result.record.toObject()}, undefined, 2);
 
 			expect(stringResult).to.eql(fs.readFileSync(expectedPath, 'utf8'));
 		});
