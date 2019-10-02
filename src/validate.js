@@ -65,10 +65,11 @@ export default async (record, fix, validateFixes, Emitter) => {
 	} else {
 		const opts = fix ? {fix, validateFixes} : {fix};
 		const result = await validate(record, opts);
-		Emitter.emit('record', {
+		const out = {
 			record: result.record,
 			failed: result.valid === false,
 			messages: result.report
-		});
+		};
+		Emitter.emit('record', out);
 	}
 };

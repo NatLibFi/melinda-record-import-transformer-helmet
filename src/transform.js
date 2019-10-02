@@ -37,19 +37,32 @@ import validator from './validate';
 export default async function (stream, Emitter, validate = true, fix = true) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
-	Emitter.emit('log', 'Starting to send recordEvents');
-	const pipeline = chain([
-		stream,
-		parser(),
-		streamArray()
-	]);
+	let promises = [];
+	let keys;
 
-	let counter = 0;
-	pipeline.on('data', record => {
-		convertRecord(record.value, validate, fix, Emitter);
-		counter++;
-	});
-	pipeline.on('end', () => Emitter.emit('counter', counter));
+	console.log(': Starting to send recordEvents');
+	try {
+		const pipeline = chain([
+			stream,
+			parser({streamNumbers: true}),
+			streamArray()
+		]);
+
+		let counter = 0;
+		pipeline.on('data', data => {
+			promises.push(convertRecord(data.value, validate, fix, Emitter));
+			counter++;
+			keys = data.key;
+		});
+		pipeline.on('end', () => {
+			console.log(`: Handled ${counter} records from stream`);
+			Promise.all(promises).then(
+				Emitter.emit('end', counter)
+			);
+		});
+	} catch (err) {
+		Emitter.emit('error', err);
+	}
 
 	async function convertRecord(record, validate, fix, Emitter) {
 		const marcRecord = convertToMARC();
