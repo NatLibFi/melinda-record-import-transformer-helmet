@@ -38,25 +38,24 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
 
 	let promises = [];
-	let keys;
+	let counter = 0;
 
 	console.log(': Starting to send recordEvents');
 	try {
 		const pipeline = chain([
 			stream,
-			parser({streamNumbers: true}),
+			parser(),
 			streamArray()
 		]);
 
-		let counter = 0;
 		pipeline.on('data', data => {
-			promises.push(convertRecord(data.value, validate, fix, Emitter));
+			promises.push(Promise.resolve(convertRecord(data.value, validate, fix, Emitter))
+				.then(result => Emitter.emit('record', result)));
 			counter++;
-			keys = data.key;
 		});
 		pipeline.on('end', () => {
-			console.log(`: Handled ${counter} records from stream`);
 			Promise.all(promises).then(
+				console.log(`: Handled ${counter} recordEvents`),
 				Emitter.emit('end', counter)
 			);
 		});
@@ -64,7 +63,7 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 		Emitter.emit('error', err);
 	}
 
-	async function convertRecord(record, validate, fix, Emitter) {
+	async function convertRecord(record, validate, fix) {
 		const marcRecord = convertToMARC();
 
 		/* Order is significant! */
@@ -89,7 +88,11 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 			]
 		});
 
-		validator(marcRecord, validate, fix, Emitter);
+		if (validate || fix) {
+			return validator(marcRecord, validate, fix);
+		}
+
+		return {failed: false, record};
 
 		function convertToMARC() {
 			const marcRecord = new MarcRecord();
