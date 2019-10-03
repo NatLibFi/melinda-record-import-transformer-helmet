@@ -48,16 +48,19 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 			streamArray()
 		]);
 
-		pipeline.on('data', data => {
-			promises.push(Promise.resolve(convertRecord(data.value, validate, fix, Emitter))
-				.then(result => Emitter.emit('record', result)));
+		pipeline.on('data', async data => {
 			counter++;
+			promises.push(transform(data.value));
+
+			async function transform(value) {
+				const result = await convertRecord(value, validate, fix, Emitter);
+				Emitter.emit('record', result);
+			}
 		});
-		pipeline.on('end', () => {
-			Promise.all(promises).then(
-				console.log(`: Handled ${counter} recordEvents`),
-				Emitter.emit('end', counter)
-			);
+		pipeline.on('end', async () => {
+			console.log(`: Handled ${counter} recordEvents`);
+			await Promise.all(promises);
+			Emitter.emit('end', counter);
 		});
 	} catch (err) {
 		Emitter.emit('error', err);
