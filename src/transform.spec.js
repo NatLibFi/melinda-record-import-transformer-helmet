@@ -58,25 +58,16 @@ describe('transform', () => {
 
 			let succesRecordArray = [];
 			let failedRecordsArray = [];
-			let counter = -1;
-			let numberOfRecords = 0;
 
 			testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), Emitter, false, false);
 
 			await new Promise(resolve => {
 				Emitter
-					.on('end', () => resolve(true))
-					.on('counter', setCounter)
+					.on('end', () => {
+						resolve(true);
+					})
 					.on('record', recordEvent);
 			});
-
-			function setCounter(amount) {
-				console.log('debug', `Expecting ${amount} records`);
-				counter = amount;
-				if (numberOfRecords === counter) {
-					Emitter.emit('end');
-				}
-			}
 
 			function recordEvent(payload) {
 				// Console.log('debug', 'Record failed: ' + payload.failed);
@@ -84,11 +75,6 @@ describe('transform', () => {
 					failedRecordsArray.push(payload);
 				} else {
 					succesRecordArray.push(payload);
-				}
-
-				numberOfRecords++;
-				if (numberOfRecords === counter) {
-					Emitter.emit('end');
 				}
 			}
 

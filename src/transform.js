@@ -91,11 +91,11 @@ export default async function (stream, Emitter, validate = true, fix = true) {
 			]
 		});
 
-		if (validate || fix) {
+		if (validate === true || fix === true) {
 			return validator(marcRecord, validate, fix);
 		}
 
-		return {failed: false, record};
+		return {failed: false, record: marcRecord};
 
 		function convertToMARC() {
 			const marcRecord = new MarcRecord();
