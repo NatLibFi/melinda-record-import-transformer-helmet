@@ -33,40 +33,49 @@ import {streamArray} from 'stream-json/streamers/StreamArray';
 import {MarcRecord} from '@natlibfi/marc-record';
 import createMaterialFields from './create-material-fields';
 import validator from './validate';
+import {Utils} from '@natlibfi/melinda-commons';
+import {EventEmitter} from 'events';
 
-export default async function (stream, Emitter, validate = true, fix = true) {
+class TransformEmitter extends EventEmitter {}
+const {createLogger} = Utils;
+
+export default function (stream, {validate = true, fix = true}) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
+	const Emitter = new TransformEmitter();
+	const logger = createLogger();
+	logger.log('debug', 'Starting to send recordEvents');
 
-	let promises = [];
-	let counter = 0;
+	readStream(stream);
+	return Emitter;
 
-	console.log(': Starting to send recordEvents');
-	try {
-		const pipeline = chain([
-			stream,
-			parser(),
-			streamArray()
-		]);
+	async function readStream(stream) {
+		try {
+			const promises = [];
+			const pipeline = chain([
+				stream,
+				parser(),
+				streamArray()
+			]);
 
-		pipeline.on('data', async data => {
-			counter++;
-			promises.push(transform(data.value));
+			pipeline.on('data', async data => {
+				promises.push(transform(data.value));
 
-			async function transform(value) {
-				const result = await convertRecord(value, validate, fix, Emitter);
-				Emitter.emit('record', result);
-			}
-		});
-		pipeline.on('end', async () => {
-			console.log(`: Handled ${counter} recordEvents`);
-			await Promise.all(promises);
-			Emitter.emit('end', counter);
-		});
-	} catch (err) {
-		Emitter.emit('error', err);
+				async function transform(value) {
+					const result = await convertRecord(value);
+					Emitter.emit('record', result);
+				}
+			});
+			pipeline.on('end', async () => {
+				logger.log('debug', `Handled ${promises.length} recordEvents`);
+				await Promise.all(promises);
+				Emitter.emit('end', promises.length);
+			});
+		} catch (err) {
+			Emitter.emit('error', err);
+		}
 	}
 
-	async function convertRecord(record, validate, fix) {
+	function convertRecord(record) {
 		const marcRecord = convertToMARC();
 
 		/* Order is significant! */

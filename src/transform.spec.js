@@ -32,9 +32,6 @@ import chai, {expect} from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import * as testContext from './transform';
-import {EventEmitter} from 'events';
-
-class TransformEmitter extends EventEmitter {}
 
 chai.use(sinonChai);
 
@@ -54,12 +51,10 @@ describe('transform', () => {
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const Emitter = new TransformEmitter();
-
 			let succesRecordArray = [];
 			let failedRecordsArray = [];
 
-			testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), Emitter, false, false);
+			const Emitter = testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), {validate: false, fix: false});
 
 			await new Promise(resolve => {
 				Emitter
@@ -70,7 +65,7 @@ describe('transform', () => {
 			});
 
 			function recordEvent(payload) {
-				// Console.log('debug', 'Record failed: ' + payload.failed);
+				// Logger.log('debug', 'Record failed: ' + payload.failed);
 				if (payload.failed) {
 					failedRecordsArray.push(payload);
 				} else {
