@@ -27,21 +27,53 @@
 */
 
 import moment from 'moment';
-import getStream from 'get-stream';
+import {chain} from 'stream-chain';
+import {parser} from 'stream-json';
+import {streamArray} from 'stream-json/streamers/StreamArray';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {Utils} from '@natlibfi/melinda-commons';
 import createMaterialFields from './create-material-fields';
+import validator from './validate';
+import {Utils} from '@natlibfi/melinda-commons';
+import {EventEmitter} from 'events';
 
+class TransformEmitter extends EventEmitter {}
 const {createLogger} = Utils;
 
-export default async function (stream) {
+export default function (stream, {validate = true, fix = true}) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
+	const Emitter = new TransformEmitter();
+	const logger = createLogger();
+	logger.log('debug', 'Starting to send recordEvents');
 
-	const Logger = createLogger();
-	const records = await JSON.parse(await getStream(stream));
+	readStream(stream);
+	return Emitter;
 
-	Logger.log('debug', `Starting conversion of ${records.length} records...`);
-	return Promise.all(records.map(convertRecord));
+	async function readStream(stream) {
+		try {
+			const promises = [];
+			const pipeline = chain([
+				stream,
+				parser(),
+				streamArray()
+			]);
+
+			pipeline.on('data', async data => {
+				promises.push(transform(data.value));
+
+				async function transform(value) {
+					const result = await convertRecord(value);
+					Emitter.emit('record', result);
+				}
+			});
+			pipeline.on('end', async () => {
+				logger.log('debug', `Handled ${promises.length} recordEvents`);
+				await Promise.all(promises);
+				Emitter.emit('end', promises.length);
+			});
+		} catch (err) {
+			Emitter.emit('error', err);
+		}
+	}
 
 	function convertRecord(record) {
 		const marcRecord = convertToMARC();
@@ -61,12 +93,18 @@ export default async function (stream) {
 		handleTerms();
 		handle856();
 
-		marcRecord.insertField({tag: 'SID', subfields: [
-			{code: 'c', value: record.id},
-			{code: 'b', value: 'helme'}
-		]});
+		marcRecord.insertField({
+			tag: 'SID', subfields: [
+				{code: 'c', value: record.id},
+				{code: 'b', value: 'helme'}
+			]
+		});
 
-		return marcRecord;
+		if (validate === true || fix === true) {
+			return validator(marcRecord, validate, fix);
+		}
+
+		return {failed: false, record: marcRecord};
 
 		function convertToMARC() {
 			const marcRecord = new MarcRecord();
@@ -228,16 +266,20 @@ export default async function (stream) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
-								marcRecord.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 äänitiedosto'}
-								]});
+								marcRecord.insertField({
+									tag: '347', subfields: [
+										{code: 'a', value: '1 äänitiedosto'}
+									]
+								});
 							} else if (/^1 videotiedosto/i.test(a.value)) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
-								marcRecord.insertField({tag: '347', subfields: [
-									{code: 'a', value: '1 videotiedosto'}
-								]});
+								marcRecord.insertField({
+									tag: '347', subfields: [
+										{code: 'a', value: '1 videotiedosto'}
+									]
+								});
 							}
 						} else if (/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/i.test(a.value)) {
 							a.value = generateExtendDescr(a.value);

@@ -51,10 +51,31 @@ describe('transform', () => {
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			const records = await testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
+			let succesRecordArray = [];
+			let failedRecordsArray = [];
+
+			const Emitter = testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), {validate: false, fix: false});
+
+			await new Promise(resolve => {
+				Emitter
+					.on('end', () => {
+						resolve(true);
+					})
+					.on('record', recordEvent);
+			});
+
+			function recordEvent(payload) {
+				// Logger.log('debug', 'Record failed: ' + payload.failed);
+				if (payload.failed) {
+					failedRecordsArray.push(payload);
+				} else {
+					succesRecordArray.push(payload);
+				}
+			}
+
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			expect(records.map(r => r.toObject())).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+			expect(succesRecordArray.map(r => r.record)).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
 		});
 	});
 });

@@ -1,6 +1,7 @@
 [
   {
     "leader": "00000nam a22003854i 4500",
+    "_validationOptions": {},
     "fields": [
       {
         "tag": "001",
@@ -550,6 +551,7 @@
   },
   {
     "leader": "00000ngm a22005414i 4500",
+    "_validationOptions": {},
     "fields": [
       {
         "tag": "007",
