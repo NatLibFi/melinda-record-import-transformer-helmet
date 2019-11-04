@@ -60,7 +60,7 @@ export default async () => {
 		await EndingPunctuation()
 	]);
 
-	return async (record, fix, validateFixes)  => {
+	return async (record, fix, validateFixes) => {
 		const opts = fix ? {fix, validateFixes} : {fix};
 		const result = await validate(record, opts);
 		return {
@@ -68,5 +68,5 @@ export default async () => {
 			failed: result.valid === false,
 			messages: result.report
 		};
-	}
+	};
 };
