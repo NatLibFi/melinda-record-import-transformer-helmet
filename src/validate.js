@@ -38,7 +38,7 @@ import {
 	SubfieldExclusion
 } from '@natlibfi/marc-record-validators-melinda';
 
-export default async (record, fix, validateFixes) => {
+export default async () => {
 	const validate = validateFactory([
 		await FieldsPresent([/^(020|022|024)$/]),
 		await FieldsPresent([/^336$/, /^337$/, /^338$/]),
@@ -60,11 +60,13 @@ export default async (record, fix, validateFixes) => {
 		await EndingPunctuation()
 	]);
 
-	const opts = fix ? {fix, validateFixes} : {fix};
-	const result = await validate(record, opts);
-	return {
-		record: result.record,
-		failed: result.valid === false,
-		messages: result.report
-	};
+	return async (record, fix, validateFixes)  => {
+		const opts = fix ? {fix, validateFixes} : {fix};
+		const result = await validate(record, opts);
+		return {
+			record: result.record,
+			failed: result.valid === false,
+			messages: result.report
+		};
+	}
 };
