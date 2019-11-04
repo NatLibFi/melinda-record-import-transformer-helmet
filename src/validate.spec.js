@@ -30,17 +30,22 @@ import fs from 'fs';
 import path from 'path';
 import {expect} from 'chai';
 import {MarcRecord} from '@natlibfi/marc-record';
-import validator from './validate';
+import createValidator from './validate';
 
 const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/validate');
 
 describe('validate', () => {
+	let validator;
+
+	before(async () => {
+		validator = await createValidator();
+	});
+
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
 			const record = new MarcRecord(JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8')));
 
 			const result = await validator(record, true, true);
-
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 			const stringResult = JSON.stringify({...result, record: result.record.toObject()}, undefined, 2);
 
