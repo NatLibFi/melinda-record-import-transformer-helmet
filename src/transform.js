@@ -64,14 +64,22 @@ export default function (stream, {validate = true, fix = true}) {
 				promises.push(transform(data.value));
 
 				async function transform(value) {
-					const result = await convertRecord(value, validator);
-					Emitter.emit('record', result);
+					try {
+						const result = await convertRecord(value, validator);
+						Emitter.emit('record', result);
+					} catch (err) {
+						Emitter.emit('error', err);
+					}
 				}
 			});
 			pipeline.on('end', async () => {
-				logger.log('debug', `Handled ${promises.length} recordEvents`);
-				await Promise.all(promises);
-				Emitter.emit('end', promises.length);
+				try {
+					logger.log('debug', `Handled ${promises.length} recordEvents`);
+					await Promise.all(promises);
+					Emitter.emit('end', promises.length);
+				} catch (err) {
+					Emitter.emit('error', err);
+				}
 			});
 		} catch (err) {
 			Emitter.emit('error', err);
