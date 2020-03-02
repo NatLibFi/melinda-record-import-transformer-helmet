@@ -41,43 +41,52 @@ const {createLogger} = Utils;
 
 export default function (stream, {validate = true, fix = true}) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
+
 	const Emitter = new TransformEmitter();
 	const logger = createLogger();
-	let validator;
+
 	logger.log('debug', 'Starting to send recordEvents');
 
 	readStream(stream);
 	return Emitter;
 
 	async function readStream(stream) {
-		validator = await createValidator();
 		try {
 			const promises = [];
+			const validator = await createValidator();
 			const pipeline = chain([
 				stream,
 				parser(),
 				streamArray()
-			]);
+			]).on('error', err => Emitter.emit('error', err));
 
 			pipeline.on('data', async data => {
 				promises.push(transform(data.value));
 
 				async function transform(value) {
-					const result = await convertRecord(value);
-					Emitter.emit('record', result);
+					try {
+						const result = await convertRecord(value, validator);
+						Emitter.emit('record', result);
+					} catch (err) {
+						Emitter.emit('error', err);
+					}
 				}
 			});
 			pipeline.on('end', async () => {
-				logger.log('debug', `Handled ${promises.length} recordEvents`);
-				await Promise.all(promises);
-				Emitter.emit('end', promises.length);
+				try {
+					logger.log('debug', `Handled ${promises.length} recordEvents`);
+					await Promise.all(promises);
+					Emitter.emit('end', promises.length);
+				} catch (err) {
+					Emitter.emit('error', err);
+				}
 			});
 		} catch (err) {
 			Emitter.emit('error', err);
 		}
 	}
 
-	function convertRecord(record) {
+	function convertRecord(record, validator) {
 		const marcRecord = convertToMARC();
 
 		/* Order is significant! */
