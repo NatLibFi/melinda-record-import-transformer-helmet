@@ -40,7 +40,7 @@ describe('create-material-fields', () => {
 			const fields = testContext.default(record);
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			expect(JSON.stringify(fields, undefined, 2)).to.eql(fs.readFileSync(expectedPath, 'utf8'));
+			expect(fields).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
 		});
 	});
 });

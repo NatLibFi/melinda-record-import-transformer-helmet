@@ -47,9 +47,9 @@ describe('validate', () => {
 
 			const result = await validator(record, true, true);
 			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
-			const stringResult = JSON.stringify({...result, record: result.record.toObject()}, undefined, 2);
+			const formattedResult = {...result, record: result.record.toObject()};
 
-			expect(stringResult).to.eql(fs.readFileSync(expectedPath, 'utf8'));
+			expect(formattedResult).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
 		});
 	});
 });
