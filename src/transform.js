@@ -104,6 +104,13 @@ export default function (stream, {validate = true, fix = true}) {
 		handleTerms();
 		handle856();
 
+		// ->  ***
+		const f000 = marcRecord.get(/^000$/).shift();
+		if (f000) {
+			console.log(' - Found field 006: ', f000);
+		}
+		// <-  ***
+
 		marcRecord.insertField({
 			tag: 'SID', subfields: [
 				{code: 'c', value: record.id},
@@ -175,6 +182,8 @@ export default function (stream, {validate = true, fix = true}) {
 			const f008 = marcRecord.get(/^008$/).shift();
 
 			if (f008) {
+
+
 				const creationDate = moment().format('YYMMDD');
 				// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
 				const chars = f008.value.split('').slice(0, 40).slice(6);
@@ -191,7 +200,17 @@ export default function (stream, {validate = true, fix = true}) {
 					chars[39] = 'c';
 				}
 
+		
+				chars[18] = '|';
+				chars[19] = '|';
+				chars[20] = '|';
+				chars[30] = '|';
+				chars[31] = '|';
+				Chars[34] = '|';
+
 				f008.value = `${creationDate}${chars.join('')}`;
+
+
 			}
 		}
 
