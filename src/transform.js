@@ -190,14 +190,9 @@ export default function (stream, {validate = true, fix = true}) {
 					chars[39] = 'c';
 				}
 
-				// Check: is it a boardgame? - >  000/06 = 'r'  &   008/33 = 'g'
-				if ((marcRecord.leader[6] === 'r') & (chars[33] === 'g')) {
-					console.log(' NOW IT IS A BOARDGAME! '); // Boardgame, so do edits:
-					chars.fill('|', 18, 19);
-					chars.fill('|', 19, 20);
-					chars.fill('|', 20, 21);
-					chars.fill('|', 30, 31);
-					chars.fill('|', 31, 32);
+				if (marcRecord.leader[6] === 'r' & chars[33] === 'g') {
+					chars.fill('|', 18, 21);
+					chars.fill('|', 30, 32);
 					chars.fill('|', 34, 35);
 				}
 
