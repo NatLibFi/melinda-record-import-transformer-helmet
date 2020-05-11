@@ -1,0 +1,475 @@
+[
+{
+  "_validationOptions": {},
+  "leader": "00000nrm a22003015i 4500",
+  "fields": [
+    {
+      "tag": "007",
+      "value": "zu"
+    },
+    {
+      "tag": "008",
+      "value": "000000t20172017fi |||  ^||| |    g|f|||g"
+    },
+    {
+      "tag": "024",
+      "ind1": "3",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "6416550861673"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-He"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "fin"
+        },
+        {
+          "code": "a",
+          "value": "swe"
+        },
+        {
+          "code": "a",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "091",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "82"
+        }
+      ]
+    },
+    {
+      "tag": "092",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "79.813"
+        }
+      ]
+    },
+    {
+      "tag": "095",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "798.2"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Knizia, Reiner,"
+        },
+        {
+          "code": "e",
+          "value": "designer"
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "0",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Icebreaker Snow /"
+        },
+        {
+          "code": "c",
+          "value": "pelinkeksijä Reiner Knizia ; alkuperäiset kuvitukset Petri Kantoniemi ; perustuu Teemu Leppälän kirjasarjaan"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Turku :"
+        },
+        {
+          "code": "b",
+          "value": "Peliko/Martinex,"
+        },
+        {
+          "code": "c",
+          "value": "[2017]"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "©2017"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "1 lautapeli +"
+        },
+        {
+          "code": "e",
+          "value": "1 sääntövihko"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kolmiulotteinen muoto"
+        },
+        {
+          "code": "b",
+          "value": "tdf"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "objekti"
+        },
+        {
+          "code": "b",
+          "value": "nr"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "2-4 pelaajalle"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Pelin kesto 25 min"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Mechanics : co-operative play"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Mekaniikat : yhteistyö"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Pelilauta, 4 jäänmurtajaa ja muovijalustaa, 36 navigaatiokorttia, 3 haastekorttia, 12 laivalaattaa, 1 jääväyläkiekko, 12 ankkurimerkkiä, säännöt"
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Talvi on tullut ja jää on muodostanut paksun kannen meren päälle. Tämä tietää paljon töitä Snow'lle ja hänen jäänmurtajaystävilleen. Icebreaker Snow on yhteistyöpeli, jossa pelaajien on tarkoitus ohjata alukset oikeisiin satamiin hyisessä meressä. Onnistutteko pitämään väylät auki ja ohjaamaan laivat perille myrskyistä ja hurjista olosuhteista huolimatta? Jos kaikki laivat on saatu oikeisiin satamiin ennen kuin pelipakka loppuu, ovat pelaajat voittaneet pelin."
+        }
+      ]
+    },
+    {
+      "tag": "521",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ikäsuositus 7+"
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "suomi, ruotsi, englanti"
+        }
+      ]
+    },
+    {
+      "tag": "574",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "renni.honkanen@hel.fi"
+        }
+      ]
+    },
+    {
+      "tag": "599",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "LAUTAPELI / BRÄDSPEL"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "jäänmurtajat"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "pelit"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "lautapelit"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "lastenpelit"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "yhteistyöpelit"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kantoniemi, Petri,"
+        },
+        {
+          "code": "e",
+          "value": "kuvittaja"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Leppälä, Teemu,"
+        },
+        {
+          "code": "e",
+          "value": "alkuperäisidean luoja"
+        }
+      ]
+    },
+    {
+      "tag": "856",
+      "ind1": "4",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "u",
+          "value": "https://boardgamegeek.com/boardgame/235812/icebreaker-snow"
+        },
+        {
+          "code": "y",
+          "value": "Peli BoardGameGeekissä"
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2318039"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}
+]
