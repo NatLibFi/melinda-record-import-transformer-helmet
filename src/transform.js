@@ -173,12 +173,11 @@ export default function (stream, {validate = true, fix = true}) {
 
 		function handle008() {
 			const f008 = marcRecord.get(/^008$/).shift();
-
 			if (f008) {
 				const creationDate = moment().format('YYMMDD');
+
 				// Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
 				const chars = f008.value.split('').slice(0, 40).slice(6);
-
 				if (chars[17] === ' ') {
 					chars[17] = '^';
 				}
@@ -189,6 +188,12 @@ export default function (stream, {validate = true, fix = true}) {
 
 				if (['#', '^', 'd', 'u', '|'].includes(chars[39])) {
 					chars[39] = 'c';
+				}
+
+				if (marcRecord.leader[6] === 'r' & chars[33] === 'g') {
+					chars.fill('|', 18, 21);
+					chars.fill('|', 30, 32);
+					chars.fill('|', 34, 35);
 				}
 
 				f008.value = `${creationDate}${chars.join('')}`;
