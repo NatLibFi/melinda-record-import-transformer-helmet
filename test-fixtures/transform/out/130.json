@@ -554,6 +554,10 @@
     "_validationOptions": {},
     "fields": [
       {
+        "tag": "003",
+        "value": "FI-MELINDA"
+      },
+      {
         "tag": "007",
         "value": "vd cvaiz|"
       },
