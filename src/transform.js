@@ -175,8 +175,8 @@ export default function (stream, {validate = true, fix = true}) {
 		function handle003() {
 			marcRecord.fields = marcRecord.fields.filter(field => field.tag !== '003');
 			marcRecord.insertField({
-				tag: "003",
-				value: "FI-MELINDA"
+				tag: '003',
+				value: 'FI-MELINDA'
 			});
 		}
 
