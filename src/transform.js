@@ -91,6 +91,7 @@ export default function (stream, {validate = true, fix = true}) {
 
 		/* Order is significant! */
 		handleLeader();
+		handle003();
 		handle007();
 		handle008();
 		handle020();
@@ -169,6 +170,14 @@ export default function (stream, {validate = true, fix = true}) {
 			function isBoardGame(field) {
 				return field.subfields.some(sf => sf.code === 'a' && sf.value === 'lautapelit');
 			}
+		}
+
+		function handle003() {
+			marcRecord.fields = marcRecord.fields.filter(field => field.tag !== '003');
+			marcRecord.insertField({
+				tag: "003",
+				value: "FI-MELINDA"
+			});
 		}
 
 		function handle008() {
