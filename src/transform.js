@@ -91,6 +91,7 @@ export default function (stream, {validate = true, fix = true}) {
 
 		/* Order is significant! */
 		handleLeader();
+		handle003();
 		handle007();
 		handle008();
 		handle020();
@@ -169,6 +170,10 @@ export default function (stream, {validate = true, fix = true}) {
 			function isBoardGame(field) {
 				return field.subfields.some(sf => sf.code === 'a' && sf.value === 'lautapelit');
 			}
+		}
+
+		function handle003() {
+			marcRecord.get(/^003$/u).forEach(field => marcRecord.removeField(field));
 		}
 
 		function handle008() {
