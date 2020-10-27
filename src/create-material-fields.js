@@ -64,7 +64,8 @@ export default function (record) {
 			update008([{index: 23, value: 'o'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'r'});
 			break;
-		/* Case '4':
+
+			/* Case '4':
 			f007.value = create007Value({len: 14, i0: 's', i1: 's', i3: 'l', i6: 'j', i10: 'p'});
 			break; */
 		case 's':
@@ -74,19 +75,21 @@ export default function (record) {
 		case 'a':
 			f007.value = create007Value({len: 6, i0: 'k'});
 			break;
+
 			/* Case '6':
 			f007.value = create007Value({len: 14, i0: 's', i1: 'd', i3: 'b', i6: 'e', i10: 'p'});
 			break; */
-		/* case 'n':
+			/* case 'n':
 			f007.value = create007Value({len: 2, i0: 'f', i1: 'b'});
 			break; */
 		case 'c':
 			f007.value = create007Value({len: 6, i0: 'k', i1: 'l'});
 			break;
+
 			/* Case 'f':
 			f007.value = create007Value({len: 9, i0: 'v', i1: 'f', i4: 'b'});
 			break; */
-		/* case 'd':
+			/* case 'd':
 			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
 			break; */
@@ -97,11 +100,12 @@ export default function (record) {
 		case '2':
 			f007.value = create007Value({len: 8, i0: 'a'});
 			break;
+
 			/* Case 'e':
 			update008([{index: 23, value: 'q'}]);
 			f007.value = create007Value({len: 14, i0: 'c', i1: 'd', i4: 'g'});
 			break; */
-		/* case 'j':
+			/* case 'j':
 			f007.value = create007Value({len: 13, i0: 'h', i1: 'u'});
 			break; */
 		case 'r':

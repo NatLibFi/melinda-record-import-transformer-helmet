@@ -33,11 +33,10 @@ import {streamArray} from 'stream-json/streamers/StreamArray';
 import {MarcRecord} from '@natlibfi/marc-record';
 import createMaterialFields from './create-material-fields';
 import createValidator from './validate';
-import {Utils} from '@natlibfi/melinda-commons';
+import {createLogger} from '@natlibfi/melinda-backend-commons';
 import {EventEmitter} from 'events';
 
 class TransformEmitter extends EventEmitter {}
-const {createLogger} = Utils;
 
 export default function (stream, {validate = true, fix = true}) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
@@ -234,7 +233,7 @@ export default function (stream, {validate = true, fix = true}) {
 					if (!field.subfields.find(sf => sf.code === 'q')) {
 						const a = field.subfields.find(sf => sf.code === 'a');
 
-						if (a && /\s/.test(a.value.trim())) {
+						if (a && (/\s/).test(a.value.trim())) {
 							const [isbn, postfix] = a.value.split(/\s/);
 							a.value = isbn;
 
@@ -257,15 +256,15 @@ export default function (stream, {validate = true, fix = true}) {
 
 		function handle130() {
 			marcRecord.get(/^130$/).forEach(field => {
-				const a = field.subfields.find(sf => sf.code === 'a' && /:/.test(sf.value));
+				const a = field.subfields.find(sf => sf.code === 'a' && (/:/).test(sf.value));
 
 				if (a) {
-					const reComplex = /^(.[^:]*).*(\(.*\))/.exec(a.value);
+					const reComplex = (/^(.[^:]*).*(\(.*\))/).exec(a.value);
 
 					if (reComplex) {
 						a.value = `${reComplex[1].replace(/\s+$/, '')} ${reComplex[2]}`;
 					} else {
-						const reSimple = /^(.[^:]*)/.exec(a.value);
+						const reSimple = (/^(.[^:]*)/).exec(a.value);
 						a.value = `${reSimple[1].replace(/\s+$/, '')}.`;
 					}
 				}
@@ -280,33 +279,29 @@ export default function (stream, {validate = true, fix = true}) {
 
 					if (a) {
 						if (b && b.value === 'elektroninen') {
-							if (/^1 tekstitiedosto/i.test(a.value)) {
+							if ((/^1 tekstitiedosto/i).test(a.value)) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
-							} else if (/^1 äänitiedosto/i.test(a.value)) {
+							} else if ((/^1 äänitiedosto/i).test(a.value)) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
 								marcRecord.insertField({
-									tag: '347', subfields: [
-										{code: 'a', value: '1 äänitiedosto'}
-									]
+									tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]
 								});
-							} else if (/^1 videotiedosto/i.test(a.value)) {
+							} else if ((/^1 videotiedosto/i).test(a.value)) {
 								a.value = generateExtendDescr(a.value);
 								marcRecord.removeSubfield(b, field);
 
 								marcRecord.insertField({
-									tag: '347', subfields: [
-										{code: 'a', value: '1 videotiedosto'}
-									]
+									tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]
 								});
 							}
-						} else if (/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/i.test(a.value)) {
+						} else if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/i).test(a.value)) {
 							a.value = generateExtendDescr(a.value);
-						} else if (/^(äänikirja|ljudbok)/i.test(a.value)) {
+						} else if ((/^(äänikirja|ljudbok)/i).test(a.value)) {
 							a.value = generateExtendDescr(a.value, '1 CD-äänilevy');
-						} else if (/^cd-skiva/i.test(a.value)) {
+						} else if ((/^cd-skiva/i).test(a.value)) {
 							a.value = generateExtendDescr(a.value, '1 CD-ljudskiva');
 						} else {
 							handleConsoleGames();
@@ -314,10 +309,10 @@ export default function (stream, {validate = true, fix = true}) {
 					}
 
 					function handleConsoleGames() {
-						if (/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/i.test(a.value)) {
-							const re = /^konsolipeli \((.*)\)(.*)$/i.exec(a.value);
+						if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/i).test(a.value)) {
+							const re = (/^konsolipeli \((.*)\)(.*)$/i).exec(a.value);
 							a.value = `${re[1]}${re[2]}`;
-						} else if (/^(konsolipeli|konsolspel)/i.test(a.value)) {
+						} else if ((/^(konsolipeli|konsolspel)/i).test(a.value)) {
 							const f007 = marcRecord.get(/^007$/).shift();
 
 							switch (f007.value[1]) {
@@ -337,7 +332,7 @@ export default function (stream, {validate = true, fix = true}) {
 					}
 
 					function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
-						const re = / \((.*)\)/i.exec(descr);
+						const re = (/ \((.*)\)/i).exec(descr);
 
 						if (re) {
 							return `${prefix} (${re[1]})`;
@@ -352,9 +347,9 @@ export default function (stream, {validate = true, fix = true}) {
 			marcRecord.get(/^500$/).forEach(field => {
 				const a = field.subfields.find(sf => sf.code === 'a');
 
-				if (a && /^(ääniraita|lainausoikeus\.|ljudspår)/i.test(a.value)) {
+				if (a && (/^(ääniraita|lainausoikeus\.|ljudspår)/i).test(a.value)) {
 					const newField = clone(field);
-					newField.tag = /^lainausoikeus/i.test(a.value) ? '540' : '546';
+					newField.tag = (/^lainausoikeus/i).test(a.value) ? '540' : '546';
 
 					marcRecord.insertField(newField);
 					marcRecord.removeField(field);
@@ -367,10 +362,10 @@ export default function (stream, {validate = true, fix = true}) {
 				const a = field.subfields.find(sf => sf.code === 'a');
 
 				if (a) {
-					const re = /^(Kielletty alle [0-9]+-v\.)(.*)$/i.exec(a.value);
+					const re = (/^(Kielletty alle [0-9]+-v\.)(.*)$/i).exec(a.value);
 
 					if (re) {
-						const reInner = /^Kielletty alle ([0-9]+)-v\./i.exec(re[1]);
+						const reInner = (/^Kielletty alle ([0-9]+)-v\./i).exec(re[1]);
 						a.value = `Kielletty alle ${reInner[1]}-vuotiailta.${re[2]}`;
 					}
 				}
@@ -381,7 +376,7 @@ export default function (stream, {validate = true, fix = true}) {
 			marcRecord.get(/^530$/).forEach(field => {
 				const a = field.subfields.find(sf => sf.code === 'a');
 
-				if (a && /^Julkaistu myös e-kirjana\.$/.test(a.value)) {
+				if (a && (/^Julkaistu myös e-kirjana\.$/).test(a.value)) {
 					a.value = 'Julkaistu myös verkkoaineistona.';
 				}
 			});
@@ -398,7 +393,7 @@ export default function (stream, {validate = true, fix = true}) {
 						.forEach(field => {
 							const a = field.subfields.find(sf => sf.code === 'a');
 
-							if (a && /svenska/i.test(a.value)) {
+							if (a && (/svenska/i).test(a.value)) {
 								a.value = a.value.replace(/svenska/i, 'ruotsi');
 								a.value = a.value.replace(/^ruotsi/, 'Ruotsi');
 							}

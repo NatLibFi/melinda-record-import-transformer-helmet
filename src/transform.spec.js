@@ -51,8 +51,8 @@ describe('transform', () => {
 
 	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
 		it(file, async () => {
-			let succesRecordArray = [];
-			let failedRecordsArray = [];
+			const succesRecordArray = [];
+			const failedRecordsArray = [];
 
 			const Emitter = testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), {validate: false, fix: false});
 
