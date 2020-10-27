@@ -33,7 +33,7 @@ const {runCLI} = Transformer;
 
 run();
 
-async function run() {
+function run() {
 	const transformerSettings = {
 		name: 'melinda-record-import-transformer-helmet',
 		yargsOptions: [

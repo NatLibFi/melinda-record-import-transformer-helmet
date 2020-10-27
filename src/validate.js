@@ -51,12 +51,8 @@ export default async () => {
 		]),
 		await EmptyFields(),
 		await IsbnIssn({hyphenateISBN: true}),
-		await SubfieldExclusion([
-			{tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/}]}
-		]),
-		await FieldStructure([
-			{tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}
-		]),
+		await SubfieldExclusion([{tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/}]}]),
+		await FieldStructure([{tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}]),
 		await EndingPunctuation()
 	]);
 
