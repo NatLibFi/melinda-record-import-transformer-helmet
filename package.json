@@ -38,7 +38,7 @@
 		"@natlibfi/marc-record-validate": "^6.0.1",
 		"@natlibfi/marc-record-validators-melinda": "^8.2.5",
 		"@natlibfi/melinda-backend-commons": "^2.0.2",
-		"@natlibfi/melinda-record-import-commons": "^9.0.1",
+		"@natlibfi/melinda-record-import-commons": "^9.1.0",
 		"moment": "^2.22.2",
 		"sinon": "^9.2.0",
 		"sinon-chai": "^3.5.0",
