@@ -112,8 +112,13 @@ export default function (stream, {validate = true, fix = true}) {
 			]
 		});
 
-		if (validate === true || fix === true) {
-			return validator(marcRecord, validate, fix);
+		try {
+			if (validate === true || fix === true) {
+				return validator(marcRecord, validate, fix);
+			}
+		} catch (error) {
+			logger.log('error', error);
+			throw error;
 		}
 
 		return {failed: false, record: marcRecord};
