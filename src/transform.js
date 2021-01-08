@@ -81,7 +81,7 @@ export default function (stream, {validate = true, fix = true}) {
 				}
 			});
 		} catch (err) {
-			logger.log('error', err);
+			logger.log('error', 'Unexpected transformation error');
 			Emitter.emit('error', err);
 		}
 	}
@@ -117,7 +117,7 @@ export default function (stream, {validate = true, fix = true}) {
 				return validator(marcRecord, validate, fix);
 			}
 		} catch (error) {
-			logger.log('error', error);
+			logger.log('error', 'Unexpected validation error');
 			throw error;
 		}
 
