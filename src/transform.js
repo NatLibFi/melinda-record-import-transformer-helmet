@@ -81,6 +81,7 @@ export default function (stream, {validate = true, fix = true}) {
 				}
 			});
 		} catch (err) {
+			logger.log('error', err);
 			Emitter.emit('error', err);
 		}
 	}
