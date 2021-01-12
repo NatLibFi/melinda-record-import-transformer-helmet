@@ -36,7 +36,7 @@ import createValidator from './validate';
 import {createLogger} from '@natlibfi/melinda-backend-commons';
 import {EventEmitter} from 'events';
 
-class TransformEmitter extends EventEmitter {}
+class TransformEmitter extends EventEmitter { }
 
 export default function (stream, {validate = true, fix = true}) {
 	MarcRecord.setValidationOptions({subfieldValues: false});
@@ -67,6 +67,7 @@ export default function (stream, {validate = true, fix = true}) {
 						const result = await convertRecord(value, validator);
 						Emitter.emit('record', result);
 					} catch (err) {
+						logger.log('error', 'Unexpected record transformation error');
 						Emitter.emit('error', err);
 					}
 				}
@@ -77,10 +78,12 @@ export default function (stream, {validate = true, fix = true}) {
 					await Promise.all(promises);
 					Emitter.emit('end', promises.length);
 				} catch (err) {
+					logger.log('error', 'Unexpected transformation error');
 					Emitter.emit('error', err);
 				}
 			});
 		} catch (err) {
+			logger.log('error', 'Unexpected stream transformation error');
 			Emitter.emit('error', err);
 		}
 	}
@@ -111,8 +114,13 @@ export default function (stream, {validate = true, fix = true}) {
 			]
 		});
 
-		if (validate === true || fix === true) {
-			return validator(marcRecord, validate, fix);
+		try {
+			if (validate === true || fix === true) {
+				return validator(marcRecord, validate, fix);
+			}
+		} catch (error) {
+			logger.log('error', 'Unexpected validation error');
+			throw error;
 		}
 
 		return {failed: false, record: marcRecord};

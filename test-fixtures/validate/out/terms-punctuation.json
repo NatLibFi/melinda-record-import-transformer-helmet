@@ -13,7 +13,7 @@
         "subfields": [
           {
             "code": "a",
-            "value": "978-15098-1589-0"
+            "value": "978-1-5098-1589-0"
           },
           {
             "code": "q",
@@ -349,7 +349,7 @@
     },
     {
       "description": "Validates ISBN and ISSN values",
-      "state": "valid"
+      "state": "fixed"
     },
     {
       "description": "Checks that the record does not contain the configured subfields",
