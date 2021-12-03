@@ -13,19 +13,19 @@ steps:
     image: quay.io/natlibfi/drone-gen-tags
 
   - name: audit
-    image: node:12
+    image: node:14
     commands:
       - npm audit --package-lock-only --production --audit-level=moderate
 
   - name: install
-    image: node:12
+    image: node:14
     commands:
       - npm ci
     environment:
       NPM_CONFIG_IGNORE_SCRIPTS: true
 
   - name: test
-    image: node:12
+    image: node:14
     commands:
       - npm test
 
@@ -36,7 +36,7 @@ steps:
 #      - npm run coverage
 
   - name: build
-    image: node:12
+    image: node:14
     commands:
       - npm run build
 
@@ -94,6 +94,6 @@ name: docker_password
 data: q7M9czMgHZg9fRjxpp1deysM/fT8b/ZGR66RRaXvXakGGbJxmuAXk7cylUnRbj27O/baPgcw4L/v4jGkWjIht1QO0WeR12MVdJg50rLsIYtNqCjAdunZwQGBZL8=
 ---
 kind: signature
-hmac: b1861790a4924c04101744023a6d3fd2eea6c03bbafc5f78c3bfb4e6fbf68bd3
+hmac: 56696ac750e1fddf27063d76f8d5fa45d88da1a9e355ddaaa417fbd25c8295ca
 
 ...
