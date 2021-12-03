@@ -38,44 +38,44 @@ chai.use(sinonChai);
 const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/transform');
 
 describe('transform', () => {
-	beforeEach(() => {
-		// 008 has current date in it
-		testContext.default.__Rewire__('moment', sinon.fake.returns({
-			format: sinon.fake.returns('000000')
-		}));
-	});
+  beforeEach(() => {
+    // 008 has current date in it
+    testContext.default.__Rewire__('moment', sinon.fake.returns({
+      format: sinon.fake.returns('000000')
+    }));
+  });
 
-	afterEach(() => {
-		testContext.default.__ResetDependency__('moment');
-	});
+  afterEach(() => {
+    testContext.default.__ResetDependency__('moment');
+  });
 
-	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
-		it(file, async () => {
-			const succesRecordArray = [];
-			const failedRecordsArray = [];
+  fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
+    it(file, async () => {
+      const succesRecordArray = [];
+      const failedRecordsArray = [];
 
-			const Emitter = testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), {validate: false, fix: false});
+      const Emitter = testContext.default(fs.createReadStream(path.join(FIXTURES_PATH, 'in', file), 'utf8'), {validate: false, fix: false});
 
-			await new Promise(resolve => {
-				Emitter
-					.on('end', () => {
-						resolve(true);
-					})
-					.on('record', recordEvent);
-			});
+      await new Promise(resolve => {
+        Emitter
+          .on('end', () => {
+            resolve(true);
+          })
+          .on('record', recordEvent);
+      });
 
-			function recordEvent(payload) {
-				// Logger.log('debug', 'Record failed: ' + payload.failed);
-				if (payload.failed) {
-					failedRecordsArray.push(payload);
-				} else {
-					succesRecordArray.push(payload);
-				}
-			}
+      function recordEvent(payload) {
+        // Logger.log('debug', 'Record failed: ' + payload.failed);
+        if (payload.failed) {  // eslint-disable-line
+          failedRecordsArray.push(payload); // eslint-disable-line
+        } else { // eslint-disable-line
+          succesRecordArray.push(payload); // eslint-disable-line
+        }
+      }
 
-			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
+      const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			expect(succesRecordArray.map(r => r.record)).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
-		});
-	});
+      expect(succesRecordArray.map(r => r.record)).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+    });
+  });
 });
