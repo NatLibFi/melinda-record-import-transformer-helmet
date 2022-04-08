@@ -44,3 +44,97 @@ function run() {
   };
   runCLI(transformerSettings);
 }
+
+import fs from 'fs';
+import yargs from 'yargs';
+import path from 'path';
+import {createLogger} from '@natlibfi/melinda-backend-commons';
+
+export default async ({name, yargsOptions = [], callback}) => {
+  const logger = createLogger();
+
+  const args = yargs
+    .scriptName(name)
+    .command('$0 <file>', '', yargs => {
+      yargs
+        .positional('file', {type: 'string', describe: 'File to transform'})
+        .option('r', {alias: 'recordsOnly', default: false, type: 'boolean', describe: 'Write only record data to output (Invalid records are excluded)'})
+        .option('d', {alias: 'outputDirectory', type: 'string', describe: 'Output directory where each record file is written (Applicable only with `recordsOnly`'});
+      yargsOptions.forEach(({option, conf}) => {
+        yargs.option(option, conf);
+      });
+    })
+    .parse();
+
+  if (!fs.existsSync(args.file)) {
+    logger.error(`File ${args.file} does not exist`);
+    return process.exit(-1); // eslint-disable-line no-process-exit
+  }
+
+  try {
+    await new Promise((resolve, reject) => {
+      let counter = 0; // eslint-disable-line functional/no-let
+
+      logger.info(`Transforming${args.validate ? ' and validating' : ''}${args.fix ? ' and fixing' : ''} records`);
+      const stream = fs.createReadStream(args.file);
+      const TransformEmitter = callback(stream, args); // eslint-disable-line callback-return
+      const pendingPromises = [];
+
+      TransformEmitter
+        .on('end', () => {
+          Promise.all(pendingPromises);
+          logger.info('Done');
+          resolve();
+        })
+        .on('error', err => {
+          logger.info('Error');
+          reject(err);
+        })
+        .on('record', payload => {
+          pendingPromises.push(recordEvent(payload)); // eslint-disable-line functional/immutable-data
+
+          function recordEvent(payload) {
+            if (payload.failed) {
+              // Send record to be handled
+              if (!args.recordsOnly) {
+                handleOutput(payload);
+                return;
+              }
+
+              return;
+            }
+
+            if (args.recordsOnly) {
+              handleOutput(payload.record);
+              return;
+            }
+
+            handleOutput(payload);
+          }
+
+          function handleOutput(payload) {
+            if (args.outputDirectory) {
+              initOutputDirectory();
+
+              const file = path.join(args.outputDirectory, `${counter}.json`);
+              fs.writeFileSync(file, JSON.stringify(payload, undefined, 2));
+              counter += 1;
+              return;
+            }
+
+            console.log(JSON.stringify(payload, undefined, 2)); // eslint-disable-line no-console
+            counter += 1;
+
+            function initOutputDirectory() {
+              if (!fs.existsSync(args.outputDirectory)) {
+                return fs.mkdirSync(args.outputDirectory);
+              }
+            }
+          }
+        });
+    });
+  } catch (err) {
+    logger.error(typeof err === 'object' && 'stack' in err ? err.stack : err);
+    process.exit(-1); // eslint-disable-line no-process-exit
+  }
+};

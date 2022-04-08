@@ -1,0 +1,652 @@
+{
+  "leader": "00000nam a22005174i 4500",
+  "fields": [
+    {
+      "tag": "001",
+      "value": "9789523421660"
+    },
+    {
+      "tag": "005",
+      "value": "20210903114411.3"
+    },
+    {
+      "tag": "008",
+      "value": "000101s2021    fi |||| ^     |0| 0|fin|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "9789523421660"
+        },
+        {
+          "code": "q",
+          "value": "nidottu"
+        }
+      ]
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "z",
+          "value": "97895234216609"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        },
+        {
+          "code": "d",
+          "value": "FI-NL"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "fin"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "65.01"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "658.8"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "658.5/.6"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "69.1"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "69.12"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "091",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "58"
+        }
+      ]
+    },
+    {
+      "tag": "095",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "674"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Lahti, Sami,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kilpailuetua tuotehallinnalla :"
+        },
+        {
+          "code": "b",
+          "value": "itsearvioinnin työkirja : 39 hyvää kysymystä ja esimerkkiparia : mikä erottaa menestyjät keskinkertaisista? /"
+        },
+        {
+          "code": "c",
+          "value": "Sami Lahti, Kari Tuominen ; kuvitus: Lasse Malmberg."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Itsearvioinnin työkirja"
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "39 hyvää kysymystä ja esimerkkiparia"
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Mikä erottaa menestyjät keskinkertaisista?"
+        }
+      ]
+    },
+    {
+      "tag": "250",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Päivitetty [painos]."
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "[Turku] :"
+        },
+        {
+          "code": "b",
+          "value": "Benchmarking,"
+        },
+        {
+          "code": "c",
+          "value": "2021"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "3",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Turenki :"
+        },
+        {
+          "code": "b",
+          "value": "Hansaprint Oy"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "140 sivua :"
+        },
+        {
+          "code": "b",
+          "value": "kuvitettu ;"
+        },
+        {
+          "code": "c",
+          "value": "21 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "teksti"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nide"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "CMP-kirjasarja"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kehittämismallit"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "EFQM."
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tekijämerkintö kannessa: Kari Tuominen, Sami Lahti."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "suomi"
+        }
+      ]
+    },
+    {
+      "tag": "599",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "KIRJA / BOK"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kilpailuetu"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p9191"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tuotteistus"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p11726"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "yritykset"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p3128"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "organisaatiot"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p272"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "menestyminen"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p2418"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tuotekehitys"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p2721"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tuotteet"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p2862"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "asiakaslähtöisyys"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p7613"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "itsearviointi"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p6253"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "laadunvalvonta"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p2720"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tuominen, Kari,"
+        },
+        {
+          "code": "0",
+          "value": "(FI-ASTERI-N)000157397"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2472303"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}
