@@ -1,0 +1,1225 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22009614i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20211008024202.8"
+    },
+    {
+      "tag": "008",
+      "value": "220408t20212021fi ||||j^     |0| j|fin|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-952-04-3477-9"
+        },
+        {
+          "code": "q",
+          "value": "sidottu"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        },
+        {
+          "code": "d",
+          "value": "FI-NL"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "fin"
+        },
+        {
+          "code": "h",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "820"
+        },
+        {
+          "code": "x",
+          "value": "-3"
+        },
+        {
+          "code": "x",
+          "value": "(024.7)"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "820"
+        },
+        {
+          "code": "x",
+          "value": "-8"
+        },
+        {
+          "code": "x",
+          "value": "(024.7)"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "84.204"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "130",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tales of courage and kindness,"
+        },
+        {
+          "code": "l",
+          "value": "suomi."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tarinoita rohkeudesta ja hyvyydestä /"
+        },
+        {
+          "code": "c",
+          "value": "suomennokset: Jenni Rapelo ja Aptara, Inc."
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Helsinki :"
+        },
+        {
+          "code": "b",
+          "value": "Tammi,"
+        },
+        {
+          "code": "c",
+          "value": "[2021]"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "3",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "EU:ssa"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "©2021"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "256 sivua :"
+        },
+        {
+          "code": "b",
+          "value": "kuvitettu ;"
+        },
+        {
+          "code": "c",
+          "value": "25 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "teksti"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nide"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Prinsessat : ikuisesti - meille kaikille"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kirjoittajat: Kelly Starling Lyons ja kymmenen muuta."
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kuvittajat: Tara N. Whitaker ja yhdeksän muuta."
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Walt Disney -tuotantoa."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "suomi."
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tiana"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Belle"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Vaiana"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Mulan"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tuhkimo"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Merida"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Lumikki"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Pocahontas"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tähkäpää"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Jasmine"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Aurora"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ariel"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Anna"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Elsa"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "rohkeus"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p619"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "hyvyys"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p3279"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kiltteys"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p18341"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "avuliaisuus"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin http://www.yso.fi/onto/kauno/p4630"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "itsetuntemus"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p4531"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tytöt"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p2409"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "lastenkirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1181"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kertomukset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s618"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "antologiat"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s289"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kaunokirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käännökset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "englanninkielinen kirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "local"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Lyons, Kelly Starling,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Whitaker, Tara N.,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Rapelo, Jenni,"
+        },
+        {
+          "code": "0",
+          "value": "(FI-ASTERI-N)000146588"
+        },
+        {
+          "code": "e",
+          "value": "kääntäjä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Lyons, Kelly Starling,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Isän kuistilla."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "McCullough, Kathy,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Yllättäviä ystäviä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Marcellino, Ann,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Hurley, Kalikolehua,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Valtameren vartijat."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Brazier, Liam,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Chow, Marie,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Koko kylän sankari."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Zhang, Ann X.,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Andrus, Aubre,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Runollinen unelma."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Chau, Alina,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Bardhan-Quallen, Sudipta,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Karhuveljet."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kipin, Sara,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Falligant, Erin,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Myrskyn jälkeen."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Erica, Nathana,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Rudnick, Elisabeth,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Kolme siskosta."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Zhang, Alice X.,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "McCullough, Kathy,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Tähdellinen tehtävä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Baldari, Nicoletta,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Richards, Kitty,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Prinsessojen poolopeli."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ali, Nabi H.,"
+        },
+        {
+          "code": "e",
+          "value": "taiteilija."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Falligant, Erin,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Kadonneet taikasauvat."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Geron, Eric,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Meren välke."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Francis, Suzanne,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Surumielinen metsä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Francis, Suzanne,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Marjoja kuningattarelle."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2469703"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22004934i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20210524044021.8"
+    },
+    {
+      "tag": "008",
+      "value": "220408s2021    xxk|||| ^6   |00| 1|eng|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-1-78773-473-9"
+        },
+        {
+          "code": "q",
+          "value": "nidottu"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "85.35"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Vieceli, Emma,"
+        },
+        {
+          "code": "e",
+          "value": "sarjakuvantekijä."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Life is strange."
+        },
+        {
+          "code": "n",
+          "value": "4,"
+        },
+        {
+          "code": "p",
+          "value": "Partners in time :"
+        },
+        {
+          "code": "b",
+          "value": "tracks /"
+        },
+        {
+          "code": "c",
+          "value": "written by Emma Vieceli ; artwork by Claudia Leonardi ; colors by Andrea Izzo ; original story and characters by Raoul Barbet, Jean-Luc Cano and Michel Koch."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Partners in time"
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tracks"
+        }
+      ]
+    },
+    {
+      "tag": "250",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "First edition."
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "London :"
+        },
+        {
+          "code": "b",
+          "value": "Titan Comics,"
+        },
+        {
+          "code": "c",
+          "value": "2021."
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "112 numeroimatonta sivua :"
+        },
+        {
+          "code": "b",
+          "value": "kuvitettu ;"
+        },
+        {
+          "code": "c",
+          "value": "26 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "stillkuva"
+        },
+        {
+          "code": "b",
+          "value": "sti"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "teksti"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nide"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Perustuu Life is strange -seikkailupeliin."
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Sarjakuvat julkaistu alun perin Life is strange -sarjakuvalehden numeroissa #13-16."
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": "8",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "'Life Is Strange' returns readers to the setting of Arcadia Bay, offering fans the opportunity to dive back into the story of its beloved characters. It follows the story of Max Caulfield, a senior majoring in photography who discovers that she can rewind time when trying to save her best friend Chloe Price. The pair investigate the mysterious disappearance of fellow student Rachel Amber, and uncover a dark side to the life in Arcadia Bay. Meanwhile, Max quickly learns that changing the past can sometimes lead to a devastating future."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "englanti."
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "1",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Caulfield, Max"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "1",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Price, Chloe"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiivinen hahmo)"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "ystävyys"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p3515"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "aikamatkat"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p4482"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "aikatasot"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p5820"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "multiversumi"
+        },
+        {
+          "code": "2",
+          "value": "kauno/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p8154"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "seikkailusarjakuvat"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s845"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "sarjakuvat"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s356"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "sarjakuvasovitukset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s67"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kaunokirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "englanninkielinen kirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "local"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Leonardi, Claudia,"
+        },
+        {
+          "code": "e",
+          "value": "sarjakuvantekijä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Izzo, Andrea,"
+        },
+        {
+          "code": "e",
+          "value": "sarjakuvantekijä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Barbet, Raoul,"
+        },
+        {
+          "code": "e",
+          "value": "alkuperäisidean luoja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Cano, Jean-Luc,"
+        },
+        {
+          "code": "e",
+          "value": "alkuperäisidean luoja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Koch, Michel,"
+        },
+        {
+          "code": "e",
+          "value": "alkuperäisidean luoja."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2470924"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

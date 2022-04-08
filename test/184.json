@@ -1,0 +1,935 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22007334i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20211014040228.2"
+    },
+    {
+      "tag": "008",
+      "value": "220408t20212021fi ||||j^     |0| j|fin|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-952-04-3331-4"
+        },
+        {
+          "code": "q",
+          "value": "sidottu"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        },
+        {
+          "code": "d",
+          "value": "FI-NL"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "fin"
+        },
+        {
+          "code": "h",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "080",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "820"
+        },
+        {
+          "code": "x",
+          "value": "-3"
+        },
+        {
+          "code": "x",
+          "value": "(024.7)"
+        },
+        {
+          "code": "2",
+          "value": "1974/fin/fennica"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "85.2204"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "85.1204"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "130",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "5 minute Christmas stories,"
+        },
+        {
+          "code": "l",
+          "value": "suomi."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "5 minuutin joulusatuja /"
+        },
+        {
+          "code": "c",
+          "value": "suomennokset: Jenni Rapelo ; kuvittanut Disney Storybook Art Team."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Viiden minuutin joulusatuja"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "[Helsinki] :"
+        },
+        {
+          "code": "b",
+          "value": "Tammi,"
+        },
+        {
+          "code": "c",
+          "value": "[2021]"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "3",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "EU:ssa"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "©2021"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "192 sivua :"
+        },
+        {
+          "code": "b",
+          "value": "kuvitettu ;"
+        },
+        {
+          "code": "c",
+          "value": "27 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "stillkuva"
+        },
+        {
+          "code": "b",
+          "value": "sti"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "teksti"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nide"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Walt Disney -tuotantoa."
+        }
+      ]
+    },
+    {
+      "tag": "500",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Kirjoittajat: Kate Ritchey ja muita."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "suomi."
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "lastenkirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1181"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kuvakirjat"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s739"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kertomukset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s618"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "joulukertomukset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s584"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "sadut"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1165"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kaunokirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käännökset"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "englanninkielinen kirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "local"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ritchey, Kate,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Rapelo, Jenni,"
+        },
+        {
+          "code": "e",
+          "value": "kääntäjä."
+        },
+        {
+          "code": "0",
+          "value": "(FI-ASTERI-N)000146588"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ritchey, Kate,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Joulupukin pikku apuri."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Redbank, Tennant,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Lahja WALL-E:lle."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Bryant, Megan,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Joulu Mikä-mikä-maassa."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "West, Tracey,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Kuningattaren kadonnut lahja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Bazaldua, Barbara,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Pentujen lumileikit."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Herman, Gail,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Jouluvalopulma."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ilnitzki, Megan,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Hyvää joulua, Nalle Puh!"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Marsoli, Lisa Ann,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Auroran jouluvalmistelut."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ritchey, Kate,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Jouluperinteitä."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Ilnitzki, Megan,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Martti pelastaa joulun."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Rubiano, Brittany,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Malttamaton kissimirri."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Marsoli, Lisa Ann,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        },
+        {
+          "code": "t",
+          "value": "Täydelliset juhlat."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Santa's little helper,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Ritchey, Kate."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "2",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "A gift for WALL-E,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Redbank, Tennant."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Christmas in Never Land,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Bryant, Megan."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "2",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "A present for the queen,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "West, Tracey."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Snow puppies,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Bazaldua, Barbara."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Christmas in Monstropolis,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Herman, Gail."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Merry Christmas, Winnie the Pooh,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Ilnitzki, Megan."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Aurora's homemade holiday,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Marsoli, Lisa Ann."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Christmas traditions,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Ritchey, Kate."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Mater saves Christmas,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Ilnitzki, Megan."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "2",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "A meowy Christmas,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Rubiano, Brittany."
+        }
+      ]
+    },
+    {
+      "tag": "730",
+      "ind1": "2",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "A perfect party,suomi / "
+        },
+        {
+          "code": "g",
+          "value": "Marsoli, Lisa Ann."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2469688"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22003974i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20210521032458.5"
+    },
+    {
+      "tag": "008",
+      "value": "220408s2020    sw |||| ^     |0| 0|swe|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-91-44-13371-3"
+        },
+        {
+          "code": "q",
+          "value": "häftad"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "swe"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "swe"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "16.7"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "30.01"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Andreasson, Jesper,"
+        },
+        {
+          "code": "e",
+          "value": "författare."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Vetenskapsteori :"
+        },
+        {
+          "code": "b",
+          "value": "grunder och tillämpning /"
+        },
+        {
+          "code": "c",
+          "value": "Jesper Andreasson, Thomas Johansson."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Grunder och tillämpning"
+        }
+      ]
+    },
+    {
+      "tag": "250",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Upplaga 1."
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Lund :"
+        },
+        {
+          "code": "b",
+          "value": "Studentlitteratur,"
+        },
+        {
+          "code": "c",
+          "value": "[2020]"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "223 sidor ;"
+        },
+        {
+          "code": "c",
+          "value": "23 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "text"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "omedierad"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "volym"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Vetenskapsteori kan ibland uppfattas som abstrakt och komplicerat. Samtidigt utgör den vetenskapsteoretiska reflektionen en grundförutsättning för akademiskt arbete. Vetenskapsteoretiska frågor aktualiseras i varje forskningsprocess, oavsett om skribenten är medveten om det eller inte. Denna bok handlar inte bara om vetenskapsteori i sig och om olika sätt att se på kunskap, utan den är snarare tänkt som ett redskap för att läsaren ska kunna omsätta en vetenskapsteoretisk reflektion i arbetet med att genomföra en studie. Ambitionen är att erbjuda konkreta exempel på diskussioner som kan uppkomma i till exempel handledningssituationer, och med hjälp av dessa visa hur det är möjligt att förstå relationen mellan vetenskapsteori och det vetenskapliga skrivandet.   Boken kan erbjuda ett stöd för såväl studenter och doktorander som för handledare. Den riktar sig främst till det samhällsvetenskapliga fältet i stort och fungerar utmärkt som en introduktion till vetenskapligt tänkande och skrivande på till exempel lärarutbildningar, socionomprogrammet, psykologutbildningen samt kurser i sociologi, socialpsykologi, kulturstudier och andra samhällsvetenskapliga ämnen."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "svenska."
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "forskningsarbete"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p20279"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "skolor (läroriktningar)"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p8954"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "inriktningar"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p10138"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "vetenskapsfilosofi"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p3016"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "vetenskapsteori"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p3019"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tieteenteoria"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p3019"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tieteenfilosofia"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p3016"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "suuntaukset"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p10138"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "koulukunnat"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p8954"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "tutkimustyö"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p20279"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Johansson, Thomas,"
+        },
+        {
+          "code": "e",
+          "value": "författare."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2470852"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

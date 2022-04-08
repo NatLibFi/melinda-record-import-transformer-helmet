@@ -63,7 +63,7 @@ function callback({
   const inputData = getFixture({components: ['input.json'], reader: READERS.STREAM});
   const expectedSuccesRecords = getFixture({components: ['outputSucces.json'], reader: READERS.JSON});
   const expectedFailedRecords = getFixture({components: ['outputFailed.json'], reader: READERS.JSON});
-  const transformHandler = createTransformHandler(momentMock);
+  const transformHandler = createTransformHandler({moment: momentMock});
 
   return new Promise((resolve, reject) => {
     const succesRecordsArray = [];

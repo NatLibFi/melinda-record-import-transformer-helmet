@@ -1,0 +1,539 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22004334i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20210618064002.0"
+    },
+    {
+      "tag": "008",
+      "value": "220408s2021    sw ||||j^    |000 f|swe|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-91-509-6530-8"
+        },
+        {
+          "code": "q",
+          "value": "inbunden"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "swe"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        },
+        {
+          "code": "d",
+          "value": "FI-He"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "swe"
+        },
+        {
+          "code": "h",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "84.31"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "James, Anna,"
+        },
+        {
+          "code": "e",
+          "value": "författare."
+        }
+      ]
+    },
+    {
+      "tag": "240",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tilly and the lost fairy tales,"
+        },
+        {
+          "code": "l",
+          "value": "svenska"
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tilly och de förlorade sagorna /"
+        },
+        {
+          "code": "c",
+          "value": "Anna James ; översättning: Helena Dahlgren ; illustrationer: Paola Escobar."
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Stockholm :"
+        },
+        {
+          "code": "b",
+          "value": "HarperCollins,"
+        },
+        {
+          "code": "c",
+          "value": "2021."
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "389 sidor :"
+        },
+        {
+          "code": "b",
+          "value": "illustrationer ;"
+        },
+        {
+          "code": "c",
+          "value": "19 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "text"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "omedierad"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "volym"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Den magiska bokhandeln; "
+        },
+        {
+          "code": "v",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Serien Den magiska bokhandeln har tagit alla med storm. Här är den efterlängtade andra delen. Bokvandraren Tilly sätts åter på prov när hon upptäcker att bokkaraktärer har försvunnit, sagor blandats ihop och att mystiska hål i intrigerna dyker upp utan förvarning. Kan Tilly lista ut vad - eller vem - som orsakar kaoset, så att alla sagor får behålla sina lyckliga slut?"
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "svenska."
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "0",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Tilly"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiv gestalt)"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "magi"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p3052"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "läsintresse"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p6218"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "sagor"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p2919"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "äventyr"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p2904"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "fiktiva platser"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p5491"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "flickor"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p2409"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "barnlitteratur"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1181"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "romaner"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s518"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "skönlitteratur"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "översättningar"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "engelsk litteratur"
+        },
+        {
+          "code": "2",
+          "value": "local"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Escobar, Paola,"
+        },
+        {
+          "code": "e",
+          "value": "illustratör."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Dahlgren, Helena,"
+        },
+        {
+          "code": "e",
+          "value": "översättare."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Uppföljare till verket:"
+        },
+        {
+          "code": "t",
+          "value": "Tilly och bokvandrarna."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2473039"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

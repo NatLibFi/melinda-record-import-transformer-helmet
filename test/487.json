@@ -1,0 +1,542 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22004334i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20210624013342.2"
+    },
+    {
+      "tag": "008",
+      "value": "220408s2021    sw |||| ^     |0| f|swe|c"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-91-0-017350-0"
+        },
+        {
+          "code": "q",
+          "value": "inbunden"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-BTJ"
+        },
+        {
+          "code": "b",
+          "value": "swe"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "swe"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "84.31"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": "9",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Spänning"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Jungstedt, Mari,"
+        },
+        {
+          "code": "e",
+          "value": "författare."
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Där den sista lampan lyser /"
+        },
+        {
+          "code": "c",
+          "value": "Mari Jungstedt."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "i",
+          "value": "Undertitel på skyddsomslag:"
+        },
+        {
+          "code": "a",
+          "value": "Kriminalroman"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "[Stockholm] :"
+        },
+        {
+          "code": "b",
+          "value": "Albert Bonniers förlag,"
+        },
+        {
+          "code": "c",
+          "value": "[2021]"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "318 sidor ;"
+        },
+        {
+          "code": "c",
+          "value": "22 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "text"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "omedierad"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "volym"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Knutas-serien ;"
+        },
+        {
+          "code": "v",
+          "value": "del 16"
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Två Stockholmspojkar som tillbringar höstlovet på ett grådisigt och stillsamt Gotland försvinner spårlöst under en cykeltur till raukområdet Holmhällar. Kommissarie Knutas drar igång en jakt efter pojkarna i en intensiv kamp mot klockan. När så kroppen efter en antikvarie på Fornsalen spolas upp på en strand norr om Visby finner polisen skäl att leta samband.Anders Knutas och hans kollega och partner Karin Jacobsson får ett svårgripbart fall att lösa, samtidigt som de står inför stora utmaningar i privatlivet."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "svenska."
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "1",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Knutas, Anders"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiv gestalt)"
+        }
+      ]
+    },
+    {
+      "tag": "600",
+      "ind1": "1",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Jacobsson, Karin"
+        },
+        {
+          "code": "c",
+          "value": "(fiktiv gestalt)"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "försvinnande"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p1126"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "pojkar"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p1589"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "poliser"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p2945"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "öar"
+        },
+        {
+          "code": "2",
+          "value": "kauno/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/kauno/p1382"
+        }
+      ]
+    },
+    {
+      "tag": "651",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Sverige"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p94383"
+        }
+      ]
+    },
+    {
+      "tag": "651",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Gotland"
+        },
+        {
+          "code": "2",
+          "value": "yso/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p108076"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kriminalfiktion"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s911"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "thrillers (litteratur)"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s382"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "romaner"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s518"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "skönlitteratur"
+        },
+        {
+          "code": "2",
+          "value": "slm/swe"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "svensk litteratur"
+        },
+        {
+          "code": "2",
+          "value": "local"
+        }
+      ]
+    },
+    {
+      "tag": "776",
+      "ind1": "0",
+      "ind2": "8",
+      "subfields": [
+        {
+          "code": "i",
+          "value": "Onlineresurs:"
+        },
+        {
+          "code": "z",
+          "value": "9789100173517"
+        }
+      ]
+    },
+    {
+      "tag": "856",
+      "ind1": "4",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "u",
+          "value": "http://link.overdrive.com/?websiteID=100197&titleID=6197701"
+        },
+        {
+          "code": "y",
+          "value": "Länk till e-boken"
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2471613"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

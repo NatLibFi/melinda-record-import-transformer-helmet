@@ -1,0 +1,624 @@
+{
+  "_validationOptions": {},
+  "leader": "00000nam a22002174i 4500",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20210501102304.0"
+    },
+    {
+      "tag": "008",
+      "value": "220408s2020    ru     j|    |||||||rus|d"
+    },
+    {
+      "tag": "020",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "978-5-00169-133-4"
+        },
+        {
+          "code": "q",
+          "value": "kovakantinen"
+        }
+      ]
+    },
+    {
+      "tag": "040",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "FI-Em"
+        },
+        {
+          "code": "b",
+          "value": "fin"
+        },
+        {
+          "code": "e",
+          "value": "rda"
+        }
+      ]
+    },
+    {
+      "tag": "041",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "rus"
+        },
+        {
+          "code": "h",
+          "value": "eng"
+        }
+      ]
+    },
+    {
+      "tag": "084",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "56"
+        },
+        {
+          "code": "2",
+          "value": "ykl"
+        }
+      ]
+    },
+    {
+      "tag": "100",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-01"
+        },
+        {
+          "code": "a",
+          "value": "Wilkinson, Phil,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "240",
+      "ind1": "1",
+      "ind2": "4",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "The boys' guide to growing up,"
+        },
+        {
+          "code": "l",
+          "value": "venäjä"
+        }
+      ]
+    },
+    {
+      "tag": "245",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-02"
+        },
+        {
+          "code": "a",
+          "value": "Kak vzroslejut maltšiki :"
+        },
+        {
+          "code": "b",
+          "value": "gid po izmenenijam tela i nastrojenija /"
+        },
+        {
+          "code": "c",
+          "value": "Fil Uilkinson ; illjustratsii Sary Horn ; perevod s anglijskogo Anny Avdejevoi."
+        }
+      ]
+    },
+    {
+      "tag": "246",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-03"
+        },
+        {
+          "code": "a",
+          "value": "Gid po izmenenijam tela i nastrojenija"
+        }
+      ]
+    },
+    {
+      "tag": "264",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-05"
+        },
+        {
+          "code": "a",
+          "value": "Moskva :"
+        },
+        {
+          "code": "b",
+          "value": "Mann, Ivanov i Ferber,"
+        },
+        {
+          "code": "c",
+          "value": "2020."
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "47 sivua, 1 numeroimaton sivu :"
+        },
+        {
+          "code": "b",
+          "value": "kuvitettu ;"
+        },
+        {
+          "code": "c",
+          "value": "24 cm"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "stillkuva"
+        },
+        {
+          "code": "b",
+          "value": "sti"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "336",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "teksti"
+        },
+        {
+          "code": "b",
+          "value": "txt"
+        },
+        {
+          "code": "2",
+          "value": "rdacontent"
+        }
+      ]
+    },
+    {
+      "tag": "337",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "käytettävissä ilman laitetta"
+        },
+        {
+          "code": "b",
+          "value": "n"
+        },
+        {
+          "code": "2",
+          "value": "rdamedia"
+        }
+      ]
+    },
+    {
+      "tag": "338",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nide"
+        },
+        {
+          "code": "b",
+          "value": "nc"
+        },
+        {
+          "code": "2",
+          "value": "rdacarrier"
+        }
+      ]
+    },
+    {
+      "tag": "490",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-06"
+        },
+        {
+          "code": "a",
+          "value": "MIF. Detstvo"
+        }
+      ]
+    },
+    {
+      "tag": "520",
+      "ind1": "8",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-08"
+        },
+        {
+          "code": "a",
+          "value": "Tiivistelmä venäjäksi."
+        }
+      ]
+    },
+    {
+      "tag": "546",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "venäjä."
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "pojat (ikäryhmät)"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p8174"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "kasvu"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p5789"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "aikuistuminen"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p15326"
+        }
+      ]
+    },
+    {
+      "tag": "650",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "murrosikä"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://www.yso.fi/onto/yso/p15514"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "oppaat (teokset)"
+        },
+        {
+          "code": "2",
+          "value": "yso/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s202"
+        }
+      ]
+    },
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "nuortenkirjallisuus"
+        },
+        {
+          "code": "2",
+          "value": "slm/fin"
+        },
+        {
+          "code": "0",
+          "value": "http://urn.fi/URN:NBN:fi:au:slm:s168"
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-09"
+        },
+        {
+          "code": "a",
+          "value": "Horne, Sarah,"
+        },
+        {
+          "code": "e",
+          "value": "kuvittaja."
+        }
+      ]
+    },
+    {
+      "tag": "700",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "880-14"
+        },
+        {
+          "code": "a",
+          "value": "Avdejeva, Anna,"
+        },
+        {
+          "code": "e",
+          "value": "kääntäjä."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "100-01/(N"
+        },
+        {
+          "code": "a",
+          "value": "Уилкинсон, Фил,"
+        },
+        {
+          "code": "e",
+          "value": "kirjoittaja."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "1",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "245-02/(N"
+        },
+        {
+          "code": "a",
+          "value": "Как взрослеют мальчики :"
+        },
+        {
+          "code": "b",
+          "value": "гид по изменениям тела и настроения /"
+        },
+        {
+          "code": "c",
+          "value": "Фил Уилкинсон ; иллюстрации Сары Хорн ; перевод с английского Анны Авдеенко."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "3",
+      "ind2": "0",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "246-03/(N"
+        },
+        {
+          "code": "a",
+          "value": "Гид по изменениям тела и настроения"
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": " ",
+      "ind2": "1",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "264-05/(N"
+        },
+        {
+          "code": "a",
+          "value": "Москва :"
+        },
+        {
+          "code": "b",
+          "value": "Манн, Иванов и Фербер,"
+        },
+        {
+          "code": "c",
+          "value": "2020."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "0",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "490-06/(N"
+        },
+        {
+          "code": "a",
+          "value": "МИФ. Детство"
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "8",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "520-08/(N"
+        },
+        {
+          "code": "a",
+          "value": "Книга просто, откровенно и деликатно говорит о вещах, которые волнуют мальчика-подростка в период полового созревания. Читатели узнают, почему ломается голос, в чем причина частых перемен настроения, почему без физической нагрузки не обойтись, зачем нужен секс, как процесс взросления происходит у девочек. Автор расскажет, как избавиться от прыщей и от запаха пота, как лучше бриться, как обрести уверенность в себе. Тактичный разговор и забавные иллюстрации помогут больше узнать о себе, уходе за телом, правильном питании, чувстве влюбленности и других переживаниях. Ребенок поймет, что взросление - это естественный процесс и в нем нет ничего стыдного. А полученные знания помогут ему подготовиться к изменениям, принять свое тело и уверенно войти в новый этап жизни."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "700-09/(N"
+        },
+        {
+          "code": "a",
+          "value": "Хорн, Сара,"
+        },
+        {
+          "code": "e",
+          "value": "kuvittaja."
+        }
+      ]
+    },
+    {
+      "tag": "880",
+      "ind1": "1",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "6",
+          "value": "700-14/(N"
+        },
+        {
+          "code": "a",
+          "value": "Авдеева, Анна,"
+        },
+        {
+          "code": "e",
+          "value": "kääntäjä."
+        }
+      ]
+    },
+    {
+      "tag": "SID",
+      "subfields": [
+        {
+          "code": "c",
+          "value": "2471281"
+        },
+        {
+          "code": "b",
+          "value": "helme"
+        }
+      ],
+      "ind1": " ",
+      "ind2": " "
+    }
+  ]
+}

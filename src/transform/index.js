@@ -30,16 +30,23 @@ import {chain} from 'stream-chain';
 import {parser} from 'stream-json';
 import {streamArray} from 'stream-json/streamers/StreamArray';
 import {MarcRecord} from '@natlibfi/marc-record';
-import createMaterialFields from './create-material-fields';
 import createValidator from '../validate';
 import {createLogger} from '@natlibfi/melinda-backend-commons';
 import {EventEmitter} from 'events';
+import {handle856} from './convert/generate8XXFields.js';
+import {handleTerms} from './convert/generate6XXFields.js';
+import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
+import {handle300} from './convert/generate3XXFields.js';
+import {handle130} from './convert/generate1XXFields.js';
+import {handle020, handle037} from './convert/generate0XXFields.js';
+import {handle003, handle007, handle008} from './convert/generateControlFields';
+import {handleSID, handleLeader} from './convert/generate-static-fields';
 
 class TransformEmitter extends EventEmitter { }
 
-export default (moment) => (stream, {validate = true, fix = true} = {}) => {
+export default config => (stream, {validate = true, fix = true} = {}) => {
   MarcRecord.setValidationOptions({subfieldValues: false});
-
+  const {moment} = config;
   const Emitter = new TransformEmitter();
   const logger = createLogger();
 
@@ -91,27 +98,21 @@ export default (moment) => (stream, {validate = true, fix = true} = {}) => {
     const marcRecord = convertToMARC();
 
     /* Order is significant! */
-    handleLeader();
-    handle003();
-    handle007();
-    handle008();
-    handle020();
-    handle037();
-    handle130();
-    handle300();
-    handle500();
-    handle506();
-    handle530();
-    handle546();
-    handleTerms();
-    handle856();
-
-    marcRecord.insertField({
-      tag: 'SID', subfields: [
-        {code: 'c', value: record.id},
-        {code: 'b', value: 'helme'}
-      ]
-    });
+    handleLeader(marcRecord);
+    handle003(marcRecord);
+    handle007(marcRecord, record);
+    handle008(marcRecord, moment);
+    handle020(marcRecord);
+    handle037(marcRecord);
+    handle130(marcRecord);
+    handle300(marcRecord);
+    handle500(marcRecord);
+    handle506(marcRecord);
+    handle530(marcRecord);
+    handle546(marcRecord);
+    handleTerms(marcRecord);
+    handle856(marcRecord);
+    handleSID(marcRecord, record);
 
     try {
       if (validate === true || fix === true) {
@@ -156,298 +157,5 @@ export default (moment) => (stream, {validate = true, fix = true} = {}) => {
 
       return marcRecord;
     }
-
-    function handleLeader() {
-      const chars = marcRecord.leader.split('');
-
-      // Set record as unicode
-      chars[9] = 'a'; // eslint-disable-line functional/immutable-data
-
-      if (chars[6] === 'o' && marcRecord.get(/^655$/u).some(isBoardGame)) { // eslint-disable-line functional/no-conditional-statement
-        chars[6] = 'r'; // eslint-disable-line functional/immutable-data
-      }
-
-      if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statement
-        chars[18] = 'i'; // eslint-disable-line functional/immutable-data
-      }
-
-      marcRecord.leader = chars.join(''); // eslint-disable-line functional/immutable-data
-
-      function isBoardGame(field) {
-        return field.subfields.some(sf => sf.code === 'a' && sf.value === 'lautapelit');
-      }
-    }
-
-    function handle003() {
-      marcRecord.get(/^003$/u).forEach(field => marcRecord.removeField(field));
-    }
-
-    function handle008() {
-      const [f008] = marcRecord.get(/^008$/u);
-      if (f008) { // eslint-disable-line functional/no-conditional-statement
-        const creationDate = moment().format('YYMMDD'); // eslint-disable-line functional/immutable-data
-
-        // Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
-        const chars = f008.value.split('').slice(0, 40).slice(6);
-        if (chars[17] === ' ') { // eslint-disable-line functional/no-conditional-statement
-          chars[17] = '^'; // eslint-disable-line functional/immutable-data
-        }
-
-        if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statement
-          chars[18] = 'i'; // eslint-disable-line functional/immutable-data
-        }
-
-        if (['#', '^', 'd', 'u', '|'].includes(chars[39])) { // eslint-disable-line functional/no-conditional-statement
-          chars[39] = 'c'; // eslint-disable-line functional/immutable-data
-        }
-
-        if (marcRecord.leader[6] === 'r' && chars[33] === 'g') { // eslint-disable-line functional/no-conditional-statement
-          chars.fill('|', 18, 21); // eslint-disable-line functional/immutable-data
-          chars.fill('|', 30, 32); // eslint-disable-line functional/immutable-data
-          chars.fill('|', 34, 35); // eslint-disable-line functional/immutable-data
-        }
-
-        f008.value = `${creationDate}${chars.join('')}`; // eslint-disable-line functional/immutable-data
-      }
-    }
-
-    function handle007() {
-      if (marcRecord.get(/^007$/u).length === 0) { // eslint-disable-line functional/no-conditional-statement
-        const fields = createMaterialFields(record) || [];
-
-        fields.forEach(f => {
-          if (f.tag === '008') { // eslint-disable-line functional/no-conditional-statement
-            const [f008] = marcRecord.get(/^008$/u);
-            f008.value = f.value; // eslint-disable-line functional/immutable-data
-          } else if (f.tag === '007') { // eslint-disable-line functional/no-conditional-statement
-            marcRecord.insertField(f);
-          } else if (f.tag === '006') { // eslint-disable-line functional/no-conditional-statement
-            const [f006] = marcRecord.get(/^006$/u);
-
-            if (f006) { // eslint-disable-line functional/no-conditional-statement
-              marcRecord.removeField(f006);
-            }
-
-            marcRecord.insertField(f);
-          }
-        });
-      }
-    }
-
-    function handle020() {
-      marcRecord.get(/^020$/u)
-        .forEach(field => {
-          if (!field.subfields.find(sf => sf.code === 'q')) { // eslint-disable-line functional/no-conditional-statement
-            const a = field.subfields.find(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
-
-            if (a && (/\s/u).test(a.value.trim())) { // eslint-disable-line functional/no-conditional-statement
-              const [isbn, postfix] = a.value.split(/\s/u);
-              a.value = isbn; // eslint-disable-line functional/immutable-data
-
-              field.subfields.push({ // eslint-disable-line functional/immutable-data
-                code: 'q',
-                value: postfix.replace(/[()]/u, '')
-              });
-            }
-          }
-        });
-    }
-
-    function handle037() {
-      marcRecord.get(/^037$/u).forEach(field => {
-        field.subfields.push({ // eslint-disable-line functional/immutable-data
-          code: '5', value: 'HELME<KEEP>'
-        });
-      });
-    }
-
-    function handle130() {
-      marcRecord.get(/^130$/u).forEach(field => {
-        const a = field.subfields.find(sf => sf.code === 'a' && (/:/u).test(sf.value));
-
-        if (a) { // eslint-disable-line functional/no-conditional-statement
-          const reComplex = (/^(.[^:]*).*(\(.*\))/u).exec(a.value); // eslint-disable-line prefer-named-capture-group
-
-          if (reComplex) { // eslint-disable-line functional/no-conditional-statement
-            a.value = `${reComplex[1].replace(/\s+$/u, '')} ${reComplex[2]}`; // eslint-disable-line functional/immutable-data
-          } else { // eslint-disable-line functional/no-conditional-statement
-            const reSimple = (/^(.[^:]*)/u).exec(a.value); // eslint-disable-line prefer-named-capture-group
-            a.value = `${reSimple[1].replace(/\s+$/u, '')}.`; // eslint-disable-line functional/immutable-data
-          }
-        }
-      });
-    }
-
-    function handle300() {
-      marcRecord.get(/^300$/u)
-        .forEach(field => {
-          const a = field.subfields.find(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
-          const b = field.subfields.find(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
-
-          if (a) { // eslint-disable-line functional/no-conditional-statement
-            if (b && b.value === 'elektroninen') { // eslint-disable-line functional/no-conditional-statement
-              if ((/^1 tekstitiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-                marcRecord.removeSubfield(b, field);
-              } else if ((/^1 äänitiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-                marcRecord.removeSubfield(b, field);
-
-                marcRecord.insertField({
-                  tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]
-                });
-              } else if ((/^1 videotiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-                marcRecord.removeSubfield(b, field);
-
-                marcRecord.insertField({
-                  tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]
-                });
-              }
-            } else if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement, prefer-named-capture-group
-              a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-            } else if ((/^(äänikirja|ljudbok)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement, prefer-named-capture-group
-              a.value = generateExtendDescr(a.value, '1 CD-äänilevy'); // eslint-disable-line functional/immutable-data
-            } else if ((/^cd-skiva/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-              a.value = generateExtendDescr(a.value, '1 CD-ljudskiva'); // eslint-disable-line functional/immutable-data
-            } else { // eslint-disable-line functional/no-conditional-statement
-              handleConsoleGames();
-            }
-          }
-
-          function handleConsoleGames() {
-            if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement, prefer-named-capture-group
-              const re = (/^konsolipeli \((.*)\)(.*)$/ui).exec(a.value); // eslint-disable-line prefer-named-capture-group
-              a.value = `${re[1]}${re[2]}`; // eslint-disable-line functional/immutable-data
-            } else if ((/^(konsolipeli|konsolspel)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement, prefer-named-capture-group
-              const [f007] = marcRecord.get(/^007$/u);
-
-              if (f007.value[1] === 'o') { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value, '1 tietolevy'); // eslint-disable-line functional/immutable-data
-              }
-
-              if (f007.value[1] === 'b') { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value, '1 piirikotelo'); // eslint-disable-line functional/immutable-data
-              }
-
-              if (f007.value[1] === 'z') { // eslint-disable-line functional/no-conditional-statement
-                a.value = generateExtendDescr(a.value, '1 muistikortti'); // eslint-disable-line functional/immutable-data
-              }
-            }
-          }
-
-          function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
-            const re = (/ \((.*)\)/ui).exec(descr); // eslint-disable-line prefer-named-capture-group
-
-            if (re) { // eslint-disable-line functional/no-conditional-statement
-              return `${prefix} (${re[1]})`;
-            }
-
-            return prefix;
-          }
-        });
-    }
-
-    function handle500() {
-      marcRecord.get(/^500$/u).forEach(field => {
-        const a = field.subfields.find(sf => sf.code === 'a');
-
-        if (a && (/^(ääniraita|lainausoikeus\.|ljudspår)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement, prefer-named-capture-group
-          const newField = clone(field);
-          newField.tag = (/^lainausoikeus/ui).test(a.value) ? '540' : '546'; // eslint-disable-line functional/immutable-data
-
-          marcRecord.insertField(newField);
-          marcRecord.removeField(field);
-        }
-      });
-    }
-
-    function handle506() {
-      marcRecord.get(/^506$/u).forEach(field => {
-        const a = field.subfields.find(sf => sf.code === 'a');
-
-        if (a) { // eslint-disable-line functional/no-conditional-statement
-          const re = (/^(Kielletty alle [0-9]+-v\.)(.*)$/ui).exec(a.value); // eslint-disable-line prefer-named-capture-group
-
-          if (re) { // eslint-disable-line functional/no-conditional-statement
-            const reInner = (/^Kielletty alle ([0-9]+)-v\./ui).exec(re[1]); // eslint-disable-line prefer-named-capture-group
-            a.value = `Kielletty alle ${reInner[1]}-vuotiailta.${re[2]}`; // eslint-disable-line functional/immutable-data
-          }
-        }
-      });
-    }
-
-    function handle530() {
-      marcRecord.get(/^530$/u).forEach(field => {
-        const a = field.subfields.find(sf => sf.code === 'a');
-
-        if (a && (/^Julkaistu myös e-kirjana\.$/u).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-          a.value = 'Julkaistu myös verkkoaineistona.'; // eslint-disable-line functional/immutable-data
-        }
-      });
-    }
-
-    function handle546() {
-      const [f040] = marcRecord.get(/^040$/u); // eslint-disable-line functional/immutable-data
-
-      if (f040) { // eslint-disable-line functional/no-conditional-statement
-        const b = f040.subfields.find(sf => sf.code === 'b');
-
-        if (b && b.value === 'fin') { // eslint-disable-line functional/no-conditional-statement
-          marcRecord.get(/^546$/u)
-            .forEach(field => {
-              const a = field.subfields.find(sf => sf.code === 'a');
-
-              if (a && (/svenska/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statement
-                a.value = a.value.replace(/svenska/ui, 'ruotsi'); // eslint-disable-line functional/immutable-data
-                a.value = a.value.replace(/^ruotsi/u, 'Ruotsi'); // eslint-disable-line functional/immutable-data
-              }
-            });
-        }
-      }
-    }
-
-    function handleTerms() {
-      marcRecord.get(/^(648|651|655)$/u).forEach(field => { // eslint-disable-line prefer-named-capture-group
-        const sf = field.subfields.find(sf => sf.code === '2');
-
-        if (sf) {
-          if (['648', '650'].includes(field.tag) && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statement
-            sf.value = 'ysa'; // eslint-disable-line functional/immutable-data
-          }
-
-          if (field.tag === '655' && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statement
-            sf.value = 'slm/fin'; // eslint-disable-line functional/immutable-data
-          }
-
-          if (field.tag === '655' && sf.value === 'bella') { // eslint-disable-line functional/no-conditional-statement
-            sf.value = 'slm/swe'; // eslint-disable-line functional/immutable-data
-          }
-        }
-      });
-    }
-
-    function handle856() {
-      marcRecord.get(/^856$/u).forEach(field => {
-        const subfield = field.subfields.find(sf => sf.code === 'z');
-
-        if (subfield) { // eslint-disable-line functional/no-conditional-statement
-          subfield.code = 'y'; // eslint-disable-line functional/immutable-data
-        }
-
-        const y = field.subfields.find(sf => sf.code === 'y');
-
-        /* Move subfield y to the last index */
-        if (y) { // eslint-disable-line functional/no-conditional-statement
-          const index = field.subfields.indexOf(y);
-          field.subfields.splice(index, 1); // eslint-disable-line functional/immutable-data
-          field.subfields.push(y); // eslint-disable-line functional/immutable-data
-        }
-      });
-    }
-  }
-
-  function clone(o) {
-    return JSON.parse(JSON.stringify(o));
   }
 };

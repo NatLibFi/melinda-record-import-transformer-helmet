@@ -85,7 +85,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "Paw Patrol."
+              "value": "Paw Patrol : 5 minute stories."
             },
             {
               "code": "l",
@@ -542,7 +542,7 @@
           "subfields": [
             {
               "code": "a",
-              "value": "Avenger (elokuva : 2018)"
+              "value": "Avenger, infinity war (elokuva : 2018)"
             }
           ]
         },
@@ -829,8 +829,8 @@
               "value": "hyvän ja pahan välinen taistelu"
             },
             {
-              "code": "e",
-              "value": "kaunokki."
+              "code": "2",
+              "value": "kaunokki"
             }
           ]
         },
@@ -844,8 +844,8 @@
               "value": "supersankarit"
             },
             {
-              "code": "e",
-              "value": "kaunokki."
+              "code": "2",
+              "value": "kaunokki"
             }
           ]
         },
