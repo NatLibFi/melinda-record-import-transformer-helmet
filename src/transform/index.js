@@ -84,7 +84,7 @@ export default config => (stream, {validate = true, fix = true} = {}) => {
           await Promise.all(promises);
           Emitter.emit('end', promises.length);
         } catch (err) {
-          logger.log('error', 'Unexpected transformation error');
+          logger.log('error', 'Unexpected transformation error in the end');
           Emitter.emit('error', err);
         }
       });

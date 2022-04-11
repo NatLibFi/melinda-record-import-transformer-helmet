@@ -33,12 +33,12 @@ import createDebugLogger from 'debug';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
 import * as testContext from './create-material-fields';
 
-const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/index.SPEC');
+const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/convert:create-material-fields');
 let validator; // eslint-disable-line
 
 generateTests({
   callback,
-  path: [__dirname, '..', '..', 'test-fixtures', 'create-material-fields'],
+  path: [__dirname, '..', '..', '..', 'test-fixtures', 'create-material-fields'],
   recurse: false,
   useMetadataFile: true,
   fixura: {
