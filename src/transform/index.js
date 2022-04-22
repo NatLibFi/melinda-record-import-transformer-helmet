@@ -44,9 +44,8 @@ import {handleSID, handleLeader} from './convert/generate-static-fields';
 
 class TransformEmitter extends EventEmitter { }
 
-export default config => (stream, {validate = true, fix = true} = {}) => {
+export default moment => (stream, {validate = true, fix = true} = {}) => {
   MarcRecord.setValidationOptions({subfieldValues: false});
-  const {moment} = config;
   const Emitter = new TransformEmitter();
   const logger = createLogger();
 
