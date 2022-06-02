@@ -34,13 +34,13 @@ import * as testContext from './create-material-fields';
 const FIXTURES_PATH = path.join(__dirname, '../test-fixtures/create-material-fields');
 
 describe('create-material-fields', () => {
-	fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
-		it(file, async () => {
-			const record = JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
-			const fields = testContext.default(record);
-			const expectedPath = path.join(FIXTURES_PATH, 'out', file);
+  fs.readdirSync(path.join(FIXTURES_PATH, 'in')).forEach(file => {
+    it(file, () => {
+      const record = JSON.parse(fs.readFileSync(path.join(FIXTURES_PATH, 'in', file), 'utf8'));
+      const fields = testContext.default(record);
+      const expectedPath = path.join(FIXTURES_PATH, 'out', file);
 
-			expect(fields).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
-		});
-	});
+      expect(fields).to.eql(JSON.parse(fs.readFileSync(expectedPath, 'utf8')));
+    });
+  });
 });
