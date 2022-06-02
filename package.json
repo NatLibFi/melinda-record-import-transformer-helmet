@@ -64,6 +64,9 @@
 		"nodemon": "^2.0.16",
 		"nyc": "^15.1.0"
 	},
+	"optionalDependencies": {
+		"fsevents": "*"
+	},
 	"eslintConfig": {
 		"parser": "@babel/eslint-parser",
 		"extends": "@natlibfi/melinda-backend"
