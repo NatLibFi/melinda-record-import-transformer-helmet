@@ -29,40 +29,40 @@
 /* eslint-disable new-cap */
 import validateFactory from '@natlibfi/marc-record-validate';
 import {
-	FieldExclusion,
-	FieldStructure,
-	FieldsPresent,
-	EmptyFields,
-	EndingPunctuation,
-	IsbnIssn,
-	SubfieldExclusion
+  FieldExclusion,
+  FieldStructure,
+  FieldsPresent,
+  EmptyFields,
+  EndingPunctuation,
+  IsbnIssn,
+  SubfieldExclusion
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
-	const validate = validateFactory([
-		await FieldsPresent([/^(020|022|024)$/]),
-		await FieldsPresent([/^336$/, /^337$/, /^338$/]),
-		await FieldExclusion([
-			/^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/,
-			{tag: /^264$/, subfields: [{code: /^a$/, value: /^\[.*\]$/}]},
-			{tag: /^650$/, subfields: [{code: /^a$/, value: /^overdrive$/i}]},
-			{tag: /^(648|650|651|655)$/, subfields: [{code: /^2$/, value: /^(ysa|musa|allars|cilla)$/}]},
-			{tag: /^041$/, dependencies: [{leader: /^.{6}[g|i]/}]}
-		]),
-		await EmptyFields(),
-		await IsbnIssn({hyphenateISBN: true}),
-		await SubfieldExclusion([{tag: /^041$/, subfields: [{code: /a|d/, value: /^zxx$/}]}]),
-		await FieldStructure([{tag: /^007$/, dependencies: [{leader: /^.{6}[^at]/}]}]),
-		await EndingPunctuation()
-	]);
+  const validate = validateFactory([
+    await FieldsPresent([/^(020|022|024)$/u]),// eslint-disable-line
+    await FieldsPresent([/^336$/u, /^337$/u, /^338$/u]),
+    await FieldExclusion([
+      /^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/u,// eslint-disable-line
+      {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
+      {tag: /^650$/u, subfields: [{code: /^a$/u, value: /^overdrive$/ui}]},
+      {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line
+      {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]}
+    ]),
+    await EmptyFields(),
+    await IsbnIssn({hyphenateISBN: true}),
+    await SubfieldExclusion([{tag: /^041$/u, subfields: [{code: /a|d/u, value: /^zxx$/u}]}]),
+    await FieldStructure([{tag: /^007$/u, dependencies: [{leader: /^.{6}[^at]/u}]}]),
+    await EndingPunctuation()
+  ]);
 
-	return async (record, fix, validateFixes) => {
-		const opts = fix ? {fix, validateFixes} : {fix};
-		const result = await validate(record, opts);
-		return {
-			record: result.record,
-			failed: result.valid === false,
-			messages: result.report
-		};
-	};
+  return async (record, fix, validateFixes) => {
+    const opts = fix ? {fix, validateFixes} : {fix};
+    const result = await validate(record, opts);
+    return {
+      record: result.record,
+      failed: result.valid === false,
+      messages: result.report
+    };
+  };
 };
