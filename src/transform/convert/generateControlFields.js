@@ -1,4 +1,5 @@
 import createMaterialFields from './create-material-fields';
+import moment from 'moment';
 
 export function handle003(marcRecord) {
   marcRecord.get(/^003$/u).forEach(field => marcRecord.removeField(field));
@@ -27,8 +28,10 @@ export function handle007(marcRecord, record) {
   }
 }
 
-export function handle008(marcRecord, moment) {
+export function handle008(marcRecord) {
+
   const [f008] = marcRecord.get(/^008$/u);
+
   if (f008) { // eslint-disable-line functional/no-conditional-statement
     const creationDate = moment().format('YYMMDD'); // eslint-disable-line functional/immutable-data
 

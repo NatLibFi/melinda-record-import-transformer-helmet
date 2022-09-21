@@ -42,7 +42,7 @@
 		"@natlibfi/melinda-commons": "^12.0.3",
 		"@natlibfi/melinda-record-import-commons": "10.1.0-alpha.18",
 		"amqplib": "^0.8.0",
-		"moment": "^2.29.3",
+		"moment": "^2.29.4",
 		"stream-chain": "^2.2.5",
 		"stream-json": "^1.7.4"
 	},
