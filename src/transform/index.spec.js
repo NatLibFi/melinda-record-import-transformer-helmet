@@ -27,7 +27,6 @@
 */
 
 import {READERS} from '@natlibfi/fixura';
-import moment from 'moment';
 import {expect} from 'chai';
 import generateTests from '@natlibfi/fixugen';
 import createTransformHandler from './index';
@@ -59,11 +58,11 @@ function callback({
     throw new Error('DISABLED');
   }
 
-  const momentMock = () => moment('2000-01-01T00:00:00');
+
   const inputData = getFixture({components: ['input.json'], reader: READERS.STREAM});
   const expectedSuccesRecords = getFixture({components: ['outputSucces.json'], reader: READERS.JSON});
   const expectedFailedRecords = getFixture({components: ['outputFailed.json'], reader: READERS.JSON});
-  const transformHandler = createTransformHandler(momentMock);
+  const transformHandler = createTransformHandler(true);
 
   return new Promise((resolve, reject) => {
     const succesRecordsArray = [];

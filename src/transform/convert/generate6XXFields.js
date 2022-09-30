@@ -1,5 +1,5 @@
 export function handleTerms(marcRecord) {
-  marcRecord.get(/^(648|651|655)$/u).forEach(field => { // eslint-disable-line prefer-named-capture-group
+  marcRecord.get(/^(648|651|655)$/u).filter(field => field.subfields).forEach(field => { // eslint-disable-line prefer-named-capture-group
     const sf = field.subfields.find(sf => sf.code === '2');
 
     if (sf) {
