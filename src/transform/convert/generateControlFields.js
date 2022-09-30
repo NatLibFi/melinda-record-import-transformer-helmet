@@ -1,4 +1,5 @@
 import createMaterialFields from './create-material-fields';
+import moment from 'moment';
 
 export function handle003(marcRecord) {
   marcRecord.get(/^003$/u).forEach(field => marcRecord.removeField(field));
@@ -27,19 +28,12 @@ export function handle007(marcRecord, record) {
   }
 }
 
-export function handle008(marcRecord, {moment}) {
+export function handle008(marcRecord, generateTestTimeStamp = false) {
 
   const [f008] = marcRecord.get(/^008$/u);
 
-  function getDate (moment) {
-    if (!moment) {
-      return '000101';
-    }
-    return moment().format('YYMMDD');
-  }
-
   if (f008) { // eslint-disable-line functional/no-conditional-statement
-    const creationDate = getDate(moment);
+    const creationDate = getTimeStamp(generateTestTimeStamp);
 
     // Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
     const chars = f008.value.split('').slice(0, 40).slice(6);
@@ -62,5 +56,13 @@ export function handle008(marcRecord, {moment}) {
     }
 
     f008.value = `${creationDate}${chars.join('')}`; // eslint-disable-line functional/immutable-data
+  }
+
+  function getTimeStamp(generateTestTimeStamp) {
+    if (generateTestTimeStamp) {
+      return moment('2000-01-01T00:00:00').format('YYMMDD');
+    }
+
+    return moment().format('YYMMDD');
   }
 }

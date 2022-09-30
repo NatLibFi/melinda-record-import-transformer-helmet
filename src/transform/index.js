@@ -44,7 +44,7 @@ import {handleSID, handleLeader} from './convert/generate-static-fields';
 
 class TransformEmitter extends EventEmitter { }
 
-export default moment => (stream, {validate = true, fix = true} = {}) => {
+export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
   MarcRecord.setValidationOptions({subfieldValues: false});
   const Emitter = new TransformEmitter();
   const logger = createLogger();
@@ -100,7 +100,7 @@ export default moment => (stream, {validate = true, fix = true} = {}) => {
     handleLeader(marcRecord);
     handle003(marcRecord);
     handle007(marcRecord, record);
-    handle008(marcRecord, moment);
+    handle008(marcRecord, testRun);
     handle020(marcRecord);
     handle037(marcRecord);
     handle130(marcRecord);
