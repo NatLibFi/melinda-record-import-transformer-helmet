@@ -20,7 +20,7 @@ export function handle020(marcRecord) {
 export function handle037(marcRecord) {
   marcRecord.get(/^037$/u).forEach(field => {
     field.subfields.push({ // eslint-disable-line functional/immutable-data
-      code: '5', value: 'HELME<KEEP>'
+      code: '5', value: 'HELME'
     });
   });
 }
