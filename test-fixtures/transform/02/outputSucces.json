@@ -229,17 +229,6 @@
           ]
         },
         {
-          "tag": "540",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Käyttöoikeus Helmet-kirjastokortilla."
-            }
-          ]
-        },
-        {
           "tag": "546",
           "ind1": " ",
           "ind2": " ",
@@ -318,21 +307,6 @@
             {
               "code": "z",
               "value": "9789511321224"
-            }
-          ]
-        },
-        {
-          "tag": "856",
-          "ind1": "4",
-          "ind2": "0",
-          "subfields": [
-            {
-              "code": "u",
-              "value": "https://www.ellibslibrary.com/helmet/9789511331353"
-            },
-            {
-              "code": "y",
-              "value": "Linkki e-kirjaan"
             }
           ]
         },

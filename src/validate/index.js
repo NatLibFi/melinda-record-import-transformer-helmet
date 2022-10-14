@@ -47,7 +47,9 @@ export default async () => {
       {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
       {tag: /^650$/u, subfields: [{code: /^a$/u, value: /^overdrive$/ui}]},
       {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line prefer-named-capture-group
-      {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]}
+      {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]},
+      {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^Käyttöoikeus Helmet-kirjastokortilla$/u}]},
+      {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}
     ]),
     await EmptyFields(),
     await IsbnIssn({hyphenateISBN: true}),
