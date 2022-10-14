@@ -65,12 +65,12 @@
 		"nodemon": "^2.0.15",
 		"nyc": "^15.1.0"
 	},
+	"optionalDependencies": {
+		"fsevents": "*"
+	},
 	"eslintConfig": {
 		"parser": "@babel/eslint-parser",
-		"extends": "@natlibfi/melinda-backend",
-		"env": {
-			"mocha": true
-		}
+		"extends": "@natlibfi/melinda-backend"
 	},
 	"babel": {
 		"presets": [
