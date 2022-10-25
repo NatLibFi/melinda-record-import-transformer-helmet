@@ -62,7 +62,7 @@ jobs:
       - uses: joelwmale/webhook-action@master
         with:
           url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"event": "${{ GITHUB_EVENT_NAME }}","uri": "${{ GITHUB_REPOSITORY }}","ref": "${{ GITHUB_REF }}","commit": "${{ GITHUB_SHA }}"}'
+          body: '{"event": "${{ github.event_name }}","uri": "${{ github.repository }}","ref": "${{ github.ref }}","commit": "${{ github.sha }}"}'
 
   quayio:
     name: Quay.io image builder & publisher
