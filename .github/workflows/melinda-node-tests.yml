@@ -56,7 +56,7 @@ jobs:
   openshift-webhook:
     name: OpenShift webhook for image builder
     needs: [build-node-versions, njsscan]
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, kk]
 
     steps:
       - uses: joelwmale/webhook-action@master
