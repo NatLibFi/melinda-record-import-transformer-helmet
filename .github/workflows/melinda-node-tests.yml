@@ -57,6 +57,7 @@ jobs:
     name: OpenShift webhook for image builder
     needs: [build-node-versions, njsscan]
     runs-on: [self-hosted, kk]
+    container: busybox:latest
 
     steps:
       - uses: joelwmale/webhook-action@master
