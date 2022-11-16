@@ -1,0 +1,840 @@
+[
+  {
+    "id": "2469049",
+    "materialType": {
+      "code": "1  ",
+      "value": "Book"
+    },
+    "catalogDate": "2021-12-01",
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Quinn, Julia,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Hirvikorpi, Susanna,"
+          },
+          {
+            "tag": "e",
+            "content": "kääntäjä."
+          },
+          {
+            "tag": "0",
+            "content": "(FI-ASTERI-N)000094317"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "3",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bridgerton"
+          },
+          {
+            "tag": "c",
+            "content": "(suku) (fiktiivinen yhteisö)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bridgerton, Benedict"
+          },
+          {
+            "tag": "c",
+            "content": "(fiktiivinen hahmo)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Beckett, Sophie"
+          },
+          {
+            "tag": "c",
+            "content": "(fiktiivinen hahmo)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "648",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1800-luku"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "rakastuminen"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p201"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "rakkaus"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p707"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "erisäätyisyys"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p3847"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ihmissuhteet"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p1541"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "perheet"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p1253"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "yläluokka"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p1378"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "aateli"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p4597"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "palvelijat"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p6573"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Lontoo"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p104995"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Iso-Britannia"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p104990"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "historialliset rakkausromaanit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s649"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "viihdekirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s691"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "jatkokertomukset"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s900"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "romaanit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s518"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaunokirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käännökset"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanninkielinen kirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "local"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "9789520435448"
+          },
+          {
+            "tag": "q",
+            "content": "kovakantinen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "89.15"
+          }
+        ]
+      },
+      {
+        "fieldTag": "m",
+        "marcTag": "093",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "KIRJA / BOK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9789520435448"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helsinki :"
+          },
+          {
+            "tag": "b",
+            "content": "Tammi,"
+          },
+          {
+            "tag": "c",
+            "content": "[2021]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "©2021"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "376 sivua ;"
+          },
+          {
+            "tag": "c",
+            "content": "23 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "teksti"
+          },
+          {
+            "tag": "b",
+            "content": "txt"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käytettävissä ilman laitetta"
+          },
+          {
+            "tag": "b",
+            "content": "n"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "nide"
+          },
+          {
+            "tag": "b",
+            "content": "nc"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "s",
+        "marcTag": "490",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Bridgerton ;"
+          },
+          {
+            "tag": "v",
+            "content": "3"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Naamiaisten kaunotar /"
+          },
+          {
+            "tag": "c",
+            "content": "Julia Quinn ; suomentanut Susanna Hirvikorpi."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "240",
+        "ind1": "1",
+        "ind2": "3",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "An offer from a gentleman,"
+          },
+          {
+            "tag": "l",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "211116t20212021fi ||||       |0| f|fin|cnam4i "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-BTJ"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20211116014610.2"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(FI-BTJ)7193575"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-BTJ"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          },
+          {
+            "tag": "d",
+            "content": "FI-NL"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "fin"
+          },
+          {
+            "tag": "h",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "080",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "820"
+          },
+          {
+            "tag": "x",
+            "content": "-3"
+          },
+          {
+            "tag": "2",
+            "content": "1974/fin/fennica"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "84.2"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": "9",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Romantiikka"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nam a22005774i 4500"
+      }
+    ]
+  }
+]
