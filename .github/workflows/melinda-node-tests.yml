@@ -42,7 +42,7 @@ jobs:
       uses: ajinabraham/njsscan-action@master
       with:
         args: '.'
-        
+
   license-scan:
     name: License compliance check
     runs-on: ubuntu-latest
@@ -52,17 +52,25 @@ jobs:
       - uses: mikaelvesavuori/license-compliance-action@v1.0.2
         with:
           exclude_pattern: /^@natlibfi/
-        
+
   openshift-webhook:
     name: OpenShift webhook for image builder
     needs: [build-node-versions, njsscan]
     runs-on: ubuntu-latest
 
     steps:
-      - uses: joelwmale/webhook-action@master
+      - name: Test webhook
+        uses: joelwmale/webhook-action@master
+        if: github.ref == 'refs/heads/test'
         with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"event": "${{ github.event_name }}","uri": "${{ github.repository }}","ref": "${{ github.ref }}","commit": "${{ github.sha }}"}'
+          url: ${{ secrets.WEBHOOK_URL_TEST }}
+          body: '{}'
+      - name: Prod webhook
+        uses: joelwmale/webhook-action@master
+        if: github.ref == 'refs/heads/master'
+        with:
+          url: ${{ secrets.WEBHOOK_URL_PROD }}
+          body: '{}'
 
   quayio:
     name: Quay.io image builder & publisher
