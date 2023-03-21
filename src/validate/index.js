@@ -50,6 +50,7 @@ export default async () => {
       {tag: /^650$/u, subfields: [{code: /^a$/u, value: /^overdrive$/ui}]},
       {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^Käyttöoikeus Helmet-kirjastokortilla$/u}]},
+      // Dropping notify fields to avoid "double" fields - reported by TATI
       {tag: /^(546|588)$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}
     ]),
