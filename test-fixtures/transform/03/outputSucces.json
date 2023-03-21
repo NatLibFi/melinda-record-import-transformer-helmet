@@ -206,28 +206,6 @@
           ]
         },
         {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Tekstitys: suomi, svenska, norja, tanska, ääniraita: englanti."
-            }
-          ]
-        },
-        {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Ääniraita englanti."
-            }
-          ]
-        },
-        {
           "tag": "650",
           "ind1": " ",
           "ind2": "7",
