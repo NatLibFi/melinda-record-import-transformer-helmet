@@ -514,6 +514,81 @@
           ]
         },
         {
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "eng"
+            },
+            {
+              "code": "a",
+              "value": "ger"
+            },
+            {
+              "code": "a",
+              "value": "fre"
+            },
+            {
+              "code": "a",
+              "value": "swe"
+            },
+            {
+              "code": "a",
+              "value": "dan"
+            },
+            {
+              "code": "a",
+              "value": "nor"
+            },
+            {
+              "code": "a",
+              "value": "fin"
+            },
+            {
+              "code": "a",
+              "value": "dut"
+            },
+            {
+              "code": "j",
+              "value": "eng"
+            },
+            {
+              "code": "j",
+              "value": "ger"
+            },
+            {
+              "code": "j",
+              "value": "fre"
+            },
+            {
+              "code": "j",
+              "value": "swe"
+            },
+            {
+              "code": "j",
+              "value": "dan"
+            },
+            {
+              "code": "j",
+              "value": "nor"
+            },
+            {
+              "code": "j",
+              "value": "fin"
+            },
+            {
+              "code": "j",
+              "value": "dut"
+            },
+            {
+              "code": "h",
+              "value": "eng"
+            }
+          ],
+          "tag": "041"
+        },
+        {
           "tag": "046",
           "ind1": " ",
           "ind2": " ",
@@ -723,28 +798,6 @@
             {
               "code": "a",
               "value": "Lainausoikeus."
-            }
-          ]
-        },
-        {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Tekstitys: suomi, ruotsi, norja, tanska, englanti, hollanti, saksa, ranska, ääniraita: monikielinen. - Kielet kannesta."
-            }
-          ]
-        },
-        {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "Ääniraita englanti, ääniraita saksa, ääniraita ranska."
             }
           ]
         },
