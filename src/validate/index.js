@@ -46,6 +46,7 @@ export default async () => {
     await FieldsPresent([/^336$/u, /^337$/u, /^338$/u]),
     await FieldExclusion([
       /^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/u, // eslint-disable-line prefer-named-capture-group
+      {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
       {tag: /^650$/u, subfields: [{code: /^a$/u, value: /^overdrive$/ui}]},
       {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line prefer-named-capture-group
