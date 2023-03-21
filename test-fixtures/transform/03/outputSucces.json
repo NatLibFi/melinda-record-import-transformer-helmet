@@ -37,57 +37,6 @@
           ]
         },
         {
-          "ind1": "1",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "eng"
-            },
-            {
-              "code": "a",
-              "value": "swe"
-            },
-            {
-              "code": "a",
-              "value": "dan"
-            },
-            {
-              "code": "a",
-              "value": "nor"
-            },
-            {
-              "code": "a",
-              "value": "fin"
-            },
-            {
-              "code": "j",
-              "value": "fin"
-            },
-            {
-              "code": "j",
-              "value": "swe"
-            },
-            {
-              "code": "j",
-              "value": "dan"
-            },
-            {
-              "code": "j",
-              "value": "nor"
-            },
-            {
-              "code": "j",
-              "value": "eng"
-            },
-            {
-              "code": "h",
-              "value": "eng"
-            }
-          ],
-          "tag": "041"
-        },
-        {
           "tag": "049",
           "ind1": " ",
           "ind2": " ",

@@ -49,21 +49,6 @@
           ]
         },
         {
-          "ind1": "0",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "fin"
-            },
-            {
-              "code": "d",
-              "value": "fin"
-            }
-          ],
-          "tag": "041"
-        },
-        {
           "tag": "100",
           "ind1": "1",
           "ind2": " ",
