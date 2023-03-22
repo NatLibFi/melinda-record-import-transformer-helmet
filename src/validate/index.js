@@ -45,7 +45,7 @@ export default async () => {
     await FieldsPresent([/^(020|022|024)$/u]), // eslint-disable-line
     await FieldsPresent([/^336$/u, /^337$/u, /^338$/u]),
     await FieldExclusion([
-      /^(001|091|092|093|094|095|256|533|574|575|576|577|578|599)$/u, // eslint-disable-line prefer-named-capture-group
+      /^(001|091|092|093|094|095|256|533|546|574|575|576|577|578|599)$/u, // eslint-disable-line prefer-named-capture-group
       // Drop 041 https://kansalliskirjasto.slack.com/archives/C0123MAS485/p1679402190105819?thread_ts=1679391807.394099&cid=C0123MAS485
       {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
@@ -53,7 +53,7 @@ export default async () => {
       {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^Käyttöoikeus Helmet-kirjastokortilla$/u}]},
       // Dropping note fields to avoid "double" fields - reported by TATI [MRA-453]
-      {tag: /^(546|588)$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
+      {tag: /^588$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}
     ]),
     await EmptyFields(),
