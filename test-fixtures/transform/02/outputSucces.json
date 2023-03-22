@@ -229,17 +229,6 @@
           ]
         },
         {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "suomi."
-            }
-          ]
-        },
-        {
           "tag": "600",
           "ind1": "1",
           "ind2": "4",
@@ -584,17 +573,6 @@
             {
               "code": "a",
               "value": "PlayStation 4."
-            }
-          ]
-        },
-        {
-          "tag": "546",
-          "ind1": " ",
-          "ind2": " ",
-          "subfields": [
-            {
-              "code": "a",
-              "value": "englanti."
             }
           ]
         },
