@@ -1,5 +1,5 @@
 {
-  "description": "Field 506-lyhenteet",
+  "description": "Remove ending spaces before punctuation f100 $e",
   "only": true,
   "skip": false,
   "succesRecords": 1,

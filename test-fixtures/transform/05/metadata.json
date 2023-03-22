@@ -1,6 +1,7 @@
 {
   "description": "a boardgame",
-  "disabled": false,
+  "only": true,
+  "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,

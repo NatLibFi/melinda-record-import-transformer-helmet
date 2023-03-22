@@ -47,18 +47,11 @@ generateTests({
 
 function callback({
   getFixture,
-  enabled = true,
   succesRecords = 1,
   failedRecords = 0,
   expectedError = false,
   expectedErrorStatus = '200'
 }) {
-  if (enabled === false) {
-    debug('Test has been set to be disabled in metadata.json');
-    throw new Error('DISABLED');
-  }
-
-
   const inputData = getFixture({components: ['input.json'], reader: READERS.STREAM});
   const expectedSuccesRecords = getFixture({components: ['outputSucces.json'], reader: READERS.JSON});
   const expectedFailedRecords = getFixture({components: ['outputFailed.json'], reader: READERS.JSON});
@@ -107,7 +100,7 @@ function callback({
             }
 
             // Check succeeded record
-            expect(result.record).to.deep.include(expectedRecords[index].record);
+            expect(result.record).to.deep.eql(expectedRecords[index].record);
           });
 
           return;

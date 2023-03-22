@@ -1,6 +1,7 @@
 {
   "description": "Field 130",
-  "disabled": false,
+  "only": true,
+  "skip": false,
   "succesRecords": 2,
   "failedRecords": 0,
   "expectedError": false,

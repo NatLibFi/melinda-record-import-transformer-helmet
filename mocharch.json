@@ -8,4 +8,4 @@
   "ui": "bdd",
   "spec": ["src/*.spec.js", "src/*/*.spec.js", "src/*/*/*.spec.js"],
   "watch-files": ["src/*/*.js", "src/**/*/*.js"]
-  }
+}
