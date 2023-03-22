@@ -33,19 +33,19 @@ export function handle008(marcRecord, generateTestTimeStamp = false) {
   const [f008] = marcRecord.get(/^008$/u);
 
   if (f008) { // eslint-disable-line functional/no-conditional-statement
-    const creationDate = getTimeStamp(generateTestTimeStamp);
+    const creationDate = getTimeStamp(generateTestTimeStamp).split('');
 
-    // Convert to array, pad to 41 characters and remove first 6 chars (Creation time) and the erroneous last three chars ('nam')
-    const chars = f008.value.split('').slice(0, 40).slice(6);
-    if (chars[17] === ' ') { // eslint-disable-line functional/no-conditional-statement
-      chars[17] = '^'; // eslint-disable-line functional/immutable-data
-    }
+    // Convert to array, update first 6 chars (Creation time) and remove the erroneous last three chars ('nam')
+    const chars = [...creationDate, ...f008.value.split('').slice(0, 40).slice(6)];
+    // if (chars[17] === ' ') { // eslint-disable-line functional/no-conditional-statement
+    //   chars[17] = '^'; // eslint-disable-line functional/immutable-data
+    // }
 
-    if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statement
-      chars[18] = 'i'; // eslint-disable-line functional/immutable-data
-    }
+    // if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statement
+    //   chars[18] = 'i'; // eslint-disable-line functional/immutable-data
+    // }
 
-    if (['#', '^', 'd', 'u', '|'].includes(chars[39])) { // eslint-disable-line functional/no-conditional-statement
+    if (['#', '^', 'd', 'u', '|', ' '].includes(chars[39])) { // eslint-disable-line functional/no-conditional-statement
       chars[39] = 'c'; // eslint-disable-line functional/immutable-data
     }
 
@@ -55,7 +55,7 @@ export function handle008(marcRecord, generateTestTimeStamp = false) {
       chars.fill('|', 34, 35); // eslint-disable-line functional/immutable-data
     }
 
-    f008.value = `${creationDate}${chars.join('')}`; // eslint-disable-line functional/immutable-data
+    f008.value = `${chars.join('')}`; // eslint-disable-line functional/immutable-data
   }
 
   function getTimeStamp(generateTestTimeStamp) {
