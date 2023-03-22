@@ -1,6 +1,6 @@
 {
   "description": "Remove ending spaces before punctuation f100 $e",
-  "only": true,
+  "only": false,
   "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,

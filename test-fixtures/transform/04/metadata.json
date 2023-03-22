@@ -1,6 +1,6 @@
 {
   "description": "Field 650 invalid sub a",
-  "only": true,
+  "only": false,
   "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,

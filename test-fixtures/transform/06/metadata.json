@@ -1,6 +1,6 @@
 {
   "description": "Material type 3",
-  "only": true,
+  "only": false,
   "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,

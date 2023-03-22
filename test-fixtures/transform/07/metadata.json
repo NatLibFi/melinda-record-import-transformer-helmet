@@ -1,6 +1,6 @@
 {
   "description": "Material type t. And drops 540 if a 'Käytettävissä...' and 856 u 'https://www.ellibslibrary.com...'",
-  "only": true,
+  "only": false,
   "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,
