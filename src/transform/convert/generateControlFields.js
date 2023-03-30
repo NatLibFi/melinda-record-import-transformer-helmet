@@ -1,5 +1,5 @@
 import createMaterialFields from './create-material-fields';
-import moment from 'moment';
+import {getTimeStamp} from './utils';
 
 export function handle003(marcRecord) {
   marcRecord.get(/^003$/u).forEach(field => marcRecord.removeField(field));
@@ -56,13 +56,5 @@ export function handle008(marcRecord, generateTestTimeStamp = false) {
     }
 
     f008.value = `${chars.join('')}`; // eslint-disable-line functional/immutable-data
-  }
-
-  function getTimeStamp(generateTestTimeStamp) {
-    if (generateTestTimeStamp) {
-      return moment('2000-01-01T00:00:00').format('YYMMDD');
-    }
-
-    return moment().format('YYMMDD');
   }
 }
