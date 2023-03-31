@@ -30,18 +30,19 @@ export function handle856(marcRecord) {
  * @param {*} marcRecord MarcRecord object of transformed record
  * @returns Array containing field 884 ($a, $g, $k, $q, $5)
  */
-export function generate884(marcRecord, testRun) {
+export function generate884(marcRecord, testRun = false) {
   const copyMarcRecordData = clone(marcRecord);
   const copyMarcRecord = new MarcRecord(copyMarcRecordData);
   emptyCreationDate(copyMarcRecord);
   const hash = createHash('sha256').update(JSON.stringify(copyMarcRecord)).digest('hex');
+  const timeStamp = testRun ? getTimeStamp('testYYYYMMDD') : getTimeStamp('YYYYMMDD');
 
   return [
     {
       tag: '884',
       subfields: [
         {code: 'a', value: 'Helmet to Melinda MARC transformation'},
-        {code: 'g', value: getTimeStamp(testRun)},
+        {code: 'g', value: timeStamp},
         {code: 'k', value: `HELMET:${testRun ? '' : hash}`},
         {code: 'q', value: 'FI-NL'},
         {code: '5', value: 'MELINDA'}
