@@ -93,7 +93,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     }
   }
 
-  function convertRecord(record, validator) {
+  async function convertRecord(record, validator) {
     const marcRecord = convertToMARC();
 
     /* Order is significant! */
@@ -112,11 +112,12 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     handleTerms(marcRecord);
     handle856(marcRecord);
     handleSID(marcRecord, record);
-    marcRecord.insertFields(generate884(marcRecord, testRun));
 
     try {
       if (validate === true || fix === true) {
-        return validator(marcRecord, validate, fix);
+        const validationResult = await validator(marcRecord, validate, fix);
+        validationResult.record.insertFields(generate884(marcRecord, testRun));
+        return validationResult;
       }
     } catch (error) {
       logger.log('error', 'Unexpected validation error');
