@@ -1,0 +1,9 @@
+{
+  "description": "SKIPPED: Strip f540 with $a matching 'Käyttöoikeus Helmet-kirjastokortilla.' in Finnish or Swedish",
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200",
+  "skip": true,
+  "only": false
+}
