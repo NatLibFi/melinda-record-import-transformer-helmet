@@ -33,7 +33,7 @@ import {MarcRecord} from '@natlibfi/marc-record';
 import createValidator from '../validate';
 import {createLogger} from '@natlibfi/melinda-backend-commons';
 import {EventEmitter} from 'events';
-import {handle856} from './convert/generate8XXFields.js';
+import {generate884, handle856} from './convert/generate8XXFields.js';
 import {handleTerms} from './convert/generate6XXFields.js';
 import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
 import {handle300} from './convert/generate3XXFields.js';
@@ -93,7 +93,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     }
   }
 
-  function convertRecord(record, validator) {
+  async function convertRecord(record, validator) {
     const marcRecord = convertToMARC();
 
     /* Order is significant! */
@@ -115,7 +115,9 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
 
     try {
       if (validate === true || fix === true) {
-        return validator(marcRecord, validate, fix);
+        const validationResult = await validator(marcRecord, validate, fix);
+        validationResult.record.insertFields(generate884(marcRecord, testRun));
+        return validationResult;
       }
     } catch (error) {
       logger.log('error', 'Unexpected validation error');
