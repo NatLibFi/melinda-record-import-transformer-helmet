@@ -1,6 +1,5 @@
 {
   "record": {
-    "_validationOptions": {},
     "leader": "00000nam  22000004i 4500",
     "fields": [
       {
@@ -196,13 +195,13 @@
         ]
       },
       {
-        "tag": "546",
+        "tag": "540",
         "ind1": " ",
         "ind2": " ",
         "subfields": [
           {
             "code": "a",
-            "value": "englanti."
+            "value": "Foobar. Field to keep."
           }
         ]
       },
@@ -342,7 +341,7 @@
     },
     {
       "description": "Checks that the record does not contain the configured fields",
-      "state": "valid"
+      "state": "fixed"
     },
     {
       "description": "Handles empty fields",
@@ -358,6 +357,21 @@
     },
     {
       "description": "Check whether the configured fields have valid structure",
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that ends with whitespace character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
       "state": "valid"
     },
     {

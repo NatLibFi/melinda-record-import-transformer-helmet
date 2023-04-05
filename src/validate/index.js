@@ -51,7 +51,7 @@ export default async () => {
       {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
       {tag: /^650$/u, subfields: [{code: /^a$/u, value: /^overdrive$/ui}]},
       {tag: /^(648|650|651|655)$/u, subfields: [{code: /^2$/u, value: /^(ysa|musa|allars|cilla)$/u}]}, // eslint-disable-line prefer-named-capture-group
-      {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^(Käyttöoikeus Helmet-kirjastokortilla|Helmet bibliotekskort krävs)$/u}]}, // eslint-disable-line prefer-named-capture-group
+      {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^(Käyttöoikeus Helmet-kirjastokortilla.|Helmet bibliotekskort krävs)$/u}]}, // eslint-disable-line prefer-named-capture-group
       // Dropping note fields to avoid "double" fields - reported by TATI [MRA-453]
       {tag: /^588$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}

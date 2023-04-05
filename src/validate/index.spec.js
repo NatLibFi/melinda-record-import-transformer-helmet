@@ -1,31 +1,3 @@
-/**
-*
-* @licstart  The following is the entire license notice for the JavaScript code in this file.
-*
-* Helmet record transformer for the Melinda record batch import system
-*
-* Copyright (c) 2018-2019 University Of Helsinki (The National Library Of Finland)
-*
-* This file is part of melinda-record-import-transformer-helmet
-*
-* melinda-record-import-transformer-helmet program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU Affero General Public License as
-* published by the Free Software Foundation, either version 3 of the
-* License, or (at your option) any later version.
-*
-* melinda-record-import-transformer-helmet is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU Affero General Public License for more details.
-*
-* You should have received a copy of the GNU Affero General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*
-* @licend  The above is the entire license notice
-* for the JavaScript code in this file.
-*
-*/
-
 import {READERS} from '@natlibfi/fixura';
 import {expect} from 'chai';
 import generateTests from '@natlibfi/fixugen';
@@ -55,15 +27,9 @@ generateTests({
 
 async function callback({
   getFixture,
-  enabled = true,
   expectedError = false,
   expectedErrorStatus = '200'
 }) {
-  if (enabled === false) {
-    debug('Test has been set to be disabled in metadata.json');
-    throw new Error('DISABLED');
-  }
-
   const debugResultHandling = debug.extend('resultHandling');
   const inputData = getFixture('input.json');
   const expectedResults = getFixture('output.json');
@@ -72,11 +38,10 @@ async function callback({
   try {
     debugResultHandling(JSON.stringify(result));
     expect(result.messages).to.be.an('Array');
-    expect(result.messages).to.deep.include(expectedResults.messages);
+    expect(result.messages).to.eql(expectedResults.messages);
     expect(result.failed).to.be.an('Boolean');
     expect(result.failed).to.eql(expectedResults.failed);
-    expect(result.failed).to.eql(expectedResults.failed);
-    expect(result.record).to.deep.include(expectedResults.record);
+    expect(result.record.toObject()).to.eql(expectedResults.record);
   } catch (err) {
     errorHandling(err);
   }
@@ -102,5 +67,7 @@ async function callback({
         return;
       }
     }
+
+    throw err;
   }
 }

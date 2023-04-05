@@ -1,6 +1,5 @@
 {
   "record": {
-    "_validationOptions": {},
     "leader": "00000ngm a22000004i 4500",
     "fields": [
       {
@@ -267,50 +266,6 @@
         ]
       },
       {
-        "tag": "546",
-        "ind1": " ",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Tekstitys: suomi, ruotsi, tanska, norja ; ääniraita: monikielinen."
-          }
-        ]
-      },
-      {
-        "tag": "546",
-        "ind1": " ",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Ääniraita englanti, ljudspår ruotsi, ääniraita norja."
-          }
-        ]
-      },
-      {
-        "tag": "588",
-        "ind1": "0",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Nimeke kannesta."
-          }
-        ]
-      },
-      {
-        "tag": "588",
-        "ind1": "0",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Kielimerkinnöt kannesta."
-          }
-        ]
-      },
-      {
         "tag": "650",
         "ind1": " ",
         "ind2": "7",
@@ -564,7 +519,7 @@
           },
           {
             "code": "e",
-            "value": "säveltäjä. ."
+            "value": "säveltäjä."
           }
         ]
       },
@@ -624,7 +579,7 @@
           },
           {
             "code": "e",
-            "value": "näyttelijä. ."
+            "value": "näyttelijä."
           }
         ]
       },
@@ -705,6 +660,21 @@
     },
     {
       "description": "Check whether the configured fields have valid structure",
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that ends with whitespace character",
+      "messages": [],
+      "state": "fixed"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
       "state": "valid"
     },
     {
