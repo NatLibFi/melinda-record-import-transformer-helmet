@@ -37,7 +37,8 @@ import {
   EndingWhitespace,
   IsbnIssn,
   NonBreakingSpace,
-  SubfieldExclusion
+  SubfieldExclusion,
+  TypeOfDateF008
 } from '@natlibfi/marc-record-validators-melinda';
 
 export default async () => {
@@ -56,6 +57,7 @@ export default async () => {
       {tag: /^588$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}
     ]),
+    await TypeOfDateF008(),
     await EmptyFields(),
     await IsbnIssn({hyphenateISBN: true}),
     await SubfieldExclusion([{tag: /^041$/u, subfields: [{code: /a|d/u, value: /^zxx$/u}]}]),
