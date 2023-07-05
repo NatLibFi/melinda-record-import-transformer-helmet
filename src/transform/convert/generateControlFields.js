@@ -45,8 +45,8 @@ export function handle008(marcRecord, testRun = false) {
     //   chars[18] = 'i'; // eslint-disable-line functional/immutable-data
     // }
 
-    if (['#', '^', 'd', 'u', '|', ' '].includes(chars[39])) { // eslint-disable-line functional/no-conditional-statement
-      chars[39] = 'c'; // eslint-disable-line functional/immutable-data
+    if (['#', '^', 'd', 'u', '|', ' ', ''].includes(chars[39])) { // eslint-disable-line functional/no-conditional-statement
+      chars[39] = chars[39] === '' ? '|' : 'c'; // eslint-disable-line functional/immutable-data
     }
 
     if (marcRecord.leader[6] === 'r' && chars[33] === 'g') { // eslint-disable-line functional/no-conditional-statement
