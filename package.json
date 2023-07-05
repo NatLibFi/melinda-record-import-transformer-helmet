@@ -46,24 +46,26 @@
 		"stream-json": "^1.7.5"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.6.4",
+		"@babel/cli": "^7.22.6",
 		"@babel/core": "latest",
 		"@babel/eslint-parser": "latest",
-		"@babel/node": "^7.2.2",
+		"@babel/node": "^7.22.6",
 		"@babel/preset-env": "latest",
-		"@babel/register": "^7.6.2",
+		"@babel/register": "^7.22.5",
 		"@natlibfi/eslint-config-melinda-backend": "^3.0.0",
-		"@natlibfi/fixugen": "^1.1.0",
-		"@natlibfi/fixura": "^1.0.0",
-		"babel-plugin-istanbul": "^3.0.0",
+		"@natlibfi/fixugen": "^2.0.0",
+		"@natlibfi/fixura": "^3.0.0",
 		"babel-plugin-rewire": "^1.2.0",
 		"chai": "^4.3.6",
 		"chai-as-promised": "^7.1.1",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.44.0",
 		"mocha": "^10.2.0",
-		"nodemon": "^2.0.22",
+		"nodemon": "^2.00.22",
 		"nyc": "^15.1.0"
+	},
+	"overrides": {
+		"semver": "^7.5.3"
 	},
 	"optionalDependencies": {
 		"fsevents": "*"
