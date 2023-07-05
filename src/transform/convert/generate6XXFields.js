@@ -3,15 +3,15 @@ export function handleTerms(marcRecord) {
     const sf = field.subfields.find(sf => sf.code === '2');
 
     if (sf) {
-      if (['648', '650'].includes(field.tag) && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statement
+      if (['648', '650'].includes(field.tag) && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statements
         sf.value = 'ysa'; // eslint-disable-line functional/immutable-data
       }
 
-      if (field.tag === '655' && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statement
+      if (field.tag === '655' && sf.value === 'kaunokki') { // eslint-disable-line functional/no-conditional-statements
         sf.value = 'slm/fin'; // eslint-disable-line functional/immutable-data
       }
 
-      if (field.tag === '655' && sf.value === 'bella') { // eslint-disable-line functional/no-conditional-statement
+      if (field.tag === '655' && sf.value === 'bella') { // eslint-disable-line functional/no-conditional-statements
         sf.value = 'slm/swe'; // eslint-disable-line functional/immutable-data
       }
     }

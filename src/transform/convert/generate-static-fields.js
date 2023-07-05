@@ -4,11 +4,11 @@ export function handleLeader(marcRecord) {
   // Set record as unicode
   chars[9] = 'a'; // eslint-disable-line functional/immutable-data
 
-  if (chars[6] === 'o' && marcRecord.get(/^655$/u).some(isBoardGame)) { // eslint-disable-line functional/no-conditional-statement
+  if (chars[6] === 'o' && marcRecord.get(/^655$/u).some(isBoardGame)) { // eslint-disable-line functional/no-conditional-statements
     chars[6] = 'r'; // eslint-disable-line functional/immutable-data
   }
 
-  if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statement
+  if (chars[18] === 'c') { // eslint-disable-line functional/no-conditional-statements
     chars[18] = 'i'; // eslint-disable-line functional/immutable-data
   }
 
