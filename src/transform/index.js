@@ -131,13 +131,13 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
 
       record.varFields
         .forEach(field => {
-          if (field.content) { // eslint-disable-line functional/no-conditional-statement
-            if (field.fieldTag === '_') { // eslint-disable-line functional/no-conditional-statement
+          if (field.content) { // eslint-disable-line functional/no-conditional-statements
+            if (field.fieldTag === '_') { // eslint-disable-line functional/no-conditional-statements
               marcRecord.leader = field.content; // eslint-disable-line functional/immutable-data
-            } else if (typeof field.marcTag === 'string') { // eslint-disable-line functional/no-conditional-statement
+            } else if (typeof field.marcTag === 'string') { // eslint-disable-line functional/no-conditional-statements
               marcRecord.insertField({tag: field.marcTag, value: field.content});
             }
-          } else if (field.subfields && typeof field.marcTag === 'string') { // eslint-disable-line functional/no-conditional-statement
+          } else if (field.subfields && typeof field.marcTag === 'string') { // eslint-disable-line functional/no-conditional-statements
             marcRecord.insertField({
               tag: field.marcTag,
               ind1: field.ind1,
