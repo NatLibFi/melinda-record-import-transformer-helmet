@@ -36,7 +36,7 @@
 		"@babel/runtime": "latest",
 		"@natlibfi/marc-record": "^7.2.2",
 		"@natlibfi/marc-record-validate": "^8.0.0",
-		"@natlibfi/marc-record-validators-melinda": "^10.9.0",
+		"@natlibfi/marc-record-validators-melinda": "^10.9.2",
 		"@natlibfi/melinda-backend-commons": "^2.2.0",
 		"@natlibfi/melinda-commons": "^13.0.4",
 		"@natlibfi/melinda-record-import-commons": "^10.1.6-alpha.4",
