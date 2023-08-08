@@ -1,10 +1,10 @@
 export function handle020(marcRecord) {
   marcRecord.get(/^020$/u)
     .forEach(field => {
-      if (!field.subfields.find(sf => sf.code === 'q')) { // eslint-disable-line functional/no-conditional-statement
+      if (!field.subfields.find(sf => sf.code === 'q')) { // eslint-disable-line functional/no-conditional-statements
         const a = field.subfields.find(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
 
-        if (a && (/\s/u).test(a.value.trim())) { // eslint-disable-line functional/no-conditional-statement
+        if (a && (/\s/u).test(a.value.trim())) { // eslint-disable-line functional/no-conditional-statements
           const [isbn, postfix] = a.value.split(/\s/u);
           a.value = isbn; // eslint-disable-line functional/immutable-data
 
