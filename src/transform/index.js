@@ -38,7 +38,7 @@ import {handleTerms} from './convert/generate6XXFields.js';
 import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
 import {handle300} from './convert/generate3XXFields.js';
 import {handle130} from './convert/generate1XXFields.js';
-import {handle020, handle037} from './convert/generate0XXFields.js';
+import {handle020, handle028, handle037} from './convert/generate0XXFields.js';
 import {handle003, handle007, handle008} from './convert/generateControlFields';
 import {handleSID, handleLeader} from './convert/generate-static-fields';
 
@@ -65,6 +65,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       ]).on('error', err => Emitter.emit('error', err));
 
       pipeline.on('data', data => {
+
         promises.push(transform(data.value)); // eslint-disable-line functional/immutable-data
 
         async function transform(value) {
@@ -102,6 +103,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     handle007(marcRecord, record);
     handle008(marcRecord, testRun);
     handle020(marcRecord);
+    handle028(marcRecord);
     handle037(marcRecord);
     handle130(marcRecord);
     handle300(marcRecord);
