@@ -1,0 +1,9 @@
+{
+  "description": "Field 028 - input: 2x028; all possible subfields in mixed order and only subfield q",
+  "only": false,
+  "skip": false,
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}
