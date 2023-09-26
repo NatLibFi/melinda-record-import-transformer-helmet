@@ -20,7 +20,7 @@ export function handle020(marcRecord) {
 export function handle028(marcRecord) {
   // subfield alternatives: a, b, q, 6, 8 -> presentation order (fin): b, a, q, 6, 8
   const arrFoundFields028 = marcRecord.get(/^028$/u);
-
+ 
   if (!arrFoundFields028) {
     return [];
   }
@@ -28,11 +28,12 @@ export function handle028(marcRecord) {
   arrFoundFields028.forEach(field => {
     const mem028field = field;
 
-    const aSubfield = field.subfields.find(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
-    const bSubfield = field.subfields.find(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
-    const qSubfield = field.subfields.find(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
-    const nr6Subfield = field.subfields.find(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
-    const nr8Subfield = field.subfields.find(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
+    const aSubfield = field.subfields.filter(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
+    const bSubfield = field.subfields.filter(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
+    const qSubfield = field.subfields.filter(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
+    const nr6Subfield = field.subfields.filter(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
+    const nr8Subfield = field.subfields.filter(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
+    const otherSubfield = field.subfields.filter(sf => ! ['a','b','q','6','8'].includes(sf.code)); // eslint-disable-line functional/immutable-data
 
     marcRecord.removeField(field);
 
@@ -46,27 +47,12 @@ export function handle028(marcRecord) {
     marcRecord.insertField(newField);
 
     function buildNewSubfields () {
-      const newSubs = [];
-
-      if (bSubfield) { // eslint-disable-line functional/no-conditional-statements
-        newSubs.push(bSubfield); // eslint-disable-line functional/immutable-data
-      }
-      if (aSubfield) { // eslint-disable-line functional/no-conditional-statements
-        newSubs.push(aSubfield); // eslint-disable-line functional/immutable-data
-      }
-      if (qSubfield) { // eslint-disable-line functional/no-conditional-statements
-        newSubs.push(qSubfield); // eslint-disable-line functional/immutable-data
-      }
-      if (nr6Subfield) { // eslint-disable-line functional/no-conditional-statements
-        newSubs.push(nr6Subfield); // eslint-disable-line functional/immutable-data
-      }
-      if (nr8Subfield) { // eslint-disable-line functional/no-conditional-statements
-        newSubs.push(nr8Subfield); // eslint-disable-line functional/immutable-data
-      }
+      const newSubs = [...bSubfield, ...aSubfield, ...qSubfield, ...nr6Subfield, ...nr8Subfield, ...otherSubfield];
       return newSubs;
     }
 
   });
+
   return [];
 }
 
