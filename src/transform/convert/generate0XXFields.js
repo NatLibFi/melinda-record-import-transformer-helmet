@@ -20,7 +20,7 @@ export function handle020(marcRecord) {
 export function handle028(marcRecord) {
   // subfield alternatives: a, b, q, 6, 8 -> presentation order (fin): b, a, q, 6, 8
   const arrFoundFields028 = marcRecord.get(/^028$/u);
- 
+
   if (!arrFoundFields028) {
     return [];
   }
@@ -33,7 +33,7 @@ export function handle028(marcRecord) {
     const qSubfield = field.subfields.filter(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
     const nr6Subfield = field.subfields.filter(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
     const nr8Subfield = field.subfields.filter(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
-    const otherSubfield = field.subfields.filter(sf => ! ['a','b','q','6','8'].includes(sf.code)); // eslint-disable-line functional/immutable-data
+    const otherSubfield = field.subfields.filter(sf => !['a', 'b', 'q', '6', '8'].includes(sf.code)); // eslint-disable-line functional/immutable-data
 
     marcRecord.removeField(field);
 
