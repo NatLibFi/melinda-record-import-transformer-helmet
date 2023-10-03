@@ -39,11 +39,23 @@
             },
             {
               "code": "q",
-              "value": "first subfield $q"
+              "value": "This is subfield $q"
             },
             {
               "code": "q",
-              "value": "second subfield $q"
+              "value": "again subfield q"
+            },
+            {
+              "code": "5",
+              "value": "5555"
+            },
+            {
+              "code": "6",
+              "value": "66666"
+            },
+            {
+              "code": "7",
+              "value": "This is subfield $7"
             },
             {
               "code": "7",

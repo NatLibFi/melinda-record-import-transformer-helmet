@@ -38,12 +38,12 @@
               "value": "1234567"
             },
             {
-              "code": "9",
-              "value": "extra subfield $9"
-            },
-            {
               "code": "5",
               "value": "extra subfield $5"
+            },
+            {
+              "code": "9",
+              "value": "extra subfield $9"
             }
           ]
         },
