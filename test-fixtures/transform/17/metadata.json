@@ -1,5 +1,5 @@
 {
-  "description": "Field 028 - input: all official subfields (a,b,q,6,8) in mixed order",
+  "description": "Field 028 - input: 028; subfields a+b+q+q (repeating subfield)",
   "only": false,
   "skip": false,
   "succesRecords": 1,

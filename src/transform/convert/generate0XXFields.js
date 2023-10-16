@@ -18,57 +18,46 @@ export function handle020(marcRecord) {
 }
 
 export function handle028(marcRecord) {
-  // subfield alternatives: a, b, q, 6, 8 -> presentation order (fin): b, a, q, 6, 8
-  marcRecord.get(/^028$/u).forEach(field => {
+  // Official subfield alternatives: a, b, q, 6, 8 -> presentation order (fin): b, a, q, 6, 8
+  // non-standard but in use: $5 ja $9
+  const arrFoundFields028 = marcRecord.get(/^028$/u);
 
-    const aCode = field.subfields.find(sf => sf.code === 'a');
-    const bCode = field.subfields.find(sf => sf.code === 'b');
-    const qCode = field.subfields.find(sf => sf.code === 'q');
-    const nr6Code = field.subfields.find(sf => sf.code === '6');
-    const nr8Code = field.subfields.find(sf => sf.code === '8');
+  if (!arrFoundFields028) {
+    return [];
+  }
 
-    if (bCode) { // eslint-disable-line functional/no-conditional-statements
-      field.subfields.push(bCode); // eslint-disable-line functional/immutable-data
-    }
+  arrFoundFields028.forEach(field => {
+    const mem028field = field;
 
-    if (aCode) { // eslint-disable-line functional/no-conditional-statements
-      field.subfields.push(aCode); // eslint-disable-line functional/immutable-data
-    }
+    const aSubfield = field.subfields.filter(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
+    const bSubfield = field.subfields.filter(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
+    const qSubfield = field.subfields.filter(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
+    const nr5Subfield = field.subfields.filter(sf => sf.code === '5'); // eslint-disable-line functional/immutable-data
+    const nr6Subfield = field.subfields.filter(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
+    const nr7Subfield = field.subfields.filter(sf => sf.code === '7'); // eslint-disable-line functional/immutable-data
+    const nr8Subfield = field.subfields.filter(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
+    const nr9Subfield = field.subfields.filter(sf => sf.code === '9'); // eslint-disable-line functional/immutable-data
+    const otherSubfield = field.subfields.filter(sf => !['a', 'b', 'q', '5', '6', '7', '8', '9'].includes(sf.code)); // eslint-disable-line functional/immutable-data
 
-    if (qCode) { // eslint-disable-line functional/no-conditional-statements
-      field.subfields.push(qCode); // eslint-disable-line functional/immutable-data
-    }
+    marcRecord.removeField(field);
 
-    if (nr6Code) { // eslint-disable-line functional/no-conditional-statements
-      field.subfields.push(nr6Code); // eslint-disable-line functional/immutable-data
-    }
+    const newField = {
+      tag: `${mem028field.tag}`,
+      ind1: `${mem028field.ind1}`,
+      ind2: `${mem028field.ind2}`,
+      subfields: buildNewSubfields()
+    };
 
-    if (nr8Code) { // eslint-disable-line functional/no-conditional-statements
-      field.subfields.push(nr8Code); // eslint-disable-line functional/immutable-data
-    }
+    marcRecord.insertField(newField);
 
-
-    if (bCode) { // eslint-disable-line functional/no-conditional-statements
-      marcRecord.removeSubfield(bCode, field);
-    }
-
-    if (aCode) { // eslint-disable-line functional/no-conditional-statements
-      marcRecord.removeSubfield(aCode, field);
-    }
-
-    if (qCode) { // eslint-disable-line functional/no-conditional-statements
-      marcRecord.removeSubfield(qCode, field);
-    }
-
-    if (nr6Code) { // eslint-disable-line functional/no-conditional-statements
-      marcRecord.removeSubfield(nr6Code, field);
-    }
-
-    if (nr8Code) { // eslint-disable-line functional/no-conditional-statements
-      marcRecord.removeSubfield(nr8Code, field);
+    function buildNewSubfields () {
+      const newSubs = [...bSubfield, ...aSubfield, ...qSubfield, ...nr5Subfield, ...nr6Subfield, ...nr7Subfield, ...nr8Subfield, ...nr9Subfield, ...otherSubfield];
+      return newSubs;
     }
 
   });
+
+  return [];
 }
 
 export function handle037(marcRecord) {
@@ -78,4 +67,3 @@ export function handle037(marcRecord) {
     });
   });
 }
-

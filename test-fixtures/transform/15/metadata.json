@@ -1,5 +1,5 @@
 {
-  "description": "Field 028 - input: all official subfields (a,b,q,6,8) in mixed order",
+  "description": "Field 028 - input: 3x028; subfields a+b, all official subfields (a,b,q,6,8) in mixed order. Changes in ind1,2",
   "only": false,
   "skip": false,
   "succesRecords": 1,
