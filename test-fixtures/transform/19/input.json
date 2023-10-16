@@ -14,21 +14,53 @@
         "ind2": " ",
         "subfields": [
           {
-            "tag": "a",
-            "content": "1234567"
+            "tag": "q",
+            "content": "This is subfield $q" 
           },
           {
+            "tag": "7",
+            "content": "This is subfield $7" 
+          },
+          {
+            "tag": "a",
+            "content": "aaaaa"
+          },                    
+          {
             "tag": "b",
-            "content": "FOO BAR Warner Bros"
+            "content": "bbbb"
+          },
+          {
+            "tag": "z",
+            "content": "zzz"
           },
           {
             "tag": "9",
-            "content": "extra subfield $9" 
+            "content": "first subfield $9" 
+          },
+          {
+            "tag": "7",
+            "content": "777"
+          },                    
+          {
+            "tag": "9",
+            "content": "second subfield $9"
+          },
+          {
+            "tag": "8",
+            "content": "888"
+          },
+          {
+            "tag": "6",
+            "content": "66666"
           },
           {
             "tag": "5",
-            "content": "extra subfield $5" 
-          }        
+            "content": "5555"
+          },
+          {
+            "tag": "q",
+            "content": "again subfield q"
+          }                                                  
         ]
       },
       {

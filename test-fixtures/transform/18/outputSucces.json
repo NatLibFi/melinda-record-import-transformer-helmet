@@ -31,19 +31,39 @@
           "subfields": [
             {
               "code": "b",
-              "value": "FOO BAR Warner Bros"
+              "value": "bbbb"
             },
             {
               "code": "a",
-              "value": "1234567"
+              "value": "aaaaa"
             },
             {
-              "code": "5",
-              "value": "extra subfield $5"
+              "code": "q",
+              "value": "first subfield $q"
+            },
+            {
+              "code": "q",
+              "value": "second subfield $q"
+            },
+            {
+              "code": "7",
+              "value": "777"
+            },
+            {
+              "code": "8",
+              "value": "888"
             },
             {
               "code": "9",
-              "value": "extra subfield $9"
+              "value": "first subfield $9"
+            },
+            {
+              "code": "9",
+              "value": "second subfield $9"
+            },
+            {
+              "code": "z",
+              "value": "zzz"
             }
           ]
         },
@@ -732,7 +752,7 @@
           "ind2": " "
         }
       ],
-      "leader": "00000nam a22002894i 4500"
+      "leader": "00000nam a22002894i 4500"  
     }
   }
 ]
