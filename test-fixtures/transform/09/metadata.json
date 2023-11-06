@@ -1,0 +1,9 @@
+{
+  "description": "Field 028 - input: subfields a and b",
+  "only": false,
+  "skip": false,
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

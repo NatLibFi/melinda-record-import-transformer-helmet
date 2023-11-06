@@ -1,0 +1,9 @@
+{
+  "description": "Field 028 - input: 028; subfields a+b+9+5 (extra subfields not included in MARC21 spec)",
+  "only": false,
+  "skip": false,
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

@@ -1,0 +1,9 @@
+{
+  "description": "Field 028 - input: all official subfields (a,b,q,6,8) in mixed order",
+  "only": false,
+  "skip": false,
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

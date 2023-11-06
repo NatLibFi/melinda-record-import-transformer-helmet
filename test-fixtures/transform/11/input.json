@@ -1,0 +1,829 @@
+[
+  {
+    "id": "2526078",
+    "materialType": {
+      "code": "1  ",
+      "value": "Book"
+    },
+    "catalogDate": "2022-11-29",
+    "varFields": [
+      {
+        "fieldTag": "y",
+        "marcTag": "028",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "96752"
+          },
+          {
+            "tag": "b",
+            "content": "Warner Bros"
+          },
+          {
+            "tag": "q",
+            "content": "This is subfield q, qualifying information"
+          },
+          {
+            "tag": "6",
+            "content": "This is subfield 6, Linkage"
+          },
+          {
+            "tag": "8",
+            "content": "This is subfield 8, Field link and sequence number"
+          }            
+        ]
+      },
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "880-01"
+          },
+          {
+            "tag": "a",
+            "content": "Todd-Stanton, Joe,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja,"
+          },
+          {
+            "tag": "e",
+            "content": "taiteilija. "
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "880-14"
+          },
+          {
+            "tag": "a",
+            "content": "Strokina, Anastasija,"
+          },
+          {
+            "tag": "e",
+            "content": "kääntäjä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "0",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Nyla"
+          },
+          {
+            "tag": "c",
+            "content": "(fiktiivinen hahmo)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "muutto"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p2687"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "elämänmuutokset"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p2593"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "hyväksyminen (psykologia)"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p6561"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "mielikuvitus"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p3882"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "komeetat"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p510"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tytöt"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p2409"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "isät"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p378"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaupungit"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p181"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "lastenkirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s1181"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kuvakirjat"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s739"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kertomukset"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s618"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaunokirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanninkielinen kirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "local"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käännökset"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "9785433510081"
+          },
+          {
+            "tag": "q",
+            "content": "kovakantinen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "8.79"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "91"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "520",
+        "ind1": "8",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "880-08"
+          },
+          {
+            "tag": "a",
+            "content": "Tiivistelmä venäjäksi."
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "venäjä"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "575",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "aineisto (at) espoo.fi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "KIRJA / BOK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9785433510081"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "880-05"
+          },
+          {
+            "tag": "a",
+            "content": "Moskva :"
+          },
+          {
+            "tag": "b",
+            "content": "Nigma,"
+          },
+          {
+            "tag": "c",
+            "content": "2022."
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "8.79"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "32 numeroimatonta sivua :"
+          },
+          {
+            "tag": "b",
+            "content": "kuvitettu ;"
+          },
+          {
+            "tag": "c",
+            "content": "28 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "stillkuva"
+          },
+          {
+            "tag": "b",
+            "content": "sti"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "teksti"
+          },
+          {
+            "tag": "b",
+            "content": "txt"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käytettävissä ilman laitetta"
+          },
+          {
+            "tag": "b",
+            "content": "n"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "nide"
+          },
+          {
+            "tag": "b",
+            "content": "nc"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "880-02"
+          },
+          {
+            "tag": "a",
+            "content": "Kometa :"
+          },
+          {
+            "tag": "b",
+            "content": "skazka /"
+          },
+          {
+            "tag": "c",
+            "content": "Džo Todd-Stenton ; perevod s anglijskogo Anastasii Strokinoi."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "240",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "The comet,"
+          },
+          {
+            "tag": "l",
+            "content": "venäjä"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "220926s2022    ru                  rus  nam4c "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-KV"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-Em"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "rus"
+          },
+          {
+            "tag": "h",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "84.71"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "880",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "100-01/(N"
+          },
+          {
+            "tag": "a",
+            "content": "Тодд-Стентон, Джо,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja,"
+          },
+          {
+            "tag": "e",
+            "content": "taiteilija."
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "880",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "245-02/(N"
+          },
+          {
+            "tag": "a",
+            "content": "Комета :"
+          },
+          {
+            "tag": "b",
+            "content": "сказка /"
+          },
+          {
+            "tag": "c",
+            "content": "Джо Тодд-Стентон ; перевод с английского Анастасии Строкиной."
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "880",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "264-05/(N"
+          },
+          {
+            "tag": "a",
+            "content": "Москва :"
+          },
+          {
+            "tag": "b",
+            "content": "Нигма,"
+          },
+          {
+            "tag": "c",
+            "content": "2022."
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "880",
+        "ind1": "8",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "520-08/(N"
+          },
+          {
+            "tag": "a",
+            "content": "Ника недавно переехала в город, но единственное, о чём она может думать, это то, что она оставила в прежнем доме. Однажды она увидела, как над городом пролетает большая сияющая Комета. Ника бросилась искать её. И то, что вначале было похоже на побег, оказалось обретением нового дома.  Для детей дошкольного возраста."
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "880",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "6",
+            "content": "700-14/(N"
+          },
+          {
+            "tag": "a",
+            "content": "Строкина, Анастасия,"
+          },
+          {
+            "tag": "e",
+            "content": "kääntäjä."
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nam a22002894c 4500"
+      }     
+    ]
+  }
+]
