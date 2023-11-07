@@ -1,0 +1,62 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag": "028",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "1234567"
+        },
+        {
+          "code": "b",
+          "value": "Warner Bros"
+        }
+      ]
+    },
+    {
+      "tag": "028",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "8",
+          "value": "This is subfield 8, Field link and sequence number"
+        },
+        {
+          "code": "a",
+          "value": "96752"
+        },
+        {
+          "code": "q",
+          "value": "This is subfield q, qualifying information"
+        },
+        {
+          "code": "6",
+          "value": "This is subfield 6, Linkage"
+        },
+        {
+          "code": "b",
+          "value": "Warner Bros"
+        }
+      ]
+    },
+    {
+      "tag": "028",
+      "ind1": "1",
+      "ind2": "2",
+      "subfields": [
+        {
+          "code": "q",
+          "value": "This is subfield q, qualifying information"
+        }
+      ]
+    }
+  ]
+}

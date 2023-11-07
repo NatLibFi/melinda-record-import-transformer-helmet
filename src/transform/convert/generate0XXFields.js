@@ -26,44 +26,54 @@ export function handle028(marcRecord) {
     return [];
   }
 
-  arrFoundFields028.forEach(field => {
-    const mem028field = field;
+  const newFields = arrFoundFields028.map(field => {
+    const tempSubfields = [...field.subfields];
 
-    const aSubfield = field.subfields.filter(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
-    const bSubfield = field.subfields.filter(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
-    const qSubfield = field.subfields.filter(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
-    const nr5Subfield = field.subfields.filter(sf => sf.code === '5'); // eslint-disable-line functional/immutable-data
-    const nr6Subfield = field.subfields.filter(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
-    const nr7Subfield = field.subfields.filter(sf => sf.code === '7'); // eslint-disable-line functional/immutable-data
-    const nr8Subfield = field.subfields.filter(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
-    const nr9Subfield = field.subfields.filter(sf => sf.code === '9'); // eslint-disable-line functional/immutable-data
-    const otherSubfield = field.subfields.filter(sf => !['a', 'b', 'q', '5', '6', '7', '8', '9'].includes(sf.code)); // eslint-disable-line functional/immutable-data
+    const newField = {
+      tag: `${field.tag}`,
+      ind1: `${field.ind1}`,
+      ind2: `${field.ind2}`,
+      subfields: []
+    };
 
     marcRecord.removeField(field);
 
-    const newField = {
-      tag: `${mem028field.tag}`,
-      ind1: `${mem028field.ind1}`,
-      ind2: `${mem028field.ind2}`,
-      subfields: buildNewSubfields()
-    };
+    const aSubfield = tempSubfields.filter(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
+    const bSubfield = tempSubfields.filter(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
+    const qSubfield = tempSubfields.filter(sf => sf.code === 'q'); // eslint-disable-line functional/immutable-data
+    const nr5Subfield = tempSubfields.filter(sf => sf.code === '5'); // eslint-disable-line functional/immutable-data
+    const nr6Subfield = tempSubfields.filter(sf => sf.code === '6'); // eslint-disable-line functional/immutable-data
+    const nr7Subfield = tempSubfields.filter(sf => sf.code === '7'); // eslint-disable-line functional/immutable-data
+    const nr8Subfield = tempSubfields.filter(sf => sf.code === '8'); // eslint-disable-line functional/immutable-data
+    const nr9Subfield = tempSubfields.filter(sf => sf.code === '9'); // eslint-disable-line functional/immutable-data
+    const otherSubfield = tempSubfields.filter(sf => !['a', 'b', 'q', '5', '6', '7', '8', '9'].includes(sf.code));
 
-    marcRecord.insertField(newField);
+    newField.subfields = buildNewSubfields(); // eslint-disable-line functional/immutable-data
 
-    function buildNewSubfields () {
+    return newField;
+
+    function buildNewSubfields() {
       const newSubs = [...bSubfield, ...aSubfield, ...qSubfield, ...nr5Subfield, ...nr6Subfield, ...nr7Subfield, ...nr8Subfield, ...nr9Subfield, ...otherSubfield];
       return newSubs;
     }
-
   });
 
-  return [];
+  return newFields;
 }
 
 export function handle037(marcRecord) {
-  marcRecord.get(/^037$/u).forEach(field => {
-    field.subfields.push({ // eslint-disable-line functional/immutable-data
-      code: '5', value: 'HELME'
-    });
+  const newFields = marcRecord.get(/^037$/u).map(field => {
+    const newField = {
+      tag: `${field.tag}`,
+      ind1: `${field.ind1}`,
+      ind2: `${field.ind2}`,
+      subfields: [...field.subfields, {code: '5', value: 'HELME'}]
+    };
+
+    marcRecord.removeField(field);
+
+    return newField;
   });
+
+  return newFields;
 }

@@ -1,8 +1,8 @@
 {
   "description": "",
-  "disabled": false,
-  "succesRecords": 1,
-  "failedRecords": 0,
+  "only": false,
+  "skip": false,
+  "functionToUse": "",
   "expectedError": false,
   "expectedErrorStatus": "200"
 }

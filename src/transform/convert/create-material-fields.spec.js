@@ -49,15 +49,9 @@ generateTests({
 
 function callback({
   getFixture,
-  enabled = true,
   expectedError = false,
   expectedErrorStatus = '200'
 }) {
-  if (enabled === false) {
-    debug('Test has been set to be disabled in metadata.json');
-    throw new Error('DISABLED');
-  }
-
   const debugResultHandling = debug.extend('resultHandling');
   const inputData = getFixture('input.json');
   const expectedResults = getFixture('output.json');

@@ -1,0 +1,8 @@
+{
+  "description": "Does not add extra fields if f037 is missing",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle037",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

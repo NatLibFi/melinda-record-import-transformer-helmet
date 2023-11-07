@@ -1,0 +1,8 @@
+{
+  "description": "F300 has sub a => e-äänikirja | e-ljudbok | eljudbok | e-kirja; keeps sub b",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle300",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

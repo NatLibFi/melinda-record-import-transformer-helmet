@@ -49,7 +49,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
   const Emitter = new TransformEmitter();
   const logger = createLogger();
 
-  logger.log('debug', 'Starting to send recordEvents');
+  logger.debug('Starting to send recordEvents');
 
   readStream(stream);
   return Emitter;
@@ -65,7 +65,6 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       ]).on('error', err => Emitter.emit('error', err));
 
       pipeline.on('data', data => {
-
         promises.push(transform(data.value)); // eslint-disable-line functional/immutable-data
 
         async function transform(value) {
@@ -97,23 +96,30 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
   async function convertRecord(record, validator) {
     const marcRecord = convertToMARC();
 
+    /* Old style */
     /* Order is significant! */
     handleLeader(marcRecord);
     handle003(marcRecord);
     handle007(marcRecord, record);
     handle008(marcRecord, testRun);
     handle020(marcRecord);
-    handle028(marcRecord);
-    handle037(marcRecord);
     handle130(marcRecord);
-    handle300(marcRecord);
     handle500(marcRecord);
     handle506(marcRecord);
     handle530(marcRecord);
     handle546(marcRecord);
     handleTerms(marcRecord);
     handle856(marcRecord);
-    handleSID(marcRecord, record);
+
+    /* New style */
+    const newFields = [
+      handle028(marcRecord),
+      handle037(marcRecord),
+      handle300(marcRecord),
+      handleSID(marcRecord, record)
+    ].flat();
+
+    marcRecord.insertFields(newFields);
 
     try {
       if (validate === true || fix === true) {

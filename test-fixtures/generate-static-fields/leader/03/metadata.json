@@ -1,0 +1,8 @@
+{
+  "description": "Does not set char 6 = r if f655 lautapelit not detected",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handleLeader",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

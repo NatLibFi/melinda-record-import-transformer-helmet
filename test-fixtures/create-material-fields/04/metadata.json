@@ -1,6 +1,7 @@
 {
   "description": "r",
-  "disabled": false,
+  "only": false,
+  "skip": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,

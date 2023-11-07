@@ -1,0 +1,55 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag": "037",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "3F27DB79-1295-4DA8-B2F6-A57916414E00"
+        },
+        {
+          "code": "b",
+          "value": "OverDrive, Inc."
+        },
+        {
+          "code": "n",
+          "value": "http://www.overdrive.com"
+        },
+        {
+          "code": "5",
+          "value": "HELME"
+        }
+      ]
+    },
+    {
+      "tag": "037",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "3F27DB79-1295-4DA8-B2F6-A57916414E00"
+        },
+        {
+          "code": "b",
+          "value": "OverDrive, Inc."
+        },
+        {
+          "code": "n",
+          "value": "http://www.overdrive.com"
+        },
+        {
+          "code": "5",
+          "value": "HELME"
+        }
+      ]
+    }
+  ]
+}

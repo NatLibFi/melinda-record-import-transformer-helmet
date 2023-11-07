@@ -1,0 +1,8 @@
+{
+  "description": "Adds subfield 5 HELME to f037",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle037",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

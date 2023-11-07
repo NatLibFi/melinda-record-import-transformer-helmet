@@ -1,0 +1,60 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag": "028",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "b",
+          "value": "1"
+        },
+        {
+          "code": "a",
+          "value": "2"
+        },
+        {
+          "code": "q",
+          "value": "3"
+        },
+        {
+          "code": "5",
+          "value": "4"
+        },
+        {
+          "code": "6",
+          "value": "5"
+        },
+        {
+          "code": "7",
+          "value": "6"
+        },
+        {
+          "code": "8",
+          "value": "7"
+        },
+        {
+          "code": "9",
+          "value": "8"
+        },
+        {
+          "code": "x",
+          "value": "9"
+        },
+        {
+          "code": "h",
+          "value": "10"
+        },
+        {
+          "code": "t",
+          "value": "11"
+        }
+      ]
+    }
+  ]
+}
