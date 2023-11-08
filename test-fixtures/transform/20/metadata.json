@@ -1,6 +1,6 @@
 {
   "description": "Field 700 - drops field if has subfield t but no i, and does not affect f700 whitout i or t",
-  "only": true,
+  "only": false,
   "skip": false,
   "succesRecords": 2,
   "failedRecords": 0,

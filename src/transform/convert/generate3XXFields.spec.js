@@ -61,5 +61,7 @@ function callback({
       expect(err.message).to.match(new RegExp(expectedError, 'u'));
       return;
     }
+
+    throw err;
   }
 }

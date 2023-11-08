@@ -26,7 +26,7 @@
 		"lint": "eslint ./src",
 		"lint:dev": "eslint ./src --fix",
 		"test": "npm run lint && npm run test:base",
-		"test:base": "cross-env NODE_ENV=test nyc mocha --package package.json --reporter-option maxDiffSize=0",
+		"test:base": "cross-env NODE_ENV=test nyc mocha --package package.json",
 		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --package ./package.json",
 		"dev": "nodemon",
 		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/*,-@natlibfi/marc-record:marcFieldSort*,-*:data NODE_ENV=test nodemon"
