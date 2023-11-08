@@ -1,0 +1,1723 @@
+[
+  {
+    "id": "2509247",
+    "materialType": {
+      "code": "1  ",
+      "value": "Book"
+    },
+    "catalogDate": "2022-10-19",
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Hamid, Mohsin,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Kankaanpää, Jaakko"
+          },
+          {
+            "tag": "e",
+            "content": "kääntäjä."
+          },
+          {
+            "tag": "0",
+            "content": "(FI-ASTERI-N)000111267"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "i",
+            "content": "Intertekstuaalisen viittauksen perustana (teos):"
+          },
+          {
+            "tag": "a",
+            "content": "Kafka, Franz."
+          },
+          {
+            "tag": "t",
+            "content": "Verwandlung."
+          },
+          {
+            "tag": "0",
+            "content": "(FI-ASTERI-N)000046293"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "0",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Anders"
+          },
+          {
+            "tag": "c",
+            "content": "(fiktiivinen hahmo)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "600",
+        "ind1": "0",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Oona"
+          },
+          {
+            "tag": "c",
+            "content": "(fiktiivinen hahmo)"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "selittämättömät ilmiöt"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p4249"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ihonväri"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p2757"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "muutos"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p158"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "identiteetti"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p3932"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ihmissuhteet"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p1541"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suru"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p2210"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "rasismi"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/kauno/p1237"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "valkoihoiset"
+          },
+          {
+            "tag": "2",
+            "content": "kauno/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p9960"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "psykologiset romaanit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s604"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "yhteiskunnalliset romaanit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s1031"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "romaanit"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s518"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kaunokirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käännökset"
+          },
+          {
+            "tag": "2",
+            "content": "slm/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "655",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "englanninkielinen kirjallisuus"
+          },
+          {
+            "tag": "2",
+            "content": "local"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "9789511447108"
+          },
+          {
+            "tag": "q",
+            "content": "kovakantinen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "89"
+          }
+        ]
+      },
+      {
+        "fieldTag": "m",
+        "marcTag": "093",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "KIRJA / BOK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9789511447108"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helsingissä :"
+          },
+          {
+            "tag": "b",
+            "content": "Kustannusosakeyhtiö Otava,"
+          },
+          {
+            "tag": "c",
+            "content": "[2022]"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "3",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Keuruu :"
+          },
+          {
+            "tag": "b",
+            "content": "Otava kirjapaino"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "c",
+            "content": "©2022"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "127 sivua ;"
+          },
+          {
+            "tag": "c",
+            "content": "22 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "teksti"
+          },
+          {
+            "tag": "b",
+            "content": "txt"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käytettävissä ilman laitetta"
+          },
+          {
+            "tag": "b",
+            "content": "n"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "nide"
+          },
+          {
+            "tag": "b",
+            "content": "nc"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "s",
+        "marcTag": "490",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Otavan kirjasto ;"
+          },
+          {
+            "tag": "v",
+            "content": "297"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Viimeinen valkoinen mies /"
+          },
+          {
+            "tag": "c",
+            "content": "Mohsin Hamid ; suomentanut Jaakko Kankaanpää."
+          }
+        ]
+      },
+      {
+        "fieldTag": "u",
+        "marcTag": "240",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "The last white man,"
+          },
+          {
+            "tag": "l",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "1.4"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "221005t20222022fi ||||       |0| f|fin|cnam4i "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-BTJ"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "005",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "20221005035454.3"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(FI-BTJ)7283507"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-BTJ"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          },
+          {
+            "tag": "d",
+            "content": "FI-NL"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "fin"
+          },
+          {
+            "tag": "h",
+            "content": "eng"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "080",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "820"
+          },
+          {
+            "tag": "x",
+            "content": "-3"
+          },
+          {
+            "tag": "2",
+            "content": "1974/fin/fennica"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "084",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "84.2"
+          },
+          {
+            "tag": "2",
+            "content": "ykl"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nam a22005174i 4500"
+      }
+    ]
+  },
+  {
+    "id": "2503946",
+    "materialType": {
+      "code": "1  ",
+      "value": "Book"
+    },
+    "catalogDate": "2022-06-27",
+    "varFields": [
+      {
+        "fieldTag": "a",
+        "marcTag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helo, Ari,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          },
+          {
+            "tag": "0",
+            "content": "(FI-ASTERI-N)000136812"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Pihlström, Sami,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          },
+          {
+            "tag": "t",
+            "content": "Amerikkalainen pragmatismi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Saikku, Mikko,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          },
+          {
+            "tag": "t",
+            "content": "Yhdysvallat ja luonnonsuojelu - \"Nature's Nation\"?"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Pettersson, Bo,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          },
+          {
+            "tag": "t",
+            "content": "Yhdysvaltojen kirjallisuus"
+          }
+        ]
+      },
+      {
+        "fieldTag": "b",
+        "marcTag": "700",
+        "ind1": "1",
+        "ind2": "2",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Laine, Kimmo,"
+          },
+          {
+            "tag": "e",
+            "content": "kirjoittaja."
+          },
+          {
+            "tag": "t",
+            "content": "Amerikkalainen elokuvateollisuus"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "löytöretket"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p13427"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "alkuperäiskansat"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p5737"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "intiaanit"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p646"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "siirtokunnat"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p3834"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "itsenäistyminen (valtiot)"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p11148"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Yhdysvaltain sisällissota"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p28736"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "orjuus"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p11204"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "rotusyrjintä"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p611"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kapitalismi"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p16573"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "imperialismi"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p8710"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "ensimmäinen maailmansota"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p9575"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "lama"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p6174"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "toinen maailmansota"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p8900"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kylmä sota"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p10319"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "tasa-arvo"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p2399"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suurvaltapolitiikka"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p14364"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "sodat"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p1271"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "yhteiskunnalliset liikkeet"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p21"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "puolueet"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p8958"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "presidentit"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p17598"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "poliittinen historia"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p15286"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "taloushistoria"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p17789"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "asutushistoria"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p16323"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "kulttuurihistoria"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p18452"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "650",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "historia"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p1780"
+          }
+        ]
+      },
+      {
+        "fieldTag": "d",
+        "marcTag": "651",
+        "ind1": " ",
+        "ind2": "7",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Yhdysvallat"
+          },
+          {
+            "tag": "2",
+            "content": "yso/fin"
+          },
+          {
+            "tag": "0",
+            "content": "http://www.yso.fi/onto/yso/p105078"
+          }
+        ]
+      },
+      {
+        "fieldTag": "i",
+        "marcTag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "9789529460199"
+          },
+          {
+            "tag": "q",
+            "content": "pehmeäkantinen"
+          }
+        ]
+      },
+      {
+        "fieldTag": "j",
+        "marcTag": "095",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "987.2"
+          }
+        ]
+      },
+      {
+        "fieldTag": "k",
+        "marcTag": "091",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "97"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "546",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "suomi"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "577",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Heikki Poroila 2022esp"
+          }
+        ]
+      },
+      {
+        "fieldTag": "n",
+        "marcTag": "599",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "KIRJA / BOK"
+          }
+        ]
+      },
+      {
+        "fieldTag": "o",
+        "marcTag": "001",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "9789529460199"
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helsinki :"
+          },
+          {
+            "tag": "b",
+            "content": "Ari Helo,"
+          },
+          {
+            "tag": "c",
+            "content": "2022"
+          }
+        ]
+      },
+      {
+        "fieldTag": "p",
+        "marcTag": "264",
+        "ind1": " ",
+        "ind2": "3",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Helsinki :"
+          },
+          {
+            "tag": "b",
+            "content": "Oy Nord Print Ab"
+          }
+        ]
+      },
+      {
+        "fieldTag": "q",
+        "marcTag": "094",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "98.312"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "632 sivua :"
+          },
+          {
+            "tag": "b",
+            "content": "kuvitettu, karttoja ;"
+          },
+          {
+            "tag": "c",
+            "content": "24 cm"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "teksti"
+          },
+          {
+            "tag": "b",
+            "content": "txt"
+          },
+          {
+            "tag": "2",
+            "content": "rdacontent"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "käytettävissä ilman laitetta"
+          },
+          {
+            "tag": "b",
+            "content": "n"
+          },
+          {
+            "tag": "2",
+            "content": "rdamedia"
+          }
+        ]
+      },
+      {
+        "fieldTag": "r",
+        "marcTag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "nide"
+          },
+          {
+            "tag": "b",
+            "content": "nc"
+          },
+          {
+            "tag": "2",
+            "content": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "fieldTag": "t",
+        "marcTag": "245",
+        "ind1": "1",
+        "ind2": "0",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "Amerikan Yhdysvaltojen historia /"
+          },
+          {
+            "tag": "c",
+            "content": "Ari Helo"
+          }
+        ]
+      },
+      {
+        "fieldTag": "v",
+        "marcTag": "092",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "98.312"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "008",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "220622t20222022fi ||||       |0| 0|fin|cnam4i "
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "003",
+        "ind1": " ",
+        "ind2": " ",
+        "content": "FI-BTJ"
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "035",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "(FI-BTJ)7279179"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "FI-BTJ"
+          },
+          {
+            "tag": "b",
+            "content": "fin"
+          },
+          {
+            "tag": "e",
+            "content": "rda"
+          },
+          {
+            "tag": "d",
+            "content": "FI-NL"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "fin"
+          }
+        ]
+      },
+      {
+        "fieldTag": "y",
+        "marcTag": "776",
+        "ind1": "0",
+        "ind2": "8",
+        "subfields": [
+          {
+            "tag": "i",
+            "content": "Verkkoaineisto:"
+          },
+          {
+            "tag": "z",
+            "content": "978-952-94-6020-5"
+          }
+        ]
+      },
+      {
+        "fieldTag": "_",
+        "content": "00000nam a22006494i 4500"
+      }
+    ]
+  }
+]

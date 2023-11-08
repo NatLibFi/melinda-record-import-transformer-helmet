@@ -89,9 +89,11 @@ function callback({
       async function handleRecords(recordArray, expectedRecordsAmount, expectedRecords) {
         if (expectedRecordsAmount > 0) {
           await Promise.all(recordArray);
+          debugResultHandling(`${recordArray.length} records handled`);
           expect(recordArray).to.have.lengthOf(expectedRecordsAmount);
           recordArray.forEach((result, index) => {
-            debugResultHandling(JSON.stringify(result));
+            // Comment out after dev
+            // debugResultHandling(JSON.stringify(result));
             expect(result.messages).to.be.an('Array'); // validator tests are in validators spec
             expect(result.failed).to.be.an('Boolean'); // validator tests are in validators spec
             expect(result.failed).to.eql(expectedRecords[index].failed);

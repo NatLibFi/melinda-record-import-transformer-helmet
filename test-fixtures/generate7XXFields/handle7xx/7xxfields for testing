@@ -1,0 +1,266 @@
+[
+  {
+    "fieldTag": "b",
+    "marcTag": "700",
+    "ind1": "1",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Salmi, Katja,"
+      },
+      {
+        "tag": "e",
+        "content": "kääntäjä."
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "700",
+    "ind1": "1",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Vaara, Kristiina,"
+      },
+      {
+        "tag": "e",
+        "content": "kääntäjä."
+      },
+      {
+        "tag": "0",
+        "content": "(FI-ASTERI-N)000172606"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "700",
+    "ind1": "1",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "i",
+        "content": "Jatkoa teokselle:"
+      },
+      {
+        "tag": "a",
+        "content": "Marklund, Liza."
+      },
+      {
+        "tag": "t",
+        "content": "Polcirkeln"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "700",
+    "ind1": "1",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Valtonen, Anna,"
+      },
+      {
+        "tag": "e",
+        "content": "toimittaja,"
+      },
+      {
+        "tag": "e",
+        "content": "kirjoittaja."
+      },
+      {
+        "tag": "0",
+        "content": "(FI-ASTERI-N)000128329"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "700",
+    "ind1": "1",
+    "ind2": "2",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Pihlström, Sami,"
+      },
+      {
+        "tag": "e",
+        "content": "kirjoittaja."
+      },
+      {
+        "tag": "t",
+        "content": "Amerikkalainen pragmatismi"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Nintendo."
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Aalto-yliopisto"
+      },
+      {
+        "tag": "0",
+        "content": "(FI-ASTERI-N)000029745"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "20th Century Fox,"
+      },
+      {
+        "tag": "e",
+        "content": "tuotantoyhtiö."
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "1",
+    "ind2": "2",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "United States."
+      },
+      {
+        "tag": "k",
+        "content": "Treaties, etc., 1841-1845 (Tyler)."
+      },
+      {
+        "tag": "e",
+        "content": "Boundary, slave trade, and extradition. 1977."
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Bazar Kustannus,"
+      },
+      {
+        "tag": "e",
+        "content": "kustantaja."
+      },
+      {
+        "tag": "0",
+        "content": "(FI-ASTERI-N)000219017"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "710",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Helsingin yliopisto."
+      },
+      {
+        "tag": "b",
+        "content": "Oikeustieteellinen tiedekunta,"
+      },
+      {
+        "tag": "e",
+        "content": "kustantaja."
+      },
+      {
+        "tag": "0",
+        "content": "(FI-ASTERI-N)000000986"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "711",
+    "ind1": "2",
+    "ind2": " ",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Conference on Acquisition of Skill"
+      },
+      {
+        "tag": "d",
+        "content": "(1965 :"
+      },
+      {
+        "tag": "c",
+        "content": "New Orleans)."
+      },
+      {
+        "tag": "t",
+        "content": "Acquisition of skill"
+      }
+    ]
+  },
+  {
+    "fieldTag": "b",
+    "marcTag": "711",
+    "ind1": "2",
+    "ind2": "2",
+    "subfields": [
+      {
+        "tag": "a",
+        "content": "Council of Carthage"
+      },
+      {
+        "tag": "d",
+        "content": "(411 :"
+      },
+      {
+        "tag": "c",
+        "content": "Carthage)."
+      },
+      {
+        "tag": "t",
+        "content": "Gesta Conlationis Carthaginiensis."
+      },
+      {
+        "tag": "l",
+        "content": "Latin"
+      },
+      {
+        "tag": "s",
+        "content": "(Weidmann)"
+      }
+    ]
+  }
+]

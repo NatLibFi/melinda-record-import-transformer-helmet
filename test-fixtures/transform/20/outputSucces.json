@@ -1,0 +1,1564 @@
+[
+  {
+    "record": {
+      "_validationOptions": {},
+      "leader": "00000nam a22005174i 4500",
+      "fields": [
+        {
+          "tag": "005",
+          "value": "20221005035454.3"
+        },
+        {
+          "tag": "008",
+          "value": "000101t20222022fi ||||       |0| f|fin|c"
+        },
+        {
+          "tag": "020",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "978-951-1-44710-8"
+            },
+            {
+              "code": "q",
+              "value": "kovakantinen"
+            }
+          ]
+        },
+        {
+          "tag": "035",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "(FI-BTJ)7283507"
+            }
+          ]
+        },
+        {
+          "tag": "040",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "FI-BTJ"
+            },
+            {
+              "code": "b",
+              "value": "fin"
+            },
+            {
+              "code": "e",
+              "value": "rda"
+            },
+            {
+              "code": "d",
+              "value": "FI-NL"
+            }
+          ]
+        },
+        {
+          "tag": "041",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "fin"
+            },
+            {
+              "code": "h",
+              "value": "eng"
+            }
+          ]
+        },
+        {
+          "tag": "080",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "820"
+            },
+            {
+              "code": "x",
+              "value": "-3"
+            },
+            {
+              "code": "2",
+              "value": "1974/fin/fennica"
+            }
+          ]
+        },
+        {
+          "tag": "084",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "84.2"
+            },
+            {
+              "code": "2",
+              "value": "ykl"
+            }
+          ]
+        },
+        {
+          "tag": "100",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Hamid, Mohsin,"
+            },
+            {
+              "code": "e",
+              "value": "kirjoittaja."
+            }
+          ]
+        },
+        {
+          "tag": "240",
+          "ind1": "1",
+          "ind2": "4",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "The last white man,"
+            },
+            {
+              "code": "l",
+              "value": "suomi"
+            }
+          ]
+        },
+        {
+          "tag": "245",
+          "ind1": "1",
+          "ind2": "0",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Viimeinen valkoinen mies /"
+            },
+            {
+              "code": "c",
+              "value": "Mohsin Hamid ; suomentanut Jaakko Kankaanpää."
+            }
+          ]
+        },
+        {
+          "tag": "264",
+          "ind1": " ",
+          "ind2": "1",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helsingissä :"
+            },
+            {
+              "code": "b",
+              "value": "Kustannusosakeyhtiö Otava,"
+            },
+            {
+              "code": "c",
+              "value": "[2022]"
+            }
+          ]
+        },
+        {
+          "tag": "264",
+          "ind1": " ",
+          "ind2": "3",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Keuruu :"
+            },
+            {
+              "code": "b",
+              "value": "Otava kirjapaino"
+            }
+          ]
+        },
+        {
+          "tag": "264",
+          "ind1": " ",
+          "ind2": "4",
+          "subfields": [
+            {
+              "code": "c",
+              "value": "©2022"
+            }
+          ]
+        },
+        {
+          "tag": "300",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "127 sivua ;"
+            },
+            {
+              "code": "c",
+              "value": "22 cm"
+            }
+          ]
+        },
+        {
+          "tag": "336",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "teksti"
+            },
+            {
+              "code": "b",
+              "value": "txt"
+            },
+            {
+              "code": "2",
+              "value": "rdacontent"
+            }
+          ]
+        },
+        {
+          "tag": "337",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "käytettävissä ilman laitetta"
+            },
+            {
+              "code": "b",
+              "value": "n"
+            },
+            {
+              "code": "2",
+              "value": "rdamedia"
+            }
+          ]
+        },
+        {
+          "tag": "338",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "nide"
+            },
+            {
+              "code": "b",
+              "value": "nc"
+            },
+            {
+              "code": "2",
+              "value": "rdacarrier"
+            }
+          ]
+        },
+        {
+          "tag": "490",
+          "ind1": "0",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Otavan kirjasto ;"
+            },
+            {
+              "code": "v",
+              "value": "297"
+            }
+          ]
+        },
+        {
+          "tag": "600",
+          "ind1": "0",
+          "ind2": "4",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Anders"
+            },
+            {
+              "code": "c",
+              "value": "(fiktiivinen hahmo)"
+            }
+          ]
+        },
+        {
+          "tag": "600",
+          "ind1": "0",
+          "ind2": "4",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Oona"
+            },
+            {
+              "code": "c",
+              "value": "(fiktiivinen hahmo)"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "selittämättömät ilmiöt"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p4249"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "ihonväri"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p2757"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "muutos"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p158"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "identiteetti"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p3932"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "ihmissuhteet"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p1541"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "suru"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p2210"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "rasismi"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/kauno/p1237"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "valkoihoiset"
+            },
+            {
+              "code": "2",
+              "value": "kauno/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p9960"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "psykologiset romaanit"
+            },
+            {
+              "code": "2",
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s604"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "yhteiskunnalliset romaanit"
+            },
+            {
+              "code": "2",
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s1031"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "romaanit"
+            },
+            {
+              "code": "2",
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s518"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "kaunokirjallisuus"
+            },
+            {
+              "code": "2",
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s975"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "käännökset"
+            },
+            {
+              "code": "2",
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+            }
+          ]
+        },
+        {
+          "tag": "655",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "englanninkielinen kirjallisuus"
+            },
+            {
+              "code": "2",
+              "value": "local"
+            }
+          ]
+        },
+        {
+          "tag": "700",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Kankaanpää, Jaakko"
+            },
+            {
+              "code": "e",
+              "value": "kääntäjä."
+            },
+            {
+              "code": "0",
+              "value": "(FI-ASTERI-N)000111267"
+            }
+          ]
+        },
+        {
+          "tag": "700",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "i",
+              "value": "Intertekstuaalisen viittauksen perustana (teos):"
+            },
+            {
+              "code": "a",
+              "value": "Kafka, Franz."
+            },
+            {
+              "code": "t",
+              "value": "Verwandlung."
+            },
+            {
+              "code": "0",
+              "value": "(FI-ASTERI-N)000046293"
+            }
+          ]
+        },
+        {
+          "tag": "884",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helmet to Melinda MARC transformation"
+            },
+            {
+              "code": "g",
+              "value": "20000101"
+            },
+            {
+              "code": "k",
+              "value": "HELMET:"
+            },
+            {
+              "code": "q",
+              "value": "FI-NL"
+            },
+            {
+              "code": "5",
+              "value": "MELINDA"
+            }
+          ],
+          "ind1": " ",
+          "ind2": " "
+        },
+        {
+          "tag": "SID",
+          "subfields": [
+            {
+              "code": "c",
+              "value": "2509247"
+            },
+            {
+              "code": "b",
+              "value": "helme"
+            }
+          ],
+          "ind1": " ",
+          "ind2": " "
+        }
+      ]
+    },
+    "failed": false,
+    "messages": [
+      {
+        "description": "Checks whether the configured fields are present in the record",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Checks whether the configured fields are present in the record",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Checks that the record does not contain the configured fields",
+        "state": "fixed"
+      },
+      {
+        "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
+        "state": "valid"
+      },
+      {
+        "description": "Validates 008 06",
+        "state": "valid"
+      },
+      {
+        "description": "Handles empty fields",
+        "state": "valid"
+      },
+      {
+        "description": "Validates ISBN and ISSN values",
+        "state": "fixed"
+      },
+      {
+        "description": "Various fixes for field 521",
+        "state": "valid"
+      },
+      {
+        "description": "Checks that the record does not contain the configured subfields",
+        "state": "valid"
+      },
+      {
+        "description": "Check whether the configured fields have valid structure",
+        "state": "valid"
+      },
+      {
+        "description": "Handles subfields that contains non-breaking space character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles subfields that ends with whitespace character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles subfields that contains non-breaking space character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles invalid ending punctuation",
+        "state": "valid"
+      }
+    ]
+  },
+  {
+    "record": {
+      "_validationOptions": {},
+      "leader": "00000nam a22006494i 4500",
+      "fields": [
+        {
+          "tag": "008",
+          "value": "000101t20222022fi ||||       |0| 0|fin|c"
+        },
+        {
+          "tag": "020",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "978-952-94-6019-9"
+            },
+            {
+              "code": "q",
+              "value": "pehmeäkantinen"
+            }
+          ]
+        },
+        {
+          "tag": "035",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "(FI-BTJ)7279179"
+            }
+          ]
+        },
+        {
+          "tag": "040",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "FI-BTJ"
+            },
+            {
+              "code": "b",
+              "value": "fin"
+            },
+            {
+              "code": "e",
+              "value": "rda"
+            },
+            {
+              "code": "d",
+              "value": "FI-NL"
+            }
+          ]
+        },
+        {
+          "tag": "041",
+          "ind1": "0",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "fin"
+            }
+          ]
+        },
+        {
+          "tag": "100",
+          "ind1": "1",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helo, Ari,"
+            },
+            {
+              "code": "e",
+              "value": "kirjoittaja."
+            },
+            {
+              "code": "0",
+              "value": "(FI-ASTERI-N)000136812"
+            }
+          ]
+        },
+        {
+          "tag": "245",
+          "ind1": "1",
+          "ind2": "0",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Amerikan Yhdysvaltojen historia /"
+            },
+            {
+              "code": "c",
+              "value": "Ari Helo."
+            }
+          ]
+        },
+        {
+          "tag": "264",
+          "ind1": " ",
+          "ind2": "1",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helsinki :"
+            },
+            {
+              "code": "b",
+              "value": "Ari Helo,"
+            },
+            {
+              "code": "c",
+              "value": "2022."
+            }
+          ]
+        },
+        {
+          "tag": "264",
+          "ind1": " ",
+          "ind2": "3",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helsinki :"
+            },
+            {
+              "code": "b",
+              "value": "Oy Nord Print Ab"
+            }
+          ]
+        },
+        {
+          "tag": "300",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "632 sivua :"
+            },
+            {
+              "code": "b",
+              "value": "kuvitettu, karttoja ;"
+            },
+            {
+              "code": "c",
+              "value": "24 cm"
+            }
+          ]
+        },
+        {
+          "tag": "336",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "teksti"
+            },
+            {
+              "code": "b",
+              "value": "txt"
+            },
+            {
+              "code": "2",
+              "value": "rdacontent"
+            }
+          ]
+        },
+        {
+          "tag": "337",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "käytettävissä ilman laitetta"
+            },
+            {
+              "code": "b",
+              "value": "n"
+            },
+            {
+              "code": "2",
+              "value": "rdamedia"
+            }
+          ]
+        },
+        {
+          "tag": "338",
+          "ind1": " ",
+          "ind2": " ",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "nide"
+            },
+            {
+              "code": "b",
+              "value": "nc"
+            },
+            {
+              "code": "2",
+              "value": "rdacarrier"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "löytöretket"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p13427"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "alkuperäiskansat"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p5737"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "intiaanit"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p646"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "siirtokunnat"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p3834"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "itsenäistyminen (valtiot)"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p11148"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Yhdysvaltain sisällissota"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p28736"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "orjuus"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p11204"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "rotusyrjintä"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p611"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "kapitalismi"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p16573"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "imperialismi"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p8710"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "ensimmäinen maailmansota"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p9575"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "lama"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p6174"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "toinen maailmansota"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p8900"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "kylmä sota"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p10319"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "tasa-arvo"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p2399"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "suurvaltapolitiikka"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p14364"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "sodat"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p1271"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "yhteiskunnalliset liikkeet"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p21"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "puolueet"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p8958"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "presidentit"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p17598"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "poliittinen historia"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p15286"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "taloushistoria"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p17789"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "asutushistoria"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p16323"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "kulttuurihistoria"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p18452"
+            }
+          ]
+        },
+        {
+          "tag": "650",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "historia"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p1780"
+            }
+          ]
+        },
+        {
+          "tag": "651",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Yhdysvallat"
+            },
+            {
+              "code": "2",
+              "value": "yso/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://www.yso.fi/onto/yso/p105078"
+            }
+          ]
+        },
+        {
+          "tag": "776",
+          "ind1": "0",
+          "ind2": "8",
+          "subfields": [
+            {
+              "code": "i",
+              "value": "Verkkoaineisto:"
+            },
+            {
+              "code": "z",
+              "value": "978-952-94-6020-5"
+            }
+          ]
+        },
+        {
+          "tag": "884",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "Helmet to Melinda MARC transformation"
+            },
+            {
+              "code": "g",
+              "value": "20000101"
+            },
+            {
+              "code": "k",
+              "value": "HELMET:"
+            },
+            {
+              "code": "q",
+              "value": "FI-NL"
+            },
+            {
+              "code": "5",
+              "value": "MELINDA"
+            }
+          ],
+          "ind1": " ",
+          "ind2": " "
+        },
+        {
+          "tag": "SID",
+          "subfields": [
+            {
+              "code": "c",
+              "value": "2503946"
+            },
+            {
+              "code": "b",
+              "value": "helme"
+            }
+          ],
+          "ind1": " ",
+          "ind2": " "
+        }
+      ]
+    },
+    "failed": false,
+    "messages": [
+      {
+        "description": "Checks whether the configured fields are present in the record",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Checks whether the configured fields are present in the record",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Checks that the record does not contain the configured fields",
+        "state": "fixed"
+      },
+      {
+        "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
+        "state": "valid"
+      },
+      {
+        "description": "Validates 008 06",
+        "state": "valid"
+      },
+      {
+        "description": "Handles empty fields",
+        "state": "valid"
+      },
+      {
+        "description": "Validates ISBN and ISSN values",
+        "state": "fixed"
+      },
+      {
+        "description": "Various fixes for field 521",
+        "state": "valid"
+      },
+      {
+        "description": "Checks that the record does not contain the configured subfields",
+        "state": "valid"
+      },
+      {
+        "description": "Check whether the configured fields have valid structure",
+        "state": "valid"
+      },
+      {
+        "description": "Handles subfields that contains non-breaking space character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles subfields that ends with whitespace character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles subfields that contains non-breaking space character",
+        "state": "valid",
+        "messages": []
+      },
+      {
+        "description": "Handles invalid ending punctuation",
+        "state": "fixed"
+      }
+    ]
+  }
+]
