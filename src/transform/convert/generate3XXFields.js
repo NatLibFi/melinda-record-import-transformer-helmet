@@ -1,3 +1,8 @@
+/**
+ * Handle 300 fields for transformation
+ * @param {MarcRecord} marcRecord Record data
+ * @returns [handled 300 fields]
+ */
 export function handle300(marcRecord) {
   const extraFields = [];
   const newFields = marcRecord.get(/^300$/u)

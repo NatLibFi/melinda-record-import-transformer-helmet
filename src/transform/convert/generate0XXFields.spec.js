@@ -19,6 +19,16 @@ generateTests({
   }
 });
 
+/**
+ * Callback function for tests
+ * @date 11/10/2023 - 8:03:40 AM
+ *
+ * @param {{ getFixture: READER; functionToUse: string; expectedError?: boolean; expectedErrorStatus?: string; }} metadataParams From metadata.json
+ * @param {READER} metadataParams.getFixture Auto generated file reader
+ * @param {string} metadataParams.functionToUse
+ * @param {boolean} [metadataParams.expectedError=false]
+ * @param {string} [metadataParams.expectedErrorStatus='200']
+ */
 function callback({
   getFixture,
   functionToUse,
@@ -27,10 +37,18 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData) // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData); // eslint-disable-line
 
   expect(result).to.eql(expectedResults);
 
+  /**
+   * Description placeholder
+   * @date 11/10/2023 - 8:10:04 AM
+   *
+   * @param {string} functionToUse Name of function for testing
+   * @param {MarcRecord} inputData Input record
+   * @returns {MarcRecord} result
+   */
   function handleProcess(functionToUse, inputData) {
     try {
       if (functionToUse === 'handle028') {
@@ -49,6 +67,12 @@ function callback({
     }
   }
 
+  /**
+   * Error situation handling for tests
+   * @date 11/10/2023 - 8:11:46 AM
+   *
+   * @param {Error} err Thrown error from test
+   */
   function errorHandling(err) {
     const debugErrorHandling = debug.extend('errorHandling');
     debugErrorHandling(err);
