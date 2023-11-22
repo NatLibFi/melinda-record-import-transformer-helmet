@@ -4,30 +4,43 @@ import {MarcRecord} from '@natlibfi/marc-record';
 import {getTimeStamp} from './utils';
 
 export function handle856(marcRecord) {
-  marcRecord.get(/^856$/u).forEach(field => {
-    const subfield = field.subfields.find(sf => sf.code === 'z');
+  const f856s = marcRecord.get(/^856$/u);
 
-    if (subfield) { // eslint-disable-line functional/no-conditional-statements
-      subfield.code = 'y'; // eslint-disable-line functional/immutable-data
-    }
+  const validFields = f856s.map(field => {
+    const newSubfields = field.subfields.map(sub => {
+      if (sub.code === 'z') {
+        return {code: 'y', value: sub.value};
+      }
 
-    const y = field.subfields.find(sf => sf.code === 'y');
+      return sub;
+    });
+
+    const subY = newSubfields.find(sub => sub.code === 'y');
 
     /* Move subfield y to the last index */
-    if (y) { // eslint-disable-line functional/no-conditional-statements
-      const index = field.subfields.indexOf(y);
-      field.subfields.splice(index, 1); // eslint-disable-line functional/immutable-data
-      field.subfields.push(y); // eslint-disable-line functional/immutable-data
+    if (subY) { // eslint-disable-line functional/no-conditional-statements
+      const index = newSubfields.indexOf(subY);
+      newSubfields.splice(index, 1); // eslint-disable-line functional/immutable-data
+      newSubfields.push(subY); // eslint-disable-line functional/immutable-data
     }
+
+    marcRecord.removeField(field);
+
+    return {
+      tag: field.tag,
+      ind1: field.ind1,
+      ind2: field.ind2,
+      subfields: newSubfields
+    };
   });
+
+  return validFields;
 }
 
 /**
  * Generates 884 field for print and electronical records
- * @param {Object} sources Pre-defined set of sources as object
- * @param {*} dataSource Origin of data
- * @param {*} moment Moment instance used for generating date information
- * @param {*} marcRecord MarcRecord object of transformed record
+ * @param {MarcRecord} marcRecord MarcRecord object of transformed record
+ * @param {boolean} testRun Param to generate test friendly field
  * @returns Array containing field 884 ($a, $g, $k, $q, $5)
  */
 export function generate884(marcRecord, testRun = false) {

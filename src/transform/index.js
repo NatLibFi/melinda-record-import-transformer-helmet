@@ -114,7 +114,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     handle530(marcRecord);
     handle546(marcRecord);
     handleTerms(marcRecord);
-    handle856(marcRecord);
+    // handle856(marcRecord);
     // handleSID(marcRecord, record);
 
 
@@ -135,7 +135,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       // handle546(marcRecord);
       // handleTerms(marcRecord);
       handle7xx(marcRecord),
-      // handle856(marcRecord);
+      handle856(marcRecord),
       handleSID(marcRecord, record)
     ].flat();
 

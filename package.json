@@ -29,7 +29,7 @@
 		"test:base": "cross-env NODE_ENV=test nyc mocha --package package.json",
 		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --package ./package.json",
 		"dev": "nodemon",
-		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/*,-@natlibfi/marc-record:marcFieldSort*,-*:data NODE_ENV=test nodemon"
+		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/melinda-record-import-transformer* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
 		"@babel/runtime": "7.22.10",

@@ -57,7 +57,8 @@ export default async () => {
       {tag: /^540$/u, subfields: [{code: /^a$/u, value: /^Käyttöoikeus Helmet-kirjastokortilla$/u}]},
       // Dropping note fields to avoid "double" fields - reported by TATI [MRA-453]
       {tag: /^588$/u, dependencies: [{leader: /^.{6}[g]/u}]}, // eslint-disable-line prefer-named-capture-group
-      {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]}
+      {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]},
+      {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/helmet.bibliolibrary.fi/u}]}
     ]),
     await SanitizeVocabularySourceCodes(),
     await TypeOfDateF008(),
