@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.23.4",
-		"@natlibfi/marc-record": "^8.0.0",
+		"@natlibfi/marc-record": "^7.3.1",
 		"@natlibfi/marc-record-validate": "^8.0.3",
 		"@natlibfi/marc-record-validators-melinda": "^10.15.1",
 		"@natlibfi/melinda-backend-commons": "^2.2.2",
@@ -93,6 +93,8 @@
 		"require": [
 			"@babel/register"
 		],
+		"inline-diffs": true,
+		"maxDiffSize": 25000,
 		"bail": true,
 		"exit": true
 	},
