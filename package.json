@@ -93,8 +93,6 @@
 		"require": [
 			"@babel/register"
 		],
-		"inline-diffs": true,
-		"maxDiffSize": 25000,
 		"bail": true,
 		"exit": true
 	},
