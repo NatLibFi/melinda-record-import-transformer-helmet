@@ -3,6 +3,11 @@ import {clone} from '@natlibfi/melinda-commons';
 import {MarcRecord} from '@natlibfi/marc-record';
 import {getTimeStamp} from './utils';
 
+/**
+ * Transforms and organizes 856 fields
+ * @param {MarcRecord} marcRecord MarcRecord object of transformed record
+ * @returns Array containing 856 fields
+ */
 export function handle856(marcRecord) {
   const f856s = marcRecord.get(/^856$/u);
 

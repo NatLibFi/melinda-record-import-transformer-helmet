@@ -1,0 +1,8 @@
+{
+  "description": "Field 856 $z -> $y and move to last",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle856",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

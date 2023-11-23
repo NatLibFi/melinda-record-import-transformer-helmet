@@ -1,0 +1,18 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag":"856",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {"code": "z", "value": "test"},
+        {"code": "a", "value": "test"}
+      ]
+    }
+  ]
+}
