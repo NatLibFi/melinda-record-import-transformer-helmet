@@ -32,6 +32,7 @@ import generateTests from '@natlibfi/fixugen';
 import createTransformHandler from './index';
 import createDebugLogger from 'debug';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
+import {MarcRecord} from '@natlibfi/marc-record';
 
 const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/index.SPEC');
 
@@ -102,7 +103,8 @@ function callback({
             }
 
             // Check succeeded record
-            expect(result.record).to.deep.eql(expectedRecords[index].record);
+            const expectedRecord = new MarcRecord(expectedRecords[index].record);
+            expect(result.record).to.deep.eql(expectedRecord);
           });
 
           return;

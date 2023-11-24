@@ -27,13 +27,13 @@
 		"lint:dev": "eslint ./src --fix",
 		"test": "npm run lint && npm run test:base",
 		"test:base": "cross-env NODE_ENV=test nyc mocha --package package.json",
-		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --package ./package.json",
+		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --reporter-option maxDiffSize=0 --package ./package.json",
 		"dev": "nodemon",
 		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/melinda-record-import-transformer* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.23.4",
-		"@natlibfi/marc-record": "^7.3.1",
+		"@natlibfi/marc-record": "^8.0.0",
 		"@natlibfi/marc-record-validate": "^8.0.3",
 		"@natlibfi/marc-record-validators-melinda": "^10.15.1",
 		"@natlibfi/melinda-backend-commons": "^2.2.2",
@@ -93,6 +93,7 @@
 		"require": [
 			"@babel/register"
 		],
+		"inline-diffs": true,
 		"bail": true,
 		"exit": true
 	},

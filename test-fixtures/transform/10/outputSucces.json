@@ -532,15 +532,11 @@
           "subfields": [
             {
               "code": "a",
-              "value": "käännökset"
+              "value": "englanninkielinen kirjallisuus"
             },
             {
               "code": "2",
-              "value": "slm/fin"
-            },
-            {
-              "code": "0",
-              "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
+              "value": "local"
             }
           ]
         },
@@ -551,11 +547,15 @@
           "subfields": [
             {
               "code": "a",
-              "value": "englanninkielinen kirjallisuus"
+              "value": "käännökset"
             },
             {
               "code": "2",
-              "value": "local"
+              "value": "slm/fin"
+            },
+            {
+              "code": "0",
+              "value": "http://urn.fi/URN:NBN:fi:au:slm:s1044"
             }
           ]
         },
