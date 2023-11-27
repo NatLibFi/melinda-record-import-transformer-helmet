@@ -1,0 +1,8 @@
+{
+  "description": "F300 sub a CD-skiva => 1 CD-ljudskiva",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle300",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

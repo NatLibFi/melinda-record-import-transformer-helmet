@@ -1,0 +1,8 @@
+{
+  "description": "Creates helmet SID 001234567",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handleSID",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

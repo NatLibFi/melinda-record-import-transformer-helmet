@@ -33,14 +33,16 @@ import {MarcRecord} from '@natlibfi/marc-record';
 import createValidator from '../validate';
 import {createLogger} from '@natlibfi/melinda-backend-commons';
 import {EventEmitter} from 'events';
-import {generate884, handle856} from './convert/generate8XXFields.js';
-import {handleTerms} from './convert/generate6XXFields.js';
-import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
-import {handle300} from './convert/generate3XXFields.js';
-import {handle130} from './convert/generate1XXFields.js';
-import {handle020, handle037} from './convert/generate0XXFields.js';
-import {handle003, handle007, handle008} from './convert/generateControlFields';
+
 import {handleSID, handleLeader} from './convert/generate-static-fields';
+import {handle020, handle028, handle037} from './convert/generate0XXFields.js';
+import {handle130} from './convert/generate1XXFields.js';
+import {handle300} from './convert/generate3XXFields.js';
+import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
+import {handleTerms} from './convert/generate6XXFields.js';
+import {handle7xx} from './convert/generate7XXFields.js';
+import {generate884, handle856} from './convert/generate8XXFields.js';
+import {handle003, handle007, handle008} from './convert/generateControlFields';
 
 class TransformEmitter extends EventEmitter { }
 
@@ -49,7 +51,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
   const Emitter = new TransformEmitter();
   const logger = createLogger();
 
-  logger.log('debug', 'Starting to send recordEvents');
+  logger.debug('Starting to send recordEvents');
 
   readStream(stream);
   return Emitter;
@@ -96,22 +98,48 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
   async function convertRecord(record, validator) {
     const marcRecord = convertToMARC();
 
+    /* Old style */
     /* Order is significant! */
     handleLeader(marcRecord);
     handle003(marcRecord);
     handle007(marcRecord, record);
     handle008(marcRecord, testRun);
     handle020(marcRecord);
-    handle037(marcRecord);
+    // handle028(marcRecord);
+    // handle037(marcRecord);
     handle130(marcRecord);
-    handle300(marcRecord);
+    // handle300(marcRecord);
     handle500(marcRecord);
     handle506(marcRecord);
     handle530(marcRecord);
     handle546(marcRecord);
     handleTerms(marcRecord);
-    handle856(marcRecord);
-    handleSID(marcRecord, record);
+    // handle856(marcRecord);
+    // handleSID(marcRecord, record);
+
+
+    /* New style */
+    const newFields = [
+      // handleLeader(marcRecord);
+      // handle003(marcRecord);
+      // handle007(marcRecord, record);
+      // handle008(marcRecord, testRun);
+      // handle020(marcRecord);
+      handle028(marcRecord),
+      handle037(marcRecord),
+      // handle130(marcRecord);
+      handle300(marcRecord),
+      // handle500(marcRecord);
+      // handle506(marcRecord);
+      // handle530(marcRecord);
+      // handle546(marcRecord);
+      // handleTerms(marcRecord);
+      handle7xx(marcRecord),
+      handle856(marcRecord),
+      handleSID(marcRecord, record)
+    ].flat();
+
+    marcRecord.insertFields(newFields);
 
     try {
       if (validate === true || fix === true) {

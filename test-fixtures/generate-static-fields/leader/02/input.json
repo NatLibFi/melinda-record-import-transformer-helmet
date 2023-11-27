@@ -1,0 +1,20 @@
+{
+  "leader": "xxxxxxoxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "655",
+      "ind1": " ",
+      "ind2": "7",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "lautapelit"
+        },
+        {
+          "code": "2",
+          "value": "ysa"
+        }
+      ]
+    }
+  ]
+}

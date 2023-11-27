@@ -1,0 +1,82 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Konsolipeli (1 muistikortti) :"
+        },
+        {
+          "code": "b",
+          "value": "värillinen, ääni ;"
+        },
+        {
+          "code": "c",
+          "value": "3 x 2 x 0,5 cm"
+        },
+        {
+          "code": "f",
+          "value": "kotelo"
+        },
+        {
+          "code": "g",
+          "value": "17 x 11 x 1 cm"
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "1 muistikortti (Nintendo Switch) :"
+        },
+        {
+          "code": "b",
+          "value": "värillinen, ääni ;"
+        },
+        {
+          "code": "c",
+          "value": "3 x 2 x 0,5 cm"
+        },
+        {
+          "code": "f",
+          "value": "kotelo"
+        },
+        {
+          "code": "g",
+          "value": "17 x 11 x 1 cm "
+        }
+      ]
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields": [
+        {
+          "code": "a",
+          "value": "Konsolipeli (1 tietolevy) :"
+        },
+        {
+          "code": "b",
+          "value": "värillinen, ääni +"
+        },
+        {
+          "code": "e",
+          "value": "1 pikaopas (2 sivua)"
+        }
+      ]
+    }
+  ]
+}

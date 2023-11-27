@@ -1,60 +1,106 @@
+/**
+ * Handle 300 fields for transformation
+ * @param {MarcRecord} marcRecord Record data
+ * @returns [handled 300 fields]
+ */
 export function handle300(marcRecord) {
-  marcRecord.get(/^300$/u)
-    .forEach(field => {
-      const a = field.subfields.find(sf => sf.code === 'a'); // eslint-disable-line functional/immutable-data
-      const b = field.subfields.find(sf => sf.code === 'b'); // eslint-disable-line functional/immutable-data
+  const extraFields = [];
+  const newFields = marcRecord.get(/^300$/u)
+    .map(field => {
+      const tag = `${field.tag}`;
+      const ind1 = `${field.ind1}`;
+      const ind2 = `${field.ind2}`;
+      const oldSubA = field.subfields.find(sf => sf.code === 'a');
+      const oldSubB = field.subfields.find(sf => sf.code === 'b') || false;
+      const otherOldSubs = field.subfields.filter(sf => sf.code !== 'a' && sf.code !== 'b');
 
-      if (a) { // eslint-disable-line functional/no-conditional-statements
-        if (b && b.value === 'elektroninen') { // eslint-disable-line functional/no-conditional-statements
-          if ((/^1 tekstitiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-            marcRecord.removeSubfield(b, field);
-          } else if ((/^1 äänitiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-            marcRecord.removeSubfield(b, field);
+      marcRecord.removeField(field);
 
-            marcRecord.insertField({
-              tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]
-            });
-          } else if ((/^1 videotiedosto/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-            marcRecord.removeSubfield(b, field);
+      if (!oldSubA) {
+        return field;
+      }
 
-            marcRecord.insertField({
-              tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]
-            });
-          }
-        } else if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements, prefer-named-capture-group
-          a.value = generateExtendDescr(a.value); // eslint-disable-line functional/immutable-data
-        } else if ((/^(äänikirja|ljudbok)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements, prefer-named-capture-group
-          a.value = generateExtendDescr(a.value, '1 CD-äänilevy'); // eslint-disable-line functional/immutable-data
-        } else if ((/^cd-skiva/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements
-          a.value = generateExtendDescr(a.value, '1 CD-ljudskiva'); // eslint-disable-line functional/immutable-data
-        } else { // eslint-disable-line functional/no-conditional-statements
-          handleConsoleGames();
+      const ifBE = Boolean(oldSubB && oldSubB.value === 'elektroninen');
+
+      if (ifBE && (/^1 tekstitiedosto/ui).test(oldSubA.value)) {
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}]
+        };
+      }
+
+      if (ifBE && (/^1 äänitiedosto/ui).test(oldSubA.value)) {
+        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]}); // eslint-disable-line functional/immutable-data
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}]
+        };
+      }
+
+      if (ifBE && (/^1 videotiedosto/ui).test(oldSubA.value)) {
+        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]}); // eslint-disable-line functional/immutable-data
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}]
+        };
+      }
+
+      if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}, oldSubB].filter(sf => sf)
+        };
+      }
+
+      if ((/^(äänikirja|ljudbok)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 CD-äänilevy')}, oldSubB].filter(sf => sf)
+        };
+      }
+
+      if ((/^cd-skiva/ui).test(oldSubA.value)) {
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 CD-ljudskiva')}, oldSubB].filter(sf => sf)
+        };
+      }
+
+      if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+        const re = (/^konsolipeli \((.*)\)(.*)$/ui).exec(oldSubA.value); // eslint-disable-line prefer-named-capture-group
+        return {
+          tag, ind1, ind2,
+          subfields: [{code: 'a', value: `${re[1]}${re[2]}`}, oldSubB, ...otherOldSubs].filter(sf => sf)
+        };
+      }
+
+      if ((/^(konsolipeli|konsolspel)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+        const [f007] = marcRecord.get(/^007$/u);
+
+        if (f007.value[1] === 'o') {
+          return {
+            tag, ind1, ind2,
+            subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 tietolevy')}, oldSubB].filter(sf => sf)
+          };
+        }
+
+        if (f007.value[1] === 'b') {
+          return {
+            tag, ind1, ind2,
+            subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 piirikotelo')}, oldSubB].filter(sf => sf)
+          };
+        }
+
+        if (f007.value[1] === 'z') {
+          return {
+            tag, ind1, ind2,
+            subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 muistikortti')}, oldSubB].filter(sf => sf)
+          };
         }
       }
 
-      function handleConsoleGames() {
-        if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements, prefer-named-capture-group
-          const re = (/^konsolipeli \((.*)\)(.*)$/ui).exec(a.value); // eslint-disable-line prefer-named-capture-group
-          a.value = `${re[1]}${re[2]}`; // eslint-disable-line functional/immutable-data
-        } else if ((/^(konsolipeli|konsolspel)/ui).test(a.value)) { // eslint-disable-line functional/no-conditional-statements, prefer-named-capture-group
-          const [f007] = marcRecord.get(/^007$/u);
 
-          if (f007.value[1] === 'o') { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value, '1 tietolevy'); // eslint-disable-line functional/immutable-data
-          }
-
-          if (f007.value[1] === 'b') { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value, '1 piirikotelo'); // eslint-disable-line functional/immutable-data
-          }
-
-          if (f007.value[1] === 'z') { // eslint-disable-line functional/no-conditional-statements
-            a.value = generateExtendDescr(a.value, '1 muistikortti'); // eslint-disable-line functional/immutable-data
-          }
-        }
-      }
+      return field;
 
       function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
         const re = (/ \((.*)\)/ui).exec(descr); // eslint-disable-line prefer-named-capture-group
@@ -66,4 +112,6 @@ export function handle300(marcRecord) {
         return prefix;
       }
     });
+
+  return [...newFields, ...extraFields];
 }

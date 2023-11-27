@@ -1,0 +1,8 @@
+{
+  "description": "Sets char 6 = r if f655 lautapelit",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handleLeader",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

@@ -32,6 +32,7 @@ import generateTests from '@natlibfi/fixugen';
 import createTransformHandler from './index';
 import createDebugLogger from 'debug';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
+import {MarcRecord} from '@natlibfi/marc-record';
 
 const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/index.SPEC');
 
@@ -89,9 +90,11 @@ function callback({
       async function handleRecords(recordArray, expectedRecordsAmount, expectedRecords) {
         if (expectedRecordsAmount > 0) {
           await Promise.all(recordArray);
+          debugResultHandling(`${recordArray.length} records handled`);
           expect(recordArray).to.have.lengthOf(expectedRecordsAmount);
           recordArray.forEach((result, index) => {
-            debugResultHandling(JSON.stringify(result));
+            // Comment out after dev
+            // debugResultHandling(JSON.stringify(result));
             expect(result.messages).to.be.an('Array'); // validator tests are in validators spec
             expect(result.failed).to.be.an('Boolean'); // validator tests are in validators spec
             expect(result.failed).to.eql(expectedRecords[index].failed);
@@ -100,7 +103,8 @@ function callback({
             }
 
             // Check succeeded record
-            expect(result.record).to.deep.eql(expectedRecords[index].record);
+            const expectedRecord = new MarcRecord(expectedRecords[index].record);
+            expect(result.record).to.deep.eql(expectedRecord);
           });
 
           return;

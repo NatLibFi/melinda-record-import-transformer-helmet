@@ -1,0 +1,8 @@
+{
+  "description": "Does not creates helmet SID if record has no id",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handleSID",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

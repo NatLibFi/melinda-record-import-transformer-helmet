@@ -1,0 +1,9 @@
+{
+  "description": "Field 028 - input: 028; subfields q+7+a+b+z+9+7+9+8+6+5+q (repeating subfield and non-standard ones)",
+  "only": false,
+  "skip": false,
+  "succesRecords": 1,
+  "failedRecords": 0,
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

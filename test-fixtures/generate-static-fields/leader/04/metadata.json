@@ -1,0 +1,8 @@
+{
+  "description": "Sets char 18 = i if incoming value c. For f020 ISBN hyphenization",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handleLeader",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

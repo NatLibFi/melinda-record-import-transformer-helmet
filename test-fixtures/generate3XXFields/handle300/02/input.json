@@ -1,0 +1,21 @@
+{
+  "leader": "xxxxxxxxxxxxxxxxxxxxxxxx",
+  "fields": [
+    {
+      "tag": "005",
+      "value": "20181016101020.6"
+    },
+    {
+      "tag": "300",
+      "ind1": " ",
+      "ind2": " ",
+      "subfields":
+      [
+          {
+              "code": "a",
+              "value": "CD-skiva (16 h 1 min)"
+          }
+      ]
+  }
+  ]
+}

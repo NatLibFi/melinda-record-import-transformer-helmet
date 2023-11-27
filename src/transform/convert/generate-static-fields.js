@@ -20,10 +20,16 @@ export function handleLeader(marcRecord) {
 }
 
 export function handleSID(marcRecord, record) {
-  marcRecord.insertField({
-    tag: 'SID', subfields: [
-      {code: 'c', value: record.id},
-      {code: 'b', value: 'helme'}
-    ]
-  });
+  if (record.id === undefined) {
+    return [];
+  }
+
+  return [
+    {
+      tag: 'SID', subfields: [
+        {code: 'c', value: record.id},
+        {code: 'b', value: 'helme'}
+      ]
+    }
+  ];
 }
