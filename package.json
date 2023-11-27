@@ -93,7 +93,6 @@
 		"require": [
 			"@babel/register"
 		],
-		"inline-diffs": true,
 		"bail": true,
 		"exit": true
 	},

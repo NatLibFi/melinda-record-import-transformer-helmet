@@ -55,14 +55,9 @@ generateTests({
 
 async function callback({
   getFixture,
-  enabled = true,
   expectedError = false,
   expectedErrorStatus = '200'
 }) {
-  if (enabled === false) {
-    debug('Test has been set to be disabled in metadata.json');
-    throw new Error('DISABLED');
-  }
 
   const debugResultHandling = debug.extend('resultHandling');
   const inputData = getFixture('input.json');
@@ -72,11 +67,11 @@ async function callback({
   try {
     debugResultHandling(JSON.stringify(result));
     expect(result.messages).to.be.an('Array');
-    expect(result.messages).to.deep.include(expectedResults.messages);
+    expect(result.messages).to.deep.eql(expectedResults.messages);
     expect(result.failed).to.be.an('Boolean');
     expect(result.failed).to.eql(expectedResults.failed);
     expect(result.failed).to.eql(expectedResults.failed);
-    expect(result.record).to.deep.include(expectedResults.record);
+    expect(result.record).to.deep.eql(expectedResults.record);
   } catch (err) {
     errorHandling(err);
   }
@@ -102,5 +97,7 @@ async function callback({
         return;
       }
     }
+
+    throw err;
   }
 }

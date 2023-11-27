@@ -1,0 +1,283 @@
+{
+  "record": {
+    "_validationOptions": {},
+    "leader": "00000nam  22000004i 4500",
+    "fields": [
+      {
+        "tag": "008",
+        "value": "190115s2016    xxk|||| ^    |00| f|eng|c"
+      },
+      {
+        "tag": "020",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "978-1-5098-1589-0"
+          },
+          {
+            "code": "q",
+            "value": "nidottu"
+          }
+        ]
+      },
+      {
+        "tag": "040",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "FI-Vantaa"
+          },
+          {
+            "code": "b",
+            "value": "fin"
+          },
+          {
+            "code": "e",
+            "value": "rda"
+          }
+        ]
+      },
+      {
+        "tag": "041",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "eng"
+          }
+        ]
+      },
+      {
+        "tag": "100",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Cleeves, Ann,"
+          },
+          {
+            "code": "e",
+            "value": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "tag": "130",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Robotbror (elokuva : 2022)"
+          }
+        ]
+      },
+      {
+        "tag": "245",
+        "ind1": "1",
+        "ind2": "4",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "The crow trap /"
+          },
+          {
+            "code": "c",
+            "value": "Ann Cleeves."
+          }
+        ]
+      },
+      {
+        "tag": "264",
+        "ind1": " ",
+        "ind2": "1",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "London :"
+          },
+          {
+            "code": "b",
+            "value": "Pan Books,"
+          },
+          {
+            "code": "c",
+            "value": "2016."
+          }
+        ]
+      },
+      {
+        "tag": "300",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "551 sivua ;"
+          },
+          {
+            "code": "c",
+            "value": "20 cm"
+          }
+        ]
+      },
+      {
+        "tag": "336",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "teksti"
+          },
+          {
+            "code": "b",
+            "value": "txt"
+          },
+          {
+            "code": "2",
+            "value": "rdacontent"
+          }
+        ]
+      },
+      {
+        "tag": "337",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "käytettävissä ilman laitetta"
+          },
+          {
+            "code": "b",
+            "value": "n"
+          },
+          {
+            "code": "2",
+            "value": "rdamedia"
+          }
+        ]
+      },
+      {
+        "tag": "338",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "nide"
+          },
+          {
+            "code": "b",
+            "value": "nc"
+          },
+          {
+            "code": "2",
+            "value": "rdacarrier"
+          }
+        ]
+      },
+      {
+        "tag": "630",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Robotbror (elokuva : 2022)"
+          }
+        ]
+      },
+      {
+        "tag": "730",
+        "ind1": "0",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Robotbror (elokuva : 2022)"
+          }
+        ]
+      }
+    ]
+  },
+  "failed": false,
+  "messages": [
+    {
+      "description": "Checks whether the configured fields are present in the record",
+      "state": "valid",
+      "messages": []
+    },
+    {
+      "description": "Checks whether the configured fields are present in the record",
+      "state": "valid",
+      "messages": []
+    },
+    {
+      "description": "Checks that the record does not contain the configured fields",
+      "state": "valid"
+    },
+    {
+      "description": "Fix various subfield internal values",
+      "state": "fixed"
+    },
+    {
+      "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
+      "state": "valid"
+    },
+    {
+      "description": "Normalize \" ; \" separators as \" -- \"",
+      "state": "valid"
+    },
+    {
+      "description": "Validates 008 06",
+      "state": "valid"
+    },
+    {
+      "description": "Handles empty fields",
+      "state": "valid"
+    },
+    {
+      "description": "Validates ISBN and ISSN values",
+      "state": "fixed"
+    },
+    {
+      "description": "Various fixes for field 521",
+      "state": "valid"
+    },
+    {
+      "description": "Checks that the record does not contain the configured subfields",
+      "state": "valid"
+    },
+    {
+      "description": "Check whether the configured fields have valid structure",
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that ends with whitespace character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles invalid ending punctuation",
+      "state": "valid"
+    }
+  ]
+}

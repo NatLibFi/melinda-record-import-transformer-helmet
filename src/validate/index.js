@@ -32,6 +32,7 @@ import {
   EmptyFields,
   EndingPunctuation,
   EndingWhitespace,
+  Field505Separators,
   Field521Fix,
   FieldExclusion,
   FieldsPresent,
@@ -40,6 +41,7 @@ import {
   NonBreakingSpace,
   SanitizeVocabularySourceCodes,
   SubfieldExclusion,
+  SubfieldValueNormalizations,
   TypeOfDateF008
 } from '@natlibfi/marc-record-validators-melinda';
 
@@ -60,7 +62,9 @@ export default async () => {
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/www.ellibslibrary.com/u}]},
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/helmet.bibliolibrary.fi/u}]}
     ]),
+    await SubfieldValueNormalizations(),
     await SanitizeVocabularySourceCodes(),
+    await Field505Separators(),
     await TypeOfDateF008(),
     await EmptyFields(),
     await IsbnIssn({hyphenateISBN: true}),
