@@ -1,6 +1,6 @@
 {
   "description": "Field505Separators (; => --)",
-  "only": true,
+  "only": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,

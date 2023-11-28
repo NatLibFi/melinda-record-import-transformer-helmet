@@ -1,6 +1,6 @@
 {
   "description": "SubfieldValueNormalizations: f130, f630, f730 (, => :)",
-  "only": true,
+  "only": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,
