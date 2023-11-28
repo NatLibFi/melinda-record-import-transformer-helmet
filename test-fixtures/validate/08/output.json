@@ -174,144 +174,77 @@
         ]
       },
       {
-        "tag": "490",
+        "tag": "505",
         "ind1": "0",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Vera Stanhope series"
-          }
-        ]
-      },
-      {
-        "tag": "520",
-        "ind1": "8",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Three very different women come together at isolated Baikie’s Cottage on the North Pennines, to complete an environmental survey. Three women who each know the meaning of betrayal . . . Rachael, the team leader, is still reeling after a double betrayal by her lover and boss, Peter Kemp. Anne, a botanist, sees the survey as a chance to indulge in a little deception of her own. And then there is Grace, a strange, uncommunicative young woman, hiding plenty of her own secrets. Rachael is the first to arrive at the cottage, where she discovers the body of her friend, Bella Furness. Bella, it appears, has committed suicide – a verdict Rachael refuses to accept. When another death occurs, a fourth woman enters the picture – the unconventional Detective Inspector Vera Stanhope . . ."
-          }
-        ]
-      },
-      {
-        "tag": "600",
-        "ind1": "1",
-        "ind2": "4",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "Stanhope, Vera,"
-          },
-          {
-            "code": "c",
-            "value": "(fiktiivinen hahmo)"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "poliisikirjallisuus"
-          },
-          {
-            "code": "2",
-            "value": "slm/fin"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "rikoskirjallisuus"
-          },
-          {
-            "code": "2",
-            "value": "slm/fin"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "romaanit"
-          },
-          {
-            "code": "2",
-            "value": "slm/fin"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "kaunokirjallisuus"
-          },
-          {
-            "code": "2",
-            "value": "slm/fin"
-          }
-        ]
-      },
-      {
-        "tag": "655",
-        "ind1": " ",
-        "ind2": "7",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "englanninkielinen kirjallisuus"
-          },
-          {
-            "code": "2",
-            "value": "slm/fin"
-          }
-        ]
-      },
-      {
-        "tag": "830",
-        "ind1": " ",
         "ind2": "0",
         "subfields": [
           {
-            "code": "a",
-            "value": "Vera Stanhope ;"
+            "code": "t",
+            "value": "Henkilöoikeus --"
           },
           {
-            "code": "v",
-            "value": "1."
-          }
-        ]
-      },
-      {
-        "tag": "SID",
-        "ind1": " ",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "c",
-            "value": "1985460"
+            "code": "t",
+            "value": "Perhe- ja perintöoikeus --"
           },
           {
-            "code": "b",
-            "value": "helme"
+            "code": "t",
+            "value": "Sopimukset ja velkasuhteet --"
+          },
+          {
+            "code": "t",
+            "value": "Irtaimen omaisuuden luovutus --"
+          },
+          {
+            "code": "t",
+            "value": "Kiinteän omaisuuden luovutus ja panttaus --"
+          },
+          {
+            "code": "t",
+            "value": "Yritysmuodot --"
+          },
+          {
+            "code": "t",
+            "value": "Immateriaalioikeudet --"
+          },
+          {
+            "code": "t",
+            "value": "Kuluttajansuoja ja kuluttajaviranomaiset --"
+          },
+          {
+            "code": "t",
+            "value": "Kilpailu ja julkiset hankinnat --"
+          },
+          {
+            "code": "t",
+            "value": "Työsopimus ja virkasuhde --"
+          },
+          {
+            "code": "t",
+            "value": "Rikoslaki --"
+          },
+          {
+            "code": "t",
+            "value": "Oikeudenkäyntimenettely --"
+          },
+          {
+            "code": "t",
+            "value": "Muu oikeudenkäyntilainsäädäntö --"
+          },
+          {
+            "code": "t",
+            "value": "Maksukyvyttömyys --"
+          },
+          {
+            "code": "t",
+            "value": "Ulosotto --"
+          },
+          {
+            "code": "t",
+            "value": "Kiinteistönmuodostaminen ja kiinteistörekisteri --"
+          },
+          {
+            "code": "t",
+            "value": "Hakemisto."
           }
         ]
       }
@@ -331,7 +264,7 @@
     },
     {
       "description": "Checks that the record does not contain the configured fields",
-      "state": "fixed"
+      "state": "valid"
     },
     {
       "description": "Fix various subfield internal values",
@@ -343,7 +276,7 @@
     },
     {
       "description": "Normalize \" ; \" separators as \" -- \"",
-      "state": "valid"
+      "state": "fixed"
     },
     {
       "description": "Validates 008 06",
@@ -386,7 +319,7 @@
     },
     {
       "description": "Handles invalid ending punctuation",
-      "state": "fixed"
+      "state": "valid"
     }
   ]
 }

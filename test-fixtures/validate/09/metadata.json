@@ -1,6 +1,6 @@
 {
-  "description": "old terms, f546 removal, f856 ellibslibrary removal",
-  "disabled": false,
+  "description": "SubfieldValueNormalizations: fix initials f100, f600, f700, (f800)",
+  "only": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,

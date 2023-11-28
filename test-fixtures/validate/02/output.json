@@ -246,17 +246,6 @@
         ]
       },
       {
-        "tag": "546",
-        "ind1": " ",
-        "ind2": " ",
-        "subfields": [
-          {
-            "code": "a",
-            "value": "persia."
-          }
-        ]
-      },
-      {
         "tag": "650",
         "ind1": " ",
         "ind2": "7",
@@ -377,6 +366,22 @@
     },
     {
       "description": "Checks that the record does not contain the configured fields",
+      "state": "fixed"
+    },
+    {
+      "description": "Fix various subfield internal values",
+      "state": "valid"
+    },
+    {
+      "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
+      "state": "valid"
+    },
+    {
+      "description": "Normalize \" ; \" separators as \" -- \"",
+      "state": "valid"
+    },
+    {
+      "description": "Validates 008 06",
       "state": "valid"
     },
     {
@@ -388,11 +393,30 @@
       "state": "fixed"
     },
     {
+      "description": "Various fixes for field 521",
+      "state": "valid"
+    },
+    {
       "description": "Checks that the record does not contain the configured subfields",
       "state": "valid"
     },
     {
       "description": "Check whether the configured fields have valid structure",
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that ends with whitespace character",
+      "messages": [],
+      "state": "valid"
+    },
+    {
+      "description": "Handles subfields that contains non-breaking space character",
+      "messages": [],
       "state": "valid"
     },
     {

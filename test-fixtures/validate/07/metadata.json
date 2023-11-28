@@ -1,6 +1,6 @@
 {
-  "description": "old terms, f546 removal, f856 ellibslibrary removal",
-  "disabled": false,
+  "description": "SubfieldValueNormalizations: f130, f630, f730 (, => :)",
+  "only": false,
   "succesRecords": 1,
   "failedRecords": 0,
   "expectedError": false,
