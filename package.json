@@ -38,7 +38,7 @@
 		"@natlibfi/marc-record-validators-melinda": "^10.15.1",
 		"@natlibfi/melinda-backend-commons": "^2.2.2",
 		"@natlibfi/melinda-commons": "^13.0.8",
-		"@natlibfi/melinda-record-import-commons": "^10.2.1",
+		"@natlibfi/melinda-record-import-commons": "^10.2.3",
 		"amqplib": "^0.10.3",
 		"debug": "^4.3.4",
 		"moment": "^2.29.4",
