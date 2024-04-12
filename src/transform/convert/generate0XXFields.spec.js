@@ -37,9 +37,12 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData); // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus); // eslint-disable-line
 
-  expect(result).to.eql(expectedResults);
+  if (result) {
+    expect(result).to.eql(expectedResults);
+    return;
+  }
 
   /**
    * Description placeholder
@@ -49,7 +52,7 @@ function callback({
    * @param {MarcRecord} inputData Input record
    * @returns {MarcRecord} result
    */
-  function handleProcess(functionToUse, inputData) {
+  function handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus) {
     try {
       if (functionToUse === 'handle028') {
         const result = inputData.insertFields(handle028(inputData)).toObject();
@@ -63,32 +66,24 @@ function callback({
 
       throw new Error('Invalid function name!');
     } catch (err) {
-      return errorHandling(err);
-    }
-  }
+      const debugErrorHandling = debug.extend('errorHandling');
+      debugErrorHandling(err);
 
-  /**
-   * Error situation handling for tests
-   * @date 11/10/2023 - 8:11:46 AM
-   *
-   * @param {Error} err Thrown error from test
-   */
-  function errorHandling(err) {
-    const debugErrorHandling = debug.extend('errorHandling');
-    debugErrorHandling(err);
+      if (expectedError) { // eslint-disable-line
+        expect(err).to.be.an('error');
 
-    if (expectedError) { // eslint-disable-line
-      expect(err).to.be.an('error');
+        if (err instanceof TransformationError) { // specified error
+          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
+          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
+          return false;
+        }
 
-      if (err instanceof TransformationError) { // specified error
-        expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-        expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-        return;
+        // common error
+        expect(err.message).to.match(new RegExp(expectedError, 'u'));
+        return false;
       }
 
-      // common error
-      expect(err.message).to.match(new RegExp(expectedError, 'u'));
-      return;
+      throw err;
     }
   }
 }
