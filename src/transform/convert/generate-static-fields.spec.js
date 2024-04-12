@@ -23,7 +23,7 @@ generateTests({
  * Callback function for tests
  * @date 12/04/2024 - 8:30:00 AM
  *
- * @param {{ getFixture: READER; functionToUse: string; expectedError?: boolean; expectedErrorStatus?: string; }} metadataParams From metadata.json
+ * @param {{ getFixture: READER, functionToUse: string, expectedError?: boolean, expectedErrorStatus?: string }} metadataParams From metadata.json
  * @param {READER} metadataParams.getFixture Auto generated file reader
  * @param {string} metadataParams.functionToUse
  * @param {boolean} [metadataParams.expectedError=false]
