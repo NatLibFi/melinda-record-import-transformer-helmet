@@ -19,6 +19,16 @@ generateTests({
   }
 });
 
+/**
+ * Callback function for tests
+ * @date 12/04/2024 - 8:30:00 AM
+ *
+ * @param {{ getFixture: READER, functionToUse: string, expectedError?: boolean, expectedErrorStatus?: string }} metadataParams From metadata.json
+ * @param {READER} metadataParams.getFixture Auto generated file reader
+ * @param {string} metadataParams.functionToUse
+ * @param {boolean} [metadataParams.expectedError=false]
+ * @param {string} [metadataParams.expectedErrorStatus='200']
+ */
 function callback({
   getFixture,
   functionToUse,
@@ -27,10 +37,23 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData) // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData); // eslint-disable-line
 
-  expect(result).to.eql(expectedResults);
+  if (result) {
+    expect(result).to.eql(expectedResults);
+    return;
+  }
 
+  /**
+  * Test process handling. Handles normal and error cases
+  * @date 12/04/2024 - 8:30:00 AM
+  *
+  * @param {string} functionToUse Name of function for testing
+  * @param {MarcRecord} inputData Input record
+  * @param {boolean} expectedError Is error expected from this test
+  * @param {string} expectedErrorStatus What is status of error that is expected
+  * @returns {object|false} Marc record result object or false
+  */
   function handleProcess(functionToUse, inputData) {
     try {
       if (functionToUse === 'handleLeader') {
@@ -47,26 +70,24 @@ function callback({
 
       throw new Error('Invalid function name!');
     } catch (err) {
-      return errorHandling(err);
-    }
-  }
+      const debugErrorHandling = debug.extend('errorHandling');
+      debugErrorHandling(err);
 
-  function errorHandling(err) {
-    const debugErrorHandling = debug.extend('errorHandling');
-    debugErrorHandling(err);
+      if (expectedError) { // eslint-disable-line
+        expect(err).to.be.an('error');
 
-    if (expectedError) { // eslint-disable-line
-      expect(err).to.be.an('error');
+        if (err instanceof TransformationError) { // specified error
+          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
+          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
+          return false;
+        }
 
-      if (err instanceof TransformationError) { // specified error
-        expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-        expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-        return;
+        // common error
+        expect(err.message).to.match(new RegExp(expectedError, 'u'));
+        return false;
       }
 
-      // common error
-      expect(err.message).to.match(new RegExp(expectedError, 'u'));
-      return;
+      throw err;
     }
   }
 }
