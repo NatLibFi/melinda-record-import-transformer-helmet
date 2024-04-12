@@ -55,35 +55,32 @@ function callback({
   const debugResultHandling = debug.extend('resultHandling');
   const inputData = getFixture('input.json');
   const expectedResults = getFixture('output.json');
-  const results = testContext.default(inputData);
-
   try {
+    const results = testContext.default(inputData);
     debugResultHandling(JSON.stringify(results));
-    expect(results).to.eql(expectedResults);
-  } catch (err) {
-    errorHandling(err);
-  }
 
-  function errorHandling(err) {
+    if (results) {
+      expect(results).to.eql(expectedResults);
+      return;
+    }
+  } catch (err) {
     const debugErrorHandling = debug.extend('errorHandling');
     debugErrorHandling(err);
 
     if (expectedError) { // eslint-disable-line
-      try {
-        expect(err).to.be.an('error');
+      expect(err).to.be.an('error');
 
-        if (err instanceof TransformationError) { // specified error
-          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-          return;
-        }
-
-        // common error
-        expect(err.message).to.match(new RegExp(expectedError, 'u'));
-        return;
-      } catch (err) {
-        return;
+      if (err instanceof TransformationError) { // specified error
+        expect(err.payload).to.match(new RegExp(expectedError, 'u'));
+        expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
+        return false;
       }
+
+      // common error
+      expect(err.message).to.match(new RegExp(expectedError, 'u'));
+      return false;
     }
+
+    throw err;
   }
 }
