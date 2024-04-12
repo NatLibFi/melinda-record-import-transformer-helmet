@@ -50,7 +50,9 @@ function callback({
    *
    * @param {string} functionToUse Name of function for testing
    * @param {MarcRecord} inputData Input record
-   * @returns {MarcRecord} result
+   * @param {boolean} expectedError Is error expected from this test
+   * @param {string} expectedErrorStatus What is status of error that is expected
+   * @returns {object} Marc record result object
    */
   function handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus) {
     try {
