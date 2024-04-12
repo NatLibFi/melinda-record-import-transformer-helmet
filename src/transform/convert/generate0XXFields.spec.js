@@ -45,14 +45,14 @@ function callback({
   }
 
   /**
-   * Description placeholder
-   * @date 11/10/2023 - 8:10:04 AM
+   * Test process handling. Handles normal and error cases
+   * @date 12/04/2024 - 8:30:00 AM
    *
    * @param {string} functionToUse Name of function for testing
    * @param {MarcRecord} inputData Input record
    * @param {boolean} expectedError Is error expected from this test
    * @param {string} expectedErrorStatus What is status of error that is expected
-   * @returns {object} Marc record result object
+   * @returns {object|false} Marc record result object or false
    */
   function handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus) {
     try {
