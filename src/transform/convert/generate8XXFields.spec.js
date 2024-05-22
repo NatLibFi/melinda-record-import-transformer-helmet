@@ -19,12 +19,11 @@ generateTests({
   }
 });
 
-
 /**
  * Callback function for tests
  * @date 11/10/2023 - 8:03:40 AM
  *
- * @param {{ getFixture: READER; functionToUse: string; expectedError?: boolean; expectedErrorStatus?: string; }} metadataParams From metadata.json
+ * @param {{ getFixture: READER, functionToUse: string, expectedError?: boolean, expectedErrorStatus?: string }} metadataParams From metadata.json
  * @param {READER} metadataParams.getFixture Auto generated file reader
  * @param {string} metadataParams.functionToUse
  * @param {boolean} [metadataParams.expectedError=false]
@@ -38,20 +37,24 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData); // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus); // eslint-disable-line
 
-  expect(result).to.eql(expectedResults);
-
+  if (result) {
+    expect(result).to.eql(expectedResults);
+    return;
+  }
 
   /**
-   * Description placeholder
-   * @date 11/10/2023 - 8:10:04 AM
+   * Test process handling. Handles normal and error cases
+   * @date 12/04/2024 - 8:30:00 AM
    *
    * @param {string} functionToUse Name of function for testing
    * @param {MarcRecord} inputData Input record
-   * @returns {MarcRecord} result
+   * @param {boolean} expectedError Is error expected from this test
+   * @param {string} expectedErrorStatus What is status of error that is expected
+   * @returns {object|false} Marc record result object or false
    */
-  function handleProcess(functionToUse, inputData) {
+  function handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus) {
     try {
       if (functionToUse === 'handle856') {
         const result = inputData.insertFields(handle856(inputData)).toObject();
@@ -60,34 +63,24 @@ function callback({
 
       throw new Error('Invalid function name!');
     } catch (err) {
-      return errorHandling(err);
-    }
-  }
+      const debugErrorHandling = debug.extend('errorHandling');
+      debugErrorHandling(err);
 
-  /**
-   * Error situation handling for tests
-   * @date 11/10/2023 - 8:11:46 AM
-   *
-   * @param {Error} err Thrown error from test
-   */
-  function errorHandling(err) {
-    const debugErrorHandling = debug.extend('errorHandling');
-    debugErrorHandling(err);
+      if (expectedError) { // eslint-disable-line
+        expect(err).to.be.an('error');
 
-    if (expectedError) { // eslint-disable-line
-      expect(err).to.be.an('error');
+        if (err instanceof TransformationError) { // specified error
+          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
+          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
+          return false;
+        }
 
-      if (err instanceof TransformationError) { // specified error
-        expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-        expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-        return;
+        // common error
+        expect(err.message).to.match(new RegExp(expectedError, 'u'));
+        return false;
       }
 
-      // common error
-      expect(err.message).to.match(new RegExp(expectedError, 'u'));
-      return;
+      throw err;
     }
-
-    throw err;
   }
 }
