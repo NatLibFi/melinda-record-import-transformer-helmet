@@ -5,7 +5,7 @@ import amqplib from 'amqplib';
 
 export async function startApp(config) {
   const logger = createLogger();
-  const riApiClient = createRecordImportApiClient(config.recordImportApiOptions);
+  const riApiClient = await createRecordImportApiClient(config.recordImportApiOptions, config.keycloakOptions);
   const transformHandler = createTransformHandler();
 
   logger.info('Starting melinda record import transformer helmet');
