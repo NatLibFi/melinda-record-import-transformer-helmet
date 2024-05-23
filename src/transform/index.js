@@ -85,6 +85,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
           if (data === undefined) {
             return;
           }
+
           try {
             const result = await convertRecord(data, validator);
             Emitter.emit('record', result);
