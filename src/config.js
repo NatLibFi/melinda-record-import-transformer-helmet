@@ -7,7 +7,12 @@ export const abortOnInvalidRecords = readEnvironmentVariable('ABORT_ON_INVALID_R
 
 export const recordImportApiOptions = {
   recordImportApiUrl: readEnvironmentVariable('RECORD_IMPORT_API_URL', {defaultValue: 'cli'}),
-  recordImportApiUsername: readEnvironmentVariable('RECORD_IMPORT_API_USERNAME_TRANSFORMER', {defaultValue: 'cli'}),
-  recordImportApiPassword: readEnvironmentVariable('RECORD_IMPORT_API_PASSWORD_TRANSFORMER', {defaultValue: 'cli', hideDefault: true}),
-  userAgent: readEnvironmentVariable('API_CLIENT_USER_AGENT', {defaultValue: '_RECORD-IMPORT-TRANSFORMER'})
+  userAgent: readEnvironmentVariable('API_CLIENT_USER_AGENT', {defaultValue: '_RECORD-IMPORT-TRANSFORMER'}),
+  allowSelfSignedApiCert: readEnvironmentVariable('ALLOW_API_SELF_SIGNED', {defaultValue: false, format: parseBoolean})
+};
+
+export const keycloakOptions = {
+  issuerBaseURL: readEnvironmentVariable('KEYCLOAK_ISSUER_BASE_URL', {defaultValue: 'KEYCLOAK_ISSUER_BASE_URL env is not set!'}),
+  serviceClientID: readEnvironmentVariable('KEYCLOAK_SERVICE_CLIENT_ID', {defaultValue: 'KEYCLOAK_SERVICE_CLIENT_ID env is not set!'}),
+  serviceClientSecret: readEnvironmentVariable('KEYCLOAK_SERVICE_CLIENT_SECRET', {defaultValue: 'KEYCLOAK_SERVICE_CLIENT_SECRET env is not set!'})
 };

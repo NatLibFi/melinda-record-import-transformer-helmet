@@ -58,7 +58,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
 
   async function readStream(stream) {
     try {
-      const promises = [];
+      const datas = [];
       const validator = await createValidator();
       const pipeline = chain([
         stream,
@@ -67,26 +67,33 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       ]).on('error', err => Emitter.emit('error', err));
 
       pipeline.on('data', data => {
-        promises.push(transform(data.value)); // eslint-disable-line functional/immutable-data
-
-        async function transform(value) {
-          try {
-            const result = await convertRecord(value, validator);
-            Emitter.emit('record', result);
-          } catch (err) {
-            logger.log('error', 'Unexpected record transformation error');
-            Emitter.emit('error', err);
-          }
-        }
+        datas.push(data.value); // eslint-disable-line functional/immutable-data
       });
       pipeline.on('end', async () => {
         try {
-          logger.log('debug', `Handled ${promises.length} recordEvents`);
-          await Promise.all(promises);
-          Emitter.emit('end', promises.length);
+          logger.log('debug', `Got ${datas.length} recordEvents`);
+          await transformPump(datas);
+          Emitter.emit('end', datas.length);
         } catch (err) {
           logger.log('error', 'Unexpected transformation error in the end');
           Emitter.emit('error', err);
+        }
+
+        async function transformPump(datas) {
+          const [data, ...rest] = datas;
+
+          if (data === undefined) {
+            return;
+          }
+          try {
+            const result = await convertRecord(data, validator);
+            Emitter.emit('record', result);
+            return transformPump(rest);
+          } catch (err) {
+            logger.log('error', 'Unexpected record transformation error');
+            Emitter.emit('error', err);
+            return transformPump(rest);
+          }
         }
       });
     } catch (err) {
