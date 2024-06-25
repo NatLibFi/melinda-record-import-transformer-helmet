@@ -146,11 +146,11 @@
           "subfields": [
             {
               "code": "a",
-              "value": "The comet,"
+              "value": "The comet."
             },
             {
               "code": "l",
-              "value": "venäjä"
+              "value": "Venäjä"
             }
           ]
         },
@@ -752,7 +752,7 @@
           "ind2": " "
         }
       ],
-      "leader": "00000nam a22002894i 4500"  
+      "leader": "00000nam a22002894i 4500"
     }
   }
 ]
