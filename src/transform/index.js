@@ -71,11 +71,12 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       });
       pipeline.on('end', async () => {
         try {
-          logger.log('debug', `Got ${datas.length} recordEvents`);
+          logger.debug(`Got ${datas.length} recordEvents`);
           await transformPump(datas);
+          logger.debug('Sending end of recordEvents');
           Emitter.emit('end', datas.length);
         } catch (err) {
-          logger.log('error', 'Unexpected transformation error in the end');
+          logger.error('Unexpected transformation error in the end');
           Emitter.emit('error', err);
         }
 
@@ -88,17 +89,18 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
 
           try {
             const result = await convertRecord(data, validator);
+            logger.info('Record transformation done');
             Emitter.emit('record', result);
             return transformPump(rest);
           } catch (err) {
-            logger.log('error', 'Unexpected record transformation error');
+            logger.error('Unexpected record transformation error');
             Emitter.emit('error', err);
             return transformPump(rest);
           }
         }
       });
     } catch (err) {
-      logger.log('error', 'Unexpected stream transformation error');
+      logger.error('Unexpected stream transformation error');
       Emitter.emit('error', err);
     }
   }
