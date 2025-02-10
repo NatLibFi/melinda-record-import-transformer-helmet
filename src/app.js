@@ -12,11 +12,12 @@ export async function startApp(config) {
   logger.info('Starting melinda record import transformer helmet');
   try {
     await transformerBlobLogic(mongoOperator, amqpOperator, transformHandler, config);
-
-    debugHandling(`Closing AMQP resources!`);
-    await amqpOperator.closeChannel();
-    await amqpOperator.closeConnection();
   } catch (error) {
     logger.error(error);
+  } finally {
+    // debugHandling(`Closing AMQP resources!`);
+    await amqpOperator.closeChannel();
+    await amqpOperator.closeConnection();
+    mongoOperator.closeClient();
   }
 }
