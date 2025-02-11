@@ -13,15 +13,16 @@
 		"type": "git",
 		"url": "git@github.com:natlibfi/melinda-record-import-transformer-helmet.git"
 	},
-	"license": "AGPL-3.0+",
+	"license": "MIT",
 	"version": "1.0.5",
 	"main": "./dist/index.js",
 	"engines": {
-		"node": ">=18"
+		"node": ">=22"
 	},
 	"scripts": {
 		"build": "babel src --source-maps --copy-files --delete-dir-on-start --out-dir=dist",
 		"start": "node dist/index.js",
+		"start:dev": "babel-node src/index.js",
 		"cli": "node dist/cli.js",
 		"lint": "eslint ./src",
 		"lint:dev": "eslint ./src --fix",
@@ -32,13 +33,14 @@
 		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/melinda-record-import-transformer* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
+		"@babel/node": "^7.26.0",
 		"@babel/runtime": "^7.25.0",
 		"@natlibfi/marc-record": "^9.0.1",
 		"@natlibfi/marc-record-validate": "^8.0.10",
-		"@natlibfi/marc-record-validators-melinda": "^11.3.1",
+		"@natlibfi/marc-record-validators-melinda": "^11.5.4",
 		"@natlibfi/melinda-backend-commons": "^2.3.1",
 		"@natlibfi/melinda-commons": "^13.0.16",
-		"@natlibfi/melinda-record-import-commons": "^11.0.0-alpha.64",
+		"@natlibfi/melinda-record-import-commons": "^12.0.0-alpha.5",
 		"amqplib": "^0.10.4",
 		"debug": "^4.3.6",
 		"moment": "^2.30.1",
@@ -62,6 +64,9 @@
 		"mocha": "^10.7.3",
 		"nodemon": "^3.1.4",
 		"nyc": "^17.0.0"
+	},
+	"overrides": {
+		"nanoid": "^3.3.8"
 	},
 	"eslintConfig": {
 		"extends": "@natlibfi/melinda-backend"

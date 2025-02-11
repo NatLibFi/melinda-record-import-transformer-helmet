@@ -5,3 +5,5 @@ export const profileIds = readEnvironmentVariable('PROFILE_IDS', {defaultValue: 
 export const amqpUrl = readEnvironmentVariable('AMQP_URL', {defaultValue: 'amqp://127.0.0.1:5672/'});
 export const mongoUrl = readEnvironmentVariable('MONGO_URI', {defaultValue: false});
 export const abortOnInvalidRecords = readEnvironmentVariable('ABORT_ON_INVALID_RECORDS', {defaultValue: false, format: parseBoolean});
+export const readFrom = readEnvironmentVariable('READ_FROM', {defaultValue: 'blobContent'});
+export const nextQueueStatus = readEnvironmentVariable('NEXT_QUEUE_STATUS', {defaultValue: 'TRANSFORMED'});
