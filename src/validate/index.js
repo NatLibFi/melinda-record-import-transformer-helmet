@@ -19,6 +19,7 @@ import {
 
 export default async () => {
   const validate = validateFactory([
+    await EmptyFields(),
     await FieldsPresent([/^(020|022|024)$/u]), // eslint-disable-line
     await FieldsPresent([/^336$/u, /^337$/u, /^338$/u]),
     await FieldExclusion([
@@ -38,7 +39,6 @@ export default async () => {
     await SanitizeVocabularySourceCodes(),
     await Field505Separators(),
     await TypeOfDateF008(),
-    await EmptyFields(),
     await IsbnIssn({hyphenateISBN: true}),
     await Field521Fix(),
     await SubfieldExclusion([{tag: /^041$/u, subfields: [{code: /a|d/u, value: /^zxx$/u}]}]),
