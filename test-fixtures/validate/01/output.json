@@ -607,6 +607,10 @@
   "failed": false,
   "messages": [
     {
+      "description": "Handles empty fields",
+      "state": "valid"
+    },
+    {
       "description": "Checks whether the configured fields are present in the record",
       "state": "valid",
       "messages": []
@@ -634,10 +638,6 @@
     },
     {
       "description": "Validates 008 06",
-      "state": "valid"
-    },
-    {
-      "description": "Handles empty fields",
       "state": "valid"
     },
     {
