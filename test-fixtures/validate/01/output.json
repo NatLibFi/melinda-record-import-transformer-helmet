@@ -578,12 +578,12 @@
             "value": "Tuominen, Kari,"
           },
           {
-            "code": "0",
-            "value": "(FI-ASTERI-N)000157397"
-          },
-          {
             "code": "e",
             "value": "kirjoittaja."
+          },
+          {
+            "code": "0",
+            "value": "(FI-ASTERI-N)000157397"
           }
         ]
       },
@@ -627,6 +627,10 @@
     {
       "description": "Fix various subfield internal values",
       "state": "valid"
+    },
+    {
+      "description": "Swap adjacent subfields",
+      "state": "fixed"
     },
     {
       "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",

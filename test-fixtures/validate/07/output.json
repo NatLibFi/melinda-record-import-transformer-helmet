@@ -233,6 +233,10 @@
       "state": "fixed"
     },
     {
+      "description": "Swap adjacent subfields",
+      "state": "valid"
+    },
+    {
       "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
       "state": "valid"
     },
