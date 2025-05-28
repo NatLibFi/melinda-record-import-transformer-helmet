@@ -23,6 +23,21 @@
         ]
       },
       {
+        "ind1": "4",
+        "ind2": "1",
+        "subfields": [
+          {
+            "code": "b",
+            "value": "Warner Bros."
+          },
+          {
+            "code": "a",
+            "value": "96752"
+          }
+        ],
+        "tag": "028"
+      },
+      {
         "tag": "040",
         "ind1": " ",
         "ind2": " ",
@@ -174,77 +189,84 @@
         ]
       },
       {
-        "tag": "505",
-        "ind1": "0",
-        "ind2": "0",
+        "tag": "100",
+        "ind1": "1",
+        "ind2": " ",
         "subfields": [
           {
-            "code": "t",
-            "value": "Henkilöoikeus --"
+            "code": "a",
+            "value": "Sukunimi, A. B.,"
           },
           {
-            "code": "t",
-            "value": "Perhe- ja perintöoikeus --"
+            "code": "e",
+            "value": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Auktorisoitu-Nimi, A.B.,"
           },
           {
-            "code": "t",
-            "value": "Sopimukset ja velkasuhteet --"
+            "code": "e",
+            "value": "kirjoittaja."
           },
           {
-            "code": "t",
-            "value": "Irtaimen omaisuuden luovutus --"
+            "code": "0",
+            "value": "(FI-ASTERI-N)007654321"
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
+          {
+            "code": "a",
+            "value": "Sukunimi, A. B. C.,"
           },
           {
-            "code": "t",
-            "value": "Kiinteän omaisuuden luovutus ja panttaus --"
-          },
+            "code": "e",
+            "value": "kirjoittaja."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
           {
-            "code": "t",
-            "value": "Yritysmuodot --"
-          },
+            "code": "a",
+            "value": "Sukunimelä, A. B. Cecilia."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
           {
-            "code": "t",
-            "value": "Immateriaalioikeudet --"
-          },
+            "code": "a",
+            "value": "Sukunimelä, A. B."
+          }
+        ]
+      },
+      {
+        "tag": "700",
+        "ind1": "1",
+        "ind2": " ",
+        "subfields": [
           {
-            "code": "t",
-            "value": "Kuluttajansuoja ja kuluttajaviranomaiset --"
-          },
-          {
-            "code": "t",
-            "value": "Kilpailu ja julkiset hankinnat --"
-          },
-          {
-            "code": "t",
-            "value": "Työsopimus ja virkasuhde --"
-          },
-          {
-            "code": "t",
-            "value": "Rikoslaki --"
-          },
-          {
-            "code": "t",
-            "value": "Oikeudenkäyntimenettely --"
-          },
-          {
-            "code": "t",
-            "value": "Muu oikeudenkäyntilainsäädäntö --"
-          },
-          {
-            "code": "t",
-            "value": "Maksukyvyttömyys --"
-          },
-          {
-            "code": "t",
-            "value": "Ulosotto --"
-          },
-          {
-            "code": "t",
-            "value": "Kiinteistönmuodostaminen ja kiinteistörekisteri --"
-          },
-          {
-            "code": "t",
-            "value": "Hakemisto."
+            "code": "a",
+            "value": "Kaikki, O. N. Oikein."
           }
         ]
       }
@@ -272,11 +294,11 @@
     },
     {
       "description": "Fix various subfield internal values",
-      "state": "valid"
+      "state": "fixed"
     },
     {
       "description": "Swap adjacent subfields",
-      "state": "valid"
+      "state": "fixed"
     },
     {
       "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",
@@ -284,7 +306,7 @@
     },
     {
       "description": "Normalize \" ; \" separators as \" -- \"",
-      "state": "fixed"
+      "state": "valid"
     },
     {
       "description": "Validates 008 06",
@@ -323,7 +345,7 @@
     },
     {
       "description": "Handles invalid ending punctuation",
-      "state": "valid"
+      "state": "fixed"
     }
   ]
 }

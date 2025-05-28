@@ -28,12 +28,12 @@
         "ind2": "1",
         "subfields": [
           {
-            "code": "a",
-            "value": "1302584"
-          },
-          {
             "code": "b",
             "value": "SF Film"
+          },
+          {
+            "code": "a",
+            "value": "1302584"
           }
         ]
       },
@@ -654,6 +654,10 @@
     {
       "description": "Fix various subfield internal values",
       "state": "valid"
+    },
+    {
+      "description": "Swap adjacent subfields",
+      "state": "fixed"
     },
     {
       "description": "Validator for sanitizing vocabulary source codes in subfield $2 (MRA-532)",

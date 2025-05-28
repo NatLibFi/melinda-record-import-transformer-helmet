@@ -45,6 +45,10 @@
           "ind2": " ",
           "subfields": [
             {
+              "code": "6",
+              "value": "This is subfield 6, Linkage"
+            },
+            {
               "code": "b",
               "value": "Warner Bros"
             },
@@ -55,10 +59,6 @@
             {
               "code": "q",
               "value": "This is subfield q, qualifying information"
-            },
-            {
-              "code": "6",
-              "value": "This is subfield 6, Linkage"
             },
             {
               "code": "8",

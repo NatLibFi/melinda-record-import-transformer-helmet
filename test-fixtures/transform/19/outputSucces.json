@@ -30,6 +30,10 @@
           "ind2": " ",
           "subfields": [
             {
+              "code": "6",
+              "value": "66666"
+            },
+            {
               "code": "b",
               "value": "bbbb"
             },
@@ -46,12 +50,8 @@
               "value": "again subfield q"
             },
             {
-              "code": "5",
-              "value": "5555"
-            },
-            {
-              "code": "6",
-              "value": "66666"
+              "code": "8",
+              "value": "888"
             },
             {
               "code": "7",
@@ -62,8 +62,8 @@
               "value": "777"
             },
             {
-              "code": "8",
-              "value": "888"
+              "code": "5",
+              "value": "5555"
             },
             {
               "code": "9",

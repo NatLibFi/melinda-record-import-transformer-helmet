@@ -27,8 +27,8 @@
 		"lint": "eslint ./src",
 		"lint:dev": "eslint ./src --fix",
 		"test": "npm run lint && npm run test:base",
-		"test:base": "cross-env NODE_ENV=test nyc mocha --package package.json",
-		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --reporter-option maxDiffSize=0 --package ./package.json",
+		"test:base": "cross-env NODE_ENV=test nyc mocha --reporter-option maxDiffsize=0",
+		"test:dev": "npm run lint:dev && cross-env NODE_ENV=test nyc mocha --reporter-option maxDiffsize=0",
 		"dev": "nodemon",
 		"dev:debug": "cross-env LOG_LEVEL=debug DEBUG=@natlibfi/melinda-record-import-transformer* NODE_ENV=test nodemon"
 	},
@@ -37,7 +37,7 @@
 		"@babel/runtime": "^7.25.0",
 		"@natlibfi/marc-record": "^9.0.1",
 		"@natlibfi/marc-record-validate": "^8.0.10",
-		"@natlibfi/marc-record-validators-melinda": "^11.5.4",
+		"@natlibfi/marc-record-validators-melinda": "^11.6.6",
 		"@natlibfi/melinda-backend-commons": "^2.3.1",
 		"@natlibfi/melinda-commons": "^13.0.16",
 		"@natlibfi/melinda-record-import-commons": "^12.0.0",
@@ -61,7 +61,7 @@
 		"chai": "^4.5.0",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.57.0",
-		"mocha": "^10.7.3",
+		"mocha": "^11.4.0",
 		"nodemon": "^3.1.4",
 		"nyc": "^17.0.0"
 	},
@@ -88,18 +88,6 @@
 				]
 			}
 		}
-	},
-	"mocha": {
-		"spec": [
-			"src/*.spec.js",
-			"src/**/*.spec.js",
-			"src/**/**/*.spec.js"
-		],
-		"require": [
-			"@babel/register"
-		],
-		"bail": true,
-		"exit": true
 	},
 	"nodemonConfig": {
 		"exec": "npm run test:dev",

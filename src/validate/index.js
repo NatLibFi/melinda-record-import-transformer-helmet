@@ -14,8 +14,10 @@ import {
   SanitizeVocabularySourceCodes,
   SubfieldExclusion,
   SubfieldValueNormalizations,
+  SortSubfields,
   TypeOfDateF008
 } from '@natlibfi/marc-record-validators-melinda';
+import {getRecordStandardIdentifiers, getRecordTitle} from '@natlibfi/melinda-commons/dist/utils';
 
 export default async () => {
   const validate = validateFactory([
@@ -36,6 +38,7 @@ export default async () => {
       {tag: /^856$/u, subfields: [{code: /^u$/u, value: /^https:\/\/helmet.bibliolibrary.fi/u}]}
     ]),
     await SubfieldValueNormalizations(),
+    await SortSubfields(),
     await SanitizeVocabularySourceCodes(),
     await Field505Separators(),
     await TypeOfDateF008(),
@@ -52,10 +55,25 @@ export default async () => {
   return async (record, fix, validateFixes) => {
     const opts = fix ? {fix, validateFixes} : {fix};
     const result = await validate(record, opts);
+    if (result.valid === false) {
+      return {
+        failed: true,
+        title: getRecordTitle(record),
+        standardIdentifiers: getRecordStandardIdentifiers(record),
+        messages: filterErrorMessages(result.report),
+        record: result.record
+      };
+    }
+
     return {
       record: result.record,
       failed: result.valid === false,
       messages: result.report
     };
   };
+
+  function filterErrorMessages(messages) {
+    const invalidValidationMessages = messages.filter(validationMessage => validationMessage.state === 'invalid');
+    return invalidValidationMessages.map(validationMessage => `${validationMessage.description}: ${validationMessage.messages.join(',')}`);
+  }
 };

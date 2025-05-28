@@ -46,12 +46,12 @@
               "value": "second subfield $q"
             },
             {
-              "code": "7",
-              "value": "777"
-            },
-            {
               "code": "8",
               "value": "888"
+            },
+            {
+              "code": "7",
+              "value": "777"
             },
             {
               "code": "9",
