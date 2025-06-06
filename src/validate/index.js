@@ -74,6 +74,6 @@ export default async () => {
 
   function filterErrorMessages(messages) {
     const invalidValidationMessages = messages.filter(validationMessage => validationMessage.state === 'invalid');
-    return invalidValidationMessages.map(validationMessage => `${validationMessage.description}: ${validationMessage.messages.join(',')}`);
+    return invalidValidationMessages.map(validationMessage => `${validationMessage.description}: ${validationMessage.messages ? validationMessage.messages.join(',') : ''}`);
   }
 };
