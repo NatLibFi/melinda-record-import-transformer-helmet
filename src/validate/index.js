@@ -17,7 +17,7 @@ import {
   SortSubfields,
   TypeOfDateF008
 } from '@natlibfi/marc-record-validators-melinda';
-import {getRecordStandardIdentifiers, getRecordTitle} from '@natlibfi/melinda-commons/dist/utils';
+import {getRecordStandardIdentifiers, getRecordTitle} from '@natlibfi/melinda-commons';
 
 export default async () => {
   const validate = validateFactory([
