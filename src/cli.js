@@ -1,6 +1,6 @@
 import fs from 'fs';
 import yargs from 'yargs';
-import transformFactory from './transform.js';
+import transformFactory from './transform/index.js';
 import moment from 'moment';
 import {transformerCliLogic} from '@natlibfi/melinda-record-import-commons';
 
