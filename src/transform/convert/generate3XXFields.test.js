@@ -1,16 +1,16 @@
-import {READERS} from '@natlibfi/fixura';
-import {expect} from 'chai';
-import generateTests from '@natlibfi/fixugen';
 import createDebugLogger from 'debug';
+import assert from 'node:assert';
+import {READERS} from '@natlibfi/fixura';
+import generateTests from '@natlibfi/fixugen';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
-import {handle300} from './generate3XXFields';
 import {MarcRecord} from '@natlibfi/marc-record';
+import {handle300} from './generate3XXFields.js';
 
 const debug = createDebugLogger('@natlibfi/tests/melinda-record-import-transformer-helmet/transform/convert:generate3XXFields');
 
 generateTests({
   callback,
-  path: [__dirname, '..', '..', '..', 'test-fixtures', 'generate3XXFields'],
+  path: [import.meta.dirname, '..', '..', '..', 'test-fixtures', 'generate3XXFields'],
   recurse: true,
   useMetadataFile: true,
   fixura: {
@@ -40,7 +40,7 @@ function callback({
   const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus); // eslint-disable-line
 
   if (result) {
-    expect(result).to.eql(expectedResults);
+    assert.deepStrictEqual(result, expectedResults);
     return;
   }
 
@@ -67,17 +67,17 @@ function callback({
       const debugErrorHandling = debug.extend('errorHandling');
       debugErrorHandling(err);
 
-      if (expectedError) { // eslint-disable-line
-        expect(err).to.be.an('error');
+      if (expectedError) {
+        assert(err instanceof Error);
 
         if (err instanceof TransformationError) { // specified error
-          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
+          assert.match(err.payload, new RegExp(expectedError, 'u'));
+          assert.match(err.status, new RegExp(expectedErrorStatus, 'u'));
           return false;
         }
 
         // common error
-        expect(err.message).to.match(new RegExp(expectedError, 'u'));
+        assert.match(err.message, new RegExp(expectedError, 'u'));
         return false;
       }
 

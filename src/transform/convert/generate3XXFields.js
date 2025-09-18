@@ -30,7 +30,7 @@ export function handle300(marcRecord) {
       }
 
       if (ifBE && (/^1 äänitiedosto/ui).test(oldSubA.value)) {
-        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]}); // eslint-disable-line functional/immutable-data
+        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 äänitiedosto'}]});
         return {
           tag, ind1, ind2,
           subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}]
@@ -38,7 +38,7 @@ export function handle300(marcRecord) {
       }
 
       if (ifBE && (/^1 videotiedosto/ui).test(oldSubA.value)) {
-        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]}); // eslint-disable-line functional/immutable-data
+        extraFields.push({tag: '347', subfields: [{code: 'a', value: '1 videotiedosto'}]});
         return {
           tag, ind1, ind2,
           subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}]
@@ -105,7 +105,7 @@ export function handle300(marcRecord) {
       function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
         const re = (/ \((.*)\)/ui).exec(descr); // eslint-disable-line prefer-named-capture-group
 
-        if (re) { // eslint-disable-line functional/no-conditional-statements
+        if (re) {
           return `${prefix} (${re[1]})`;
         }
 

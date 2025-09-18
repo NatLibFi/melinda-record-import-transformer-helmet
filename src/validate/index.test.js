@@ -1,24 +1,24 @@
-import {READERS} from '@natlibfi/fixura';
-import {expect} from 'chai';
-import generateTests from '@natlibfi/fixugen';
 import createDebugLogger from 'debug';
+import assert from 'node:assert';
+import {READERS} from '@natlibfi/fixura';
+import generateTests from '@natlibfi/fixugen';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
-import createValidator from './index';
 import {MarcRecord} from '@natlibfi/marc-record';
+import createValidator from './index.js';
 
 const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/index.SPEC');
-let validator; // eslint-disable-line
+let validator;
 
 generateTests({
   callback,
-  path: [__dirname, '..', '..', 'test-fixtures', 'validate'],
+  path: [import.meta.dirname, '..', '..', 'test-fixtures', 'validate'],
   recurse: false,
   useMetadataFile: true,
   fixura: {
     failWhenNotFound: true,
     reader: READERS.JSON
   },
-  mocha: {
+  hooks: {
     before: async () => {
       validator = await createValidator();
     }
@@ -38,12 +38,12 @@ async function callback({
 
   try {
     debugResultHandling(JSON.stringify(result));
-    expect(result.messages).to.be.an('Array');
-    expect(result.messages).to.deep.eql(expectedResults.messages);
-    expect(result.failed).to.be.an('Boolean');
-    expect(result.failed).to.eql(expectedResults.failed);
-    expect(result.failed).to.eql(expectedResults.failed);
-    expect(result.record).to.deep.eql(expectedResults.record);
+    assert.equal(Array.isArray(result.messages), true);
+    assert.deepStrictEqual(result.messages, expectedResults.messages);
+    assert.equal(typeof result.failed === 'boolean', true);
+    assert.equal(result.failed, expectedResults.failed);
+    assert.equal(result.failed, expectedResults.failed);
+    assert.deepStrictEqual(result.record.toObject(), expectedResults.record);
   } catch (err) {
     errorHandling(err);
   }
@@ -54,16 +54,16 @@ async function callback({
 
     if (expectedError) { // eslint-disable-line
       try {
-        expect(err).to.be.an('error');
+        assert(err instanceof Error);
 
         if (err instanceof TransformationError) { // specified error
-          expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-          expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-          return;
+          assert.match(err.payload, new RegExp(expectedError, 'u'));
+          assert.match(err.status, new RegExp(expectedErrorStatus, 'u'));
+          return false;
         }
 
         // common error
-        expect(err.message).to.match(new RegExp(expectedError, 'u'));
+        assert.match(err.message, new RegExp(expectedError, 'u'));
         return;
       } catch (err) {
         return;

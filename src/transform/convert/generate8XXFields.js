@@ -1,7 +1,7 @@
 import {createHash} from 'crypto';
 import {clone} from '@natlibfi/melinda-commons';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {getTimeStamp} from './utils';
+import {getTimeStamp} from './utils.js';
 
 /**
  * Transforms and organizes 856 fields
@@ -23,10 +23,10 @@ export function handle856(marcRecord) {
     const subY = newSubfields.find(sub => sub.code === 'y');
 
     /* Move subfield y to the last index */
-    if (subY) { // eslint-disable-line functional/no-conditional-statements
+    if (subY) {
       const index = newSubfields.indexOf(subY);
-      newSubfields.splice(index, 1); // eslint-disable-line functional/immutable-data
-      newSubfields.push(subY); // eslint-disable-line functional/immutable-data
+      newSubfields.splice(index, 1);
+      newSubfields.push(subY);
     }
 
     marcRecord.removeField(field);
@@ -69,7 +69,7 @@ export function generate884(marcRecord, testRun = false) {
   ];
 
   function emptyCreationDate(record) {
-    const [f008] = record.pop(/008/u); // eslint-disable-line functional/immutable-data
+    const [f008] = record.pop(/008/u);
     // emptyCreationDate:
     // Normalize f008/00-05 - In non-MARC21 imports f008 'Date entered on file' gets always the current date
     // This propably should be configurable

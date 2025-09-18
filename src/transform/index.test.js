@@ -1,16 +1,16 @@
-import {READERS} from '@natlibfi/fixura';
-import {expect} from 'chai';
-import generateTests from '@natlibfi/fixugen';
-import createTransformHandler from './index';
 import createDebugLogger from 'debug';
+import assert from 'node:assert';
+import {READERS} from '@natlibfi/fixura';
+import generateTests from '@natlibfi/fixugen';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
 import {MarcRecord} from '@natlibfi/marc-record';
+import createTransformHandler from './index.js';
 
 const debug = createDebugLogger('@natlibfi/melinda-record-import-transformer-helmet/transform/index.SPEC');
 
 generateTests({
   callback,
-  path: [__dirname, '..', '..', 'test-fixtures', 'transform'],
+  path: [import.meta.dirname, '..', '..', 'test-fixtures', 'transform'],
   recurse: false,
   useMetadataFile: true,
   fixura: {
@@ -41,10 +41,10 @@ function callback({
 
     function recordEvent(payload) {
       if (payload.failed) {
-        return failedRecordsArray.push(payload); // eslint-disable-line
+        return failedRecordsArray.push(payload);
       }
 
-      return succesRecordsArray.push(payload); // eslint-disable-line
+      return succesRecordsArray.push(payload);
     }
 
     async function resultHandling() {
@@ -63,20 +63,20 @@ function callback({
         if (expectedRecordsAmount > 0) {
           await Promise.all(recordArray);
           debugResultHandling(`${recordArray.length} records handled`);
-          expect(recordArray).to.have.lengthOf(expectedRecordsAmount);
+          assert.equal(recordArray.length, expectedRecordsAmount);
           recordArray.forEach((result, index) => {
             // Comment out after dev
             // debugResultHandling(JSON.stringify(result));
-            expect(result.messages).to.be.an('Array'); // validator tests are in validators spec
-            expect(result.failed).to.be.an('Boolean'); // validator tests are in validators spec
-            expect(result.failed).to.eql(expectedRecords[index].failed);
+            assert.equal(Array.isArray(result.messages), true); // validator tests are in validators test js
+            assert.equal(typeof result.failed === 'boolean', true); // validator tests are in validators test js
+            assert.equal(result.failed, expectedRecords[index].failed);
             if (result.failed) {
               return;
             }
 
             // Check succeeded record
             const expectedRecord = new MarcRecord(expectedRecords[index].record);
-            expect(result.record).to.deep.eql(expectedRecord);
+            assert.deepStrictEqual(result.record, expectedRecord);
           });
 
           return;
@@ -88,18 +88,18 @@ function callback({
       const debugErrorHandling = debug.extend('errorHandling');
       debugErrorHandling(err);
 
-      if (expectedError) { // eslint-disable-line
+      if (expectedError) {
         try {
-          expect(err).to.be.an('error');
+          assert(err instanceof Error);
 
           if (err instanceof TransformationError) { // specified error
-            expect(err.payload).to.match(new RegExp(expectedError, 'u'));
-            expect(err.status).to.match(new RegExp(expectedErrorStatus, 'u'));
-            return resolve(); // test ok
+            assert.match(err.payload, new RegExp(expectedError, 'u'));
+            assert.match(err.status, new RegExp(expectedErrorStatus, 'u'));
+            return false;
           }
 
           // common error
-          expect(err.message).to.match(new RegExp(expectedError, 'u'));
+          assert.match(err.message, new RegExp(expectedError, 'u'));
           return resolve(); // test ok
         } catch (err) {
           return reject(err);

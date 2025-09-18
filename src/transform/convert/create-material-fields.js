@@ -15,7 +15,7 @@ export default function (record) {
     value: record.varFields.find(f => f.marcTag === '008').content
   };
 
-  f007.value = f007ValueOptionsFromMaterialtype(materialType); // eslint-disable-line functional/immutable-data
+  f007.value = f007ValueOptionsFromMaterialtype(materialType);
 
   if (f007.value) {
     return [f007, f008];
@@ -103,20 +103,20 @@ export default function (record) {
   }
 
   function create007Value(opts) {
-    const value = Array(opts.len).fill('|'); // eslint-disable-line functional/immutable-data
+    const value = Array(opts.len).fill('|');
 
     Object.keys(opts).filter(k => k.startsWith('i')).forEach(k => {
       const index = Number(k.replace(/^i/u, ''));
-      value[index] = opts[k]; // eslint-disable-line functional/immutable-data
+      value[index] = opts[k];
     });
 
     return value.join('');
   }
 
   function createElectronicVideo() {
-    const valuesFirst007 = replaceArrayValue(Array(9).fill('|'), {'0': 'v', '1': 'z'}); // eslint-disable-line functional/immutable-data
-    const valuesSecond007 = replaceArrayValue(Array(14).fill('|'), {'0': 'c', '1': 'r'}); // eslint-disable-line functional/immutable-data
-    const values006 = replaceArrayValue(Array(18).fill('|'), {'0': 'm', '6': 'o', '9': 'h'}); // eslint-disable-line functional/immutable-data
+    const valuesFirst007 = replaceArrayValue(Array(9).fill('|'), {'0': 'v', '1': 'z'});
+    const valuesSecond007 = replaceArrayValue(Array(14).fill('|'), {'0': 'c', '1': 'r'});
+    const values006 = replaceArrayValue(Array(18).fill('|'), {'0': 'm', '6': 'o', '9': 'h'});
 
     return [
       {tag: '006', value: values006.join('')},
@@ -126,9 +126,9 @@ export default function (record) {
   }
 
   function createElectronicRecording() {
-    const valuesFirst007 = replaceArrayValue(Array(14).fill('|'), {'0': 's', '1': 'r'}); // eslint-disable-line functional/immutable-data
-    const valuesSecond007 = replaceArrayValue(Array(14).fill('|'), {'0': 'c', '1': 'r'}); // eslint-disable-line functional/immutable-data
-    const values006 = replaceArrayValue(Array(18).fill('|'), {'0': 'm', '6': 'o', '9': 'h'}); // eslint-disable-line functional/immutable-data
+    const valuesFirst007 = replaceArrayValue(Array(14).fill('|'), {'0': 's', '1': 'r'});
+    const valuesSecond007 = replaceArrayValue(Array(14).fill('|'), {'0': 'c', '1': 'r'});
+    const values006 = replaceArrayValue(Array(18).fill('|'), {'0': 'm', '6': 'o', '9': 'h'});
 
     return [
       {tag: '006', value: values006.join('')},
@@ -141,10 +141,10 @@ export default function (record) {
     const chars = f008.value.split('');
 
     values.forEach(({index, value}) => {
-      chars[index] = value; // eslint-disable-line functional/immutable-data
+      chars[index] = value;
     });
 
-    f008.value = chars.join(''); // eslint-disable-line functional/immutable-data
+    f008.value = chars.join('');
   }
 
   function replaceArrayValue(array, options) {
