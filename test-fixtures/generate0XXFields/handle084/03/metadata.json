@@ -1,0 +1,8 @@
+{
+  "description": "Keeps 084 field that has subfield $2",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle084",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

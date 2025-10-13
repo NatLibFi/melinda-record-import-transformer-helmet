@@ -1,0 +1,8 @@
+{
+  "description": "Does not add extra fields if f084 is missing",
+  "only": false,
+  "skip": false,
+  "functionToUse": "handle084",
+  "expectedError": false,
+  "expectedErrorStatus": "200"
+}

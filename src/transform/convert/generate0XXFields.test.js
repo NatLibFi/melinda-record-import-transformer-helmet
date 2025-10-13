@@ -4,7 +4,7 @@ import {READERS} from '@natlibfi/fixura';
 import generateTests from '@natlibfi/fixugen';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {handle028, handle037} from './generate0XXFields.js';
+import {handle028, handle037, handle084} from './generate0XXFields.js';
 
 const debug = createDebugLogger('@natlibfi/tests/melinda-record-import-transformer-helmet/transform/convert:generate0XXFields');
 
@@ -63,6 +63,11 @@ function callback({
 
       if (functionToUse === 'handle037') {
         const result = inputData.insertFields(handle037(inputData)).toObject();
+        return result;
+      }
+
+      if (functionToUse === 'handle084') {
+        const result = inputData.insertFields(handle084(inputData)).toObject();
         return result;
       }
 

@@ -77,3 +77,24 @@ export function handle037(marcRecord) {
 
   return newFields;
 }
+
+export function handle084(marcRecord) {
+  const newFields = marcRecord.get(/^084$/u).map(field => {
+    const newField = {
+      tag: `${field.tag}`,
+      ind1: `${field.ind1}`,
+      ind2: `${field.ind2}`,
+      subfields: [...field.subfields]
+    };
+
+    marcRecord.removeField(field);
+
+    if (newField.subfields.some(sub => sub.code === '2')) {
+      return newField;
+    }
+
+    return false;
+  }).filter(field => field);
+
+  return newFields;
+}
