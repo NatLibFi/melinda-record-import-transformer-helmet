@@ -13,7 +13,6 @@ import {handle020, handle028, handle037, handle084} from './convert/generate0XXF
 import {handle130} from './convert/generate1XXFields.js';
 import {handle300} from './convert/generate3XXFields.js';
 import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
-import {handleTerms} from './convert/generate6XXFields.js';
 import {handle7xx} from './convert/generate7XXFields.js';
 import {generate884, handle856} from './convert/generate8XXFields.js';
 import {handle003, handle007, handle008} from './convert/generateControlFields.js';
@@ -97,7 +96,6 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     handle506(marcRecord);
     handle530(marcRecord);
     handle546(marcRecord);
-    handleTerms(marcRecord);
     // handle856(marcRecord);
     // handleSID(marcRecord, record);
 
@@ -118,7 +116,6 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
       // handle506(marcRecord);
       // handle530(marcRecord);
       // handle546(marcRecord);
-      // handleTerms(marcRecord);
       handle7xx(marcRecord),
       handle856(marcRecord),
       handleSID(marcRecord, record)

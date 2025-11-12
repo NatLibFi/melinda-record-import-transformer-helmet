@@ -578,6 +578,21 @@
           ]
         },
         {
+          "tag": "648",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "2010-luku"
+            },
+            {
+              "code": "2",
+              "value": "kaunokki"
+            }
+          ]
+        },
+        {
           "tag": "650",
           "ind1": " ",
           "ind2": "7",
