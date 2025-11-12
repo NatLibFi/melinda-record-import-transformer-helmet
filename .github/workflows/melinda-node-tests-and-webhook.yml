@@ -1,6 +1,6 @@
 # Melinda node tests
 
-name: Melinda-node-tests
+name: Melinda-node-tests-and-webhook
 
 on: push
 
