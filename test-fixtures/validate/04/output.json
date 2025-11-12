@@ -1,6 +1,5 @@
 {
   "record": {
-    "_validationOptions": {},
     "leader": "00000ngm a22000004i 4500",
     "fields": [
       {
@@ -89,7 +88,7 @@
           },
           {
             "code": "c",
-            "value": "Warner Bros. Pictures ; directed by Robert Zemeckis ; screenplay by Robert Zemeckis & Kenya Barris and Guillermo del Toro ; produced by Robert Zemeckis [ja neljä muuta]"
+            "value": "Warner Bros. Pictures ; directed by Robert Zemeckis ; screenplay by Robert Zemeckis & Kenya Barris and Guillermo del Toro ; produced by Robert Zemeckis [ja neljä muuta]."
           }
         ]
       },

@@ -73,7 +73,7 @@
             },
             {
               "code": "c",
-              "value": "created by Mike Judge & John Altschuler & Dave Krinsky 5. kausi (DVD)"
+              "value": "created by Mike Judge & John Altschuler & Dave Krinsky 5. kausi (DVD)."
             }
           ]
         },
@@ -206,6 +206,21 @@
           ]
         },
         {
+          "tag": "648",
+          "ind1": " ",
+          "ind2": "7",
+          "subfields": [
+            {
+              "code": "a",
+              "value": "2010-luku"
+            },
+            {
+              "code": "2",
+              "value": "kaunokki"
+            }
+          ]
+        },
+        {
           "tag": "650",
           "ind1": " ",
           "ind2": "7",
@@ -306,7 +321,7 @@
             },
             {
               "code": "2",
-              "value": "slm/fin"
+              "value": "kaunokki"
             }
           ]
         },
@@ -321,7 +336,7 @@
             },
             {
               "code": "2",
-              "value": "slm/fin"
+              "value": "kaunokki"
             }
           ]
         },
