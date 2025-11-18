@@ -24,7 +24,7 @@ export default async () => {
     await FieldsPresent([/^(020|022|024)$/u]),
     await FieldsPresent([/^336$/u, /^337$/u, /^338$/u]),
     await FieldExclusion([
-      /^(001|091|092|093|094|095|256|533|546|574|575|576|577|578|599)$/u,
+      /^(001|091|092|093|094|095|097|256|533|546|574|575|576|577|578|599)$/u,
       // Drop 041 https://kansalliskirjasto.slack.com/archives/C0123MAS485/p1679402190105819?thread_ts=1679391807.394099&cid=C0123MAS485
       {tag: /^041$/u, dependencies: [{leader: /^.{6}[g|i]/u}]},
       {tag: /^264$/u, subfields: [{code: /^a$/u, value: /^\[.*\]$/u}]},
