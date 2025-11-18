@@ -99,11 +99,3 @@ export function handle084(marcRecord) {
   return newFields;
 }
 
-export function handle097(marcRecord) {
-  const newFields = marcRecord.get(/^097$/u).map(field => {
-    marcRecord.removeField(field);
-    return false;
-  }).filter(field => field);
-
-  return newFields;
-}
