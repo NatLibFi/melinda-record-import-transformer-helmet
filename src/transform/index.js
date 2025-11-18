@@ -9,7 +9,7 @@ import {createLogger} from '@natlibfi/melinda-backend-commons';
 import createValidator from '../validate/index.js';
 
 import {handleSID, handleLeader} from './convert/generate-static-fields.js';
-import {handle020, handle028, handle037, handle084} from './convert/generate0XXFields.js';
+import {handle020, handle028, handle037, handle084, handle097} from './convert/generate0XXFields.js';
 import {handle130} from './convert/generate1XXFields.js';
 import {handle300} from './convert/generate3XXFields.js';
 import {handle500, handle506, handle530, handle546} from './convert/generate5XXFields.js';
@@ -90,6 +90,7 @@ export default (testRun) => (stream, {validate = true, fix = true} = {}) => {
     handle020(marcRecord);
     // handle028(marcRecord);
     // handle037(marcRecord);
+    handle097(marcRecord); // Remove Helmet-only 097 fiels
     handle130(marcRecord);
     // handle300(marcRecord);
     handle500(marcRecord);
