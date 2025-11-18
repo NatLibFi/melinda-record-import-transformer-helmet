@@ -1,24 +1,30 @@
+// Backround: https://wiki.helsinki.fi/xwiki/bin/view/rdasovellusohje/RDA-kuvailu%20MARC%2021%20-formaatilla/Aineistokohtaiset%20ty%C3%B6ohjeet/Videotallenteet/#H1302013PE4E4kirjaus2CyhtenE4istettynimeke28ET292013Ydinelementti
+export function splitAndTuneTitleAndQualifier(f130a) {
+  const matches = f130a.match(/^([^ ].*?)(\((?:(?:elokuva|lyhytelokuva|Motion picture|televisio-ohjelma)[^\)]*|19[0-9][0-9]|20[012][0-9])\)[ ,.:-]*)$/ui);  // eslint-disable-line prefer-named-capture-group
+  if (matches) {
+    // MRA-614: "(elokuva, YYYY)"" is converted to "(elokuva : YYYY)".
+
+    return [matches[1].trim().replace(/ ?: /u, ', '), matches[2].replace(/^([^ ]+), ([12][0-9][0-9][0-9])/u, "$1 : $2")];  // eslint-disable-line prefer-named-capture-group
+  }
+  return [f130a, undefined];
+}
+
+
 export function handle130(marcRecord) {
   marcRecord.get(/^130$/u).forEach(field => {
-    const a = field.subfields.find(sf => sf.code === 'a' && (/:/u).test(sf.value));
-
-    if (a) {
-      if ((/^(.[^:]*):/u).test(a.value) && (/\(elokuva :/ug).test(a.value)) { // eslint-disable-line prefer-named-capture-group
-        const reComplex = (/^(.[^:]*):(\(.*\)|.*|.*\(.*\))/u).exec(a.value); // eslint-disable-line prefer-named-capture-group
-        a.value = `${reComplex[1].replace(/\s+$/u, '')},${reComplex[2].replace(/,$/u, '.')}`;
-        return;
-      }
-
-      const reComplex = (/^(.[^:]*):(\(.*\)|.*|.*\(.*\))/u).exec(a.value); // eslint-disable-line prefer-named-capture-group
-
-      if (reComplex) {
-        a.value = `${reComplex[1].replace(/\s{2,}$/u, ' ')}:${reComplex[2].replace(/,$/u, '.')}`;
-        return;
-      }
-
-      const reSimple = (/^(.[^:]*)/u).exec(a.value); // eslint-disable-line prefer-named-capture-group
-      a.value = `${reSimple[1].replace(/\s+$/u, '').replace(/,$/u, '.')}.`;
+    const a = field.subfields.find(sf => sf.code === 'a');
+    if (!a) {
       return;
     }
+
+    const [fullTitle, qualifier] = splitAndTuneTitleAndQualifier(a.value);
+
+    if (qualifier !== undefined) {
+      a.value = `${fullTitle} ${qualifier}`;
+    }
+
+    // Convert final ',' to '.' (presumably Helmet had/has this punctuation error):
+    a.value = a.value.replace(/([^ ]) *, *$/, '$1.'); // eslint-disable-line prefer-named-capture-group
+    return;
   });
 }
