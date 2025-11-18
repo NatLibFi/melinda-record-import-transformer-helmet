@@ -37,7 +37,7 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus); // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus);
 
   if (result) {
     assert.deepStrictEqual(result, expectedResults);
@@ -81,7 +81,7 @@ function callback({
       const debugErrorHandling = debug.extend('errorHandling');
       debugErrorHandling(err);
 
-      if (expectedError) { // eslint-disable-line
+      if (expectedError) {
         assert(err instanceof Error);
 
         if (err instanceof TransformationError) { // specified error

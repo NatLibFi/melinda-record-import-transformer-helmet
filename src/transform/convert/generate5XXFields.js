@@ -2,7 +2,7 @@ export function handle500(marcRecord) {
   marcRecord.get(/^500$/u).forEach(field => {
     const a = field.subfields.find(sf => sf.code === 'a');
 
-    if (a && (/^(ääniraita|lainausoikeus\.|ljudspår)/ui).test(a.value)) { // eslint-disable-line prefer-named-capture-group
+    if (a && (/^(ääniraita|lainausoikeus\.|ljudspår)/ui).test(a.value)) {
       const newField = clone(field);
       newField.tag = (/^lainausoikeus/ui).test(a.value) ? '540' : '546';
 
@@ -21,10 +21,10 @@ export function handle506(marcRecord) {
     const a = field.subfields.find(sf => sf.code === 'a');
 
     if (a) {
-      const re = (/^(Kielletty alle [0-9]+-v\.)(.*)$/ui).exec(a.value); // eslint-disable-line prefer-named-capture-group
+      const re = (/^(Kielletty alle [0-9]+-v\.)(.*)$/ui).exec(a.value);
 
       if (re) {
-        const reInner = (/^Kielletty alle ([0-9]+)-v\./ui).exec(re[1]); // eslint-disable-line prefer-named-capture-group
+        const reInner = (/^Kielletty alle ([0-9]+)-v\./ui).exec(re[1]);
         a.value = `Kielletty alle ${reInner[1]}-vuotiailta.${re[2]}`;
       }
     }

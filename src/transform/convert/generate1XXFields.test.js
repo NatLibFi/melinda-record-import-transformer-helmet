@@ -37,7 +37,7 @@ function callback({
 }) {
   const inputData = new MarcRecord(getFixture('input.json'));
   const expectedResults = getFixture('output.json');
-  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus); // eslint-disable-line
+  const result = handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus);
 
   if (result) {
     assert.deepStrictEqual(result, expectedResults);

@@ -52,7 +52,7 @@ async function callback({
     const debugErrorHandling = debug.extend('errorHandling');
     debugErrorHandling(err);
 
-    if (expectedError) { // eslint-disable-line
+    if (expectedError) {
       try {
         assert(err instanceof Error);
 
