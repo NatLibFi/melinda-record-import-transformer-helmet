@@ -1,8 +1,0 @@
-{
-  "description": "Removes 097 (it's Helmet specific and thus noise",
-  "only": false,
-  "skip": false,
-  "functionToUse": "handle097",
-  "expectedError": false,
-  "expectedErrorStatus": "200"
-}
