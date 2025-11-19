@@ -1,16 +1,16 @@
 import createDebugLogger from 'debug';
-import assert from 'node:assert';
+import assert from 'node:assert/strict';
 import {READERS} from '@natlibfi/fixura';
 import generateTests from '@natlibfi/fixugen';
 import {Error as TransformationError} from '@natlibfi/melinda-commons';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {handle300} from './generate3XXFields.js';
+import {handle130} from './generate1XXFields.js';
 
-const debug = createDebugLogger('@natlibfi/tests/melinda-record-import-transformer-helmet/transform/convert:generate3XXFields');
+const debug = createDebugLogger('@natlibfi/tests/melinda-record-import-transformer-helmet/transform/convert:generate1XXFields');
 
 generateTests({
   callback,
-  path: [import.meta.dirname, '..', '..', '..', 'test-fixtures', 'generate3XXFields'],
+  path: [import.meta.dirname, '..', '..', '..', 'test-fixtures', 'generate1XXFields'],
   recurse: true,
   useMetadataFile: true,
   fixura: {
@@ -57,9 +57,10 @@ function callback({
    */
   function handleProcess(functionToUse, inputData, expectedError, expectedErrorStatus) {
     try {
-      if (functionToUse === 'handle300') {
-        const result = inputData.insertFields(handle300(inputData)).toObject();
-        return result;
+      if (functionToUse === 'handle130') {
+        handle130(inputData);
+        //const result = inputData.insertFields(handle130(inputData)).toObject();
+        return inputData.toObject();
       }
 
       throw new Error('Invalid function name!');

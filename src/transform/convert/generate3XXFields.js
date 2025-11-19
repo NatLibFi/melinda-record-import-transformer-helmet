@@ -45,14 +45,14 @@ export function handle300(marcRecord) {
         };
       }
 
-      if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+      if ((/^(e-äänikirja|e-ljudbok|eljudbok|e-kirja)/ui).test(oldSubA.value)) {
         return {
           tag, ind1, ind2,
           subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value)}, oldSubB].filter(sf => sf)
         };
       }
 
-      if ((/^(äänikirja|ljudbok)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+      if ((/^(äänikirja|ljudbok)/ui).test(oldSubA.value)) {
         return {
           tag, ind1, ind2,
           subfields: [{code: 'a', value: generateExtendDescr(oldSubA.value, '1 CD-äänilevy')}, oldSubB].filter(sf => sf)
@@ -66,15 +66,15 @@ export function handle300(marcRecord) {
         };
       }
 
-      if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
-        const re = (/^konsolipeli \((.*)\)(.*)$/ui).exec(oldSubA.value); // eslint-disable-line prefer-named-capture-group
+      if ((/^konsolipeli \(1 (tietolevy|blu-ray-levy|muistikortti)\)/ui).test(oldSubA.value)) {
+        const re = (/^konsolipeli \((.*)\)(.*)$/ui).exec(oldSubA.value);
         return {
           tag, ind1, ind2,
           subfields: [{code: 'a', value: `${re[1]}${re[2]}`}, oldSubB, ...otherOldSubs].filter(sf => sf)
         };
       }
 
-      if ((/^(konsolipeli|konsolspel)/ui).test(oldSubA.value)) { // eslint-disable-line prefer-named-capture-group
+      if ((/^(konsolipeli|konsolspel)/ui).test(oldSubA.value)) {
         const [f007] = marcRecord.get(/^007$/u);
 
         if (f007.value[1] === 'o') {
@@ -103,7 +103,7 @@ export function handle300(marcRecord) {
       return field;
 
       function generateExtendDescr(descr, prefix = '1 verkkoaineisto') {
-        const re = (/ \((.*)\)/ui).exec(descr); // eslint-disable-line prefer-named-capture-group
+        const re = (/ \((.*)\)/ui).exec(descr);
 
         if (re) {
           return `${prefix} (${re[1]})`;

@@ -402,6 +402,18 @@
         ]
       },
       {
+        "fieldTag": "q",
+        "marcTag": "097",
+        "ind1": " ",
+        "ind2": " ",
+        "subfields": [
+          {
+            "tag": "a",
+            "content": "14.8"
+          }
+        ]
+      },
+      {
         "fieldTag": "r",
         "marcTag": "300",
         "ind1": " ",
