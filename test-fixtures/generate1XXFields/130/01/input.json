@@ -7,7 +7,7 @@
       "value": "20181016101020.6"
     },
     { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "Nimeke (elokuva : 2020)" } ] },
-    { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "Pilkku kaksoispisteeksi (elokuva : 1990)" } ] },
+    { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "Pilkku kaksoispisteeksi (elokuva, 1990)" } ] },
     { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "Päänimeke : muu nimeketieto (televisio-ohjelma, 2020-2023)" } ] },
     { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "Variaatio: edellisestä (televisio-ohjelma, 2020-2023)" } ] },
     { "tag": "130", "ind1": "0", "ind2": " ", "subfields": [ { "code": "a", "value": "The 15:17 to Paris (elokuva)" } ] },
