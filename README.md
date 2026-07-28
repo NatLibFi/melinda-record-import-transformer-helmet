@@ -18,6 +18,6 @@ Helmet record transformer for the Melinda record batch import system. Consumes r
 
 ## License and copyright
 
-Copyright (c) 2018-2025 **The National Library Of Finland**
+Copyright (c) 2018-2026 **The National Library Of Finland**
 
 This project's source code is licensed under the terms of **MIT** or any later version.
