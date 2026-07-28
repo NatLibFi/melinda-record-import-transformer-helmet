@@ -19,7 +19,7 @@
 	"type": "module",
 	"bin": "./dist/cli.js",
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
 	"scripts": {
 		"build": "esbuild \"src/**/*.js\" --sourcemap --platform=node --outdir=dist",
