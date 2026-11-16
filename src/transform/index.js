@@ -1,11 +1,9 @@
 import {chain} from 'stream-chain';
-import streamJsonPkg from 'stream-json';
-const {parser} = streamJsonPkg;
-import streamArrayPkg from 'stream-json/streamers/StreamArray.js';
-const {streamArray} = streamArrayPkg;
+import {parser} from 'stream-json';
+import {streamArray} from 'stream-json/streamers/stream-array.js';
 import {EventEmitter} from 'events';
 import {MarcRecord} from '@natlibfi/marc-record';
-import {createLogger} from '@natlibfi/melinda-backend-commons';
+import {createLogger} from '@natlibfi/melinda-commons';
 import createValidator from '../validate/index.js';
 
 import {handleSID, handleLeader} from './convert/generate-static-fields.js';
