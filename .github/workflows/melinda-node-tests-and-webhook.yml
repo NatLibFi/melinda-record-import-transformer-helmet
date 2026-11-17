@@ -63,13 +63,13 @@ jobs:
 
     steps:
       - name: Test webhook
-        uses: joelwmale/webhook-action@eb6dc6ac15300d0f246ccc26d22efb4c2dd15e80 # v2.4.2
+        uses: joelwmale/webhook-action@50f3dc0b06625a68681ddb0ee36a6f7923d7b597 # v2.4.2
         if: github.ref == 'refs/heads/test'
         with:
           url: ${{ secrets.WEBHOOK_URL_TEST }}
           body: '{"event": "${{ github.event_name }}","uri": "${{ github.repository }}","ref": "${{ github.ref }}","commit": "${{ github.sha }}"}'
       - name: Prod webhook
-        uses: joelwmale/webhook-action@eb6dc6ac15300d0f246ccc26d22efb4c2dd15e80 # v2.4.2
+        uses: joelwmale/webhook-action@50f3dc0b06625a68681ddb0ee36a6f7923d7b597 # v2.4.2
         if: github.ref == 'refs/heads/master'
         with:
           url: ${{ secrets.WEBHOOK_URL_PROD }}
