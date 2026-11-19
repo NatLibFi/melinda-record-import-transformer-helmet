@@ -37,10 +37,10 @@
 	"dependencies": {
 		"@natlibfi/marc-record": "^11.0.3",
 		"@natlibfi/marc-record-validate": "^9.0.2",
-		"@natlibfi/marc-record-validators-melinda": "^13.0.6",
+		"@natlibfi/marc-record-validators-melinda": "^13.0.7",
 		"@natlibfi/melinda-commons": "^16.0.0",
-		"@natlibfi/melinda-record-import-commons": "^14.0.0-alpha.1",
-		"amqplib": "^2.3.3",
+		"@natlibfi/melinda-record-import-commons": "^14.0.0",
+		"amqplib": "^2.4.0",
 		"debug": "^4.4.3",
 		"moment": "^2.31.0",
 		"stream-chain": "^4.4.2",
@@ -48,14 +48,13 @@
 		"yargs": "^18.2.0"
 	},
 	"devDependencies": {
-		"@natlibfi/fixugen": "^3.0.1",
-		"@natlibfi/fixura": "^4.0.1",
+		"@natlibfi/fixugen": "^4.0.1",
+		"@natlibfi/fixura": "^5.1.1",
 		"cross-env": "^10.1.0",
-		"esbuild": "^0.28.1",
-		"eslint": "^10.8.0"
+		"esbuild": "^0.28.2",
+		"eslint": "^10.15.0"
 	},
 	"overrides": {
-		"@natlibfi/marc-record": "$@natlibfi/marc-record",
-		"nanoid": "^3.3.8"
+		"@natlibfi/marc-record": "$@natlibfi/marc-record"
 	}
 }
